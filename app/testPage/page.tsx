@@ -1,18 +1,23 @@
-"use client";
-import { useSearchParams } from "next/navigation";
-import Exam from "@/components/testPage/testPage";
+"use client"
 
-const TestPage = () => {
-  const searchParams = useSearchParams();
+import { Suspense } from "react"
+import { useSearchParams } from "next/navigation"
+import Exam from "@/components/testPage/testPage"
 
-  const title = decodeURIComponent(searchParams.get("title") || "");
-  const category = decodeURIComponent(searchParams.get("category") || "");
+function PageWithParams() {
+  const searchParams = useSearchParams()
+  const title = decodeURIComponent(searchParams.get("title") || "")
+  const category = decodeURIComponent(searchParams.get("category") || "")
 
+  return <Exam title={title} category={category} />
+}
+
+export default function TestPage() {
   return (
     <div className="min-h-screen">
-      <Exam title={title} category={category} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <PageWithParams />
+      </Suspense>
     </div>
   )
-};  
-
-export default TestPage;
+}
