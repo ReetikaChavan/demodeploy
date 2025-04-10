@@ -1,0 +1,213 @@
+{
+  "category": "AI & Machine Learning",
+    "title": "Clustering Techniques",
+    "level": "Intermediate",
+    "Difficulty": "Medium",
+    "timer": "20 minutes",
+    "skill": "50%",
+    "knowledge": "40%",
+    "application": "60%",
+    "why":"This Clustering Techniques exam assesses your understanding of unsupervised learning methods, specifically K-means and hierarchical clustering. It evaluates your ability to choose the appropriate clustering algorithm for different scenarios, understand the underlying principles of each technique, and interpret evaluation metrics like the silhouette score and WCSS. By taking this exam, you can gauge your proficiency in applying clustering techniques to discover hidden patterns and structures within data, which is essential for various applications like customer segmentation and data analysis.",
+    "questions": [
+      {
+        "question": "Scenario: You need to group customers based on purchasing behavior without predefined labels. Which technique should you use?",
+        "options": [
+          "K-means clustering",
+          "Hierarchical clustering",
+          "Both K-means and hierarchical",
+          "Logistic regression"
+        ],
+        "correctAnswer": "K-means clustering"
+      },
+      {
+        "question": "What is the primary objective of K-means clustering?",
+        "options": [
+          "To minimize the distance between points and their cluster centroids",
+          "To maximize the distance between clusters",
+          "To create a hierarchical tree of clusters",
+          "To predict continuous values"
+        ],
+        "correctAnswer": "To minimize the distance between points and their cluster centroids"
+      },
+      {
+        "question": "How does hierarchical clustering differ from K-means clustering?",
+        "options": [
+          "It builds a tree of clusters instead of assigning points to fixed clusters",
+          "It requires the number of clusters to be specified in advance",
+          "It uses centroids to group data",
+          "It minimizes within-cluster variance"
+        ],
+        "correctAnswer": "It builds a tree of clusters instead of assigning points to fixed clusters"
+      },
+      {
+        "question": "True or False: K-means clustering requires the number of clusters (k) to be specified beforehand.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "true"
+      },
+      {
+        "question": "Scenario: A dataset has an unknown number of clusters. Which clustering method is more suitable?",
+        "options": [
+          "Hierarchical clustering",
+          "K-means clustering",
+          "Logistic regression",
+          "Decision trees"
+        ],
+        "correctAnswer": "Hierarchical clustering"
+      },
+      {
+        "question": "What is a common evaluation metric for clustering quality?",
+        "options": [
+          "Silhouette score",
+          "Mean squared error",
+          "Accuracy",
+          "Precision"
+        ],
+        "correctAnswer": "Silhouette score"
+      },
+      {
+        "question": "How does the silhouette score measure clustering performance?",
+        "options": [
+          "By comparing intra-cluster cohesion to inter-cluster separation",
+          "By calculating the total distance between all points",
+          "By measuring prediction accuracy",
+          "By summing the variance within clusters"
+        ],
+        "correctAnswer": "By comparing intra-cluster cohesion to inter-cluster separation"
+      },
+      {
+        "question": "True or False: Hierarchical clustering can be visualized using a dendrogram.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "true"
+      },
+      {
+        "question": "Scenario: You want to cluster data and visualize the hierarchy of clusters. Which technique should you use?",
+        "options": [
+          "Hierarchical clustering",
+          "K-means clustering",
+          "K-nearest neighbors",
+          "Linear regression"
+        ],
+        "correctAnswer": "Hierarchical clustering"
+      },
+      {
+        "question": "What is a limitation of K-means clustering?",
+        "options": [
+          "It assumes clusters are spherical and equally sized",
+          "It requires a dendrogram for interpretation",
+          "It cannot handle numerical data",
+          "It is only used for classification"
+        ],
+        "correctAnswer": "It assumes clusters are spherical and equally sized"
+      },
+      {
+        "question": "Why might hierarchical clustering be computationally expensive?",
+        "options": [
+          "It calculates distances between all pairs of points",
+          "It requires specifying the number of clusters",
+          "It uses centroids for assignment",
+          "It minimizes variance iteratively"
+        ],
+        "correctAnswer": "It calculates distances between all pairs of points"
+      },
+      {
+        "question": "True or False: The elbow method can help determine the optimal number of clusters in K-means.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "true"
+      },
+      {
+        "question": "Scenario: A K-means model shows high within-cluster variance. What does this suggest?",
+        "options": [
+          "The number of clusters may be suboptimal",
+          "The clusters are perfectly separated",
+          "The data is linearly separable",
+          "The model is overfitted"
+        ],
+        "correctAnswer": "The number of clusters may be suboptimal"
+      },
+      {
+        "question": "What does the 'within-cluster sum of squares' (WCSS) measure in K-means?",
+        "options": [
+          "The total variance within each cluster",
+          "The distance between cluster centroids",
+          "The accuracy of cluster assignments",
+          "The height of the dendrogram"
+        ],
+        "correctAnswer": "The total variance within each cluster"
+      },
+      {
+        "question": "How does hierarchical clustering determine cluster similarity?",
+        "options": [
+          "By using linkage criteria like single, complete, or average",
+          "By minimizing within-cluster variance",
+          "By calculating distances to centroids",
+          "By predicting class labels"
+        ],
+        "correctAnswer": "By using linkage criteria like single, complete, or average"
+      },
+      {
+        "question": "Scenario: You need a fast clustering method for a large dataset with a known number of groups. Which should you choose?",
+        "options": [
+          "K-means clustering",
+          "Hierarchical clustering",
+          "K-nearest neighbors",
+          "Logistic regression"
+        ],
+        "correctAnswer": "K-means clustering"
+      },
+      {
+        "question": "What is a disadvantage of hierarchical clustering compared to K-means?",
+        "options": [
+          "It is slower for large datasets",
+          "It requires specifying the number of clusters",
+          "It assumes spherical clusters",
+          "It cannot handle categorical data"
+        ],
+        "correctAnswer": "It is slower for large datasets"
+      },
+      {
+        "question": "Why is feature scaling important for K-means clustering?",
+        "options": [
+          "It ensures distances are calculated fairly across features",
+          "It reduces the height of the dendrogram",
+          "It improves linkage criteria",
+          "It simplifies centroid initialization"
+        ],
+        "correctAnswer": "It ensures distances are calculated fairly across features"
+      },
+      {
+        "question": "Scenario: A silhouette score close to 1 indicates what about the clustering?",
+        "options": [
+          "Well-separated and cohesive clusters",
+          "Poorly defined clusters",
+          "Overlapping clusters",
+          "Random assignments"
+        ],
+        "correctAnswer": "Well-separated and cohesive clusters"
+      },
+      {
+        "question": "How can you analyze the optimal number of clusters in hierarchical clustering?",
+        "options": [
+          "By cutting the dendrogram at a specific height",
+          "By calculating the elbow point",
+          "By minimizing the silhouette score",
+          "By averaging centroid distances"
+        ],
+        "correctAnswer": "By cutting the dendrogram at a specific height"
+      }
+    ]
+  }

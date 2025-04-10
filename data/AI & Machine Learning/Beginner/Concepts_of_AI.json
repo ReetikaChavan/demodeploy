@@ -1,0 +1,125 @@
+{
+  "category": "AI & Machine Learning",
+    "title": "Concepts of AI",
+    "level": "Beginner",
+    "Difficulty": "Easy",
+    "timer": "10 minutes",
+    "skill": "40%",
+    "knowledge": "30%",
+    "application": "55%",
+    "why":"The Concepts of AI exam introduces foundational artificial intelligence principles through 11 beginner-friendly questions covering core concepts like supervised vs. unsupervised learning, real-world AI applications (voice assistants, recommender systems), and key terminology - providing a clear understanding of how machines simulate human intelligence through labeled data analysis, pattern recognition, and predictive modeling in everyday technologies.",
+    "questions": [
+      {
+        "question": "What does AI stand for?",
+        "options": [
+          "Artificial Intelligence",
+          "Automated Integration",
+          "Advanced Informatics",
+          "Algorithmic Intelligence"
+        ],
+        "correctAnswer": "Artificial Intelligence"
+      },
+      {
+        "question": "Which of the following best defines Artificial Intelligence?",
+        "options": [
+          "The ability of machines to mimic human intelligence",
+          "A programming language for robotics",
+          "A type of hardware for data storage",
+          "A method for encrypting data"
+        ],
+        "correctAnswer": "The ability of machines to mimic human intelligence"
+      },
+      {
+        "question": "What is a key characteristic of supervised learning?",
+        "options": [
+          "It uses labeled data",
+          "It works without any data",
+          "It clusters data without labels",
+          "It predicts random outcomes"
+        ],
+        "correctAnswer": "It uses labeled data"
+      },
+      {
+        "question": "True or False: Unsupervised learning requires labeled data to train models.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "false"
+      },
+      {
+        "question": "Which of the following is an example of a supervised learning task?",
+        "options": [
+          "Email spam detection",
+          "Customer segmentation",
+          "Data clustering",
+          "Pattern discovery"
+        ],
+        "correctAnswer": "Email spam detection"
+      },
+      {
+        "question": "Which type of learning is used to group similar items without prior examples?",
+        "options": [
+          "Unsupervised learning",
+          "Supervised learning",
+          "Reinforcement learning",
+          "Deep learning"
+        ],
+        "correctAnswer": "Unsupervised learning"
+      },
+      {
+        "question": "What is a common application of AI in daily life?",
+        "options": [
+          "Voice assistants like Siri",
+          "Manual data entry",
+          "Building physical robots",
+          "Writing code without tools"
+        ],
+        "correctAnswer": "Voice assistants like Siri"
+      },
+      {
+        "question": "True or False: Supervised learning predicts outcomes based on input-output pairs.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "true"
+      },
+      {
+        "question": "Which of these is an example of an unsupervised learning application?",
+        "options": [
+          "Recommender systems",
+          "Image classification",
+          "Speech recognition",
+          "Fraud detection"
+        ],
+        "correctAnswer": "Recommender systems"
+      },
+      {
+        "question": "What is the main goal of AI?",
+        "options": [
+          "To simulate human intelligence",
+          "To replace all human jobs",
+          "To store large datasets",
+          "To design hardware"
+        ],
+        "correctAnswer": "To simulate human intelligence"
+      },
+      {
+        "question": "True or False: AI can only be used in robotics.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "false"
+      }
+    ]
+}
+    
+  

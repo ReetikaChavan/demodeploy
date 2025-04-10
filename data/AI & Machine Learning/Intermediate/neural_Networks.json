@@ -1,0 +1,154 @@
+{
+  "category": "AI & Machine Learning",
+    "title": "Introduction to Neural Networks",
+    "level": "Intermediate",
+    "Difficulty": "Hard",
+    "timer": "20 minutes",
+    "skill": "50%",
+    "knowledge": "40%",
+    "application": "60%",
+    "why":"This Introduction to Neural Networks exam is designed to assess your foundational understanding of neural network components and training processes. It focuses on evaluating your grasp of perceptrons, activation functions, and backpropagation, and your ability to apply these concepts in practical scenarios. Taking this exam helps you solidify your knowledge of how neural networks learn and make predictions, which is crucial for building and understanding complex machine learning models.",
+    "questions": [
+      {
+        "question": "Scenario: You need a simple model to classify data as positive or negative based on a linear boundary. Which neural network component should you use?",
+        "options": [
+          "Perceptron",
+          "Activation function",
+          "Backpropagation",
+          "Multi-layer network"
+        ],
+        "correctAnswer": "Perceptron"
+      },
+      {
+        "question": "What is the primary function of a perceptron?",
+        "options": [
+          "To classify inputs based on a weighted sum and threshold",
+          "To perform regression on continuous data",
+          "To cluster similar data points",
+          "To optimize activation functions"
+        ],
+        "correctAnswer": "To classify inputs based on a weighted sum and threshold"
+      },
+      {
+        "question": "How does a perceptron make a decision?",
+        "options": [
+          "By applying a step function to the weighted sum of inputs",
+          "By minimizing the cost function directly",
+          "By propagating errors backward",
+          "By calculating distances between points"
+        ],
+        "correctAnswer": "By applying a step function to the weighted sum of inputs"
+      },
+      {
+        "question": "True or False: A perceptron can only solve linearly separable problems.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "true"
+      },
+      {
+        "question": "Scenario: A model fails to classify data with a non-linear boundary using a perceptron. What is the limitation?",
+        "options": [
+          "Perceptrons cannot handle non-linearly separable data",
+          "The activation function is too complex",
+          "Backpropagation is not applied",
+          "The weights are fixed"
+        ],
+        "correctAnswer": "Perceptrons cannot handle non-linearly separable data"
+      },
+      {
+        "question": "What is the purpose of an activation function in a neural network?",
+        "options": [
+          "To introduce non-linearity and map inputs to outputs",
+          "To calculate the error in predictions",
+          "To initialize weights",
+          "To propagate errors backward"
+        ],
+        "correctAnswer": "To introduce non-linearity and map inputs to outputs"
+      },
+      {
+        "question": "Which of the following is a common activation function?",
+        "options": [
+          "Sigmoid",
+          "Mean squared error",
+          "Gini impurity",
+          "Euclidean distance"
+        ],
+        "correctAnswer": "Sigmoid"
+      },
+      {
+        "question": "True or False: The sigmoid activation function outputs values between 0 and 1.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "true"
+      },
+      {
+        "question": "Scenario: You need an activation function to model probabilities in a binary classification task. Which should you choose?",
+        "options": [
+          "Sigmoid",
+          "ReLU",
+          "Tanh",
+          "Step function"
+        ],
+        "correctAnswer": "Sigmoid"
+      },
+      {
+        "question": "What is a key advantage of the ReLU activation function over sigmoid?",
+        "options": [
+          "It avoids the vanishing gradient problem",
+          "It outputs probabilities directly",
+          "It simplifies backpropagation",
+          "It works only with perceptrons"
+        ],
+        "correctAnswer": "It avoids the vanishing gradient problem"
+      },
+      {
+        "question": "Why might the sigmoid function cause issues during training?",
+        "options": [
+          "Its gradients can become very small, slowing learning",
+          "It outputs negative values",
+          "It cannot handle non-linear data",
+          "It increases computational complexity"
+        ],
+        "correctAnswer": "Its gradients can become very small, slowing learning"
+      },
+      {
+        "question": "True or False: Backpropagation updates weights by propagating errors backward through the network.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "true"
+      },
+      {
+        "question": "Scenario: A neural network’s predictions are inaccurate. Which process can adjust the model?",
+        "options": [
+          "Backpropagation",
+          "Perceptron training",
+          "Activation function selection",
+          "Data clustering"
+        ],
+        "correctAnswer": "Backpropagation"
+      },
+      {
+        "question": "What is the role of the gradient in backpropagation?",
+        "options": [
+          "It indicates the direction and magnitude of weight updates",
+          "It calculates the final output",
+          "It initializes the perceptron",
+          "It measures distances between neurons"
+        ],
+        "correctAnswer": "It indicates the direction and magnitude of weight updates"
+      }
+    ]
+}
+  

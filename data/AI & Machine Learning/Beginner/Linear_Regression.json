@@ -1,0 +1,163 @@
+{
+  "category": "AI & Machine Learning",
+    "title": "Linear Regression",
+    "level": "Beginner",
+    "Difficulty": "Medium",
+    "timer": "10 minutes",
+    "skill": "20%",
+    "knowledge": "40%",
+    "application": "70%",
+    "why":"The Linear Regression exam introduces fundamental machine learning concepts through 15 practical questions, covering the algorithm's core components (slope, intercept), optimization techniques (gradient descent, cost functions), and real-world applications (price prediction) - providing beginners with a solid foundation in this essential predictive modeling technique while emphasizing practical implementation over theoretical complexity.",
+    "questions": [
+      {
+        "question": "What is the primary goal of linear regression?",
+        "options": [
+          "To predict a continuous outcome",
+          "To classify data into categories",
+          "To cluster similar data points",
+          "To reduce data dimensions"
+        ],
+        "correctAnswer": "To predict a continuous outcome"
+      },
+      {
+        "question": "Which of the following represents the equation of a simple linear regression model?",
+        "options": [
+          "y = mx + b",
+          "y = x^2 + b",
+          "y = log(x) + m",
+          "y = mx / b"
+        ],
+        "correctAnswer": "y = mx + b"
+      },
+      {
+        "question": "In the linear regression equation y = mx + b, what does 'm' represent?",
+        "options": [
+          "Slope",
+          "Intercept",
+          "Error term",
+          "Predicted value"
+        ],
+        "correctAnswer": "Slope"
+      },
+      {
+        "question": "True or False: Linear regression assumes a linear relationship between input and output variables.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "true"
+      },
+      {
+        "question": "What is the purpose of the cost function in linear regression?",
+        "options": [
+          "To measure the error between predicted and actual values",
+          "To classify data points",
+          "To increase model complexity",
+          "To reduce the number of features"
+        ],
+        "correctAnswer": "To measure the error between predicted and actual values"
+      },
+      {
+        "question": "Which of the following is a common cost function for linear regression?",
+        "options": [
+          "Mean Squared Error (MSE)",
+          "Mean Absolute Error (MAE)",
+          "Cross-Entropy Loss",
+          "Hinge Loss"
+        ],
+        "correctAnswer": "Mean Squared Error (MSE)"
+      },
+      {
+        "question": "What does gradient descent do in linear regression?",
+        "options": [
+          "Minimizes the cost function",
+          "Increases the cost function",
+          "Predicts the output directly",
+          "Classifies the data"
+        ],
+        "correctAnswer": "Minimizes the cost function"
+      },
+      {
+        "question": "True or False: Gradient descent updates model parameters iteratively.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "true"
+      },
+      {
+        "question": "In gradient descent, what is the role of the learning rate?",
+        "options": [
+          "It controls the step size of parameter updates",
+          "It calculates the final prediction",
+          "It measures the error",
+          "It defines the number of features"
+        ],
+        "correctAnswer": "It controls the step size of parameter updates"
+      },
+      {
+        "question": "What happens if the learning rate in gradient descent is too large?",
+        "options": [
+          "The model may fail to converge",
+          "The model converges too quickly",
+          "The cost function becomes zero",
+          "The predictions become more accurate"
+        ],
+        "correctAnswer": "The model may fail to converge"
+      },
+      {
+        "question": "True or False: The cost function is always a positive value.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "true"
+      },
+      {
+        "question": "Scenario: You need to predict house prices based on square footage. Which algorithm should you use?",
+        "options": [
+          "Linear regression",
+          "K-means clustering",
+          "Decision trees",
+          "Support vector machines"
+        ],
+        "correctAnswer": "Linear regression"
+      },
+      {
+        "question": "Which component of linear regression adjusts the model to fit the data?",
+        "options": [
+          "Gradient descent",
+          "Cost function",
+          "Input features",
+          "Output variable"
+        ],
+        "correctAnswer": "Gradient descent"
+      },
+      {
+        "question": "What does the 'b' in the linear regression equation y = mx + b represent?",
+        "options": [
+          "Intercept",
+          "Slope",
+          "Error",
+          "Learning rate"
+        ],
+        "correctAnswer": "Intercept"
+      },
+      {
+        "question": "Scenario: A model’s predictions are far from the actual values. What should you adjust to improve it?",
+        "options": [
+          "Parameters using gradient descent",
+          "The input data only",
+          "The output variable",
+          "The number of features"
+        ],
+        "correctAnswer": "Parameters using gradient descent"
+      }
+    ]
+  }

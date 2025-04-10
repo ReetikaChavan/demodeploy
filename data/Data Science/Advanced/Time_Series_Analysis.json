@@ -1,0 +1,314 @@
+{
+  "category": "Data Science",
+    "title": "Time Series Analysis",
+    "level": "Advanced",
+    "Difficulty": "Hard",
+    "timer": "30 minutes",
+    "skill": "30%",
+    "knowledge": "50%",
+    "application": "20%",
+    "why": "This Time Series Analysis assessment challenges learners to master forecasting models like ARIMA, understand key concepts like stationarity, seasonality, and autocorrelation, and apply anomaly detection strategies. It builds deep analytical insight into temporal data, supporting roles that involve financial modeling, trend forecasting, and decision-making based on time-dependent patterns.",
+
+    "questions": [
+      {
+        "question": "Scenario: You predict stock prices. Evaluate: Is ARIMA suitable if data has a trend?",
+        "options": [
+          "Yes, if differenced to stationarity",
+          "No, never",
+          "Yes, without changes",
+          "Only for seasonality"
+        ],
+        "correctAnswer": "Yes, if differenced to stationarity"
+      },
+      {
+        "question": "What does stationarity mean?",
+        "options": [
+          "Constant mean and variance over time",
+          "Random fluctuations",
+          "Increasing trend",
+          "Seasonal peaks"
+        ],
+        "correctAnswer": "Constant mean and variance over time"
+      },
+      {
+        "question": "Solve: A series is 1, 2, 3, 4. What’s the first difference?",
+        "options": [
+          "1, 1, 1",
+          "2, 3, 4",
+          "0, 1, 2",
+          "1, 2, 3"
+        ],
+        "correctAnswer": "1, 1, 1"
+      },
+      {
+        "question": "What does autocorrelation measure?",
+        "options": [
+          "Correlation of a series with its past values",
+          "Trend strength",
+          "Seasonal period",
+          "Random noise"
+        ],
+        "correctAnswer": "Correlation of a series with its past values"
+      },
+      {
+        "question": "Scenario: Sales data has yearly peaks. What’s this called?",
+        "options": [
+          "Seasonality",
+          "Trend",
+          "Noise",
+          "Stationarity"
+        ],
+        "correctAnswer": "Seasonality"
+      },
+      {
+        "question": "Evaluate: Why might ARIMA fail for non-stationary data?",
+        "options": [
+          "It assumes constant statistics",
+          "It ignores seasonality",
+          "It’s too simple",
+          "It removes trends"
+        ],
+        "correctAnswer": "It assumes constant statistics"
+      },
+      {
+        "question": "Create: What’s a step in forecasting with ARIMA?",
+        "options": [
+          "Fit model to differenced data",
+          "Remove all data",
+          "Ignore lags",
+          "Use raw data"
+        ],
+        "correctAnswer": "Fit model to differenced data"
+      },
+      {
+        "question": "What does trend decomposition separate?",
+        "options": [
+          "Trend, seasonality, residual",
+          "Mean, variance",
+          "Lags, noise",
+          "Data, clusters"
+        ],
+        "correctAnswer": "Trend, seasonality, residual"
+      },
+      {
+        "question": "Solve: For ARIMA(1,1,1), what does '1,1,1' represent?",
+        "options": [
+          "1 AR, 1 diff, 1 MA",
+          "1 trend, 1 season, 1 noise",
+          "1 lag, 1 mean, 1 var",
+          "1 cluster, 1 split, 1 error"
+        ],
+        "correctAnswer": "1 AR, 1 diff, 1 MA"
+      },
+      {
+        "question": "Scenario: A series has a spike 3x the mean. What’s this likely?",
+        "options": [
+          "Anomaly",
+          "Seasonality",
+          "Trend",
+          "Stationarity"
+        ],
+        "correctAnswer": "Anomaly"
+      },
+      {
+        "question": "What’s a test for stationarity?",
+        "options": [
+          "ADF (Augmented Dickey-Fuller)",
+          "K-means",
+          "Grid search",
+          "Cross-validation"
+        ],
+        "correctAnswer": "ADF (Augmented Dickey-Fuller)"
+      },
+      {
+        "question": "Evaluate: Why is seasonality critical in forecasting?",
+        "options": [
+          "It captures recurring patterns",
+          "It removes trends",
+          "It simplifies data",
+          "It increases noise"
+        ],
+        "correctAnswer": "It captures recurring patterns"
+      },
+      {
+        "question": "Create: Design a step for anomaly detection.",
+        "options": [
+          "Set threshold at 3 std devs",
+          "Remove all data",
+          "Average all points",
+          "Ignore outliers"
+        ],
+        "correctAnswer": "Set threshold at 3 std devs"
+      },
+      {
+        "question": "What does ARIMA stand for?",
+        "options": [
+          "AutoRegressive Integrated Moving Average",
+          "Automatic Random Integrated Model",
+          "Average Recurrent Internal Model",
+          "Adaptive Regression Integrated Mean"
+        ],
+        "correctAnswer": "AutoRegressive Integrated Moving Average"
+      },
+      {
+        "question": "Scenario: Stock prices increase linearly. How do you make it stationary?",
+        "options": [
+          "Take first difference",
+          "Add noise",
+          "Double values",
+          "Remove seasonality"
+        ],
+        "correctAnswer": "Take first difference"
+      },
+      {
+        "question": "Solve: A series 2, 4, 6 has autocorrelation at lag 1. What’s a possible value (simplified)?",
+        "options": [
+          "Positive",
+          "Negative",
+          "Zero",
+          "Undefined"
+        ],
+        "correctAnswer": "Positive"
+      },
+      {
+        "question": "What’s a forecasting goal?",
+        "options": [
+          "Predict future values",
+          "Remove past data",
+          "Cluster points",
+          "Scale features"
+        ],
+        "correctAnswer": "Predict future values"
+      },
+      {
+        "question": "Evaluate: Why might ARIMA not suit chaotic data?",
+        "options": [
+          "It assumes linear dependencies",
+          "It’s too complex",
+          "It ignores noise",
+          "It removes trends"
+        ],
+        "correctAnswer": "It assumes linear dependencies"
+      },
+      {
+        "question": "Create: What’s a step in sales forecasting?",
+        "options": [
+          "Decompose seasonality and trend",
+          "Randomize data",
+          "Remove all lags",
+          "Ignore patterns"
+        ],
+        "correctAnswer": "Decompose seasonality and trend"
+      },
+      {
+        "question": "What does a high autocorrelation at lag 1 suggest?",
+        "options": [
+          "Strong short-term dependency",
+          "No dependency",
+          "Long-term trend",
+          "Random noise"
+        ],
+        "correctAnswer": "Strong short-term dependency"
+      },
+      {
+        "question": "Scenario: A series jumps from 10 to 100. What’s the best action?",
+        "options": [
+          "Flag as anomaly",
+          "Ignore it",
+          "Double it",
+          "Average it"
+        ],
+        "correctAnswer": "Flag as anomaly"
+      },
+      {
+        "question": "Solve: A stationary series has mean 5, variance 2. After differencing again, what’s the mean?",
+        "options": [
+          "0",
+          "5",
+          "2",
+          "10"
+        ],
+        "correctAnswer": "0"
+      },
+      {
+        "question": "What’s a limitation of ARIMA?",
+        "options": [
+          "Requires stationarity",
+          "Always accurate",
+          "No tuning needed",
+          "Handles all data"
+        ],
+        "correctAnswer": "Requires stationarity"
+      },
+      {
+        "question": "Evaluate: Why decompose a time series?",
+        "options": [
+          "To understand components separately",
+          "To remove all data",
+          "To simplify noise",
+          "To increase variance"
+        ],
+        "correctAnswer": "To understand components separately"
+      },
+      {
+        "question": "Create: Design a forecasting step for monthly data.",
+        "options": [
+          "Model 12-month seasonality",
+          "Ignore cycles",
+          "Remove trends",
+          "Double data"
+        ],
+        "correctAnswer": "Model 12-month seasonality"
+      },
+      {
+        "question": "What does an ACF plot show?",
+        "options": [
+          "Autocorrelation at different lags",
+          "Trend strength",
+          "Cluster size",
+          "Feature weights"
+        ],
+        "correctAnswer": "Autocorrelation at different lags"
+      },
+      {
+        "question": "Scenario: Sales drop suddenly. What’s this likely?",
+        "options": [
+          "Anomaly",
+          "Seasonality",
+          "Trend",
+          "Stationarity"
+        ],
+        "correctAnswer": "Anomaly"
+      },
+      {
+        "question": "Solve: A series 10, 20, 30 is differenced. What’s the result?",
+        "options": [
+          "10, 10",
+          "20, 30",
+          "0, 10",
+          "10, 20"
+        ],
+        "correctAnswer": "10, 10"
+      },
+      {
+        "question": "Evaluate: Why is stationarity key for ARIMA?",
+        "options": [
+          "It ensures stable predictions",
+          "It removes noise",
+          "It doubles accuracy",
+          "It ignores trends"
+        ],
+        "correctAnswer": "It ensures stable predictions"
+      },
+      {
+        "question": "Create: What’s a step to test ARIMA fit?",
+        "options": [
+          "Check residual randomness",
+          "Remove all lags",
+          "Double data",
+          "Ignore errors"
+        ],
+        "correctAnswer": "Check residual randomness"
+      }
+    ]
+  }

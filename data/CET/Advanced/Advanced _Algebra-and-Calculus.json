@@ -1,0 +1,313 @@
+{
+  "category": "CET",
+    "title": "Advanced Algebra and Calculus",
+    "level": "Advanced",
+    "Difficulty": "Easy",
+    "timer": "30 minutes",
+    "skill": "50%",
+    "knowledge": "60%",
+    "application": "80%",
+    "why":"This exam assesses your proficiency in advanced algebraic and calculus concepts. It evaluates your skills in solving complex equations, understanding matrix operations, applying calculus to optimization and integration, and analyzing limits and series. Success in this exam demonstrates your mastery of fundamental mathematical tools and their applications.",
+    "questions": [
+      {
+        "question": "Scenario: Solve 2x + y = 5, x - y = 1. Evaluate: Matrix method vs. substitution?",
+        "options": [
+          "Matrix for scalability",
+          "Substitution for simplicity",
+          "Both are equal",
+          "Neither works"
+        ],
+        "correctAnswer": "Substitution for simplicity"
+      },
+      {
+        "question": "What’s the determinant of [[2, 3], [4, 5]]?",
+        "options": [
+          "-2",
+          "10",
+          "14",
+          "-14"
+        ],
+        "correctAnswer": "-2"
+      },
+      {
+        "question": "Solve: Sum of first 5 terms of arithmetic series 3, 7, 11, …?",
+        "options": [
+          "55",
+          "35",
+          "45",
+          "65"
+        ],
+        "correctAnswer": "55"
+      },
+      {
+        "question": "What’s the limit of (x² - 1)/(x - 1) as x → 1?",
+        "options": [
+          "2",
+          "1",
+          "0",
+          "Undefined"
+        ],
+        "correctAnswer": "2"
+      },
+      {
+        "question": "Scenario: Find max of y = -x² + 4x. What’s the vertex?",
+        "options": [
+          "(2, 4)",
+          "(4, 2)",
+          "(1, 3)",
+          "(0, 0)"
+        ],
+        "correctAnswer": "(2, 4)"
+      },
+      {
+        "question": "Evaluate: Why use matrices for systems with >2 variables?",
+        "options": [
+          "Efficient computation",
+          "Simpler than substitution",
+          "Always accurate",
+          "Avoids calculus"
+        ],
+        "correctAnswer": "Efficient computation"
+      },
+      {
+        "question": "Create: Formula for sum of n terms of 2, 5, 8, …?",
+        "options": [
+          "n(3n - 1)/2",
+          "n(n + 1)/2",
+          "3n",
+          "n²"
+        ],
+        "correctAnswer": "n(3n - 1)/2"
+      },
+      {
+        "question": "What’s the derivative of x³?",
+        "options": [
+          "3x²",
+          "x²",
+          "3x",
+          "x⁴/4"
+        ],
+        "correctAnswer": "3x²"
+      },
+      {
+        "question": "Solve: Integrate 2x dx from 0 to 3.",
+        "options": [
+          "9",
+          "6",
+          "3",
+          "12"
+        ],
+        "correctAnswer": "9"
+      },
+      {
+        "question": "Scenario: A matrix has det = 0. What’s true?",
+        "options": [
+          "Singular",
+          "Invertible",
+          "Symmetric",
+          "Zero matrix"
+        ],
+        "correctAnswer": "Singular"
+      },
+      {
+        "question": "What’s the 10th term of 1, 4, 7, …?",
+        "options": [
+          "28",
+          "31",
+          "25",
+          "34"
+        ],
+        "correctAnswer": "28"
+      },
+      {
+        "question": "Evaluate: When is substitution better than matrices?",
+        "options": [
+          "Small, simple systems",
+          "Large systems",
+          "Non-linear equations",
+          "Always"
+        ],
+        "correctAnswer": "Small, simple systems"
+      },
+      {
+        "question": "Create: Derivative rule for f(x)g(x)?",
+        "options": [
+          "f’g + fg’",
+          "f’g’",
+          "fg’ - f’g",
+          "f/g"
+        ],
+        "correctAnswer": "f’g + fg’"
+      },
+      {
+        "question": "What’s the integral of 1/x dx?",
+        "options": [
+          "ln|x| + C",
+          "x²/2 + C",
+          "1/x² + C",
+          "x + C"
+        ],
+        "correctAnswer": "ln|x| + C"
+      },
+      {
+        "question": "Scenario: Minimize cost C = 2x + 3/x. What’s x?",
+        "options": [
+          "√1.5",
+          "1",
+          "2",
+          "3"
+        ],
+        "correctAnswer": "√1.5"
+      },
+      {
+        "question": "Solve: Limit of (sin x)/x as x → 0?",
+        "options": [
+          "1",
+          "0",
+          "∞",
+          "Undefined"
+        ],
+        "correctAnswer": "1"
+      },
+      {
+        "question": "What’s the trace of [[1, 2], [3, 4]]?",
+        "options": [
+          "5",
+          "6",
+          "4",
+          "7"
+        ],
+        "correctAnswer": "5"
+      },
+      {
+        "question": "Evaluate: Why use calculus for optimization?",
+        "options": [
+          "Finds extrema",
+          "Solves matrices",
+          "Simplifies algebra",
+          "Avoids limits"
+        ],
+        "correctAnswer": "Finds extrema"
+      },
+      {
+        "question": "Create: Sum formula for geometric series 2, 6, 18, … (n terms)?",
+        "options": [
+          "2(3ⁿ - 1)/2",
+          "3ⁿ",
+          "2ⁿ",
+          "n(3n - 1)"
+        ],
+        "correctAnswer": "2(3ⁿ - 1)/2"
+      },
+      {
+        "question": "What’s the derivative of e^x?",
+        "options": [
+          "e^x",
+          "x e^x",
+          "e^x / x",
+          "1"
+        ],
+        "correctAnswer": "e^x"
+      },
+      {
+        "question": "Scenario: Solve x + 2y = 3, 2x + 4y = 6. What’s true?",
+        "options": [
+          "Infinite solutions",
+          "No solution",
+          "Unique solution",
+          "x = 1"
+        ],
+        "correctAnswer": "Infinite solutions"
+      },
+      {
+        "question": "Solve: Integrate 3x² dx from 1 to 2.",
+        "options": [
+          "7",
+          "8",
+          "6",
+          "9"
+        ],
+        "correctAnswer": "7"
+      },
+      {
+        "question": "What’s the sum of first n odd numbers?",
+        "options": [
+          "n²",
+          "n(n + 1)/2",
+          "2n",
+          "n"
+        ],
+        "correctAnswer": "n²"
+      },
+      {
+        "question": "Evaluate: Why might limits be undefined?",
+        "options": [
+          "Division by zero",
+          "Always finite",
+          "No variables",
+          "Constant terms"
+        ],
+        "correctAnswer": "Division by zero"
+      },
+      {
+        "question": "Create: Formula for nth term of 5, 8, 11, …?",
+        "options": [
+          "3n + 2",
+          "3n - 2",
+          "2n + 3",
+          "n + 4"
+        ],
+        "correctAnswer": "3n + 2"
+      },
+      {
+        "question": "What’s the derivative of ln(x)?",
+        "options": [
+          "1/x",
+          "x",
+          "ln(x) + 1",
+          "e^x"
+        ],
+        "correctAnswer": "1/x"
+      },
+      {
+        "question": "Scenario: Max area of rectangle with perimeter 20. What’s the length?",
+        "options": [
+          "5",
+          "10",
+          "4",
+          "6"
+        ],
+        "correctAnswer": "5"
+      },
+      {
+        "question": "Solve: Determinant of [[1, 0], [0, 1]]?",
+        "options": [
+          "1",
+          "0",
+          "-1",
+          "2"
+        ],
+        "correctAnswer": "1"
+      },
+      {
+        "question": "Evaluate: Why use integrals for area?",
+        "options": [
+          "Sums infinitesimal parts",
+          "Finds limits",
+          "Solves equations",
+          "Avoids derivatives"
+        ],
+        "correctAnswer": "Sums infinitesimal parts"
+      },
+      {
+        "question": "Create: Derivative of x² sin(x)?",
+        "options": [
+          "2x sin(x) + x² cos(x)",
+          "x² sin(x)",
+          "2x cos(x)",
+          "sin(x) + x²"
+        ],
+        "correctAnswer": "2x sin(x) + x² cos(x)"
+      }
+    ]
+  }

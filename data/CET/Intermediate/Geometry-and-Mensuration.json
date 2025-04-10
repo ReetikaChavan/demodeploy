@@ -1,0 +1,213 @@
+{
+  "category": "CET",
+    "title": "Geometry and Mensuration",
+    "level": "Intermediate",
+    "Difficulty": "Easy",
+    "timer": "20 minutes",
+    "skill": "45%",
+    "knowledge": "70%",
+    "application": "35%",
+    "why":"This exam focuses on geometric principles and mensuration calculations. It tests your ability to apply the Pythagorean theorem, calculate areas and volumes of basic shapes, understand coordinate geometry concepts, and analyze the effects of dimensional changes on geometric figures. Success in this exam demonstrates a solid understanding of geometric concepts and their application in practical scenarios.",
+    "questions": [
+      {
+        "question": "Scenario: A right triangle has legs 3 and 4. Apply the Pythagorean theorem to find the hypotenuse.",
+        "options": [
+          "5",
+          "6",
+          "7",
+          "8"
+        ],
+        "correctAnswer": "5"
+      },
+      {
+        "question": "What is the area of a circle with radius 7? (Use π = 22/7)",
+        "options": [
+          "154",
+          "44",
+          "77",
+          "22"
+        ],
+        "correctAnswer": "154"
+      },
+      {
+        "question": "Solve: A rectangle has length 5 and width 3. What’s its perimeter?",
+        "options": [
+          "16",
+          "15",
+          "18",
+          "20"
+        ],
+        "correctAnswer": "16"
+      },
+      {
+        "question": "Analyze: If a rectangle’s dimensions are doubled, how does its area change?",
+        "options": [
+          "Increases 4 times",
+          "Doubles",
+          "Triples",
+          "Stays the same"
+        ],
+        "correctAnswer": "Increases 4 times"
+      },
+      {
+        "question": "What’s the volume of a cube with side 4?",
+        "options": [
+          "64",
+          "16",
+          "48",
+          "32"
+        ],
+        "correctAnswer": "64"
+      },
+      {
+        "question": "Scenario: A triangle has base 6 and height 8. What’s its area?",
+        "options": [
+          "24",
+          "48",
+          "12",
+          "36"
+        ],
+        "correctAnswer": "24"
+      },
+      {
+        "question": "Solve: Distance between points (1, 2) and (4, 6) in coordinate geometry?",
+        "options": [
+          "5",
+          "3",
+          "4",
+          "6"
+        ],
+        "correctAnswer": "5"
+      },
+      {
+        "question": "What’s the circumference of a circle with diameter 10? (Use π = 3.14)",
+        "options": [
+          "31.4",
+          "15.7",
+          "62.8",
+          "10"
+        ],
+        "correctAnswer": "31.4"
+      },
+      {
+        "question": "Analyze: Why does a square have a larger area than a rectangle with the same perimeter?",
+        "options": [
+          "Equal sides maximize area",
+          "It has more sides",
+          "Perimeter is smaller",
+          "It’s a circle"
+        ],
+        "correctAnswer": "Equal sides maximize area"
+      },
+      {
+        "question": "Solve: Surface area of a cube with side 3?",
+        "options": [
+          "54",
+          "27",
+          "18",
+          "36"
+        ],
+        "correctAnswer": "54"
+      },
+      {
+        "question": "Scenario: A quadrilateral has sides 4, 5, 4, 5. What’s its perimeter?",
+        "options": [
+          "18",
+          "20",
+          "16",
+          "22"
+        ],
+        "correctAnswer": "18"
+      },
+      {
+        "question": "What’s the area of a triangle with sides 3, 4, 5? (Hint: It’s right-angled)",
+        "options": [
+          "6",
+          "12",
+          "10",
+          "15"
+        ],
+        "correctAnswer": "6"
+      },
+      {
+        "question": "Solve: Volume of a cylinder with radius 2, height 5? (Use π = 3.14)",
+        "options": [
+          "62.8",
+          "31.4",
+          "20",
+          "125.6"
+        ],
+        "correctAnswer": "62.8"
+      },
+      {
+        "question": "Analyze: If a circle’s radius doubles, how does its circumference change?",
+        "options": [
+          "Doubles",
+          "Quadruples",
+          "Triples",
+          "Halves"
+        ],
+        "correctAnswer": "Doubles"
+      },
+      {
+        "question": "What’s the property of an equilateral triangle?",
+        "options": [
+          "All sides equal",
+          "Two sides equal",
+          "Right angle",
+          "No equal sides"
+        ],
+        "correctAnswer": "All sides equal"
+      },
+      {
+        "question": "Solve: Midpoint of (2, 3) and (6, 7)?",
+        "options": [
+          "(4, 5)",
+          "(2, 4)",
+          "(6, 3)",
+          "(8, 10)"
+        ],
+        "correctAnswer": "(4, 5)"
+      },
+      {
+        "question": "Scenario: A room is 4m long, 3m wide, 2m high. What’s its volume?",
+        "options": [
+          "24 m³",
+          "12 m³",
+          "18 m³",
+          "30 m³"
+        ],
+        "correctAnswer": "24 m³"
+      },
+      {
+        "question": "What’s the surface area of a sphere with radius 3? (Use π = 3.14)",
+        "options": [
+          "113.04",
+          "56.52",
+          "36",
+          "84.78"
+        ],
+        "correctAnswer": "113.04"
+      },
+      {
+        "question": "Analyze: Why use coordinate geometry?",
+        "options": [
+          "To find distances and midpoints",
+          "To measure angles",
+          "To calculate volume",
+          "To draw shapes"
+        ],
+        "correctAnswer": "To find distances and midpoints"
+      },
+      {
+        "question": "Solve: Perimeter of a square with area 16?",
+        "options": [
+          "16",
+          "8",
+          "12",
+          "20"
+        ],
+        "correctAnswer": "16"
+      }
+    ]
+  }

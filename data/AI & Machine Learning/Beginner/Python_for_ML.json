@@ -1,0 +1,163 @@
+{
+  "category": "AI & Machine Learning",
+    "title": "Python for Machine Learning",
+    "level": "Beginner",
+    "Difficulty": "Hard",
+    "timer": "7 minutes",
+    "skill": "50%",
+    "knowledge": "40%",
+    "application": "60%",
+    "why":"The Python for Machine Learning exam tests foundational skills in essential Python libraries (NumPy, Pandas, Scikit-learn) through practical questions focused on data manipulation, model building, and numerical computing - equipping beginners with the core toolkit needed to implement basic machine learning workflows while emphasizing real-world application over theoretical complexity",
+    "questions": [
+      {
+        "question": "What is NumPy primarily used for in Python?",
+        "options": [
+          "Numerical computations and array operations",
+          "Data visualization",
+          "Web development",
+          "File management"
+        ],
+        "correctAnswer": "Numerical computations and array operations"
+      },
+      {
+        "question": "Which Python library is used for data manipulation and analysis?",
+        "options": [
+          "Pandas",
+          "NumPy",
+          "Scikit-learn",
+          "Matplotlib"
+        ],
+        "correctAnswer": "Pandas"
+      },
+      {
+        "question": "What does Scikit-learn provide for machine learning in Python?",
+        "options": [
+          "Tools for model building and evaluation",
+          "Array creation functions",
+          "Dataframe operations",
+          "Graph plotting utilities"
+        ],
+        "correctAnswer": "Tools for model building and evaluation"
+      },
+      {
+        "question": "True or False: NumPy arrays are faster than Python lists for numerical operations.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "true"
+      },
+      {
+        "question": "Which Pandas data structure is used to store tabular data?",
+        "options": [
+          "DataFrame",
+          "Series",
+          "Array",
+          "List"
+        ],
+        "correctAnswer": "DataFrame"
+      },
+      {
+        "question": "What is the purpose of the 'shape' attribute in NumPy?",
+        "options": [
+          "To return the dimensions of an array",
+          "To calculate the mean of an array",
+          "To reshape an array",
+          "To sort an array"
+        ],
+        "correctAnswer": "To return the dimensions of an array"
+      },
+      {
+        "question": "Which Scikit-learn function is used to split data into training and testing sets?",
+        "options": [
+          "train_test_split",
+          "split_data",
+          "divide_dataset",
+          "train_split"
+        ],
+        "correctAnswer": "train_test_split"
+      },
+      {
+        "question": "True or False: Pandas can read data from CSV files.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "true"
+      },
+      {
+        "question": "What is the output of 'np.array([1, 2, 3]).sum()' in NumPy?",
+        "options": [
+          "6",
+          "1",
+          "3",
+          "9"
+        ],
+        "correctAnswer": "6"
+      },
+      {
+        "question": "Which Pandas method is used to display the first few rows of a DataFrame?",
+        "options": [
+          "head()",
+          "tail()",
+          "info()",
+          "describe()"
+        ],
+        "correctAnswer": "head()"
+      },
+      {
+        "question": "What is the purpose of Scikit-learn’s 'fit' method?",
+        "options": [
+          "To train a machine learning model",
+          "To split data into sets",
+          "To calculate statistical summaries",
+          "To visualize data"
+        ],
+        "correctAnswer": "To train a machine learning model"
+      },
+      {
+        "question": "True or False: NumPy can perform element-wise operations on arrays.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "true"
+      },
+      {
+        "question": "Scenario: You need to load a dataset from a CSV file for a machine learning task. Which library should you use?",
+        "options": [
+          "Pandas",
+          "NumPy",
+          "Scikit-learn",
+          "Matplotlib"
+        ],
+        "correctAnswer": "Pandas"
+      },
+      {
+        "question": "Which of the following is a valid way to create a NumPy array?",
+        "options": [
+          "np.array([1, 2, 3])",
+          "pd.array([1, 2, 3])",
+          "sk.array([1, 2, 3])",
+          "array([1, 2, 3])"
+        ],
+        "correctAnswer": "np.array([1, 2, 3])"
+      },
+      {
+        "question": "Scenario: You want to predict house prices using a dataset. Which library provides the tools to build the model?",
+        "options": [
+          "Scikit-learn",
+          "NumPy",
+          "Pandas",
+          "Python lists"
+        ],
+        "correctAnswer": "Scikit-learn"
+      }
+    ]
+  }

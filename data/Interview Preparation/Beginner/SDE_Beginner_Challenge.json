@@ -1,0 +1,265 @@
+{
+    "category": "Interview Preparation",
+    "title": "SDE Beginner Challenge",
+    "level": "Beginner",
+    "Difficulty": "Hard",
+    "timer": "25 minutes",
+    "total_marks": 100,
+    "marks_per_question": 2,
+    "skill": "30%",
+    "knowledge": "30%",
+    "application": "40%",
+    "why":"The SDE Beginner Challenge bridges the gap between basic interview knowledge and professional level preparation by testing 50 real-world scenarios from handling tough behavioral questions (Tell me about a failure) to mastering virtual interviews and salary negotiations. This intensive preparation transforms beginners into confident candidates who can articulate their skills, demonstrate cultural fit, and navigate complex interview dynamics with the poise of experienced professionals.",
+    "questions": [
+        {
+            "question": "What’s the best way to research a company?",
+            "options": ["Website and news", "Ask a friend", "Guess", "Ignore it"],
+            "correctAnswer": "Website and news"
+        },
+        {
+            "question": "How do you answer 'What’s your greatest achievement?'",
+            "options": ["Specific example", "Say 'I’m awesome'", "Nothing big", "Lie"],
+            "correctAnswer": "Specific example"
+        },
+        {
+            "question": "What’s a good response to 'Why should we hire you?'",
+            "options": ["Skills match the job", "I’m nice", "I need a job", "No reason"],
+            "correctAnswer": "Skills match the job"
+        },
+        {
+            "question": "What’s the hardest part of preparing for an interview?",
+            "options": ["Anticipating questions", "Waking up", "Eating", "Driving"],
+            "correctAnswer": "Anticipating questions"
+        },
+        {
+            "question": "How do you show confidence without arrogance?",
+            "options": ["Clear, humble answers", "Brag a lot", "Stay silent", "Laugh loudly"],
+            "correctAnswer": "Clear, humble answers"
+        },
+        {
+            "question": "What’s a good question to ask about company culture?",
+            "options": ["How do teams collaborate?", "Do you party?", "Is it boring?", "What’s the pay?"],
+            "correctAnswer": "How do teams collaborate?"
+        },
+        {
+            "question": "What’s a mistake when discussing salary?",
+            "options": ["Asking too early", "Asking politely", "Waiting for them", "Researching it"],
+            "correctAnswer": "Asking too early"
+        },
+        {
+            "question": "How do you handle 'Tell me about a failure'?",
+            "options": ["Lesson learned", "Blame others", "Deny it", "Cry"],
+            "correctAnswer": "Lesson learned"
+        },
+        {
+            "question": "What’s a key to virtual interviews?",
+            "options": ["Good lighting", "Loud background", "No camera", "Messy room"],
+            "correctAnswer": "Good lighting"
+        },
+        {
+            "question": "What’s a sign of poor preparation?",
+            "options": ["Not knowing the role", "Arriving early", "Asking questions", "Bringing a resume"],
+            "correctAnswer": "Not knowing the role"
+        },
+        {
+            "question": "How do you explain a career change?",
+            "options": ["Focus on growth", "Say you were bored", "Complain", "Avoid it"],
+            "correctAnswer": "Focus on growth"
+        },
+        {
+            "question": "What’s a good way to show adaptability?",
+            "options": ["Past example", "Say 'I’m flexible'", "No change", "Complain"],
+            "correctAnswer": "Past example"
+        },
+        {
+            "question": "Why is follow-up timing important?",
+            "options": ["Shows professionalism", "It’s random", "To annoy them", "It’s not"],
+            "correctAnswer": "Shows professionalism"
+        },
+        {
+            "question": "What’s a good response to 'What motivates you?'",
+            "options": ["Achieving goals", "Money only", "Nothing", "Vacation"],
+            "correctAnswer": "Achieving goals"
+        },
+        {
+            "question": "How do you prepare for behavioral questions?",
+            "options": ["Use STAR method", "Make it up", "Stay vague", "Ignore them"],
+            "correctAnswer": "Use STAR method"
+        },
+        {
+            "question": "What’s a red flag in an interview?",
+            "options": ["Being late", "Smiling", "Asking questions", "Dressing well"],
+            "correctAnswer": "Being late"
+        },
+        {
+            "question": "What’s a good way to show leadership?",
+            "options": ["Team success story", "Say 'I’m a leader'", "Boss others", "Stay quiet"],
+            "correctAnswer": "Team success story"
+        },
+        {
+            "question": "How do you handle unexpected questions?",
+            "options": ["Pause, think, answer", "Panic", "Change topic", "Say 'I don’t know'"],
+            "correctAnswer": "Pause, think, answer"
+        },
+        {
+            "question": "What’s a key to group interviews?",
+            "options": ["Balance speaking", "Talk over others", "Stay silent", "Leave early"],
+            "correctAnswer": "Balance speaking"
+        },
+        {
+            "question": "What’s a good closing statement?",
+            "options": ["I’m excited for this role", "I’ll take anything", "See you later", "I’m tired"],
+            "correctAnswer": "I’m excited for this role"
+        },
+        {
+            "question": "Why avoid over-rehearsing?",
+            "options": ["Sounds robotic", "It’s fun", "To confuse them", "It’s confident"],
+            "correctAnswer": "Sounds robotic"
+        },
+        {
+            "question": "What’s a good way to show teamwork?",
+            "options": ["Collaboration example", "Say 'I’m a team player'", "Work alone", "Criticize others"],
+            "correctAnswer": "Collaboration example"
+        },
+        {
+            "question": "What’s a common trap in interviews?",
+            "options": ["Over-explaining", "Being brief", "Smiling", "Listening"],
+            "correctAnswer": "Over-explaining"
+        },
+        {
+            "question": "How do you show you’re a quick learner?",
+            "options": ["Example of adapting", "Say 'I’m smart'", "No proof", "Slow example"],
+            "correctAnswer": "Example of adapting"
+        },
+        {
+            "question": "What’s a good question about growth?",
+            "options": ["Are there training opportunities?", "Will I get rich?", "Can I nap?", "What’s the food like?"],
+            "correctAnswer": "Are there training opportunities?"
+        },
+        {
+            "question": "What’s a sign of good communication?",
+            "options": ["Clear answers", "Mumbling", "Interrupting", "Silence"],
+            "correctAnswer": "Clear answers"
+        },
+        {
+            "question": "How do you handle a tough interviewer?",
+            "options": ["Stay calm, polite", "Argue back", "Walk out", "Cry"],
+            "correctAnswer": "Stay calm, polite"
+        },
+        {
+            "question": "What’s a good way to show initiative?",
+            "options": ["Project you started", "Say 'I’m proactive'", "Wait for orders", "Complain"],
+            "correctAnswer": "Project you started"
+        },
+        {
+            "question": "Why is company fit important?",
+            "options": ["Aligns with values", "It’s not", "For money", "To brag"],
+            "correctAnswer": "Aligns with values"
+        },
+        {
+            "question": "What’s a good response to 'What’s your weakness?'",
+            "options": ["Improving skill", "I’m perfect", "Everything", "I don’t know"],
+            "correctAnswer": "Improving skill"
+        },
+        {
+            "question": "How do you prepare for a panel interview?",
+            "options": ["Address all members", "Focus on one", "Ignore them", "Talk fast"],
+            "correctAnswer": "Address all members"
+        },
+        {
+            "question": "What’s a key to answering technical questions?",
+            "options": ["Explain simply", "Use jargon", "Guess", "Stay silent"],
+            "correctAnswer": "Explain simply"
+        },
+        {
+            "question": "What’s a good way to show reliability?",
+            "options": ["Past consistency", "Say 'I’m reliable'", "Miss deadlines", "Blame others"],
+            "correctAnswer": "Past consistency"
+        },
+        {
+            "question": "Why avoid fidgeting?",
+            "options": ["Looks nervous", "It’s cool", "To distract", "It’s fun"],
+            "correctAnswer": "Looks nervous"
+        },
+        {
+            "question": "What’s a good question about the role?",
+            "options": ["What’s a typical day like?", "Can I work less?", "Is it easy?", "What’s the pay?"],
+            "correctAnswer": "What’s a typical day like?"
+        },
+        {
+            "question": "How do you show problem-solving?",
+            "options": ["Real example", "Say 'I’m good'", "Avoid it", "Complain"],
+            "correctAnswer": "Real example"
+        },
+        {
+            "question": "What’s a sign of overconfidence?",
+            "options": ["Bragging", "Clear answers", "Listening", "Asking questions"],
+            "correctAnswer": "Bragging"
+        },
+        {
+            "question": "How do you handle silence in an interview?",
+            "options": ["Pause, then answer", "Talk nonstop", "Leave", "Panic"],
+            "correctAnswer": "Pause, then answer"
+        },
+        {
+            "question": "What’s a good way to show creativity?",
+            "options": ["Unique solution", "Say 'I’m creative'", "Copy others", "Stay quiet"],
+            "correctAnswer": "Unique solution"
+        },
+        {
+            "question": "Why is tone important?",
+            "options": ["Sets the mood", "It’s loud", "To confuse", "It’s not"],
+            "correctAnswer": "Sets the mood"
+        },
+        {
+            "question": "What’s a good response to 'How do you handle stress?'",
+            "options": ["Organize tasks", "Panic", "Avoid it", "Yell"],
+            "correctAnswer": "Organize tasks"
+        },
+        {
+            "question": "How do you prepare for a second interview?",
+            "options": ["Review first, go deeper", "Wing it", "Repeat answers", "Skip it"],
+            "correctAnswer": "Review first, go deeper"
+        },
+        {
+            "question": "What’s a key to negotiation?",
+            "options": ["Know your worth", "Demand more", "Say yes fast", "Stay quiet"],
+            "correctAnswer": "Know your worth"
+        },
+        {
+            "question": "What’s a good way to show attention to detail?",
+            "options": ["Spotting errors", "Say 'I’m careful'", "Miss things", "Rush"],
+            "correctAnswer": "Spotting errors"
+        },
+        {
+            "question": "Why avoid interrupting?",
+            "options": ["Shows respect", "It’s fun", "To talk more", "It’s loud"],
+            "correctAnswer": "Shows respect"
+        },
+        {
+            "question": "What’s a good question about challenges?",
+            "options": ["What obstacles might I face?", "Is it hard?", "Can I avoid work?", "What’s the worst part?"],
+            "correctAnswer": "What obstacles might I face?"
+        },
+        {
+            "question": "How do you show time management?",
+            "options": ["Prioritizing tasks", "Say 'I’m fast'", "Miss deadlines", "Procrastinate"],
+            "correctAnswer": "Prioritizing tasks"
+        },
+        {
+            "question": "What’s a sign of good preparation?",
+            "options": ["Tailored answers", "Guessing", "No questions", "Late arrival"],
+            "correctAnswer": "Tailored answers"
+        },
+        {
+            "question": "How do you end a thank-you email?",
+            "options": ["Sincerely", "Bye", "Later", "Cool"],
+            "correctAnswer": "Sincerely"
+        },
+        {
+            "question": "What’s a key to success in interviews?",
+            "options": ["Practice and confidence", "Luck", "Talking loud", "No effort"],
+            "correctAnswer": "Practice and confidence"
+        }
+    ]
+}

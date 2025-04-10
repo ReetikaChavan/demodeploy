@@ -1,0 +1,163 @@
+{
+  "category": "CET",
+    "title": "Introduction to Logical Reasoning",
+    "level": "Beginner",
+    "Difficulty": "Hard",
+    "timer": "10 minutes",
+    "skill": "20%",
+    "knowledge": "50%",
+    "application": "60%",
+    "why":"This exam explores basic logical reasoning skills. It assesses your ability to identify patterns in sequences, understand analogies, draw logical conclusions from given statements, and solve simple spatial reasoning problems. Success in this exam reflects your capacity to think logically and analytically.",
+    "questions": [
+      {
+        "question": "What is the next number in the sequence: 2, 4, 6, 8, …?",
+        "options": [
+          "10",
+          "12",
+          "8",
+          "14"
+        ],
+        "correctAnswer": "10"
+      },
+      {
+        "question": "If 'Cat is to Kitten', then 'Dog is to …'?",
+        "options": [
+          "Puppy",
+          "Cub",
+          "Calf",
+          "Foal"
+        ],
+        "correctAnswer": "Puppy"
+      },
+      {
+        "question": "Solve: What’s the next term in 1, 3, 5, 7, …?",
+        "options": [
+          "9",
+          "8",
+          "10",
+          "11"
+        ],
+        "correctAnswer": "9"
+      },
+      {
+        "question": "What does a syllogism involve?",
+        "options": [
+          "Logical conclusions from statements",
+          "Random guesses",
+          "Number patterns",
+          "Direction changes"
+        ],
+        "correctAnswer": "Logical conclusions from statements"
+      },
+      {
+        "question": "Scenario: All birds fly. Sparrows are birds. What follows?",
+        "options": [
+          "Sparrows fly",
+          "Sparrows swim",
+          "Sparrows don’t fly",
+          "Birds are sparrows"
+        ],
+        "correctAnswer": "Sparrows fly"
+      },
+      {
+        "question": "True or False: A sequence always increases.",
+        "options": [
+          "false",
+          "true",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "false"
+      },
+      {
+        "question": "Solve: If you face North and turn 90° right, what direction do you face?",
+        "options": [
+          "East",
+          "West",
+          "South",
+          "North"
+        ],
+        "correctAnswer": "East"
+      },
+      {
+        "question": "What is an analogy?",
+        "options": [
+          "A comparison showing similarity",
+          "A number sequence",
+          "A direction puzzle",
+          "A random list"
+        ],
+        "correctAnswer": "A comparison showing similarity"
+      },
+      {
+        "question": "Solve: What’s the next term in 5, 10, 15, 20, …?",
+        "options": [
+          "25",
+          "30",
+          "20",
+          "35"
+        ],
+        "correctAnswer": "25"
+      },
+      {
+        "question": "Scenario: Some cats are black. Fluffy is a cat. What can you conclude?",
+        "options": [
+          "Fluffy may be black",
+          "Fluffy is black",
+          "Fluffy is not black",
+          "All cats are Fluffy"
+        ],
+        "correctAnswer": "Fluffy may be black"
+      },
+      {
+        "question": "What’s the pattern in 1, 4, 9, 16, …?",
+        "options": [
+          "Squares of numbers",
+          "Doubles",
+          "Triples",
+          "Random"
+        ],
+        "correctAnswer": "Squares of numbers"
+      },
+      {
+        "question": "Solve: If you face East and turn 180°, what direction do you face?",
+        "options": [
+          "West",
+          "East",
+          "North",
+          "South"
+        ],
+        "correctAnswer": "West"
+      },
+      {
+        "question": "True or False: Logical reasoning requires math skills only.",
+        "options": [
+          "false",
+          "true",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "false"
+      },
+      {
+        "question": "What’s the next term in A, B, C, D, …?",
+        "options": [
+          "E",
+          "F",
+          "A",
+          "D"
+        ],
+        "correctAnswer": "E"
+      },
+      {
+        "question": "Scenario: If it rains, the ground is wet. It’s raining. What follows?",
+        "options": [
+          "The ground is wet",
+          "The ground is dry",
+          "It’s not raining",
+          "The ground may be wet"
+        ],
+        "correctAnswer": "The ground is wet"
+      }
+    ]
+  }

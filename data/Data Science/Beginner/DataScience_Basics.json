@@ -1,0 +1,164 @@
+{
+  "category": "Data Science",
+    "title": "Introduction to Data Science",
+    "level": "Beginner",
+    "Difficulty": "Medium",
+    "timer": "10 minutes",
+    "skill": "35%",
+    "knowledge": "55%",
+    "application": "10%",
+    "why": "This assessment builds foundational knowledge in data science concepts such as structured and unstructured data, data types, and the data lifecycle. It aids learners in recognizing tools and practices widely used in real-world data workflows.",
+
+    "questions": [
+      {
+        "question": "What is data science?",
+        "options": [
+          "The study of data to extract insights",
+          "A programming language",
+          "A type of hardware",
+          "A visualization tool"
+        ],
+        "correctAnswer": "The study of data to extract insights"
+      },
+      {
+        "question": "Which of these is an example of structured data?",
+        "options": [
+          "A spreadsheet with rows and columns",
+          "A video file",
+          "A social media post",
+          "An audio recording"
+        ],
+        "correctAnswer": "A spreadsheet with rows and columns"
+      },
+      {
+        "question": "What is the first step in the data lifecycle?",
+        "options": [
+          "Data collection",
+          "Data cleaning",
+          "Data analysis",
+          "Data visualization"
+        ],
+        "correctAnswer": "Data collection"
+      },
+      {
+        "question": "True or False: Unstructured data has no predefined format.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "true"
+      },
+      {
+        "question": "Which tool is commonly used for data science programming?",
+        "options": [
+          "Python",
+          "Photoshop",
+          "Word",
+          "PowerPoint"
+        ],
+        "correctAnswer": "Python"
+      },
+      {
+        "question": "What type of data is 'Age: 25, 30, 35'?",
+        "options": [
+          "Numerical",
+          "Categorical",
+          "Text",
+          "Image"
+        ],
+        "correctAnswer": "Numerical"
+      },
+      {
+        "question": "What is the purpose of data cleaning?",
+        "options": [
+          "To remove errors and inconsistencies",
+          "To create charts",
+          "To collect more data",
+          "To write code"
+        ],
+        "correctAnswer": "To remove errors and inconsistencies"
+      },
+      {
+        "question": "Solve: Arrange these data lifecycle steps in order: Analysis, Collection, Visualization, Cleaning",
+        "options": [
+          "Collection, Cleaning, Analysis, Visualization",
+          "Analysis, Collection, Cleaning, Visualization",
+          "Visualization, Analysis, Cleaning, Collection",
+          "Cleaning, Collection, Analysis, Visualization"
+        ],
+        "correctAnswer": "Collection, Cleaning, Analysis, Visualization"
+      },
+      {
+        "question": "Which of these is unstructured data?",
+        "options": [
+          "A text email",
+          "A table of sales figures",
+          "A list of names",
+          "A database of customer IDs"
+        ],
+        "correctAnswer": "A text email"
+      },
+      {
+        "question": "What type of data is 'Color: Red, Blue, Green'?",
+        "options": [
+          "Categorical",
+          "Numerical",
+          "Binary",
+          "Continuous"
+        ],
+        "correctAnswer": "Categorical"
+      },
+      {
+        "question": "Which tool is best for basic data manipulation and visualization?",
+        "options": [
+          "Excel",
+          "Python",
+          "R",
+          "All of the above"
+        ],
+        "correctAnswer": "Excel"
+      },
+      {
+        "question": "True or False: Data visualization is the final step in the data lifecycle.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "true"
+      },
+      {
+        "question": "Solve: If you have data with missing values, which step addresses this?",
+        "options": [
+          "Data cleaning",
+          "Data collection",
+          "Data analysis",
+          "Data visualization"
+        ],
+        "correctAnswer": "Data cleaning"
+      },
+      {
+        "question": "What does data analysis involve?",
+        "options": [
+          "Finding patterns and insights",
+          "Creating charts",
+          "Collecting raw data",
+          "Formatting spreadsheets"
+        ],
+        "correctAnswer": "Finding patterns and insights"
+      },
+      {
+        "question": "Which language is known for statistical analysis in data science?",
+        "options": [
+          "R",
+          "Python",
+          "Excel",
+          "Java"
+        ],
+        "correctAnswer": "R"
+      }
+    ]
+  }

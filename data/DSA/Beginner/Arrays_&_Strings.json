@@ -1,0 +1,164 @@
+{
+  "category": "DSA",
+    "title": "Arrays and Strings",
+    "level": "Beginner",
+    "Difficulty": "Easy",
+    "timer": "10 minutes",
+    "skill": "40%",
+    "knowledge": "50%",
+    "application": "10%",
+    "why": "This Arrays and Strings exam introduces foundational data structures for software development by assessing conceptual understanding, Python syntax, and manipulation techniques such as slicing, concatenation, and traversal. It builds the ability to write efficient and accurate code for problems involving sequential data.",
+
+    "questions": [
+      {
+        "question": "How do you declare an integer array of size 5 in Python?",
+        "options": [
+          "arr = [0] * 5",
+          "arr = (0, 5)",
+          "arr = {0, 5}",
+          "arr = 5"
+        ],
+        "correctAnswer": "arr = [0] * 5"
+      },
+      {
+        "question": "What is the purpose of array indexing?",
+        "options": [
+          "To access elements using their position",
+          "To sort the array",
+          "To delete the array",
+          "To concatenate arrays"
+        ],
+        "correctAnswer": "To access elements using their position"
+      },
+      {
+        "question": "What is the index of the first element in an array?",
+        "options": [
+          "0",
+          "1",
+          "-1",
+          "2"
+        ],
+        "correctAnswer": "0"
+      },
+      {
+        "question": "True or False: Arrays in Python can only store elements of the same type.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "false"
+      },
+      {
+        "question": "Scenario: You need to add an element to the end of an array in Python. Which method should you use?",
+        "options": [
+          "append()",
+          "insert()",
+          "pop()",
+          "remove()"
+        ],
+        "correctAnswer": "append()"
+      },
+      {
+        "question": "What does the operation 'arr.pop(2)' do in Python?",
+        "options": [
+          "Removes and returns the element at index 2",
+          "Adds an element at index 2",
+          "Reverses the array up to index 2",
+          "Returns the length of the array"
+        ],
+        "correctAnswer": "Removes and returns the element at index 2"
+      },
+      {
+        "question": "How do you find the length of an array 'arr' in Python?",
+        "options": [
+          "len(arr)",
+          "arr.length()",
+          "arr.size()",
+          "length(arr)"
+        ],
+        "correctAnswer": "len(arr)"
+      },
+      {
+        "question": "True or False: Inserting an element at the beginning of an array shifts all other elements to the right.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "true"
+      },
+      {
+        "question": "Scenario: You need to combine two strings 'hello' and 'world' into 'helloworld'. Which operation should you use?",
+        "options": [
+          "Concatenation",
+          "Substring",
+          "Reversal",
+          "Traversal"
+        ],
+        "correctAnswer": "Concatenation"
+      },
+      {
+        "question": "What is the result of 'hello' + ' world' in Python?",
+        "options": [
+          "hello world",
+          "helloworld",
+          "hello+world",
+          "Error"
+        ],
+        "correctAnswer": "hello world"
+      },
+      {
+        "question": "How do you reverse a string 'cat' in Python using slicing?",
+        "options": [
+          "'cat'[::-1]",
+          "'cat'[:1]",
+          "'cat'[1:]",
+          "'cat'[::2]"
+        ],
+        "correctAnswer": "'cat'[::-1]"
+      },
+      {
+        "question": "True or False: Strings in Python are immutable.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "true"
+      },
+      {
+        "question": "Scenario: You need to extract 'py' from the string 'python'. Which operation should you use?",
+        "options": [
+          "Substring with slicing",
+          "Concatenation",
+          "Reversal",
+          "Traversal"
+        ],
+        "correctAnswer": "Substring with slicing"
+      },
+      {
+        "question": "What is the output of 'python'[0:2] in Python?",
+        "options": [
+          "py",
+          "python",
+          "yth",
+          "on"
+        ],
+        "correctAnswer": "py"
+      },
+      {
+        "question": "What does array traversal mean?",
+        "options": [
+          "Visiting each element in the array",
+          "Reversing the array",
+          "Deleting elements",
+          "Sorting the array"
+        ],
+        "correctAnswer": "Visiting each element in the array"
+      }
+    ]
+  }

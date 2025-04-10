@@ -1,0 +1,164 @@
+{
+  "category": "Data Science",
+    "title": "Data Visualization Basics",
+    "level": "Beginner",
+    "Difficulty": "Easy",
+    "timer": "10 minutes",
+    "skill": "30%",
+    "knowledge": "60%",
+    "application": "10%",
+    "why": "This quiz introduces the fundamentals of data visualization, helping learners understand the use of common chart types like bar graphs, pie charts, and histograms. It strengthens basic interpretation and presentation skills essential for data analysis.",
+
+    "questions": [
+      {
+        "question": "Which chart is best for showing categorical data proportions?",
+        "options": [
+          "Pie chart",
+          "Bar chart",
+          "Histogram",
+          "Scatter plot"
+        ],
+        "correctAnswer": "Pie chart"
+      },
+      {
+        "question": "What does a histogram show?",
+        "options": [
+          "Frequency of numerical data",
+          "Categories",
+          "Trends over time",
+          "Proportions"
+        ],
+        "correctAnswer": "Frequency of numerical data"
+      },
+      {
+        "question": "True or False: A bar chart uses bars of different heights to compare values.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "true"
+      },
+      {
+        "question": "What is the purpose of a line graph?",
+        "options": [
+          "To show trends over time",
+          "To compare categories",
+          "To show frequency",
+          "To display proportions"
+        ],
+        "correctAnswer": "To show trends over time"
+      },
+      {
+        "question": "Solve: Choose the best chart for data: Red: 5, Blue: 3, Green: 2.",
+        "options": [
+          "Pie chart",
+          "Histogram",
+          "Scatter plot",
+          "Line graph"
+        ],
+        "correctAnswer": "Pie chart"
+      },
+      {
+        "question": "Which chart uses bars to show continuous data frequency?",
+        "options": [
+          "Histogram",
+          "Bar chart",
+          "Pie chart",
+          "Line graph"
+        ],
+        "correctAnswer": "Histogram"
+      },
+      {
+        "question": "What is a key principle of effective visualization?",
+        "options": [
+          "Clarity",
+          "Complexity",
+          "Random colors",
+          "Small text"
+        ],
+        "correctAnswer": "Clarity"
+      },
+      {
+        "question": "Solve: Identify the chart for data: Sales over 5 months.",
+        "options": [
+          "Line graph",
+          "Pie chart",
+          "Bar chart",
+          "Histogram"
+        ],
+        "correctAnswer": "Line graph"
+      },
+      {
+        "question": "What does a scatter plot display?",
+        "options": [
+          "Relationships between two numerical variables",
+          "Categorical proportions",
+          "Frequency",
+          "Trends over time"
+        ],
+        "correctAnswer": "Relationships between two numerical variables"
+      },
+      {
+        "question": "True or False: A pie chart should have many slices for clarity.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "false"
+      },
+      {
+        "question": "Which chart compares discrete categories?",
+        "options": [
+          "Bar chart",
+          "Histogram",
+          "Scatter plot",
+          "Pie chart"
+        ],
+        "correctAnswer": "Bar chart"
+      },
+      {
+        "question": "Solve: Choose the chart for data: Heights of 10 students.",
+        "options": [
+          "Histogram",
+          "Pie chart",
+          "Bar chart",
+          "Line graph"
+        ],
+        "correctAnswer": "Histogram"
+      },
+      {
+        "question": "What should every chart include?",
+        "options": [
+          "Labels",
+          "No colors",
+          "Small font",
+          "Random shapes"
+        ],
+        "correctAnswer": "Labels"
+      },
+      {
+        "question": "What does a bar chart emphasize?",
+        "options": [
+          "Comparison of categories",
+          "Continuous data",
+          "Proportions",
+          "Trends"
+        ],
+        "correctAnswer": "Comparison of categories"
+      },
+      {
+        "question": "Solve: Identify the chart for data: Temperature vs. Rainfall.",
+        "options": [
+          "Scatter plot",
+          "Pie chart",
+          "Bar chart",
+          "Histogram"
+        ],
+        "correctAnswer": "Scatter plot"
+      }
+    ]
+  }

@@ -1,0 +1,165 @@
+{
+    "category": "Interview Preparation",
+    "title": "SDE Intermediate Skills",
+    "level": "Intermediate",
+    "Difficulty": "Medium",
+    "timer": "15 minutes",
+    "total_marks": 50,
+    "marks_per_question": 2,
+    "skill": "50%",
+    "knowledge": "30%",
+    "application": "20%",
+    "why":"This exam assesses core SDE skills like algorithm efficiency, data structure knowledge, and problem-solving abilities. It helps identify strengths and weaknesses in applying these concepts, especially in time/space complexity and code explanation. Success demonstrates a solid foundation for intermediate SDE roles and improves interview performance.",
+    "questions": [
+        {
+            "question": "What’s the time complexity of binary search?",
+            "options": ["O(log n)", "O(n)", "O(n²)", "O(1)"],
+            "correctAnswer": "O(log n)"
+        },
+        {
+            "question": "Which sorting algorithm is stable?",
+            "options": ["Merge Sort", "Quick Sort", "Heap Sort", "Selection Sort"],
+            "correctAnswer": "Merge Sort"
+        },
+        {
+            "question": "What’s the output: x = [1, 2]; x.append(3); print(x)?",
+            "options": ["[1, 2, 3]", "[1, 2]", "[3]", "Error"],
+            "correctAnswer": "[1, 2, 3]"
+        },
+        {
+            "question": "What’s a key difference between stack and queue?",
+            "options": ["LIFO vs FIFO", "Size", "Speed", "Memory"],
+            "correctAnswer": "LIFO vs FIFO"
+        },
+        {
+            "question": "How do you reverse a string in Python?",
+            "options": ["s[::-1]", "reverse(s)", "s.reverse()", "s[-1]"],
+            "correctAnswer": "s[::-1]"
+        },
+        {
+            "question": "What’s a common SDE interview mistake?",
+            "options": ["Not explaining code", "Talking loud", "Smiling", "Asking questions"],
+            "correctAnswer": "Not explaining code"
+        },
+        {
+            "question": "What’s the space complexity of a recursive function?",
+            "options": ["O(n)", "O(1)", "O(log n)", "O(n²)"],
+            "correctAnswer": "O(n)"
+        },
+        {
+            "question": "What’s the output: for i in range(3): print(i)?",
+            "options": ["0 1 2", "1 2 3", "0 1", "3"],
+            "correctAnswer": "0 1 2"
+        },
+        {
+            "question": "What’s a linked list’s advantage over an array?",
+            "options": ["Dynamic size", "Faster access", "Less memory", "Sorting"],
+            "correctAnswer": "Dynamic size"
+        },
+        {
+            "question": "What’s the time complexity of inserting in a hash table?",
+            "options": ["O(1)", "O(n)", "O(log n)", "O(n²)"],
+            "correctAnswer": "O(1)"
+        },
+        {
+            "question": "What’s a good way to explain code in an interview?",
+            "options": ["Step-by-step", "Say 'It works'", "Skip it", "Write more"],
+            "correctAnswer": "Step-by-step"
+        },
+        {
+            "question": "What’s a binary search tree property?",
+            "options": ["Left < Root < Right", "Left > Right", "Root = Left", "All equal"],
+            "correctAnswer": "Left < Root < Right"
+        },
+        {
+            "question": "What’s the output: print(len('code'))?",
+            "options": ["4", "3", "5", "Error"],
+            "correctAnswer": "4"
+        },
+        {
+            "question": "What’s a common recursion pitfall?",
+            "options": ["No base case", "Fast execution", "Less memory", "Simple code"],
+            "correctAnswer": "No base case"
+        },
+        {
+            "question": "What’s the output: x = {1: 'a'}; print(x[1])?",
+            "options": ["a", "1", "Error", "None"],
+            "correctAnswer": "a"
+        },
+        {
+            "question": "What’s a good question to ask in an SDE interview?",
+            "options": ["What’s the tech stack?", "Do you like me?", "Can I leave early?", "What’s for lunch?"],
+            "correctAnswer": "What’s the tech stack?"
+        },
+        {
+            "question": "What’s the purpose of a debugger?",
+            "options": ["Find errors", "Write code", "Run faster", "Sort data"],
+            "correctAnswer": "Find errors"
+        },
+        {
+            "question": "What’s a hash table collision?",
+            "options": ["Same key location", "Different keys", "Empty table", "Sorted data"],
+            "correctAnswer": "Same key location"
+        },
+        {
+            "question": "What’s the output: x = [1]; x += [2]; print(x)?",
+            "options": ["[1, 2]", "[1]", "[2]", "Error"],
+            "correctAnswer": "[1, 2]"
+        },
+        {
+            "question": "What’s the time complexity of linear search?",
+            "options": ["O(n)", "O(1)", "O(log n)", "O(n²)"],
+            "correctAnswer": "O(n)"
+        },
+        {
+            "question": "What’s a good way to handle a hard coding question?",
+            "options": ["Break it down", "Give up", "Guess", "Complain"],
+            "correctAnswer": "Break it down"
+        },
+        {
+            "question": "What’s the output: x = 'abc'; print(x[1:])?",
+            "options": ["bc", "abc", "a", "Error"],
+            "correctAnswer": "bc"
+        },
+        {
+            "question": "What’s a key to solving coding problems?",
+            "options": ["Understand requirements", "Write fast", "Copy code", "Skip testing"],
+            "correctAnswer": "Understand requirements"
+        },
+        {
+            "question": "What’s the output: print('a' in 'abc')?",
+            "options": ["True", "False", "Error", "a"],
+            "correctAnswer": "True"
+        },
+        {
+            "question": "What’s a common data structure for undo operations?",
+            "options": ["Stack", "Queue", "Tree", "Graph"],
+            "correctAnswer": "Stack"
+        },
+        {
+            "question": "What’s the time complexity of accessing a hash map?",
+            "options": ["O(1)", "O(n)", "O(log n)", "O(n²)"],
+            "correctAnswer": "O(1)"
+        },
+        {
+            "question": "What’s a good way to test code in an interview?",
+            "options": ["Use examples", "Skip testing", "Guess output", "Write more"],
+            "correctAnswer": "Use examples"
+        },
+        {
+            "question": "What’s the output: x = [1, 2, 3]; print(x.pop(0))?",
+            "options": ["1", "2", "3", "Error"],
+            "correctAnswer": "1"
+        },
+        {
+            "question": "What’s a key to pair programming in interviews?",
+            "options": ["Communication", "Silence", "Ignoring partner", "Writing alone"],
+            "correctAnswer": "Communication"
+        },
+        {
+            "question": "What’s the purpose of version control in coding?",
+            "options": ["Track changes", "Run code", "Sort files", "Debug"],
+            "correctAnswer": "Track changes"
+        }
+    ]
+}

@@ -1,0 +1,115 @@
+{
+    "category": "Interview Preparation",
+    "title": "SDE Intermediate Basics",
+    "level": "Intermediate",
+    "Difficulty": "Easy",
+    "timer": "10 minutes",
+    "total_marks": 20,
+    "marks_per_question": 1,
+    "skill": "40%",
+    "knowledge": "50%",
+    "application": "10%",
+    "why":"This exam is designed to assess foundational knowledge and skills crucial for an intermediate Software Development Engineer (SDE). Taking this exam allows you to gauge your understanding of core concepts like data structures, time complexity, and problem-solving, all of which are essential for technical interviews and practical software development. It helps identify strengths and weaknesses, enabling focused preparation for SDE roles, and builds confidence in tackling common coding challenges.",
+    "questions": [
+        {
+            "question": "What is the time complexity of accessing an array element?",
+            "options": ["O(1)", "O(n)", "O(log n)", "O(n²)"],
+            "correctAnswer": "O(1)"
+        },
+        {
+            "question": "Which data structure uses LIFO?",
+            "options": ["Stack", "Queue", "Array", "Tree"],
+            "correctAnswer": "Stack"
+        },
+        {
+            "question": "What does SDE stand for?",
+            "options": ["Software Development Engineer", "System Design Expert", "Software Data Engineer", "Simple Development Environment"],
+            "correctAnswer": "Software Development Engineer"
+        },
+        {
+            "question": "What’s a common SDE interview topic?",
+            "options": ["Data structures", "Cooking recipes", "History", "Sports"],
+            "correctAnswer": "Data structures"
+        },
+        {
+            "question": "Which loop is best for iterating over an array?",
+            "options": ["For", "While", "Do-While", "None"],
+            "correctAnswer": "For"
+        },
+        {
+            "question": "What’s a key skill for an SDE interview?",
+            "options": ["Problem-solving", "Singing", "Drawing", "Cooking"],
+            "correctAnswer": "Problem-solving"
+        },
+        {
+            "question": "What’s the base case in recursion?",
+            "options": ["Stopping condition", "First call", "Last call", "Loop"],
+            "correctAnswer": "Stopping condition"
+        },
+        {
+            "question": "Which is a linear data structure?",
+            "options": ["Array", "Tree", "Graph", "Heap"],
+            "correctAnswer": "Array"
+        },
+        {
+            "question": "What’s the output of: print(len([1, 2, 3]))?",
+            "options": ["3", "2", "4", "Error"],
+            "correctAnswer": "3"
+        },
+        {
+            "question": "What’s the first step in solving a coding problem?",
+            "options": ["Understand the problem", "Write code", "Test it", "Debug"],
+            "correctAnswer": "Understand the problem"
+        },
+        {
+            "question": "What’s a good way to prepare for coding interviews?",
+            "options": ["Practice problems", "Memorize code", "Avoid practice", "Guess answers"],
+            "correctAnswer": "Practice problems"
+        },
+        {
+            "question": "What’s the size of an array declared as int arr[5]?",
+            "options": ["5", "4", "6", "0"],
+            "correctAnswer": "5"
+        },
+        {
+            "question": "Which keyword declares a function in Python?",
+            "options": ["def", "function", "func", "let"],
+            "correctAnswer": "def"
+        },
+        {
+            "question": "What’s a binary tree with one child per node called?",
+            "options": ["Degenerate", "Full", "Complete", "Balanced"],
+            "correctAnswer": "Degenerate"
+        },
+        {
+            "question": "What’s the output of: if True: print('Code')?",
+            "options": ["Code", "Error", "True", "Nothing"],
+            "correctAnswer": "Code"
+        },
+        {
+            "question": "Which is NOT a primitive data type?",
+            "options": ["Array", "Integer", "Boolean", "Float"],
+            "correctAnswer": "Array"
+        },
+        {
+            "question": "What’s the purpose of a stack in coding?",
+            "options": ["Function calls", "Sorting", "Searching", "Looping"],
+            "correctAnswer": "Function calls"
+        },
+        {
+            "question": "What’s a common coding interview format?",
+            "options": ["Whiteboard coding", "Singing", "Drawing", "Essay"],
+            "correctAnswer": "Whiteboard coding"
+        },
+        {
+            "question": "What’s the output of: x = 'code'; print(x[0])?",
+            "options": ["c", "code", "o", "Error"],
+            "correctAnswer": "c"
+        },
+        {
+            "question": "What’s a good habit during a coding interview?",
+            "options": ["Explain your thought process", "Stay silent", "Guess randomly", "Write fast"],
+            "correctAnswer": "Explain your thought process"
+        }
+    ]
+}

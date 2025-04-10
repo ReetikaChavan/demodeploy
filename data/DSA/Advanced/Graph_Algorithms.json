@@ -1,0 +1,313 @@
+{
+  "category": "DSA",
+    "title": "Graph Algorithms",
+    "level": "Advanced",
+    "Difficulty": "Hard",
+    "timer": "30 minutes",
+    "skill": "30%",
+    "knowledge": "40%",
+    "application": "30%",
+    "why": "This Graph Algorithms module emphasizes core graph traversal, shortest path algorithms, and minimum spanning trees. It blends theoretical graph properties with practical algorithmic applications like BFS, Dijkstra’s, and Bellman-Ford—preparing candidates for system design, routing problems, and graph-based coding interviews.",
+    "questions": [
+      {
+        "question": "Which graph representation is best for a dense graph?",
+        "options": [
+          "Adjacency matrix",
+          "Adjacency list",
+          "Edge list",
+          "Incidence matrix"
+        ],
+        "correctAnswer": "Adjacency matrix"
+      },
+      {
+        "question": "What is the time complexity of BFS on an adjacency list representation?",
+        "options": [
+          "O(V + E)",
+          "O(V^2)",
+          "O(E log V)",
+          "O(V log E)"
+        ],
+        "correctAnswer": "O(V + E)"
+      },
+      {
+        "question": "Evaluate: Why might DFS be preferred over BFS for detecting cycles?",
+        "options": [
+          "It uses less memory with recursion",
+          "It explores deeper paths faster",
+          "It guarantees shortest paths",
+          "It processes nodes in order"
+        ],
+        "correctAnswer": "It explores deeper paths faster"
+      },
+      {
+        "question": "Scenario: A network has negative edge weights. Which shortest path algorithm should you use?",
+        "options": [
+          "Bellman-Ford",
+          "Dijkstra’s",
+          "BFS",
+          "Prim’s"
+        ],
+        "correctAnswer": "Bellman-Ford"
+      },
+      {
+        "question": "Create: How would you modify BFS to find the shortest path in an unweighted graph?",
+        "options": [
+          "Track parent pointers while exploring",
+          "Use a priority queue",
+          "Reverse the graph",
+          "Sort the edges first"
+        ],
+        "correctAnswer": "Track parent pointers while exploring"
+      },
+      {
+        "question": "What is the space complexity of an adjacency matrix for a graph with V vertices?",
+        "options": [
+          "O(V^2)",
+          "O(V + E)",
+          "O(E)",
+          "O(V log V)"
+        ],
+        "correctAnswer": "O(V^2)"
+      },
+      {
+        "question": "Evaluate: Why does Dijkstra’s algorithm fail with negative weights?",
+        "options": [
+          "It assumes non-negative distances once a node is processed",
+          "It uses a stack instead of a queue",
+          "It can’t handle cycles",
+          "It requires an adjacency matrix"
+        ],
+        "correctAnswer": "It assumes non-negative distances once a node is processed"
+      },
+      {
+        "question": "Scenario: You need to connect all cities with minimum cost in a weighted graph. Which algorithm is best?",
+        "options": [
+          "Kruskal’s",
+          "Dijkstra’s",
+          "Bellman-Ford",
+          "DFS"
+        ],
+        "correctAnswer": "Kruskal’s"
+      },
+      {
+        "question": "What is the time complexity of Prim’s algorithm with a binary heap?",
+        "options": [
+          "O(E log V)",
+          "O(V^2)",
+          "O(V + E)",
+          "O(E^2)"
+        ],
+        "correctAnswer": "O(E log V)"
+      },
+      {
+        "question": "Create: How would you adapt Kruskal’s algorithm to handle disconnected graphs?",
+        "options": [
+          "Run it on each connected component separately",
+          "Add a dummy vertex with infinite weights",
+          "Use DFS to connect components",
+          "Sort vertices by degree"
+        ],
+        "correctAnswer": "Run it on each connected component separately"
+      },
+      {
+        "question": "Why is an adjacency list preferred for sparse graphs?",
+        "options": [
+          "It uses O(V + E) space",
+          "It supports faster edge deletion",
+          "It allows matrix operations",
+          "It reduces time complexity"
+        ],
+        "correctAnswer": "It uses O(V + E) space"
+      },
+      {
+        "question": "Scenario: A GPS system needs the shortest path in a road network with positive weights. Which algorithm fits best?",
+        "options": [
+          "Dijkstra’s",
+          "Bellman-Ford",
+          "BFS",
+          "Kruskal’s"
+        ],
+        "correctAnswer": "Dijkstra’s"
+      },
+      {
+        "question": "What does Bellman-Ford detect that Dijkstra’s cannot?",
+        "options": [
+          "Negative weight cycles",
+          "Disconnected components",
+          "Minimum spanning trees",
+          "Topological order"
+        ],
+        "correctAnswer": "Negative weight cycles"
+      },
+      {
+        "question": "Evaluate: When is Prim’s algorithm more efficient than Kruskal’s?",
+        "options": [
+          "In dense graphs with a heap implementation",
+          "In sparse graphs with sorted edges",
+          "In graphs with negative weights",
+          "In unweighted graphs"
+        ],
+        "correctAnswer": "In dense graphs with a heap implementation"
+      },
+      {
+        "question": "Create: How would you find the second shortest path in a graph?",
+        "options": [
+          "Modify Dijkstra’s to track two distances per node",
+          "Run BFS twice",
+          "Use Kruskal’s with edge removal",
+          "Sort all paths by length"
+        ],
+        "correctAnswer": "Modify Dijkstra’s to track two distances per node"
+      },
+      {
+        "question": "What is the time complexity of Bellman-Ford?",
+        "options": [
+          "O(VE)",
+          "O(V + E)",
+          "O(E log V)",
+          "O(V^2)"
+        ],
+        "correctAnswer": "O(VE)"
+      },
+      {
+        "question": "Scenario: A network has 5 nodes and 4 edges. Which representation saves more space?",
+        "options": [
+          "Adjacency list",
+          "Adjacency matrix",
+          "Edge list",
+          "Incidence matrix"
+        ],
+        "correctAnswer": "Adjacency list"
+      },
+      {
+        "question": "Why does Kruskal’s algorithm require a disjoint-set data structure?",
+        "options": [
+          "To detect cycles efficiently",
+          "To sort edges",
+          "To find shortest paths",
+          "To balance the graph"
+        ],
+        "correctAnswer": "To detect cycles efficiently"
+      },
+      {
+        "question": "Evaluate: Why might BFS be inefficient for finding shortest paths in a weighted graph?",
+        "options": [
+          "It assumes all edges have equal weight",
+          "It uses too much memory",
+          "It only works with matrices",
+          "It requires negative weights"
+        ],
+        "correctAnswer": "It assumes all edges have equal weight"
+      },
+      {
+        "question": "Create: How would you design a system to find all shortest paths in a dense network?",
+        "options": [
+          "Use Floyd-Warshall with an adjacency matrix",
+          "Run Dijkstra’s from each vertex",
+          "Use BFS with weight adjustments",
+          "Apply Kruskal’s repeatedly"
+        ],
+        "correctAnswer": "Use Floyd-Warshall with an adjacency matrix"
+      },
+      {
+        "question": "What is the time complexity of Kruskal’s with a good union-find implementation?",
+        "options": [
+          "O(E log V)",
+          "O(V^2)",
+          "O(VE)",
+          "O(V + E)"
+        ],
+        "correctAnswer": "O(E log V)"
+      },
+      {
+        "question": "Scenario: A graph has a cycle with total weight 0. Which algorithm handles this?",
+        "options": [
+          "Bellman-Ford",
+          "Dijkstra’s",
+          "Prim’s",
+          "BFS"
+        ],
+        "correctAnswer": "Bellman-Ford"
+      },
+      {
+        "question": "Why is DFS useful for topological sorting?",
+        "options": [
+          "It processes nodes in depth-first order",
+          "It finds shortest paths",
+          "It balances the graph",
+          "It sorts edges by weight"
+        ],
+        "correctAnswer": "It processes nodes in depth-first order"
+      },
+      {
+        "question": "Evaluate: When is an adjacency matrix inefficient?",
+        "options": [
+          "In sparse graphs due to O(V^2) space",
+          "In dense graphs due to edge lookup",
+          "In weighted graphs due to sorting",
+          "In directed graphs due to cycles"
+        ],
+        "correctAnswer": "In sparse graphs due to O(V^2) space"
+      },
+      {
+        "question": "Create: How would you optimize Dijkstra’s for a sparse graph?",
+        "options": [
+          "Use a priority queue with an adjacency list",
+          "Convert to an adjacency matrix",
+          "Run BFS instead",
+          "Sort edges before processing"
+        ],
+        "correctAnswer": "Use a priority queue with an adjacency list"
+      },
+      {
+        "question": "What is the purpose of a minimum spanning tree?",
+        "options": [
+          "To connect all vertices with minimum total edge weight",
+          "To find the shortest path between two nodes",
+          "To detect negative cycles",
+          "To sort vertices"
+        ],
+        "correctAnswer": "To connect all vertices with minimum total edge weight"
+      },
+      {
+        "question": "Scenario: You need to find the shortest path in a graph with 1000 nodes and positive weights. Which is fastest?",
+        "options": [
+          "Dijkstra’s with a heap",
+          "Bellman-Ford",
+          "Floyd-Warshall",
+          "BFS"
+        ],
+        "correctAnswer": "Dijkstra’s with a heap"
+      },
+      {
+        "question": "Why does Prim’s algorithm use a priority queue?",
+        "options": [
+          "To select the minimum edge efficiently",
+          "To sort vertices",
+          "To detect cycles",
+          "To reverse the graph"
+        ],
+        "correctAnswer": "To select the minimum edge efficiently"
+      },
+      {
+        "question": "Evaluate: Why might Bellman-Ford be impractical for large graphs?",
+        "options": [
+          "Its O(VE) time complexity",
+          "It can’t handle sparse graphs",
+          "It requires a priority queue",
+          "It only works with matrices"
+        ],
+        "correctAnswer": "Its O(VE) time complexity"
+      },
+      {
+        "question": "Create: How would you detect a negative cycle in a graph?",
+        "options": [
+          "Run Bellman-Ford and check for updates after V-1 iterations",
+          "Use DFS with edge sorting",
+          "Apply Prim’s with weight checks",
+          "Run BFS twice"
+        ],
+        "correctAnswer": "Run Bellman-Ford and check for updates after V-1 iterations"
+      }
+    ]
+  }

@@ -1,0 +1,314 @@
+{
+  "category": "Data Science",
+    "title": "Advanced Machine Learning",
+    "level": "Advanced",
+    "Difficulty": "Easy",
+    "timer": "30 minutes",
+    "skill": "40%",
+    "knowledge": "40%",
+    "application": "20%",
+    "why": "This Advanced Machine Learning exam tests core skills in evaluating and optimizing ML models like Random Forest and Gradient Boosting, tuning hyperparameters, identifying overfitting/underfitting, and applying clustering and validation techniques. It emphasizes hands-on decision-making in real-world ML scenarios to build robust predictive models and ensure performance across varied datasets.",
+
+    "questions": [
+      {
+        "question": "Scenario: You’re classifying spam emails. Evaluate: Random Forest vs. Gradient Boosting for high accuracy?",
+        "options": [
+          "Gradient Boosting if tuned well",
+          "Random Forest always wins",
+          "Both are equal",
+          "Neither works"
+        ],
+        "correctAnswer": "Gradient Boosting if tuned well"
+      },
+      {
+        "question": "What’s a key feature of decision trees?",
+        "options": [
+          "Splitting based on feature thresholds",
+          "Linear relationships",
+          "Clustering data",
+          "Fixed depth"
+        ],
+        "correctAnswer": "Splitting based on feature thresholds"
+      },
+      {
+        "question": "Solve: In K-means with 3 clusters, how many centroids are initialized?",
+        "options": [
+          "3",
+          "1",
+          "5",
+          "0"
+        ],
+        "correctAnswer": "3"
+      },
+      {
+        "question": "What does cross-validation prevent?",
+        "options": [
+          "Overfitting",
+          "Underfitting",
+          "Data scaling",
+          "Feature encoding"
+        ],
+        "correctAnswer": "Overfitting"
+      },
+      {
+        "question": "Scenario: A model performs well on training but poorly on testing. What’s the issue?",
+        "options": [
+          "Overfitting",
+          "Underfitting",
+          "Perfect fit",
+          "No error"
+        ],
+        "correctAnswer": "Overfitting"
+      },
+      {
+        "question": "Evaluate: Why might Random Forest outperform a single Decision Tree?",
+        "options": [
+          "It reduces variance via averaging",
+          "It increases bias",
+          "It’s simpler",
+          "It ignores features"
+        ],
+        "correctAnswer": "It reduces variance via averaging"
+      },
+      {
+        "question": "Create: What’s a step in a hyperparameter tuning pipeline?",
+        "options": [
+          "Grid search over parameter space",
+          "Remove all features",
+          "Train once and stop",
+          "Ignore validation"
+        ],
+        "correctAnswer": "Grid search over parameter space"
+      },
+      {
+        "question": "What’s a sign of underfitting?",
+        "options": [
+          "High error on both train and test",
+          "Low error on train, high on test",
+          "High error on train, low on test",
+          "Low error on both"
+        ],
+        "correctAnswer": "High error on both train and test"
+      },
+      {
+        "question": "Solve: A 5-fold cross-validation splits 100 samples. How many are in each validation fold?",
+        "options": [
+          "20",
+          "25",
+          "10",
+          "50"
+        ],
+        "correctAnswer": "20"
+      },
+      {
+        "question": "Scenario: You cluster customer data with K-means. How do you choose K?",
+        "options": [
+          "Elbow method",
+          "Random guess",
+          "Always 2",
+          "Highest accuracy"
+        ],
+        "correctAnswer": "Elbow method"
+      },
+      {
+        "question": "What does gradient boosting improve over decision trees?",
+        "options": [
+          "Accuracy via sequential error correction",
+          "Speed",
+          "Simplicity",
+          "Feature scaling"
+        ],
+        "correctAnswer": "Accuracy via sequential error correction"
+      },
+      {
+        "question": "Evaluate: Why use cross-validation instead of a single train-test split?",
+        "options": [
+          "It provides a robust performance estimate",
+          "It’s faster",
+          "It removes outliers",
+          "It simplifies models"
+        ],
+        "correctAnswer": "It provides a robust performance estimate"
+      },
+      {
+        "question": "Create: Design a step to reduce overfitting in Random Forest.",
+        "options": [
+          "Limit max depth",
+          "Increase tree count",
+          "Remove all data",
+          "Ignore features"
+        ],
+        "correctAnswer": "Limit max depth"
+      },
+      {
+        "question": "What’s a hyperparameter in K-means?",
+        "options": [
+          "Number of clusters (K)",
+          "Cluster centroids",
+          "Data points",
+          "Feature weights"
+        ],
+        "correctAnswer": "Number of clusters (K)"
+      },
+      {
+        "question": "Scenario: A Decision Tree has depth 10 and overfits. What’s a fix?",
+        "options": [
+          "Prune to depth 5",
+          "Increase depth",
+          "Remove all splits",
+          "Double features"
+        ],
+        "correctAnswer": "Prune to depth 5"
+      },
+      {
+        "question": "Solve: A model’s accuracy is 0.9 on train, 0.6 on test. What’s the issue?",
+        "options": [
+          "Overfitting",
+          "Underfitting",
+          "Perfect fit",
+          "Balanced fit"
+        ],
+        "correctAnswer": "Overfitting"
+      },
+      {
+        "question": "What does Random Forest use to combine predictions?",
+        "options": [
+          "Majority voting or averaging",
+          "Single tree output",
+          "Weighted sum",
+          "Random selection"
+        ],
+        "correctAnswer": "Majority voting or averaging"
+      },
+      {
+        "question": "Evaluate: Why might Gradient Boosting be slower than Random Forest?",
+        "options": [
+          "Sequential tree building",
+          "Fewer trees",
+          "Simpler splits",
+          "No tuning"
+        ],
+        "correctAnswer": "Sequential tree building"
+      },
+      {
+        "question": "Create: What’s a pipeline step for clustering evaluation?",
+        "options": [
+          "Silhouette score calculation",
+          "Train-test split",
+          "Feature removal",
+          "Single run"
+        ],
+        "correctAnswer": "Silhouette score calculation"
+      },
+      {
+        "question": "What’s a drawback of K-means?",
+        "options": [
+          "Sensitive to initial centroids",
+          "Always accurate",
+          "No tuning needed",
+          "Linear only"
+        ],
+        "correctAnswer": "Sensitive to initial centroids"
+      },
+      {
+        "question": "Scenario: You tune a model with grid search. What’s a key parameter for Random Forest?",
+        "options": [
+          "Number of trees",
+          "Learning rate",
+          "Cluster count",
+          "Split threshold"
+        ],
+        "correctAnswer": "Number of trees"
+      },
+      {
+        "question": "Solve: In 3-fold cross-validation with 90 samples, how many are trained per fold?",
+        "options": [
+          "60",
+          "30",
+          "90",
+          "45"
+        ],
+        "correctAnswer": "60"
+      },
+      {
+        "question": "What does overfitting indicate?",
+        "options": [
+          "Model fits noise, not patterns",
+          "Model is too simple",
+          "Model ignores data",
+          "Model is perfect"
+        ],
+        "correctAnswer": "Model fits noise, not patterns"
+      },
+      {
+        "question": "Evaluate: Why might clustering fail with noisy data?",
+        "options": [
+          "Noise distorts cluster boundaries",
+          "It improves clusters",
+          "It simplifies data",
+          "It scales features"
+        ],
+        "correctAnswer": "Noise distorts cluster boundaries"
+      },
+      {
+        "question": "Create: Design a step to improve K-means stability.",
+        "options": [
+          "Run multiple times with different seeds",
+          "Increase K",
+          "Remove all data",
+          "Single iteration"
+        ],
+        "correctAnswer": "Run multiple times with different seeds"
+      },
+      {
+        "question": "What’s a benefit of gradient boosting?",
+        "options": [
+          "Handles complex patterns",
+          "Fast computation",
+          "No tuning needed",
+          "Linear only"
+        ],
+        "correctAnswer": "Handles complex patterns"
+      },
+      {
+        "question": "Scenario: A model underfits. What’s a solution?",
+        "options": [
+          "Increase model complexity",
+          "Reduce features",
+          "Decrease depth",
+          "Remove data"
+        ],
+        "correctAnswer": "Increase model complexity"
+      },
+      {
+        "question": "Solve: A Decision Tree splits 100 samples into 70 and 30. What’s the Gini impurity if both are pure?",
+        "options": [
+          "0",
+          "0.5",
+          "1",
+          "0.25"
+        ],
+        "correctAnswer": "0"
+      },
+      {
+        "question": "Evaluate: Why use ensemble methods like Random Forest?",
+        "options": [
+          "They improve generalization",
+          "They reduce accuracy",
+          "They simplify models",
+          "They ignore data"
+        ],
+        "correctAnswer": "They improve generalization"
+      },
+      {
+        "question": "Create: What’s a pipeline step for model selection?",
+        "options": [
+          "Compare cross-validation scores",
+          "Pick randomly",
+          "Train once",
+          "Ignore metrics"
+        ],
+        "correctAnswer": "Compare cross-validation scores"
+      }
+    ]
+  }

@@ -1,0 +1,163 @@
+{
+  "category": "CET",
+    "title": "Basic Arithmetic and Number Systems",
+    "level": "Beginner",
+    "Difficulty": "Easy",
+    "timer": "10 minutes",
+    "skill": "20%",
+    "knowledge": "50%",
+    "application": "70%",
+    "why":"This exam focuses on fundamental arithmetic operations and number system concepts. It evaluates your ability to perform basic calculations, understand number properties like prime numbers and HCF/LCM, and convert between fractions and decimals. Success in this exam demonstrates a solid grasp of elementary mathematical skills.",
+    "questions": [
+      {
+        "question": "What is the HCF of 12 and 18?",
+        "options": [
+          "6",
+          "3",
+          "12",
+          "18"
+        ],
+        "correctAnswer": "6"
+      },
+      {
+        "question": "Which of these is a prime number?",
+        "options": [
+          "7",
+          "9",
+          "12",
+          "15"
+        ],
+        "correctAnswer": "7"
+      },
+      {
+        "question": "Solve: Convert 3/4 to a decimal.",
+        "options": [
+          "0.75",
+          "0.25",
+          "0.5",
+          "1.0"
+        ],
+        "correctAnswer": "0.75"
+      },
+      {
+        "question": "What is 25% of 80?",
+        "options": [
+          "20",
+          "25",
+          "15",
+          "30"
+        ],
+        "correctAnswer": "20"
+      },
+      {
+        "question": "What does LCM stand for?",
+        "options": [
+          "Least Common Multiple",
+          "Largest Common Multiple",
+          "Least Common Measure",
+          "Largest Common Measure"
+        ],
+        "correctAnswer": "Least Common Multiple"
+      },
+      {
+        "question": "True or False: Zero is an integer.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "true"
+      },
+      {
+        "question": "Solve: Add 15 and -7.",
+        "options": [
+          "8",
+          "22",
+          "-8",
+          "7"
+        ],
+        "correctAnswer": "8"
+      },
+      {
+        "question": "What is the first step to find the HCF of two numbers?",
+        "options": [
+          "List their factors",
+          "Multiply them",
+          "Divide them",
+          "Add them"
+        ],
+        "correctAnswer": "List their factors"
+      },
+      {
+        "question": "Solve: Convert 0.6 to a fraction in simplest form.",
+        "options": [
+          "3/5",
+          "6/10",
+          "2/3",
+          "1/2"
+        ],
+        "correctAnswer": "3/5"
+      },
+      {
+        "question": "What is 10% of 50?",
+        "options": [
+          "5",
+          "10",
+          "15",
+          "20"
+        ],
+        "correctAnswer": "5"
+      },
+      {
+        "question": "Which number is not prime?",
+        "options": [
+          "4",
+          "2",
+          "3",
+          "5"
+        ],
+        "correctAnswer": "4"
+      },
+      {
+        "question": "Solve: Find the LCM of 6 and 8.",
+        "options": [
+          "24",
+          "12",
+          "48",
+          "16"
+        ],
+        "correctAnswer": "24"
+      },
+      {
+        "question": "What operation does '×' represent?",
+        "options": [
+          "Multiplication",
+          "Addition",
+          "Subtraction",
+          "Division"
+        ],
+        "correctAnswer": "Multiplication"
+      },
+      {
+        "question": "True or False: A fraction can be greater than 1.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "true"
+      },
+      {
+        "question": "Solve: Subtract -3 from 7.",
+        "options": [
+          "10",
+          "4",
+          "-4",
+          "3"
+        ],
+        "correctAnswer": "10"
+      }
+    ]
+  }

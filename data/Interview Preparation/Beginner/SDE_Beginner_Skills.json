@@ -1,0 +1,140 @@
+{
+    "category": "Interview Preparation",
+    "title": "SDE Beginner Skills",
+    "level": "Beginner",
+    "Difficulty": "Medium",
+    "timer": "12.5 minutes",
+    "total_marks": 50,
+    "marks_per_question": 2,
+    "skill": "50%",
+    "knowledge": "30%",
+    "application": "20%",
+    "why":"The SDE Beginner Skills exam provides foundational interview training through 25 targeted questions that teach professional communication (STAR method, positive tone), strategic preparation (company research, resume tailoring), and essential etiquette (follow-ups, body language) giving entry level candidates the core skills to make strong first impressions in technical interviews.",
+    "questions": [
+        {
+            "question": "What’s the purpose of researching a company?",
+            "options": ["To understand its goals", "To memorize its address", "To impress friends", "To waste time"],
+            "correctAnswer": "To understand its goals"
+        },
+        {
+            "question": "How should you answer 'What are your strengths?'",
+            "options": ["Give examples", "Say 'I’m perfect'", "Stay silent", "List weaknesses"],
+            "correctAnswer": "Give examples"
+        },
+        {
+            "question": "What’s a good response to 'Why do you want this job?'",
+            "options": ["I like the company’s values", "I need money", "I don’t know", "It’s close to home"],
+            "correctAnswer": "I like the company’s values"
+        },
+        {
+            "question": "What does STAR stand for in answering questions?",
+            "options": ["Situation, Task, Action, Result", "Start, Talk, Act, Repeat", "Smile, Talk, Answer, Run", "Simple, True, Always, Right"],
+            "correctAnswer": "Situation, Task, Action, Result"
+        },
+        {
+            "question": "Why is body language important?",
+            "options": ["Shows confidence", "It’s funny", "To distract", "It’s not important"],
+            "correctAnswer": "Shows confidence"
+        },
+        {
+            "question": "What’s a good way to handle nerves?",
+            "options": ["Deep breathing", "Yelling", "Running away", "Talking fast"],
+            "correctAnswer": "Deep breathing"
+        },
+        {
+            "question": "What should you avoid in an interview?",
+            "options": ["Negative talk", "Smiling", "Asking questions", "Being polite"],
+            "correctAnswer": "Negative talk"
+        },
+        {
+            "question": "How do you explain a gap in your resume?",
+            "options": ["Be honest, focus on skills", "Lie about it", "Ignore the question", "Blame others"],
+            "correctAnswer": "Be honest, focus on skills"
+        },
+        {
+            "question": "What’s a professional email closing?",
+            "options": ["Best regards", "See ya", "Bye bye", "Later"],
+            "correctAnswer": "Best regards"
+        },
+        {
+            "question": "What’s a good weakness to mention?",
+            "options": ["One you’re improving", "Being too perfect", "Hating work", "Forgetting things"],
+            "correctAnswer": "One you’re improving"
+        },
+        {
+            "question": "Why ask about the next steps?",
+            "options": ["Shows interest", "To leave early", "To annoy them", "It’s rude"],
+            "correctAnswer": "Shows interest"
+        },
+        {
+            "question": "What’s a key part of teamwork?",
+            "options": ["Collaboration", "Arguing", "Ignoring others", "Working alone"],
+            "correctAnswer": "Collaboration"
+        },
+        {
+            "question": "How do you prepare for a phone interview?",
+            "options": ["Quiet space, notes ready", "Loud music", "No preparation", "While driving"],
+            "correctAnswer": "Quiet space, notes ready"
+        },
+        {
+            "question": "What’s a sign of active listening?",
+            "options": ["Nodding", "Looking away", "Interrupting", "Sleeping"],
+            "correctAnswer": "Nodding"
+        },
+        {
+            "question": "What’s a good answer to 'Where do you see yourself in 5 years?'",
+            "options": ["Growing in the role", "Retired", "No idea", "Somewhere else"],
+            "correctAnswer": "Growing in the role"
+        },
+        {
+            "question": "Why tailor your resume?",
+            "options": ["Matches job needs", "Looks pretty", "To confuse them", "It’s shorter"],
+            "correctAnswer": "Matches job needs"
+        },
+        {
+            "question": "What’s a common mistake in interviews?",
+            "options": ["Talking too much", "Being quiet", "Smiling", "Asking questions"],
+            "correctAnswer": "Talking too much"
+        },
+        {
+            "question": "What does enthusiasm show?",
+            "options": ["Interest in the job", "Boredom", "Nervousness", "Anger"],
+            "correctAnswer": "Interest in the job"
+        },
+        {
+            "question": "How do you follow up after an interview?",
+            "options": ["Polite email", "Call daily", "Text them", "Do nothing"],
+            "correctAnswer": "Polite email"
+        },
+        {
+            "question": "What’s a transferable skill?",
+            "options": ["Useful in many jobs", "Only for one job", "Not important", "Hard to learn"],
+            "correctAnswer": "Useful in many jobs"
+        },
+        {
+            "question": "Why practice common questions?",
+            "options": ["Builds confidence", "To forget them", "To sound robotic", "It’s boring"],
+            "correctAnswer": "Builds confidence"
+        },
+        {
+            "question": "What’s a good tone for answers?",
+            "options": ["Positive", "Angry", "Sad", "Confused"],
+            "correctAnswer": "Positive"
+        },
+        {
+            "question": "What’s a sign of preparation?",
+            "options": ["Knowing the job description", "Arriving late", "No questions", "Forgetting resume"],
+            "correctAnswer": "Knowing the job description"
+        },
+        {
+            "question": "Why avoid slang in an interview?",
+            "options": ["Keeps it professional", "It’s fun", "To confuse them", "It’s trendy"],
+            "correctAnswer": "Keeps it professional"
+        },
+        {
+            "question": "What’s a good way to show problem-solving?",
+            "options": ["Give an example", "Say 'I’m great'", "Avoid the question", "Blame others"],
+            "correctAnswer": "Give an example"
+        }
+    ]
+}

@@ -1,0 +1,313 @@
+{
+  "category": "CET",
+    "title": "Trigonometry and Vector Analysis",
+    "level": "Advanced",
+    "Difficulty": "Hard",
+    "timer": "30 minutes",
+    "skill": "20%",
+    "knowledge": "50%",
+    "application": "70%",
+    "why":"This exam evaluates your understanding of advanced trigonometry and vector analysis. It tests your ability to apply trigonometric identities, solve complex trigonometric equations, perform vector operations, and analyze vector relationships in practical contexts. Success in this exam reflects your expertise in these advanced mathematical areas and your ability to apply them in real-world scenarios.",
+    "questions": [
+      {
+        "question": "Scenario: A 5m ladder leans at 60° to ground. Evaluate: Height reached?",
+        "options": [
+          "4.33 m",
+          "2.5 m",
+          "5 m",
+          "3 m"
+        ],
+        "correctAnswer": "4.33 m"
+      },
+      {
+        "question": "What’s sin²θ + cos²θ?",
+        "options": [
+          "1",
+          "0",
+          "sin θ",
+          "cos θ"
+        ],
+        "correctAnswer": "1"
+      },
+      {
+        "question": "Solve: If sin θ = 0.6, what’s cos θ?",
+        "options": [
+          "0.8",
+          "0.6",
+          "0.4",
+          "1"
+        ],
+        "correctAnswer": "0.8"
+      },
+      {
+        "question": "What’s the dot product of (2, 3) and (4, -1)?",
+        "options": [
+          "5",
+          "8",
+          "-5",
+          "11"
+        ],
+        "correctAnswer": "5"
+      },
+      {
+        "question": "Scenario: Forces 3N at 0° and 4N at 90°. What’s the resultant magnitude?",
+        "options": [
+          "5N",
+          "7N",
+          "3N",
+          "4N"
+        ],
+        "correctAnswer": "5N"
+      },
+      {
+        "question": "Evaluate: Why use trigonometry for heights?",
+        "options": [
+          "Relates angles and sides",
+          "Avoids vectors",
+          "Simplifies algebra",
+          "Ignores distances"
+        ],
+        "correctAnswer": "Relates angles and sides"
+      },
+      {
+        "question": "Create: Vector sum of (1, 2) and (3, 4)?",
+        "options": [
+          "(4, 6)",
+          "(2, 6)",
+          "(3, 2)",
+          "(1, 4)"
+        ],
+        "correctAnswer": "(4, 6)"
+      },
+      {
+        "question": "What’s tan 45°?",
+        "options": [
+          "1",
+          "0",
+          "√2",
+          "1/√2"
+        ],
+        "correctAnswer": "1"
+      },
+      {
+        "question": "Solve: Solve sin x = 1/2 (0° ≤ x ≤ 360°).",
+        "options": [
+          "30°, 150°",
+          "60°, 120°",
+          "45°, 135°",
+          "90°"
+        ],
+        "correctAnswer": "30°, 150°"
+      },
+      {
+        "question": "Scenario: A tower’s shadow is 10m at 30° sun angle. What’s its height?",
+        "options": [
+          "5.77 m",
+          "10 m",
+          "8.66 m",
+          "5 m"
+        ],
+        "correctAnswer": "5.77 m"
+      },
+      {
+        "question": "What’s the cross product magnitude of (1, 0, 0) and (0, 1, 0)?",
+        "options": [
+          "1",
+          "0",
+          "2",
+          "-1"
+        ],
+        "correctAnswer": "1"
+      },
+      {
+        "question": "Evaluate: Why is dot product zero for perpendicular vectors?",
+        "options": [
+          "Cos 90° = 0",
+          "Sin 90° = 1",
+          "Vectors cancel",
+          "No magnitude"
+        ],
+        "correctAnswer": "Cos 90° = 0"
+      },
+      {
+        "question": "Create: Trigonometric identity for sin 2θ?",
+        "options": [
+          "2 sin θ cos θ",
+          "sin² θ + cos² θ",
+          "1 - cos 2θ",
+          "tan θ"
+        ],
+        "correctAnswer": "2 sin θ cos θ"
+      },
+      {
+        "question": "What’s cos 60°?",
+        "options": [
+          "0.5",
+          "1",
+          "√3/2",
+          "0"
+        ],
+        "correctAnswer": "0.5"
+      },
+      {
+        "question": "Scenario: Vectors (2, 3) and (-3, 2). What’s the angle?",
+        "options": [
+          "90°",
+          "0°",
+          "45°",
+          "180°"
+        ],
+        "correctAnswer": "90°"
+      },
+      {
+        "question": "Solve: If tan θ = 1, what’s θ (0° ≤ θ ≤ 360°)?",
+        "options": [
+          "45°, 225°",
+          "90°",
+          "0°",
+          "180°"
+        ],
+        "correctAnswer": "45°, 225°"
+      },
+      {
+        "question": "What’s the magnitude of (3, 4)?",
+        "options": [
+          "5",
+          "7",
+          "6",
+          "4"
+        ],
+        "correctAnswer": "5"
+      },
+      {
+        "question": "Evaluate: Why use vectors in physics?",
+        "options": [
+          "Handles direction and magnitude",
+          "Avoids angles",
+          "Simplifies algebra",
+          "Ignores forces"
+        ],
+        "correctAnswer": "Handles direction and magnitude"
+      },
+      {
+        "question": "Create: Resolve 5N at 37° into x-component (sin 37° ≈ 0.6, cos 37° ≈ 0.8).",
+        "options": [
+          "4N",
+          "3N",
+          "5N",
+          "2N"
+        ],
+        "correctAnswer": "4N"
+      },
+      {
+        "question": "What’s sin 90°?",
+        "options": [
+          "1",
+          "0",
+          "0.5",
+          "√2/2"
+        ],
+        "correctAnswer": "1"
+      },
+      {
+        "question": "Scenario: A plane flies 100 km at 30° N of E. What’s the northward distance?",
+        "options": [
+          "50 km",
+          "86.6 km",
+          "100 km",
+          "25 km"
+        ],
+        "correctAnswer": "50 km"
+      },
+      {
+        "question": "Solve: Dot product of (1, -2, 3) and (4, 5, -1)?",
+        "options": [
+          "-9",
+          "9",
+          "0",
+          "12"
+        ],
+        "correctAnswer": "-9"
+      },
+      {
+        "question": "What’s 1 + tan²θ?",
+        "options": [
+          "sec²θ",
+          "csc²θ",
+          "1",
+          "cos²θ"
+        ],
+        "correctAnswer": "sec²θ"
+      },
+      {
+        "question": "Evaluate: Why might cross product be useful?",
+        "options": [
+          "Finds perpendicular vector",
+          "Sums magnitudes",
+          "Avoids angles",
+          "Simplifies dot"
+        ],
+        "correctAnswer": "Finds perpendicular vector"
+      },
+      {
+        "question": "Create: Vector perpendicular to (1, 2)?",
+        "options": [
+          "(-2, 1)",
+          "(2, 1)",
+          "(1, -2)",
+          "(0, 1)"
+        ],
+        "correctAnswer": "(-2, 1)"
+      },
+      {
+        "question": "What’s cot 30°?",
+        "options": [
+          "√3",
+          "1/√3",
+          "2",
+          "0.5"
+        ],
+        "correctAnswer": "√3"
+      },
+      {
+        "question": "Scenario: Shadow 12m, angle 45°. What’s the pole height?",
+        "options": [
+          "12 m",
+          "6 m",
+          "8 m",
+          "10 m"
+        ],
+        "correctAnswer": "12 m"
+      },
+      {
+        "question": "Solve: Solve cos x = -1 (0° ≤ x ≤ 360°).",
+        "options": [
+          "180°",
+          "0°",
+          "90°",
+          "270°"
+        ],
+        "correctAnswer": "180°"
+      },
+      {
+        "question": "Evaluate: Why use identities in equations?",
+        "options": [
+          "Simplifies solving",
+          "Avoids vectors",
+          "Increases complexity",
+          "Ignores angles"
+        ],
+        "correctAnswer": "Simplifies solving"
+      },
+      {
+        "question": "Create: x-component of 10N at 60° (cos 60° = 0.5)?",
+        "options": [
+          "5N",
+          "8.66N",
+          "10N",
+          "0N"
+        ],
+        "correctAnswer": "5N"
+      }
+    ]
+  }

@@ -1,0 +1,314 @@
+{
+  "category": "DSA",
+    "title": "Advanced Data Structures",
+    "level": "Advanced",
+    "Difficulty": "Easy",
+    "timer": "30 minutes",
+    "skill": "30%",
+    "knowledge": "45%",
+    "application": "25%",
+    "why": "This Advanced Data Structures module builds a deep understanding of efficient data organization and retrieval mechanisms using AVL trees, heaps, tries, and hash tables. It evaluates theoretical insights and real-world use cases such as autocomplete, top-k elements, and priority queues critical for system-level design and optimization in interviews.",
+
+    "questions": [
+      {
+        "question": "What is the time complexity of searching in a balanced BST?",
+        "options": [
+          "O(log n)",
+          "O(n)",
+          "O(1)",
+          "O(n log n)"
+        ],
+        "correctAnswer": "O(log n)"
+      },
+      {
+        "question": "What ensures an AVL tree remains balanced?",
+        "options": [
+          "Height difference of subtrees is at most 1",
+          "All nodes have two children",
+          "It uses a priority queue",
+          "It sorts keys on insertion"
+        ],
+        "correctAnswer": "Height difference of subtrees is at most 1"
+      },
+      {
+        "question": "Evaluate: Why might a hash table outperform an AVL tree?",
+        "options": [
+          "It offers O(1) average-case lookup",
+          "It maintains order",
+          "It balances automatically",
+          "It uses less memory"
+        ],
+        "correctAnswer": "It offers O(1) average-case lookup"
+      },
+      {
+        "question": "Scenario: You need fast prefix searches for a dictionary. Which structure is best?",
+        "options": [
+          "Trie",
+          "AVL tree",
+          "Hash table",
+          "Min heap"
+        ],
+        "correctAnswer": "Trie"
+      },
+      {
+        "question": "Create: How would you design a trie for prefix-based autocomplete?",
+        "options": [
+          "Store characters in nodes with an isEnd flag",
+          "Use a BST with string keys",
+          "Hash all prefixes",
+          "Sort words in a heap"
+        ],
+        "correctAnswer": "Store characters in nodes with an isEnd flag"
+      },
+      {
+        "question": "What is the time complexity of inserting into a min heap?",
+        "options": [
+          "O(log n)",
+          "O(n)",
+          "O(1)",
+          "O(n log n)"
+        ],
+        "correctAnswer": "O(log n)"
+      },
+      {
+        "question": "Evaluate: Why might an unbalanced BST be inefficient?",
+        "options": [
+          "It degrades to O(n) for operations",
+          "It uses too much memory",
+          "It can’t store duplicates",
+          "It requires sorting"
+        ],
+        "correctAnswer": "It degrades to O(n) for operations"
+      },
+      {
+        "question": "Scenario: A system needs O(1) lookups for unordered data. Which structure fits?",
+        "options": [
+          "Hash table",
+          "AVL tree",
+          "Trie",
+          "Max heap"
+        ],
+        "correctAnswer": "Hash table"
+      },
+      {
+        "question": "What is the time complexity of deletion in an AVL tree?",
+        "options": [
+          "O(log n)",
+          "O(n)",
+          "O(1)",
+          "O(n^2)"
+        ],
+        "correctAnswer": "O(log n)"
+      },
+      {
+        "question": "Create: How would you handle collisions in a hash table?",
+        "options": [
+          "Use chaining with linked lists",
+          "Increase table size infinitely",
+          "Sort keys on insertion",
+          "Use a BST instead"
+        ],
+        "correctAnswer": "Use chaining with linked lists"
+      },
+      {
+        "question": "Why does a max heap keep the largest element at the root?",
+        "options": [
+          "It satisfies the heap property",
+          "It balances the tree",
+          "It sorts the elements",
+          "It reduces height"
+        ],
+        "correctAnswer": "It satisfies the heap property"
+      },
+      {
+        "question": "Scenario: You need to maintain sorted order with fast insertions. Which structure is best?",
+        "options": [
+          "AVL tree",
+          "Hash table",
+          "Trie",
+          "Min heap"
+        ],
+        "correctAnswer": "AVL tree"
+      },
+      {
+        "question": "What is the space complexity of a trie for n words of length m?",
+        "options": [
+          "O(nm)",
+          "O(n)",
+          "O(m)",
+          "O(n + m)"
+        ],
+        "correctAnswer": "O(nm)"
+      },
+      {
+        "question": "Evaluate: When is a BST better than a hash table?",
+        "options": [
+          "When range queries are needed",
+          "When O(1) lookup is critical",
+          "When memory is unlimited",
+          "When data is unsorted"
+        ],
+        "correctAnswer": "When range queries are needed"
+      },
+      {
+        "question": "Create: How would you optimize a heap for frequent minimum extractions?",
+        "options": [
+          "Use a min heap",
+          "Convert to a BST",
+          "Hash the elements",
+          "Sort the heap"
+        ],
+        "correctAnswer": "Use a min heap"
+      },
+      {
+        "question": "What is the time complexity of searching a prefix in a trie?",
+        "options": [
+          "O(m)",
+          "O(n)",
+          "O(log n)",
+          "O(nm)"
+        ],
+        "correctAnswer": "O(m)"
+      },
+      {
+        "question": "Scenario: A BST becomes skewed after insertions. How do you fix it?",
+        "options": [
+          "Convert to an AVL tree with rotations",
+          "Use a hash table instead",
+          "Sort the nodes",
+          "Increase table size"
+        ],
+        "correctAnswer": "Convert to an AVL tree with rotations"
+      },
+      {
+        "question": "Why does a hash table use open addressing?",
+        "options": [
+          "To resolve collisions in the same table",
+          "To balance the structure",
+          "To maintain order",
+          "To reduce height"
+        ],
+        "correctAnswer": "To resolve collisions in the same table"
+      },
+      {
+        "question": "Evaluate: Why might a trie be inefficient for short strings?",
+        "options": [
+          "It uses more memory per character",
+          "It requires balancing",
+          "It can’t handle duplicates",
+          "It’s slower than a BST"
+        ],
+        "correctAnswer": "It uses more memory per character"
+      },
+      {
+        "question": "Create: How would you design a system for top-k frequent elements?",
+        "options": [
+          "Use a min heap with a hash table",
+          "Sort all elements",
+          "Use a trie with counts",
+          "Balance a BST"
+        ],
+        "correctAnswer": "Use a min heap with a hash table"
+      },
+      {
+        "question": "What is the time complexity of rebalancing an AVL tree after insertion?",
+        "options": [
+          "O(log n)",
+          "O(n)",
+          "O(1)",
+          "O(n log n)"
+        ],
+        "correctAnswer": "O(log n)"
+      },
+      {
+        "question": "Scenario: You need fast key-value lookups with no order. Which is best?",
+        "options": [
+          "Hash table",
+          "AVL tree",
+          "Trie",
+          "Min heap"
+        ],
+        "correctAnswer": "Hash table"
+      },
+      {
+        "question": "What is the purpose of rotations in an AVL tree?",
+        "options": [
+          "To maintain balance",
+          "To sort the nodes",
+          "To reduce memory",
+          "To handle collisions"
+        ],
+        "correctAnswer": "To maintain balance"
+      },
+      {
+        "question": "Evaluate: Why might a heap be better than a BST for priority queues?",
+        "options": [
+          "It ensures O(log n) insertion and extraction",
+          "It maintains sorted order",
+          "It uses less memory",
+          "It supports range queries"
+        ],
+        "correctAnswer": "It ensures O(log n) insertion and extraction"
+      },
+      {
+        "question": "Create: How would you implement a spell checker with a trie?",
+        "options": [
+          "Store words and allow prefix lookups with edits",
+          "Hash all words",
+          "Sort words in a BST",
+          "Use a heap for frequency"
+        ],
+        "correctAnswer": "Store words and allow prefix lookups with edits"
+      },
+      {
+        "question": "What is the time complexity of building a heap from n elements?",
+        "options": [
+          "O(n)",
+          "O(n log n)",
+          "O(log n)",
+          "O(n^2)"
+        ],
+        "correctAnswer": "O(n)"
+      },
+      {
+        "question": "Scenario: A system needs fast range queries. Which structure fits?",
+        "options": [
+          "AVL tree",
+          "Hash table",
+          "Trie",
+          "Max heap"
+        ],
+        "correctAnswer": "AVL tree"
+      },
+      {
+        "question": "Why does a hash table’s performance degrade with high load?",
+        "options": [
+          "Collisions increase lookup time",
+          "It becomes balanced",
+          "It sorts the keys",
+          "It reduces memory"
+        ],
+        "correctAnswer": "Collisions increase lookup time"
+      },
+      {
+        "question": "Evaluate: When is a trie better than a hash table?",
+        "options": [
+          "For prefix-based searches",
+          "For O(1) lookups",
+          "For ordered keys",
+          "For small datasets"
+        ],
+        "correctAnswer": "For prefix-based searches"
+      },
+      {
+        "question": "Create: How would you optimize a BST for frequent deletions?",
+        "options": [
+          "Use an AVL tree for self-balancing",
+          "Convert to a hash table",
+          "Sort the nodes",
+          "Use a heap instead"
+        ],
+        "correctAnswer": "Use an AVL tree for self-balancing"
+      }
+    ]
+  }

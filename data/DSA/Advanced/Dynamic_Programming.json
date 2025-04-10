@@ -1,0 +1,313 @@
+{
+  "category": "DSA",
+    "title": "Dynamic Programming",
+    "level": "Advanced",
+    "Difficulty": "Medium",
+    "timer": "30 minutes",
+    "skill": "25%",
+    "knowledge": "35%",
+    "application": "40%",
+    "why": "This Dynamic Programming module develops problem-solving skills through optimal substructure, memoization, and tabulation. It targets application-heavy coding patterns like LCS, knapsack, and matrix chain multiplication, empowering candidates to tackle overlapping subproblem scenarios in technical interviews efficiently.",
+    "questions": [
+      {
+        "question": "What is the key feature of overlapping subproblems in DP?",
+        "options": [
+          "The same subproblems are solved multiple times",
+          "Subproblems are independent",
+          "Subproblems increase exponentially",
+          "Subproblems are unsolvable"
+        ],
+        "correctAnswer": "The same subproblems are solved multiple times"
+      },
+      {
+        "question": "What is the time complexity of Fibonacci using memoization?",
+        "options": [
+          "O(n)",
+          "O(2^n)",
+          "O(n^2)",
+          "O(log n)"
+        ],
+        "correctAnswer": "O(n)"
+      },
+      {
+        "question": "Evaluate: Why is tabulation often preferred over memoization?",
+        "options": [
+          "It avoids recursion overhead",
+          "It uses more memory",
+          "It’s slower but more accurate",
+          "It requires less computation"
+        ],
+        "correctAnswer": "It avoids recursion overhead"
+      },
+      {
+        "question": "Scenario: You need to optimize matrix chain multiplication for matrices A(10x30), B(30x5), C(5x60). Which DP approach works?",
+        "options": [
+          "Tabulation with a cost table",
+          "Recursive backtracking",
+          "Greedy selection",
+          "Random partitioning"
+        ],
+        "correctAnswer": "Tabulation with a cost table"
+      },
+      {
+        "question": "Create: How would you solve the knapsack problem with DP?",
+        "options": [
+          "Use a 2D table for weights and values",
+          "Recursively try all combinations",
+          "Sort items by value",
+          "Use a greedy approach"
+        ],
+        "correctAnswer": "Use a 2D table for weights and values"
+      },
+      {
+        "question": "What is the space complexity of the longest common subsequence (LCS) with tabulation?",
+        "options": [
+          "O(mn)",
+          "O(n)",
+          "O(m + n)",
+          "O(1)"
+        ],
+        "correctAnswer": "O(mn)"
+      },
+      {
+        "question": "Evaluate: Why does naive recursion fail for Fibonacci?",
+        "options": [
+          "It recomputes subproblems exponentially",
+          "It uses too little memory",
+          "It requires sorting",
+          "It lacks optimal substructure"
+        ],
+        "correctAnswer": "It recomputes subproblems exponentially"
+      },
+      {
+        "question": "Scenario: A recursive Fibonacci takes too long for n=50. What’s the best fix?",
+        "options": [
+          "Use memoization",
+          "Increase stack size",
+          "Sort the sequence",
+          "Use a greedy method"
+        ],
+        "correctAnswer": "Use memoization"
+      },
+      {
+        "question": "What is the time complexity of the 0/1 knapsack problem with DP?",
+        "options": [
+          "O(nW)",
+          "O(n^2)",
+          "O(2^n)",
+          "O(n log W)"
+        ],
+        "correctAnswer": "O(nW)"
+      },
+      {
+        "question": "Create: How would you optimize matrix chain multiplication for large inputs?",
+        "options": [
+          "Use a DP table to store minimum costs",
+          "Recursively split at every point",
+          "Use a stack-based approach",
+          "Sort matrices by size"
+        ],
+        "correctAnswer": "Use a DP table to store minimum costs"
+      },
+      {
+        "question": "Why does optimal substructure matter in DP?",
+        "options": [
+          "It ensures solutions to subproblems combine into the optimal solution",
+          "It reduces memory usage",
+          "It eliminates recursion",
+          "It sorts the input"
+        ],
+        "correctAnswer": "It ensures solutions to subproblems combine into the optimal solution"
+      },
+      {
+        "question": "Scenario: You need the LCS of 'ABCD' and 'ACDF'. What’s the length using DP?",
+        "options": [
+          "3",
+          "2",
+          "4",
+          "1"
+        ],
+        "correctAnswer": "3"
+      },
+      {
+        "question": "What is a disadvantage of memoization?",
+        "options": [
+          "It uses recursive stack space",
+          "It requires more iterations",
+          "It’s slower than naive recursion",
+          "It can’t handle large inputs"
+        ],
+        "correctAnswer": "It uses recursive stack space"
+      },
+      {
+        "question": "Evaluate: When is a greedy approach better than DP?",
+        "options": [
+          "When the problem lacks overlapping subproblems",
+          "When memory is unlimited",
+          "When recursion is faster",
+          "When subproblems are unique"
+        ],
+        "correctAnswer": "When the problem lacks overlapping subproblems"
+      },
+      {
+        "question": "Create: How would you solve the coin change problem with minimum coins?",
+        "options": [
+          "Use a DP table to track minimum coins per amount",
+          "Recursively try all denominations",
+          "Sort coins by value",
+          "Use a queue-based approach"
+        ],
+        "correctAnswer": "Use a DP table to track minimum coins per amount"
+      },
+      {
+        "question": "What is the time complexity of matrix chain multiplication with DP?",
+        "options": [
+          "O(n^3)",
+          "O(n^2)",
+          "O(2^n)",
+          "O(n log n)"
+        ],
+        "correctAnswer": "O(n^3)"
+      },
+      {
+        "question": "Scenario: A recursive knapsack solution is too slow. What’s the best optimization?",
+        "options": [
+          "Switch to tabulation",
+          "Increase recursion depth",
+          "Use a greedy heuristic",
+          "Sort items by weight"
+        ],
+        "correctAnswer": "Switch to tabulation"
+      },
+      {
+        "question": "Why does tabulation avoid stack overflow?",
+        "options": [
+          "It uses iteration instead of recursion",
+          "It reduces subproblem size",
+          "It sorts the input",
+          "It uses less memory"
+        ],
+        "correctAnswer": "It uses iteration instead of recursion"
+      },
+      {
+        "question": "Evaluate: Why might memoization use more memory than tabulation?",
+        "options": [
+          "It stores only needed subproblems, but with call stack overhead",
+          "It computes all subproblems",
+          "It requires sorting",
+          "It lacks optimal substructure"
+        ],
+        "correctAnswer": "It stores only needed subproblems, but with call stack overhead"
+      },
+      {
+        "question": "Create: How would you design a DP solution for the egg dropping problem?",
+        "options": [
+          "Use a 2D table for floors and eggs",
+          "Recursively drop from each floor",
+          "Sort floors by height",
+          "Use a greedy drop strategy"
+        ],
+        "correctAnswer": "Use a 2D table for floors and eggs"
+      },
+      {
+        "question": "What is the space complexity of Fibonacci with tabulation?",
+        "options": [
+          "O(n)",
+          "O(1)",
+          "O(n^2)",
+          "O(log n)"
+        ],
+        "correctAnswer": "O(n)"
+      },
+      {
+        "question": "Scenario: You need to multiply 4 matrices efficiently. Why use DP?",
+        "options": [
+          "It minimizes the number of scalar multiplications",
+          "It sorts the matrices",
+          "It reduces memory usage",
+          "It eliminates recursion"
+        ],
+        "correctAnswer": "It minimizes the number of scalar multiplications"
+      },
+      {
+        "question": "What property does the knapsack problem exhibit?",
+        "options": [
+          "Overlapping subproblems",
+          "Linear subproblems",
+          "Sorted inputs",
+          "Non-optimal substructure"
+        ],
+        "correctAnswer": "Overlapping subproblems"
+      },
+      {
+        "question": "Evaluate: Why is DP better than brute force for LCS?",
+        "options": [
+          "It avoids recomputing subproblems",
+          "It uses less memory",
+          "It sorts the strings",
+          "It requires fewer comparisons"
+        ],
+        "correctAnswer": "It avoids recomputing subproblems"
+      },
+      {
+        "question": "Create: How would you optimize the rod cutting problem?",
+        "options": [
+          "Use a DP table to store max values per length",
+          "Cut recursively at every point",
+          "Sort prices by value",
+          "Use a stack-based cut"
+        ],
+        "correctAnswer": "Use a DP table to store max values per length"
+      },
+      {
+        "question": "What is the time complexity of the egg dropping problem with DP?",
+        "options": [
+          "O(nk)",
+          "O(n^2)",
+          "O(2^n)",
+          "O(n log k)"
+        ],
+        "correctAnswer": "O(nk)"
+      },
+      {
+        "question": "Scenario: A recursive LCS solution crashes for long strings. What’s the fix?",
+        "options": [
+          "Use tabulation with a 2D array",
+          "Increase stack size",
+          "Sort the strings",
+          "Use a greedy match"
+        ],
+        "correctAnswer": "Use tabulation with a 2D array"
+      },
+      {
+        "question": "Why does DP work for problems like matrix chain multiplication?",
+        "options": [
+          "It exploits optimal substructure",
+          "It uses random partitioning",
+          "It avoids subproblems",
+          "It sorts matrices"
+        ],
+        "correctAnswer": "It exploits optimal substructure"
+      },
+      {
+        "question": "Evaluate: When might DP be overkill?",
+        "options": [
+          "For problems without overlapping subproblems",
+          "For small inputs",
+          "For sorted data",
+          "For recursive solutions"
+        ],
+        "correctAnswer": "For problems without overlapping subproblems"
+      },
+      {
+        "question": "Create: How would you solve the subset sum problem efficiently?",
+        "options": [
+          "Use a DP table to track possible sums",
+          "Recursively try all subsets",
+          "Sort the numbers",
+          "Use a queue-based approach"
+        ],
+        "correctAnswer": "Use a DP table to track possible sums"
+      }
+    ]
+  }

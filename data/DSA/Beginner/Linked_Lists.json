@@ -1,0 +1,164 @@
+{
+  "category": "DSA",
+    "title": "Linked Lists",
+    "level": "Beginner",
+    "Difficulty": "Medium",
+    "timer": "10 minutes",
+    "skill": "45%",
+    "knowledge": "40%",
+    "application": "15%",
+    "why": "This Linked Lists exam evaluates fundamental understanding and practical manipulation of dynamic data structures, emphasizing pointer-based node relationships, traversal, and complexity analysis. It prepares candidates to handle memory-efficient structures used in real-world systems like queues, stacks, and dynamic memory allocation.",
+
+    "questions": [
+      {
+        "question": "What is a singly linked list?",
+        "options": [
+          "A collection of nodes where each node points to the next",
+          "A fixed-size array of elements",
+          "A tree structure with multiple branches",
+          "A list where each node points to the previous node"
+        ],
+        "correctAnswer": "A collection of nodes where each node points to the next"
+      },
+      {
+        "question": "What does the 'head' of a linked list refer to?",
+        "options": [
+          "The first node",
+          "The last node",
+          "The middle node",
+          "The node with the largest value"
+        ],
+        "correctAnswer": "The first node"
+      },
+      {
+        "question": "What does the 'tail' of a linked list refer to?",
+        "options": [
+          "The last node",
+          "The first node",
+          "The node before the head",
+          "The node with the smallest value"
+        ],
+        "correctAnswer": "The last node"
+      },
+      {
+        "question": "What is stored in a node of a singly linked list?",
+        "options": [
+          "Data and a pointer to the next node",
+          "Data and a pointer to the previous node",
+          "Only data",
+          "Only a pointer"
+        ],
+        "correctAnswer": "Data and a pointer to the next node"
+      },
+      {
+        "question": "True or False: In a singly linked list, the tail node points to null.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "true"
+      },
+      {
+        "question": "Which operation allows you to visit each node in a linked list?",
+        "options": [
+          "Traversal",
+          "Insertion",
+          "Deletion",
+          "Sorting"
+        ],
+        "correctAnswer": "Traversal"
+      },
+      {
+        "question": "How does a linked list differ from an array?",
+        "options": [
+          "Linked lists have dynamic size, arrays have fixed size",
+          "Arrays have dynamic size, linked lists have fixed size",
+          "Linked lists store data in contiguous memory, arrays do not",
+          "Arrays allow random access, linked lists do too"
+        ],
+        "correctAnswer": "Linked lists have dynamic size, arrays have fixed size"
+      },
+      {
+        "question": "What is the time complexity of inserting a node at the beginning of a singly linked list?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n^2)"
+        ],
+        "correctAnswer": "O(1)"
+      },
+      {
+        "question": "Complete the code: Given a Node class, what should replace ___ to define a singly linked list node in JavaScript?\n\nclass Node {\n  constructor(data) {\n    this.data = data;\n    this.___ = null;\n  }\n}",
+        "options": [
+          "next",
+          "prev",
+          "head",
+          "tail"
+        ],
+        "correctAnswer": "next"
+      },
+      {
+        "question": "True or False: Accessing an element in a linked list is faster than in an array.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "false"
+      },
+      {
+        "question": "Find the error: This code intends to add a node at the end of a linked list, but it fails. What’s wrong?\n\nlet head = null;\nfunction addNode(data) {\n  let newNode = { data: data, next: null };\n  head = newNode; // Error here\n}",
+        "options": [
+          "It overwrites the head instead of appending to the end",
+          "It forgets to set the data field",
+          "It doesn’t initialize the head",
+          "It uses an array instead of a node"
+        ],
+        "correctAnswer": "It overwrites the head instead of appending to the end"
+      },
+      {
+        "question": "Complete the code: To find the length of a linked list, what should replace ___?\n\nfunction getLength(head) {\n  let count = 0;\n  let current = head;\n  while (current !== null) {\n    count++;\n    current = ___;\n  }\n  return count;\n}",
+        "options": [
+          "current.next",
+          "current.data",
+          "head",
+          "null"
+        ],
+        "correctAnswer": "current.next"
+      },
+      {
+        "question": "What does the following linked list structure represent?\nhead -> [5 | next] -> [10 | next] -> [15 | null]",
+        "options": [
+          "A list with 3 nodes: 5, 10, 15",
+          "A list with 2 nodes: 5, 10",
+          "A circular list",
+          "An empty list"
+        ],
+        "correctAnswer": "A list with 3 nodes: 5, 10, 15"
+      },
+      {
+        "question": "Find the error: This code tries to traverse a linked list but has a bug. What’s wrong?\n\nlet current = head;\nwhile (current.next !== null) {\n  console.log(current.data);\n  current = current.next;\n}",
+        "options": [
+          "It skips the last node",
+          "It prints the next pointer instead of data",
+          "It runs infinitely",
+          "It doesn’t initialize current"
+        ],
+        "correctAnswer": "It skips the last node"
+      },
+      {
+        "question": "True or False: Deleting a node from the end of a singly linked list takes O(n) time.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "true"
+      }
+    ]
+  }

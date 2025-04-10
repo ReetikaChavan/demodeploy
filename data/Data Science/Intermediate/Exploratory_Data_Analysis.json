@@ -1,0 +1,214 @@
+{
+  "category": "Data Science",
+    "title": "Exploratory Data Analysis (EDA)",
+    "level": "Intermediate",
+    "Difficulty": "Medium",
+    "timer": "20 minutes",
+    "skill": "35%",
+    "knowledge": "50%",
+    "application": "15%",
+    "why": "This assessment strengthens the ability to explore and interpret datasets using techniques such as correlation, distribution analysis, and visualization. It encourages critical thinking and pattern recognition for effective hypothesis generation before modeling.",
+
+    "questions": [
+      {
+        "question": "Scenario: You have variables 'Height' and 'Weight'. How do you measure their relationship?",
+        "options": [
+          "Correlation",
+          "Mean",
+          "Mode",
+          "Range"
+        ],
+        "correctAnswer": "Correlation"
+      },
+      {
+        "question": "What does a correlation of -0.8 indicate?",
+        "options": [
+          "Strong negative relationship",
+          "Strong positive relationship",
+          "No relationship",
+          "Weak positive relationship"
+        ],
+        "correctAnswer": "Strong negative relationship"
+      },
+      {
+        "question": "Solve: Calculate the mean of 2, 4, 6, 8, 10.",
+        "options": [
+          "6",
+          "5",
+          "7",
+          "8"
+        ],
+        "correctAnswer": "6"
+      },
+      {
+        "question": "What library in Python is used for data manipulation in EDA?",
+        "options": [
+          "Pandas",
+          "NumPy",
+          "Matplotlib",
+          "Scikit-learn"
+        ],
+        "correctAnswer": "Pandas"
+      },
+      {
+        "question": "Scenario: A dataset has a right-skewed distribution. What’s likely true?",
+        "options": [
+          "Mean > Median",
+          "Mean < Median",
+          "Mean = Median",
+          "Median > Mode"
+        ],
+        "correctAnswer": "Mean > Median"
+      },
+      {
+        "question": "Analyze: Why is correlation useful in EDA?",
+        "options": [
+          "It shows variable dependencies",
+          "It removes outliers",
+          "It normalizes data",
+          "It encodes categories"
+        ],
+        "correctAnswer": "It shows variable dependencies"
+      },
+      {
+        "question": "What does covariance measure?",
+        "options": [
+          "Direction of relationship between variables",
+          "Data spread",
+          "Central tendency",
+          "Frequency"
+        ],
+        "correctAnswer": "Direction of relationship between variables"
+      },
+      {
+        "question": "Solve: For data 1, 2, 3, 4, 5, what’s the median?",
+        "options": [
+          "3",
+          "2",
+          "4",
+          "5"
+        ],
+        "correctAnswer": "3"
+      },
+      {
+        "question": "What does a histogram reveal in EDA?",
+        "options": [
+          "Data distribution",
+          "Correlations",
+          "Trends over time",
+          "Categorical proportions"
+        ],
+        "correctAnswer": "Data distribution"
+      },
+      {
+        "question": "Scenario: You plot a scatter of 'Sales' vs. 'Ads'. A downward trend appears. What’s the correlation likely?",
+        "options": [
+          "Negative",
+          "Positive",
+          "Zero",
+          "Undefined"
+        ],
+        "correctAnswer": "Negative"
+      },
+      {
+        "question": "Analyze: Why might a dataset with zero correlation still have a relationship?",
+        "options": [
+          "It could be non-linear",
+          "It’s always linear",
+          "It has no variance",
+          "It’s normalized"
+        ],
+        "correctAnswer": "It could be non-linear"
+      },
+      {
+        "question": "Solve: For data 10, 20, 30, 40, what’s the variance (population)?",
+        "options": [
+          "125",
+          "100",
+          "150",
+          "200"
+        ],
+        "correctAnswer": "125"
+      },
+      {
+        "question": "What Python library is used for plotting in EDA?",
+        "options": [
+          "Matplotlib",
+          "Pandas",
+          "NumPy",
+          "SciPy"
+        ],
+        "correctAnswer": "Matplotlib"
+      },
+      {
+        "question": "Scenario: A dataset has values 1, 2, 3, 100. What does this suggest?",
+        "options": [
+          "Presence of an outlier",
+          "Normal distribution",
+          "Zero correlation",
+          "Equal variance"
+        ],
+        "correctAnswer": "Presence of an outlier"
+      },
+      {
+        "question": "What does a box plot show?",
+        "options": [
+          "Quartiles and outliers",
+          "Trends over time",
+          "Correlations",
+          "Proportions"
+        ],
+        "correctAnswer": "Quartiles and outliers"
+      },
+      {
+        "question": "Solve: For data 5, 5, 5, 5, what’s the standard deviation?",
+        "options": [
+          "0",
+          "1",
+          "5",
+          "10"
+        ],
+        "correctAnswer": "0"
+      },
+      {
+        "question": "Analyze: Why is skewness important in EDA?",
+        "options": [
+          "It indicates distribution shape",
+          "It measures correlation",
+          "It removes outliers",
+          "It scales data"
+        ],
+        "correctAnswer": "It indicates distribution shape"
+      },
+      {
+        "question": "What does a positive covariance indicate?",
+        "options": [
+          "Variables increase together",
+          "Variables decrease together",
+          "No relationship",
+          "Random variation"
+        ],
+        "correctAnswer": "Variables increase together"
+      },
+      {
+        "question": "Solve: For data 2, 4, 6, what’s the range?",
+        "options": [
+          "4",
+          "6",
+          "2",
+          "5"
+        ],
+        "correctAnswer": "4"
+      },
+      {
+        "question": "Scenario: You find a correlation of 0.9 between 'Hours Studied' and 'Grades'. What’s the implication?",
+        "options": [
+          "Strong positive relationship",
+          "Weak negative relationship",
+          "No relationship",
+          "Random data"
+        ],
+        "correctAnswer": "Strong positive relationship"
+      }
+    ]
+  }

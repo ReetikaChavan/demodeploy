@@ -1,0 +1,115 @@
+{
+    "category": "Interview Preparation",
+    "title": "SDE Beginner Basics",
+    "level": "Beginner",
+    "Difficulty": "Easy",
+    "timer": "10 minutes",
+    "total_marks": 20,
+    "marks_per_question": 1,
+    "skill": "40%",
+    "knowledge": "50%",
+    "application": "10%",
+    "why":"The SDE Beginner Basics exam equips first-time job seekers with fundamental interview skills through practical questions covering professional etiquette (punctuality, dress code), communication techniques (clear answers, active listening), and preparation strategies (company research, Q&A practice) transforming interview anxiety into confident first impressions for entry-level tech roles.",
+    "questions": [
+        {
+            "question": "What is the first step in preparing for an interview?",
+            "options": ["Research the company", "Wear a suit", "Arrive late", "Talk loudly"],
+            "correctAnswer": "Research the company"
+        },
+        {
+            "question": "What should you bring to an interview?",
+            "options": ["Resume", "A snack", "Your phone", "A toy"],
+            "correctAnswer": "Resume"
+        },
+        {
+            "question": "How should you greet the interviewer?",
+            "options": ["Handshake and smile", "Wave from afar", "Ignore them", "Yell 'Hi!'"],
+            "correctAnswer": "Handshake and smile"
+        },
+        {
+            "question": "What does 'Tell me about yourself' ask for?",
+            "options": ["Brief background", "Your favorite movie", "Your pet’s name", "A long story"],
+            "correctAnswer": "Brief background"
+        },
+        {
+            "question": "Why is eye contact important in an interview?",
+            "options": ["Shows confidence", "It’s rude", "To stare", "It’s not important"],
+            "correctAnswer": "Shows confidence"
+        },
+        {
+            "question": "What’s a good way to end an interview?",
+            "options": ["Say thank you", "Run out", "Ask for food", "Complain"],
+            "correctAnswer": "Say thank you"
+        },
+        {
+            "question": "What should you wear to an interview?",
+            "options": ["Professional attire", "Pajamas", "Swimwear", "Costume"],
+            "correctAnswer": "Professional attire"
+        },
+        {
+            "question": "What’s a common interview question?",
+            "options": ["What are your strengths?", "What’s your favorite color?", "Do you like cats?", "How tall are you?"],
+            "correctAnswer": "What are your strengths?"
+        },
+        {
+            "question": "Why should you arrive early to an interview?",
+            "options": ["Shows punctuality", "To nap", "To eat", "To leave early"],
+            "correctAnswer": "Shows punctuality"
+        },
+        {
+            "question": "What’s a strength you might mention?",
+            "options": ["Teamwork", "Laziness", "Arguing", "Sleeping"],
+            "correctAnswer": "Teamwork"
+        },
+        {
+            "question": "What does a firm handshake show?",
+            "options": ["Confidence", "Weakness", "Anger", "Boredom"],
+            "correctAnswer": "Confidence"
+        },
+        {
+            "question": "What should you research before an interview?",
+            "options": ["Company mission", "Weather", "TV shows", "Games"],
+            "correctAnswer": "Company mission"
+        },
+        {
+            "question": "What’s a good posture during an interview?",
+            "options": ["Sit up straight", "Slouch", "Lie down", "Stand"],
+            "correctAnswer": "Sit up straight"
+        },
+        {
+            "question": "Why avoid saying 'um' too much?",
+            "options": ["Sounds unsure", "It’s cool", "It’s loud", "It’s funny"],
+            "correctAnswer": "Sounds unsure"
+        },
+        {
+            "question": "What’s a weakness you might admit?",
+            "options": ["Public speaking", "Perfection", "Everything", "Nothing"],
+            "correctAnswer": "Public speaking"
+        },
+        {
+            "question": "What’s a good question to ask the interviewer?",
+            "options": ["What’s the team like?", "Can I leave early?", "Do you like me?", "What’s for lunch?"],
+            "correctAnswer": "What’s the team like?"
+        },
+        {
+            "question": "What does a smile show in an interview?",
+            "options": ["Friendliness", "Nervousness", "Anger", "Sleepiness"],
+            "correctAnswer": "Friendliness"
+        },
+        {
+            "question": "What should you do after an interview?",
+            "options": ["Send a thank-you note", "Forget it", "Call them", "Complain"],
+            "correctAnswer": "Send a thank-you note"
+        },
+        {
+            "question": "What’s a key skill for interviews?",
+            "options": ["Communication", "Running", "Cooking", "Singing"],
+            "correctAnswer": "Communication"
+        },
+        {
+            "question": "Why practice answers before an interview?",
+            "options": ["To feel prepared", "To forget them", "To confuse yourself", "To waste time"],
+            "correctAnswer": "To feel prepared"
+        }
+    ]
+}

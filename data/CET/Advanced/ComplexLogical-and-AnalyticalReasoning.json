@@ -1,0 +1,313 @@
+{
+  "category": "CET",
+    "title": "Complex Logical and Analytical Reasoning",
+    "level": "Advanced",
+    "Difficulty": "Medium",
+    "timer": "30 minutes",
+    "skill": "70%",
+    "knowledge": "90%",
+    "application": "40%",
+    "why":"This exam challenges your logical and analytical thinking. It tests your ability to solve complex scenarios involving spatial reasoning, family relationships, logical deductions, and data sufficiency. Success in this exam indicates your capacity to analyze information, draw valid conclusions, and apply logical principles to solve intricate problems.",
+    "questions": [
+      {
+        "question": "Scenario: A, B, C sit in a circle. A is left of B. Evaluate: Who’s left of C?",
+        "options": [
+          "B",
+          "A",
+          "Cannot determine",
+          "C"
+        ],
+        "correctAnswer": "Cannot determine"
+      },
+      {
+        "question": "What’s A’s relation if A is B’s father’s son?",
+        "options": [
+          "B’s brother",
+          "B’s father",
+          "B’s son",
+          "B"
+        ],
+        "correctAnswer": "B’s brother"
+      },
+      {
+        "question": "Solve: 5 people, A to E, in a row. A is 2nd, E is last. Where’s B if not next to A?",
+        "options": [
+          "4th",
+          "1st",
+          "3rd",
+          "Cannot determine"
+        ],
+        "correctAnswer": "4th"
+      },
+      {
+        "question": "Data Sufficiency: Is x > 5? (1) x > 3 (2) x < 7",
+        "options": [
+          "Both insufficient",
+          "1 sufficient",
+          "2 sufficient",
+          "Together sufficient"
+        ],
+        "correctAnswer": "Both insufficient"
+      },
+      {
+        "question": "Scenario: ‘All students study. Some study hard.’ What’s true?",
+        "options": [
+          "Some students study hard",
+          "All study hard",
+          "None study hard",
+          "Cannot determine"
+        ],
+        "correctAnswer": "Some students study hard"
+      },
+      {
+        "question": "Evaluate: ‘Rain causes floods.’ Weak argument?",
+        "options": [
+          "Floods happen without rain",
+          "Rain always floods",
+          "Floods need rain",
+          "Rain is wet"
+        ],
+        "correctAnswer": "Floods happen without rain"
+      },
+      {
+        "question": "Create: Arrange 4 people in a circle with A opposite C.",
+        "options": [
+          "A, B, C, D",
+          "A, C, B, D",
+          "A, D, C, B",
+          "Random"
+        ],
+        "correctAnswer": "A, D, C, B"
+      },
+      {
+        "question": "What’s inferred from ‘If P, then Q. Q is false.’?",
+        "options": [
+          "P is false",
+          "P is true",
+          "Q is true",
+          "Cannot determine"
+        ],
+        "correctAnswer": "P is false"
+      },
+      {
+        "question": "Solve: A is B’s mother. C is A’s son. What’s C to B?",
+        "options": [
+          "Brother",
+          "Father",
+          "Son",
+          "Cousin"
+        ],
+        "correctAnswer": "Brother"
+      },
+      {
+        "question": "Scenario: 6 seats, 3 boys, 3 girls. Boys together. How many ways?",
+        "options": [
+          "144",
+          "72",
+          "36",
+          "288"
+        ],
+        "correctAnswer": "144"
+      },
+      {
+        "question": "Data Sufficiency: Is n even? (1) n > 0 (2) n² is even",
+        "options": [
+          "2 sufficient",
+          "1 sufficient",
+          "Both insufficient",
+          "Together sufficient"
+        ],
+        "correctAnswer": "2 sufficient"
+      },
+      {
+        "question": "Evaluate: ‘Smoking harms health.’ Strong argument?",
+        "options": [
+          "Studies show lung damage",
+          "Some smokers live long",
+          "Smoking is cool",
+          "Health is random"
+        ],
+        "correctAnswer": "Studies show lung damage"
+      },
+      {
+        "question": "Create: Sequence for A, B, C with B between A and C.",
+        "options": [
+          "A, B, C",
+          "B, A, C",
+          "C, B, A",
+          "A, C, B"
+        ],
+        "correctAnswer": "A, B, C"
+      },
+      {
+        "question": "What’s true if ‘Some A are B. All B are C.’?",
+        "options": [
+          "Some A are C",
+          "All A are C",
+          "No A are C",
+          "All C are A"
+        ],
+        "correctAnswer": "Some A are C"
+      },
+      {
+        "question": "Scenario: A is taller than B, B taller than C. Who’s shortest?",
+        "options": [
+          "C",
+          "A",
+          "B",
+          "Cannot determine"
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "question": "Solve: 4 people in a circle. A next to B. How many arrangements?",
+        "options": [
+          "12",
+          "6",
+          "8",
+          "4"
+        ],
+        "correctAnswer": "12"
+      },
+      {
+        "question": "Data Sufficiency: Is x = 2? (1) x² = 4 (2) x > 0",
+        "options": [
+          "Together sufficient",
+          "1 sufficient",
+          "2 sufficient",
+          "Both insufficient"
+        ],
+        "correctAnswer": "Together sufficient"
+      },
+      {
+        "question": "Evaluate: ‘Exercise improves fitness.’ Weak argument?",
+        "options": [
+          "Some fit people don’t exercise",
+          "Exercise builds muscle",
+          "Fitness needs exercise",
+          "Exercise is fun"
+        ],
+        "correctAnswer": "Some fit people don’t exercise"
+      },
+      {
+        "question": "Create: Deduction from ‘If X, then Y. If Y, then Z.’ and X is true.",
+        "options": [
+          "Z is true",
+          "Y is false",
+          "X is false",
+          "Z is false"
+        ],
+        "correctAnswer": "Z is true"
+      },
+      {
+        "question": "What’s A to C if A is B’s sister and B is C’s father?",
+        "options": [
+          "Aunt",
+          "Mother",
+          "Sister",
+          "Cousin"
+        ],
+        "correctAnswer": "Aunt"
+      },
+      {
+        "question": "Scenario: 5 people in a row. A at one end, B not next to A. Where’s B?",
+        "options": [
+          "3rd, 4th, or 5th",
+          "1st",
+          "2nd",
+          "Any"
+        ],
+        "correctAnswer": "3rd, 4th, or 5th"
+      },
+      {
+        "question": "Solve: If P is Q’s son and Q is R’s daughter, what’s P to R?",
+        "options": [
+          "Grandson",
+          "Son",
+          "Nephew",
+          "Brother"
+        ],
+        "correctAnswer": "Grandson"
+      },
+      {
+        "question": "Data Sufficiency: Is a > b? (1) a - b > 0 (2) b < a",
+        "options": [
+          "1 sufficient",
+          "2 sufficient",
+          "Both sufficient",
+          "Both insufficient"
+        ],
+        "correctAnswer": "Both sufficient"
+      },
+      {
+        "question": "Evaluate: ‘Taxes fund schools.’ Strong argument?",
+        "options": [
+          "Tax records show school funding",
+          "Taxes are high",
+          "Schools don’t need funds",
+          "Some taxes are wasted"
+        ],
+        "correctAnswer": "Tax records show school funding"
+      },
+      {
+        "question": "Create: Circular arrangement for 5 with A next to B, C opposite A.",
+        "options": [
+          "A, B, D, C, E",
+          "A, C, B, D, E",
+          "A, B, C, D, E",
+          "Random"
+        ],
+        "correctAnswer": "A, B, D, C, E"
+      },
+      {
+        "question": "What’s inferred from ‘If not P, then Q. P is true.’?",
+        "options": [
+          "Q is unknown",
+          "Q is true",
+          "Q is false",
+          "P is false"
+        ],
+        "correctAnswer": "Q is unknown"
+      },
+      {
+        "question": "Scenario: A beats B, B beats C, C beats A. Who’s best?",
+        "options": [
+          "Cannot determine",
+          "A",
+          "B",
+          "C"
+        ],
+        "correctAnswer": "Cannot determine"
+      },
+      {
+        "question": "Solve: 6 people, 3 pairs sit together. How many ways?",
+        "options": [
+          "48",
+          "24",
+          "72",
+          "96"
+        ],
+        "correctAnswer": "48"
+      },
+      {
+        "question": "Evaluate: Why critical in data sufficiency?",
+        "options": [
+          "Tests minimal info needed",
+          "Avoids puzzles",
+          "Simplifies arguments",
+          "Ignores logic"
+        ],
+        "correctAnswer": "Tests minimal info needed"
+      },
+      {
+        "question": "Create: Deduction from ‘All X are Y. Some Y are Z.’",
+        "options": [
+          "Some X may be Z",
+          "All X are Z",
+          "No X are Z",
+          "All Z are X"
+        ],
+        "correctAnswer": "Some X may be Z"
+      }
+    ]
+  }

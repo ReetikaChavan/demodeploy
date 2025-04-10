@@ -1,0 +1,345 @@
+{
+    "category": "Interview Preparation",
+    "title": "SDE Advanced Mastery",
+    "level": "Advanced",
+    "Difficulty": "Hard",
+    "timer": "35 minutes",
+    "total_marks": 140,
+    "marks_per_question": 2,
+    "skill": "30%",
+    "knowledge": "30%",
+    "application": "40%",
+    "why":"The SDE Advanced Mastery exam rigorously prepares candidates for top-tier technical interviews by testing advanced algorithms (Kruskal's, Bellman-Ford), complex data structures (AVL trees, monotonic stacks), and distributed system design principles (fault tolerance, sharding), while sharpening problem-solving skills for optimization challenges (space-time tradeoffs, dynamic programming) and real-world scenarios (race conditions, load balancing) through carefully curated questions that mirror FAANG-level interview difficulty.",
+    "questions": [
+        {
+            "question": "What’s the time complexity of Kruskal’s algorithm with a union-find data structure?",
+            "options": ["O(E log V)", "O(V²)", "O(n)", "O(1)"],
+            "correctAnswer": "O(E log V)"
+        },
+        {
+            "question": "What’s a key property of an AVL tree?",
+            "options": ["Balance factor ≤ 1", "Unordered", "Fixed height", "All leaves equal"],
+            "correctAnswer": "Balance factor ≤ 1"
+        },
+        {
+            "question": "What’s the output: x = [1, 2, 3]; x.pop(0); print(x)?",
+            "options": ["[2, 3]", "[1, 2]", "[1, 3]", "Error"],
+            "correctAnswer": "[2, 3]"
+        },
+        {
+            "question": "What’s a common use of a monotonic stack?",
+            "options": ["Next greater element", "Tree traversal", "Graph search", "Hashing"],
+            "correctAnswer": "Next greater element"
+        },
+        {
+            "question": "What’s the time complexity of Prim’s algorithm with a priority queue?",
+            "options": ["O(E log V)", "O(V²)", "O(n)", "O(1)"],
+            "correctAnswer": "O(E log V)"
+        },
+        {
+            "question": "What’s a good way to optimize a graph algorithm?",
+            "options": ["Adjacency list", "More edges", "Brute force", "Guess"],
+            "correctAnswer": "Adjacency list"
+        },
+        {
+            "question": "What’s the output: x = {'a': 1}; x.update({'b': 2}); print(x)?",
+            "options": ["{'a': 1, 'b': 2}", "{'a': 1}", "{'b': 2}", "Error"],
+            "correctAnswer": "{'a': 1, 'b': 2}"
+        },
+        {
+            "question": "What’s a key to designing a distributed system?",
+            "options": ["Fault tolerance", "Single server", "No redundancy", "Slow queries"],
+            "correctAnswer": "Fault tolerance"
+        },
+        {
+            "question": "What’s the time complexity of the Bellman-Ford algorithm?",
+            "options": ["O(VE)", "O(V²)", "O(log n)", "O(n)"],
+            "correctAnswer": "O(VE)"
+        },
+        {
+            "question": "What’s the output: x = 'code'; print(''.join(reversed(x)))?",
+            "options": ["edoc", "code", "c", "Error"],
+            "correctAnswer": "edoc"
+        },
+        {
+            "question": "What’s a common advanced graph problem?",
+            "options": ["Minimum spanning tree", "Bubble Sort", "Binary Search", "Stack operations"],
+            "correctAnswer": "Minimum spanning tree"
+        },
+        {
+            "question": "What’s the space complexity of a suffix tree?",
+            "options": ["O(n)", "O(1)", "O(log n)", "O(n²)"],
+            "correctAnswer": "O(n)"
+        },
+        {
+            "question": "What’s a good way to approach a complex system design?",
+            "options": ["Break into components", "Guess", "Write code first", "Skip planning"],
+            "correctAnswer": "Break into components"
+        },
+        {
+            "question": "What’s the time complexity of topological sort with DFS?",
+            "options": ["O(V + E)", "O(n²)", "O(log n)", "O(1)"],
+            "correctAnswer": "O(V + E)"
+        },
+        {
+            "question": "What’s the output: x = [1, 2]; x.extend([3]); print(x)?",
+            "options": ["[1, 2, 3]", "[1, 2]", "[3]", "Error"],
+            "correctAnswer": "[1, 2, 3]"
+        },
+        {
+            "question": "What’s a key to debugging a distributed system?",
+            "options": ["Log analysis", "Guess fixes", "Skip it", "Rewrite"],
+            "correctAnswer": "Log analysis"
+        },
+        {
+            "question": "What’s the time complexity of finding all pairs in an array?",
+            "options": ["O(n²)", "O(n)", "O(log n)", "O(1)"],
+            "correctAnswer": "O(n²)"
+        },
+        {
+            "question": "What’s a common use of a segment tree?",
+            "options": ["Range queries", "DFS", "Bubble Sort", "String reversal"],
+            "correctAnswer": "Range queries"
+        },
+        {
+            "question": "What’s the output: x = [1, 2, 3]; x.clear(); print(x)?",
+            "options": ["[]", "[1, 2, 3]", "[0]", "Error"],
+            "correctAnswer": "[]"
+        },
+        {
+            "question": "What’s a key to handling big data?",
+            "options": ["Partitioning", "More memory", "Slow code", "Guessing"],
+            "correctAnswer": "Partitioning"
+        },
+        {
+            "question": "What’s the time complexity of quicksort’s worst case?",
+            "options": ["O(n²)", "O(n log n)", "O(n)", "O(1)"],
+            "correctAnswer": "O(n²)"
+        },
+        {
+            "question": "What’s a good question about distributed systems?",
+            "options": ["How do you ensure consistency?", "What’s the pay?", "Is it fun?", "Do you like me?"],
+            "correctAnswer": "How do you ensure consistency?"
+        },
+        {
+            "question": "What’s the output: x = 'abc'; print(x.index('c'))?",
+            "options": ["2", "0", "1", "Error"],
+            "correctAnswer": "2"
+        },
+        {
+            "question": "What’s a common advanced two-pointer problem?",
+            "options": ["Trapping rain water", "DFS", "Heap Sort", "Graph Coloring"],
+            "correctAnswer": "Trapping rain water"
+        },
+        {
+            "question": "What’s the time complexity of matrix multiplication?",
+            "options": ["O(n³)", "O(n²)", "O(n)", "O(1)"],
+            "correctAnswer": "O(n³)"
+        },
+        {
+            "question": "What’s a key to writing scalable code?",
+            "options": ["Modularity", "More lines", "Complex logic", "No comments"],
+            "correctAnswer": "Modularity"
+        },
+        {
+            "question": "What’s the output: x = [1, 2]; x[1] = 3; print(x)?",
+            "options": ["[1, 3]", "[1, 2]", "[3, 2]", "Error"],
+            "correctAnswer": "[1, 3]"
+        },
+        {
+            "question": "What’s a common use of bit manipulation?",
+            "options": ["Subset generation", "Bubble Sort", "Binary Search", "Stack operations"],
+            "correctAnswer": "Subset generation"
+        },
+        {
+            "question": "What’s the time complexity of A* search?",
+            "options": ["O(b^d)", "O(n²)", "O(log n)", "O(1)"],
+            "correctAnswer": "O(b^d)"
+        },
+        {
+            "question": "What’s a good way to test a distributed system?",
+            "options": ["Simulate failures", "Skip testing", "Guess output", "Write more"],
+            "correctAnswer": "Simulate failures"
+        },
+        {
+            "question": "What’s the output: x = {'a': 1, 'b': 2}; x.pop('a'); print(x)?",
+            "options": ["{'b': 2}", "{'a': 1}", "Error", "{}"],
+            "correctAnswer": "{'b': 2}"
+        },
+        {
+            "question": "What’s a key to successful system design interviews?",
+            "options": ["Trade-off analysis", "Ignoring constraints", "Writing code first", "Silence"],
+            "correctAnswer": "Trade-off analysis"
+        },
+        {
+            "question": "What’s the time complexity of heap sort?",
+            "options": ["O(n log n)", "O(n²)", "O(n)", "O(1)"],
+            "correctAnswer": "O(n log n)"
+        },
+        {
+            "question": "What’s a common system design pattern?",
+            "options": ["Sharding", "Drawing", "Singing", "Essay"],
+            "correctAnswer": "Sharding"
+        },
+        {
+            "question": "What’s the output: x = 'code'; print(x.startswith('co'))?",
+            "options": ["True", "False", "Error", "co"],
+            "correctAnswer": "True"
+        },
+        {
+            "question": "What’s a key to handling race conditions?",
+            "options": ["Locks", "More threads", "No synchronization", "Guessing"],
+            "correctAnswer": "Locks"
+        },
+        {
+            "question": "What’s the time complexity of finding kth smallest in a BST?",
+            "options": ["O(h)", "O(n)", "O(log n)", "O(n²)"],
+            "correctAnswer": "O(h)"
+        },
+        {
+            "question": "What’s a good way to improve algorithm performance?",
+            "options": ["Space-time trade-off", "More loops", "Slow code", "Copy code"],
+            "correctAnswer": "Space-time trade-off"
+        },
+        {
+            "question": "What’s the output: x = [1, 2, 3]; x.append([4]); print(x)?",
+            "options": ["[1, 2, 3, [4]]", "[1, 2, 3, 4]", "[4]", "Error"],
+            "correctAnswer": "[1, 2, 3, [4]]"
+        },
+        {
+            "question": "What’s a common use of a disjoint-set?",
+            "options": ["Union-find", "Sorting", "Tree traversal", "Stack operations"],
+            "correctAnswer": "Union-find"
+        },
+        {
+            "question": "What’s the time complexity of finding shortest paths in DAG?",
+            "options": ["O(V + E)", "O(n²)", "O(log n)", "O(1)"],
+            "correctAnswer": "O(V + E)"
+        },
+        {
+            "question": "What’s a good way to end a system design interview?",
+            "options": ["Summarize trade-offs", "Leave silently", "Complain", "Guess"],
+            "correctAnswer": "Summarize trade-offs"
+        },
+        {
+            "question": "What’s the output: x = 'abc'; print(list(x))?",
+            "options": ["['a', 'b', 'c']", "['abc']", "Error", "abc"],
+            "correctAnswer": "['a', 'b', 'c']"
+        },
+        {
+            "question": "What’s a key to NoSQL database design?",
+            "options": ["Denormalization", "More tables", "No indexes", "Slow queries"],
+            "correctAnswer": "Denormalization"
+        },
+        {
+            "question": "What’s the time complexity of finding median in a BST?",
+            "options": ["O(n)", "O(log n)", "O(1)", "O(n²)"],
+            "correctAnswer": "O(n)"
+        },
+        {
+            "question": "What’s a common advanced coding challenge?",
+            "options": ["Dynamic programming", "Drawing", "Singing", "Essay"],
+            "correctAnswer": "Dynamic programming"
+        },
+        {
+            "question": "What’s the output: x = [1, 2]; x *= 2; print(x)?",
+            "options": ["[1, 2, 1, 2]", "[1, 2]", "[2, 4]", "Error"],
+            "correctAnswer": "[1, 2, 1, 2]"
+        },
+        {
+            "question": "What’s a key to RESTful API design?",
+            "options": ["Statelessness", "Complex endpoints", "No docs", "Slow response"],
+            "correctAnswer": "Statelessness"
+        },
+        {
+            "question": "What’s the time complexity of counting inversions?",
+            "options": ["O(n log n)", "O(n²)", "O(n)", "O(1)"],
+            "correctAnswer": "O(n log n)"
+        },
+        {
+            "question": "What’s a good way to handle a complex bug?",
+            "options": ["Divide and conquer", "Ignore it", "Guess fix", "Rewrite"],
+            "correctAnswer": "Divide and conquer"
+        },
+        {
+            "question": "What’s the output: x = {'a': 1}; print(x.get('b', 0))?",
+            "options": ["0", "1", "Error", "None"],
+            "correctAnswer": "0"
+        },
+        {
+            "question": "What’s a common use of a bloom filter?",
+            "options": ["Membership testing", "Sorting", "Tree traversal", "Stack operations"],
+            "correctAnswer": "Membership testing"
+        },
+        {
+            "question": "What’s the time complexity of finding LCA in a BST?",
+            "options": ["O(h)", "O(n)", "O(log n)", "O(n²)"],
+            "correctAnswer": "O(h)"
+        },
+        {
+            "question": "What’s a key to microservices design?",
+            "options": ["Loose coupling", "Tight integration", "No APIs", "Slow response"],
+            "correctAnswer": "Loose coupling"
+        },
+        {
+            "question": "What’s the output: x = [1, 2, 3]; print(x[-1])?",
+            "options": ["3", "1", "2", "Error"],
+            "correctAnswer": "3"
+        },
+        {
+            "question": "What’s a common use of backtracking?",
+            "options": ["N-Queens", "Bubble Sort", "Binary Search", "Stack operations"],
+            "correctAnswer": "N-Queens"
+        },
+        {
+            "question": "What’s the time complexity of finding all subsets?",
+            "options": ["O(2^n)", "O(n²)", "O(n)", "O(1)"],
+            "correctAnswer": "O(2^n)"
+        },
+        {
+            "question": "What’s a good way to optimize a database query?",
+            "options": ["Indexing", "More joins", "No indexes", "Slow queries"],
+            "correctAnswer": "Indexing"
+        },
+        {
+            "question": "What’s the output: x = 'code'; print(x.count('c'))?",
+            "options": ["1", "2", "0", "Error"],
+            "correctAnswer": "1"
+        },
+        {
+            "question": "What’s a key to load balancer design?",
+            "options": ["Even distribution", "Single server", "No redundancy", "Slow queries"],
+            "correctAnswer": "Even distribution"
+        },
+        {
+            "question": "What’s the time complexity of finding max subarray sum?",
+            "options": ["O(n)", "O(n²)", "O(log n)", "O(1)"],
+            "correctAnswer": "O(n)"
+        },
+        {
+            "question": "What’s a common use of greedy algorithms?",
+            "options": ["Activity selection", "DFS", "Bubble Sort", "String reversal"],
+            "correctAnswer": "Activity selection"
+        },
+        {
+            "question": "What’s the output: x = [1, 2]; print(x * 3)?",
+            "options": ["[1, 2, 1, 2, 1, 2]", "[1, 2, 3]", "[3, 6]", "Error"],
+            "correctAnswer": "[1, 2, 1, 2, 1, 2]"
+        },
+        {
+            "question": "What’s a key to handling system failures?",
+            "options": ["Redundancy", "Single point", "No backups", "Slow recovery"],
+            "correctAnswer": "Redundancy"
+        },
+        {
+            "question": "What’s the time complexity of finding longest common subsequence?",
+            "options": ["O(nm)", "O(n²)", "O(n)", "O(1)"],
+            "correctAnswer": "O(nm)"
+        },
+        {
+            "question": "What’s a good way to prepare for advanced SDE interviews?",
+            "options": ["Practice system design", "Memorize syntax", "Avoid practice", "Copy code"],
+            "correctAnswer": "Practice system design"
+        }
+    ]
+}

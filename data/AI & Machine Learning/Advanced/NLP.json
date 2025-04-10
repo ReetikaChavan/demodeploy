@@ -1,0 +1,313 @@
+{
+    "category": "AI & Machine Learning",
+    "title": "Natural Language Processing (NLP)",
+    "level": "Advanced",
+    "Difficulty": "Easy",
+    "timer": "30 minutes",
+    "skill": "40%",
+    "knowledge": "60%",
+    "application": "35%",
+    "why":"The Natural Language Processing (NLP) exam evaluates advanced understanding of text processing through targeted questions covering tokenization techniques (WordPiece, subword), embedding models (Word2Vec, transformers), and practical pipeline design equipping candidates to implement solutions from preprocessing to contextual language understanding.",
+    "questions": [
+      {
+        "question": "Scenario: You’re preprocessing text for sentiment analysis. What is the first step you should take?",
+        "options": [
+          "Tokenization",
+          "Word embedding",
+          "Transformer encoding",
+          "Stopword removal"
+        ],
+        "correctAnswer": "Tokenization"
+      },
+      {
+        "question": "Evaluate: Why is tokenization essential in NLP?",
+        "options": [
+          "It breaks text into manageable units for analysis",
+          "It generates word embeddings directly",
+          "It reduces model complexity",
+          "It eliminates the need for embeddings"
+        ],
+        "correctAnswer": "It breaks text into manageable units for analysis"
+      },
+      {
+        "question": "What is the primary output of tokenization?",
+        "options": [
+          "A list of tokens (words or subwords)",
+          "A numerical vector",
+          "A transformer model",
+          "A syntax tree"
+        ],
+        "correctAnswer": "A list of tokens (words or subwords)"
+      },
+      {
+        "question": "True or False: Subword tokenization can handle out-of-vocabulary words better than word-level tokenization.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "true"
+      },
+      {
+        "question": "Scenario: Your NLP model struggles with rare words in a dataset. What tokenization approach should you use?",
+        "options": [
+          "Subword tokenization (e.g., BPE)",
+          "Word-level tokenization",
+          "Character-level tokenization",
+          "Sentence-level tokenization"
+        ],
+        "correctAnswer": "Subword tokenization (e.g., BPE)"
+      },
+      {
+        "question": "Create: Propose a preprocessing pipeline for text before feeding it into Word2Vec.",
+        "options": [
+          "Tokenization → Lowercasing → Stopword removal",
+          "Word2Vec → Tokenization → Normalization",
+          "Transformer encoding → Tokenization",
+          "Stopword removal → Embedding"
+        ],
+        "correctAnswer": "Tokenization → Lowercasing → Stopword removal"
+      },
+      {
+        "question": "What is the main goal of Word2Vec?",
+        "options": [
+          "To represent words as dense vectors capturing semantic meaning",
+          "To tokenize text into subwords",
+          "To classify sentences",
+          "To translate languages"
+        ],
+        "correctAnswer": "To represent words as dense vectors capturing semantic meaning"
+      },
+      {
+        "question": "True or False: Word2Vec uses a skip-gram model to predict context words given a target word.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "true"
+      },
+      {
+        "question": "Scenario: You need word embeddings that capture word similarity for a recommendation system. Which model should you use?",
+        "options": [
+          "Word2Vec",
+          "BERT",
+          "GloVe",
+          "FastText"
+        ],
+        "correctAnswer": "Word2Vec"
+      },
+      {
+        "question": "Evaluate: Why might Word2Vec struggle with polysemy (words with multiple meanings)?",
+        "options": [
+          "It assigns a single vector per word, ignoring context",
+          "It uses subword tokenization",
+          "It relies on transformers",
+          "It cannot handle large vocabularies"
+        ],
+        "correctAnswer": "It assigns a single vector per word, ignoring context"
+      },
+      {
+        "question": "What is a key difference between Word2Vec and transformer-based embeddings?",
+        "options": [
+          "Transformers are contextual, while Word2Vec is static",
+          "Word2Vec uses attention mechanisms",
+          "Transformers are limited to fixed vocabularies",
+          "Word2Vec is more computationally intensive"
+        ],
+        "correctAnswer": "Transformers are contextual, while Word2Vec is static"
+      },
+      {
+        "question": "True or False: Transformers rely on self-attention to process input sequences.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "true"
+      },
+      {
+        "question": "Scenario: A chatbot needs to understand context across long conversations. Which model should you use?",
+        "options": [
+          "Transformer (e.g., BERT)",
+          "Word2Vec",
+          "Skip-gram",
+          "CBOW"
+        ],
+        "correctAnswer": "Transformer (e.g., BERT)"
+      },
+      {
+        "question": "Create: Design an NLP pipeline to classify movie reviews using a transformer.",
+        "options": [
+          "Tokenization → Transformer encoding → Dense layer",
+          "Word2Vec → Tokenization → Dense layer",
+          "Tokenization → Stopword removal → Flatten",
+          "Transformer → Word2Vec → Classification"
+        ],
+        "correctAnswer": "Tokenization → Transformer encoding → Dense layer"
+      },
+      {
+        "question": "Evaluate: Why is self-attention in transformers advantageous over RNNs?",
+        "options": [
+          "It processes sequences in parallel and captures long-range dependencies",
+          "It reduces vocabulary size",
+          "It eliminates the need for tokenization",
+          "It simplifies word embeddings"
+        ],
+        "correctAnswer": "It processes sequences in parallel and captures long-range dependencies"
+      },
+      {
+        "question": "What does the CBOW model in Word2Vec predict?",
+        "options": [
+          "A target word given its context",
+          "Context words given a target word",
+          "Sentence structure",
+          "Word probabilities"
+        ],
+        "correctAnswer": "A target word given its context"
+      },
+      {
+        "question": "Scenario: Your NLP model needs to handle multilingual text. Which approach is most suitable?",
+        "options": [
+          "Multilingual transformer (e.g., mBERT)",
+          "Word2Vec with separate models",
+          "Basic tokenization",
+          "Skip-gram only"
+        ],
+        "correctAnswer": "Multilingual transformer (e.g., mBERT)"
+      },
+      {
+        "question": "Create: Propose a method to improve Word2Vec for rare words.",
+        "options": [
+          "Use subword information (e.g., FastText)",
+          "Increase vector dimensions",
+          "Switch to transformers",
+          "Remove rare words"
+        ],
+        "correctAnswer": "Use subword information (e.g., FastText)"
+      },
+      {
+        "question": "Evaluate: Why might transformers outperform Word2Vec in sentiment analysis?",
+        "options": [
+          "They capture contextual nuances better",
+          "They require less training data",
+          "They use static embeddings",
+          "They simplify tokenization"
+        ],
+        "correctAnswer": "They capture contextual nuances better"
+      },
+      {
+        "question": "What is the role of the attention mechanism in transformers?",
+        "options": [
+          "To weigh the importance of different words in a sequence",
+          "To tokenize the input",
+          "To generate static embeddings",
+          "To reduce vocabulary size"
+        ],
+        "correctAnswer": "To weigh the importance of different words in a sequence"
+      },
+      {
+        "question": "Scenario: An NLP model processes long documents but loses context. What should you improve?",
+        "options": [
+          "Use a transformer with longer sequence length",
+          "Switch to Word2Vec",
+          "Reduce tokenization complexity",
+          "Increase embedding dimensions"
+        ],
+        "correctAnswer": "Use a transformer with longer sequence length"
+      },
+      {
+        "question": "Create: Design a tokenization strategy for a transformer-based NER system.",
+        "options": [
+          "Subword tokenization (e.g., WordPiece)",
+          "Word-level tokenization",
+          "Character-level tokenization",
+          "Sentence-level tokenization"
+        ],
+        "correctAnswer": "Subword tokenization (e.g., WordPiece)"
+      },
+      {
+        "question": "Evaluate: Why is WordPiece tokenization used in transformers like BERT?",
+        "options": [
+          "It balances vocabulary size and out-of-vocabulary handling",
+          "It reduces computational cost",
+          "It generates static embeddings",
+          "It eliminates context"
+        ],
+        "correctAnswer": "It balances vocabulary size and out-of-vocabulary handling"
+      },
+      {
+        "question": "What is a limitation of Word2Vec compared to transformers?",
+        "options": [
+          "It lacks contextual awareness",
+          "It cannot process large datasets",
+          "It requires subword tokenization",
+          "It is slower to train"
+        ],
+        "correctAnswer": "It lacks contextual awareness"
+      },
+      {
+        "question": "Scenario: You need to fine-tune a transformer for text summarization. What should you adjust?",
+        "options": [
+          "Add a task-specific output layer",
+          "Increase Word2Vec dimensions",
+          "Remove attention layers",
+          "Use basic tokenization"
+        ],
+        "correctAnswer": "Add a task-specific output layer"
+      },
+      {
+        "question": "Create: Suggest a Word2Vec variant for morphologically rich languages.",
+        "options": [
+          "FastText",
+          "Skip-gram",
+          "CBOW",
+          "GloVe"
+        ],
+        "correctAnswer": "FastText"
+      },
+      {
+        "question": "Evaluate: Why might transformers require more computational resources than Word2Vec?",
+        "options": [
+          "They use attention mechanisms and deeper architectures",
+          "They rely on static embeddings",
+          "They tokenize text inefficiently",
+          "They reduce sequence length"
+        ],
+        "correctAnswer": "They use attention mechanisms and deeper architectures"
+      },
+      {
+        "question": "Scenario: An NLP system needs to classify tweets with slang. What embedding should you use?",
+        "options": [
+          "Transformer (e.g., BERT)",
+          "Word2Vec",
+          "GloVe",
+          "Basic tokenization"
+        ],
+        "correctAnswer": "Transformer (e.g., BERT)"
+      },
+      {
+        "question": "What does the transformer’s positional encoding do?",
+        "options": [
+          "Adds information about word order",
+          "Generates word embeddings",
+          "Tokenizes the input",
+          "Reduces model size"
+        ],
+        "correctAnswer": "Adds information about word order"
+      },
+      {
+        "question": "Scenario: A model needs to process legal texts with complex syntax. Which approach is best?",
+        "options": [
+          "Transformer with fine-tuning",
+          "Word2Vec with CBOW",
+          "Basic tokenization",
+          "Skip-gram alone"
+        ],
+        "correctAnswer": "Transformer with fine-tuning"
+      }
+    ]
+  }

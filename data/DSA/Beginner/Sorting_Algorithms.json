@@ -1,0 +1,164 @@
+{
+  "category": "DSA",
+    "title": "Basic Sorting Algorithms",
+    "level": "Beginner",
+    "Difficulty": "Hard",
+    "timer": "10 minutes",
+    "skill": "50%",
+    "knowledge": "30%",
+    "application": "20%",
+    "why": "This Sorting Algorithms exam tests critical understanding of classic sorting techniques, complexity analysis, and decision-making based on data characteristics. It enables learners to apply sorting algorithms like Bubble, Insertion, and Selection Sort effectively in real-life scenarios, including performance optimization and algorithm selection."
+,
+    "questions": [
+      {
+        "question": "Which of the following is NOT a basic sorting algorithm covered in this exam?",
+        "options": [
+          "Bubble Sort",
+          "Selection Sort",
+          "Insertion Sort",
+          "Quick Sort"
+        ],
+        "correctAnswer": "Quick Sort"
+      },
+      {
+        "question": "What is the time complexity of Bubble Sort in the worst case?",
+        "options": [
+          "O(n²)",
+          "O(n)",
+          "O(n log n)",
+          "O(1)"
+        ],
+        "correctAnswer": "O(n²)"
+      },
+      {
+        "question": "Which sorting algorithm repeatedly swaps adjacent elements if they are in the wrong order?",
+        "options": [
+          "Bubble Sort",
+          "Selection Sort",
+          "Insertion Sort",
+          "None of the above"
+        ],
+        "correctAnswer": "Bubble Sort"
+      },
+      {
+        "question": "True or False: Selection Sort is a stable sorting algorithm.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "false"
+      },
+      {
+        "question": "What is the main step in Insertion Sort?",
+        "options": [
+          "Inserting elements into their correct position one by one",
+          "Swapping adjacent elements",
+          "Finding the minimum element and placing it at the start",
+          "Dividing the array into two halves"
+        ],
+        "correctAnswer": "Inserting elements into their correct position one by one"
+      },
+      {
+        "question": "Which sorting algorithm has a space complexity of O(1)?",
+        "options": [
+          "Bubble Sort",
+          "Selection Sort",
+          "Insertion Sort",
+          "All of the above"
+        ],
+        "correctAnswer": "All of the above"
+      },
+      {
+        "question": "What does 'stability' mean in the context of sorting algorithms?",
+        "options": [
+          "Preserving the relative order of equal elements",
+          "Reducing time complexity",
+          "Using less memory",
+          "Sorting in fewer passes"
+        ],
+        "correctAnswer": "Preserving the relative order of equal elements"
+      },
+      {
+        "question": "True or False: Insertion Sort is a stable sorting algorithm.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "true"
+      },
+      {
+        "question": "Which sorting algorithm finds the smallest element in each pass and places it at the beginning?",
+        "options": [
+          "Selection Sort",
+          "Bubble Sort",
+          "Insertion Sort",
+          "None of the above"
+        ],
+        "correctAnswer": "Selection Sort"
+      },
+      {
+        "question": "What is the worst-case time complexity of Insertion Sort?",
+        "options": [
+          "O(n²)",
+          "O(n)",
+          "O(n log n)",
+          "O(1)"
+        ],
+        "correctAnswer": "O(n²)"
+      },
+      {
+        "question": "Scenario: You have a small dataset of 10 numbers that is already partially sorted. Which algorithm would be most efficient?",
+        "options": [
+          "Insertion Sort",
+          "Bubble Sort",
+          "Selection Sort",
+          "All are equally efficient"
+        ],
+        "correctAnswer": "Insertion Sort"
+      },
+      {
+        "question": "True or False: Bubble Sort is efficient for large datasets.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "false"
+      },
+      {
+        "question": "Which sorting algorithm is best suited for small datasets due to its simplicity?",
+        "options": [
+          "Bubble Sort",
+          "Selection Sort",
+          "Insertion Sort",
+          "All of the above"
+        ],
+        "correctAnswer": "All of the above"
+      },
+      {
+        "question": "What is the key difference between Bubble Sort and Selection Sort?",
+        "options": [
+          "Bubble Sort swaps adjacent elements, while Selection Sort finds the minimum",
+          "Bubble Sort finds the minimum, while Selection Sort swaps adjacent elements",
+          "Bubble Sort is stable, while Selection Sort is not",
+          "There is no difference"
+        ],
+        "correctAnswer": "Bubble Sort swaps adjacent elements, while Selection Sort finds the minimum"
+      },
+      {
+        "question": "Scenario: You need a sorting algorithm that maintains the order of duplicate elements in a small dataset. Which should you choose?",
+        "options": [
+          "Insertion Sort",
+          "Selection Sort",
+          "Bubble Sort",
+          "Both Insertion Sort and Bubble Sort"
+        ],
+        "correctAnswer": "Both Insertion Sort and Bubble Sort"
+      }
+    ]
+  }

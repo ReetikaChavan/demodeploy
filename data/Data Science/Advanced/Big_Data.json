@@ -1,0 +1,314 @@
+{
+  "category": "Data Science",
+    "title": "Big Data and Scalable Systems",
+    "level": "Advanced",
+    "Difficulty": "Medium",
+    "timer": "30 minutes",
+    "skill": "35%",
+    "knowledge": "45%",
+    "application": "20%",
+    "why": "This Big Data and Scalable Systems quiz assesses your understanding of distributed systems, real-time data pipelines, and processing frameworks like Spark and Hadoop. It emphasizes designing scalable workflows, parallel computing, and system performance evaluation, helping learners prepare for engineering roles that involve managing large datasets and building cloud-native solutions.",
+
+    "questions": [
+      {
+        "question": "Scenario: Process a 1TB dataset. Evaluate: Spark vs. Hadoop for speed?",
+        "options": [
+          "Spark, due to in-memory processing",
+          "Hadoop, due to disk I/O",
+          "Both are equal",
+          "Neither works"
+        ],
+        "correctAnswer": "Spark, due to in-memory processing"
+      },
+      {
+        "question": "What’s distributed computing?",
+        "options": [
+          "Processing across multiple machines",
+          "Single machine computation",
+          "Local data storage",
+          "Manual processing"
+        ],
+        "correctAnswer": "Processing across multiple machines"
+      },
+      {
+        "question": "Solve: A dataset is split across 4 nodes. How many nodes process in parallel?",
+        "options": [
+          "4",
+          "1",
+          "2",
+          "0"
+        ],
+        "correctAnswer": "4"
+      },
+      {
+        "question": "What’s Hadoop’s core component for storage?",
+        "options": [
+          "HDFS",
+          "MapReduce",
+          "Spark",
+          "YARN"
+        ],
+        "correctAnswer": "HDFS"
+      },
+      {
+        "question": "Scenario: Real-time analytics needed. What’s the best tool?",
+        "options": [
+          "Spark Streaming",
+          "Hadoop MapReduce",
+          "AWS S3",
+          "GCP BigTable"
+        ],
+        "correctAnswer": "Spark Streaming"
+      },
+      {
+        "question": "Evaluate: Why is Spark faster than Hadoop MapReduce?",
+        "options": [
+          "In-memory computation",
+          "More nodes",
+          "Simpler code",
+          "Less data"
+        ],
+        "correctAnswer": "In-memory computation"
+      },
+      {
+        "question": "Create: What’s a step in a scalable pipeline?",
+        "options": [
+          "Partition data across nodes",
+          "Process all on one machine",
+          "Remove all data",
+          "Ignore scaling"
+        ],
+        "correctAnswer": "Partition data across nodes"
+      },
+      {
+        "question": "What does parallel processing improve?",
+        "options": [
+          "Speed via simultaneous tasks",
+          "Data size",
+          "Accuracy",
+          "Simplicity"
+        ],
+        "correctAnswer": "Speed via simultaneous tasks"
+      },
+      {
+        "question": "Solve: A 100GB dataset on 10 nodes. How much per node ideally?",
+        "options": [
+          "10GB",
+          "100GB",
+          "5GB",
+          "20GB"
+        ],
+        "correctAnswer": "10GB"
+      },
+      {
+        "question": "Scenario: Store 5TB of logs. What’s a good cloud solution?",
+        "options": [
+          "AWS S3",
+          "GCP Compute Engine",
+          "Spark",
+          "Hadoop YARN"
+        ],
+        "correctAnswer": "AWS S3"
+      },
+      {
+        "question": "What’s Spark’s advantage?",
+        "options": [
+          "In-memory processing",
+          "Disk-only storage",
+          "Single node",
+          "No scalability"
+        ],
+        "correctAnswer": "In-memory processing"
+      },
+      {
+        "question": "Evaluate: Why might Hadoop suit batch processing?",
+        "options": [
+          "Reliable disk-based MapReduce",
+          "Real-time speed",
+          "In-memory focus",
+          "No fault tolerance"
+        ],
+        "correctAnswer": "Reliable disk-based MapReduce"
+      },
+      {
+        "question": "Create: Design a step for real-time pipeline.",
+        "options": [
+          "Use Spark Streaming for live data",
+          "Batch process daily",
+          "Remove all streams",
+          "Ignore latency"
+        ],
+        "correctAnswer": "Use Spark Streaming for live data"
+      },
+      {
+        "question": "What’s a data pipeline?",
+        "options": [
+          "Workflow for data from source to output",
+          "Single process",
+          "Random data flow",
+          "Storage only"
+        ],
+        "correctAnswer": "Workflow for data from source to output"
+      },
+      {
+        "question": "Scenario: A 10TB dataset crashes a single machine. What’s the fix?",
+        "options": [
+          "Distribute with Spark",
+          "Add more RAM",
+          "Remove data",
+          "Double speed"
+        ],
+        "correctAnswer": "Distribute with Spark"
+      },
+      {
+        "question": "Solve: 5 nodes process 50GB in 10 mins. How long for 100GB?",
+        "options": [
+          "20 mins",
+          "10 mins",
+          "5 mins",
+          "30 mins"
+        ],
+        "correctAnswer": "20 mins"
+      },
+      {
+        "question": "What’s Hadoop’s MapReduce role?",
+        "options": [
+          "Process data in parallel",
+          "Store data",
+          "Stream data",
+          "Cluster nodes"
+        ],
+        "correctAnswer": "Process data in parallel"
+      },
+      {
+        "question": "Evaluate: Why use cloud platforms like AWS?",
+        "options": [
+          "Scalable resources on demand",
+          "Fixed storage",
+          "No cost",
+          "Single machine"
+        ],
+        "correctAnswer": "Scalable resources on demand"
+      },
+      {
+        "question": "Create: What’s a step to handle large datasets?",
+        "options": [
+          "Use distributed file system like HDFS",
+          "Process locally",
+          "Remove all data",
+          "Ignore nodes"
+        ],
+        "correctAnswer": "Use distributed file system like HDFS"
+      },
+      {
+        "question": "What’s a Spark RDD?",
+        "options": [
+          "Resilient Distributed Dataset",
+          "Random Data Driver",
+          "Reduced Data Disk",
+          "Real-time Data"
+        ],
+        "correctAnswer": "Resilient Distributed Dataset"
+      },
+      {
+        "question": "Scenario: Analyze 2TB of logs. What’s a good tool?",
+        "options": [
+          "Spark",
+          "Excel",
+          "Hadoop MapReduce",
+          "Single PC"
+        ],
+        "correctAnswer": "Spark"
+      },
+      {
+        "question": "Solve: 8 nodes process 80GB in 16 mins. Time per GB per node?",
+        "options": [
+          "1.6 mins",
+          "2 mins",
+          "1 min",
+          "0.5 mins"
+        ],
+        "correctAnswer": "1.6 mins"
+      },
+      {
+        "question": "What’s a benefit of distributed systems?",
+        "options": [
+          "Fault tolerance",
+          "Single point failure",
+          "Slow speed",
+          "No scaling"
+        ],
+        "correctAnswer": "Fault tolerance"
+      },
+      {
+        "question": "Evaluate: Why might Spark fail with low memory?",
+        "options": [
+          "In-memory processing overflows",
+          "It uses disk only",
+          "It’s too simple",
+          "It ignores data"
+        ],
+        "correctAnswer": "In-memory processing overflows"
+      },
+      {
+        "question": "Create: Design a step for batch pipeline.",
+        "options": [
+          "Schedule Hadoop jobs",
+          "Stream all data",
+          "Remove nodes",
+          "Ignore scheduling"
+        ],
+        "correctAnswer": "Schedule Hadoop jobs"
+      },
+      {
+        "question": "What’s GCP BigQuery for?",
+        "options": [
+          "Large-scale data querying",
+          "Real-time streaming",
+          "Local storage",
+          "Single node"
+        ],
+        "correctAnswer": "Large-scale data querying"
+      },
+      {
+        "question": "Scenario: 500GB dataset needs fast analysis. What’s best?",
+        "options": [
+          "Spark",
+          "Hadoop",
+          "AWS EC2",
+          "Local PC"
+        ],
+        "correctAnswer": "Spark"
+      },
+      {
+        "question": "Solve: 6 nodes process 120GB. Ideal split per node?",
+        "options": [
+          "20GB",
+          "30GB",
+          "10GB",
+          "40GB"
+        ],
+        "correctAnswer": "20GB"
+      },
+      {
+        "question": "Evaluate: Why use data pipelines?",
+        "options": [
+          "Automate and scale workflows",
+          "Reduce data",
+          "Simplify code",
+          "Ignore processing"
+        ],
+        "correctAnswer": "Automate and scale workflows"
+      },
+      {
+        "question": "Create: What’s a step for fault tolerance?",
+        "options": [
+          "Replicate data across nodes",
+          "Remove backups",
+          "Single node",
+          "Ignore errors"
+        ],
+        "correctAnswer": "Replicate data across nodes"
+      }
+    ]
+  }

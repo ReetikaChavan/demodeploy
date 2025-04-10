@@ -1,0 +1,164 @@
+{
+  "category": "Data Science",
+    "title": "Descriptive Statistics",
+    "level": "Beginner",
+    "Difficulty": "Hard",
+    "timer": "10 minutes",
+    "skill": "45%",
+    "knowledge": "40%",
+    "application": "15%",
+    "why": "This quiz helps learners understand core statistical measures like mean, median, mode, range, and standard deviation. It encourages conceptual clarity and computational ability for analyzing data distributions effectively.",
+
+    "questions": [
+      {
+        "question": "What is the formula for the mean of a dataset?",
+        "options": [
+          "Sum of values / Number of values",
+          "Largest value - Smallest value",
+          "Most frequent value",
+          "Middle value"
+        ],
+        "correctAnswer": "Sum of values / Number of values"
+      },
+      {
+        "question": "What is the median of 3, 5, 7?",
+        "options": [
+          "5",
+          "3",
+          "7",
+          "4"
+        ],
+        "correctAnswer": "5"
+      },
+      {
+        "question": "What does the mode represent?",
+        "options": [
+          "The most frequent value",
+          "The average value",
+          "The middle value",
+          "The range"
+        ],
+        "correctAnswer": "The most frequent value"
+      },
+      {
+        "question": "Solve: Calculate the mean of 2, 4, 6.",
+        "options": [
+          "4",
+          "3",
+          "5",
+          "6"
+        ],
+        "correctAnswer": "4"
+      },
+      {
+        "question": "What is the range of 10, 15, 20?",
+        "options": [
+          "10",
+          "15",
+          "5",
+          "20"
+        ],
+        "correctAnswer": "10"
+      },
+      {
+        "question": "True or False: Variance measures how spread out data is.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "true"
+      },
+      {
+        "question": "What does a normal distribution look like?",
+        "options": [
+          "Bell-shaped",
+          "Skewed left",
+          "Skewed right",
+          "Flat"
+        ],
+        "correctAnswer": "Bell-shaped"
+      },
+      {
+        "question": "Solve: Find the mode of 1, 2, 2, 3, 4.",
+        "options": [
+          "2",
+          "1",
+          "3",
+          "4"
+        ],
+        "correctAnswer": "2"
+      },
+      {
+        "question": "What is standard deviation?",
+        "options": [
+          "A measure of data spread around the mean",
+          "The average value",
+          "The most frequent value",
+          "The range"
+        ],
+        "correctAnswer": "A measure of data spread around the mean"
+      },
+      {
+        "question": "What is the range formula?",
+        "options": [
+          "Largest value - Smallest value",
+          "Sum / Count",
+          "Middle value",
+          "Square root of variance"
+        ],
+        "correctAnswer": "Largest value - Smallest value"
+      },
+      {
+        "question": "True or False: A skewed distribution has unequal tails.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "true"
+      },
+      {
+        "question": "Solve: Calculate the median of 4, 1, 3, 2.",
+        "options": [
+          "2.5",
+          "3",
+          "2",
+          "4"
+        ],
+        "correctAnswer": "2.5"
+      },
+      {
+        "question": "What measure of central tendency is affected most by extreme values?",
+        "options": [
+          "Mean",
+          "Median",
+          "Mode",
+          "Midrange"
+        ],
+        "correctAnswer": "Mean"
+      },
+      {
+        "question": "What does a high standard deviation indicate?",
+        "options": [
+          "Data is spread out",
+          "Data is clustered",
+          "Data is skewed",
+          "Data is normal"
+        ],
+        "correctAnswer": "Data is spread out"
+      },
+      {
+        "question": "Solve: Find the range of 5, 8, 12, 3.",
+        "options": [
+          "9",
+          "12",
+          "8",
+          "5"
+        ],
+        "correctAnswer": "9"
+      }
+    ]
+  }

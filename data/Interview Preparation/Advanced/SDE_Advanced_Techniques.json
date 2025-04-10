@@ -1,0 +1,265 @@
+{
+    "category": "Interview Preparation",
+    "title": "SDE Advanced Techniques",
+    "level": "Advanced",
+    "Difficulty": "Medium",
+    "timer": "25 minutes",
+    "total_marks": 100,
+    "marks_per_question": 2,
+    "skill": "50%",
+    "knowledge": "30%",
+    "application": "20%",
+    "why":"The SDE Advanced Techniques exam bridges the gap between coding fundamentals and expert-level interview performance by testing crucial algorithms (Dijkstra's, Floyd's cycle detection), advanced data structures (red-black trees, tries), and system design principles (load balancing, caching), while honing problem-solving strategies (sliding window, dynamic programming) and debugging skills through carefully crafted questions that simulate real technical interviews at top tech companies.",
+    "questions": [
+        {
+            "question": "What’s the time complexity of Dijkstra’s algorithm with a priority queue?",
+            "options": ["O((V + E) log V)", "O(V²)", "O(n)", "O(1)"],
+            "correctAnswer": "O((V + E) log V)"
+        },
+        {
+            "question": "What’s a key property of a red-black tree?",
+            "options": ["Self-balancing", "Unordered", "Fixed height", "All red nodes"],
+            "correctAnswer": "Self-balancing"
+        },
+        {
+            "question": "What’s the output: x = [1, 2, 3]; x.pop(); print(x)?",
+            "options": ["[1, 2]", "[1, 2, 3]", "[2, 3]", "Error"],
+            "correctAnswer": "[1, 2]"
+        },
+        {
+            "question": "What’s a common use of a sliding window?",
+            "options": ["Substring problems", "Tree traversal", "Graph search", "Stack operations"],
+            "correctAnswer": "Substring problems"
+        },
+        {
+            "question": "What’s the time complexity of building a binary heap?",
+            "options": ["O(n)", "O(n log n)", "O(log n)", "O(n²)"],
+            "correctAnswer": "O(n)"
+        },
+        {
+            "question": "What’s a good way to optimize a recursive solution?",
+            "options": ["Dynamic programming", "More recursion", "Brute force", "Guess"],
+            "correctAnswer": "Dynamic programming"
+        },
+        {
+            "question": "What’s the output: x = {'a': 1}; x['b'] = 2; print(x)?",
+            "options": ["{'a': 1, 'b': 2}", "{'a': 1}", "{'b': 2}", "Error"],
+            "correctAnswer": "{'a': 1, 'b': 2}"
+        },
+        {
+            "question": "What’s a key to designing a scalable system?",
+            "options": ["Load balancing", "Single server", "No caching", "Slow queries"],
+            "correctAnswer": "Load balancing"
+        },
+        {
+            "question": "What’s the time complexity of Floyd’s cycle detection?",
+            "options": ["O(n)", "O(log n)", "O(n²)", "O(1)"],
+            "correctAnswer": "O(n)"
+        },
+        {
+            "question": "What’s the output: x = 'code'; print(x[::-1])?",
+            "options": ["edoc", "code", "c", "Error"],
+            "correctAnswer": "edoc"
+        },
+        {
+            "question": "What’s a common graph traversal algorithm?",
+            "options": ["DFS", "Bubble Sort", "Binary Search", "Hashing"],
+            "correctAnswer": "DFS"
+        },
+        {
+            "question": "What’s the space complexity of a trie?",
+            "options": ["O(n * m)", "O(1)", "O(n)", "O(log n)"],
+            "correctAnswer": "O(n * m)"
+        },
+        {
+            "question": "What’s a good way to handle a system design question?",
+            "options": ["Define requirements", "Guess", "Write code first", "Skip planning"],
+            "correctAnswer": "Define requirements"
+        },
+        {
+            "question": "What’s the time complexity of merge sort?",
+            "options": ["O(n log n)", "O(n²)", "O(n)", "O(1)"],
+            "correctAnswer": "O(n log n)"
+        },
+        {
+            "question": "What’s the output: x = [1, 2]; x.extend([3, 4]); print(x)?",
+            "options": ["[1, 2, 3, 4]", "[1, 2]", "[3, 4]", "Error"],
+            "correctAnswer": "[1, 2, 3, 4]"
+        },
+        {
+            "question": "What’s a key to debugging in an interview?",
+            "options": ["Walk through logic", "Guess fixes", "Skip it", "Rewrite"],
+            "correctAnswer": "Walk through logic"
+        },
+        {
+            "question": "What’s the time complexity of finding a loop in a linked list?",
+            "options": ["O(n)", "O(log n)", "O(n²)", "O(1)"],
+            "correctAnswer": "O(n)"
+        },
+        {
+            "question": "What’s a common use of a priority queue?",
+            "options": ["Dijkstra’s algorithm", "DFS", "Bubble Sort", "String reversal"],
+            "correctAnswer": "Dijkstra’s algorithm"
+        },
+        {
+            "question": "What’s the output: x = [1, 2, 3]; x.remove(2); print(x)?",
+            "options": ["[1, 3]", "[1, 2]", "[2, 3]", "Error"],
+            "correctAnswer": "[1, 3]"
+        },
+        {
+            "question": "What’s a key to handling large datasets?",
+            "options": ["Efficient algorithms", "More memory", "Slow code", "Guessing"],
+            "correctAnswer": "Efficient algorithms"
+        },
+        {
+            "question": "What’s the time complexity of quicksort’s average case?",
+            "options": ["O(n log n)", "O(n²)", "O(n)", "O(1)"],
+            "correctAnswer": "O(n log n)"
+        },
+        {
+            "question": "What’s a good question about system design?",
+            "options": ["How do you handle scale?", "What’s the pay?", "Is it fun?", "Do you like me?"],
+            "correctAnswer": "How do you handle scale?"
+        },
+        {
+            "question": "What’s the output: x = 'abc'; print(x.find('b'))?",
+            "options": ["1", "0", "2", "Error"],
+            "correctAnswer": "1"
+        },
+        {
+            "question": "What’s a common two-pointer problem?",
+            "options": ["Two Sum", "DFS", "Heap Sort", "Graph Coloring"],
+            "correctAnswer": "Two Sum"
+        },
+        {
+            "question": "What’s the time complexity of inserting into a sorted array?",
+            "options": ["O(n)", "O(1)", "O(log n)", "O(n²)"],
+            "correctAnswer": "O(n)"
+        },
+        {
+            "question": "What’s a key to writing clean code?",
+            "options": ["Readability", "More lines", "Complex logic", "No comments"],
+            "correctAnswer": "Readability"
+        },
+        {
+            "question": "What’s the output: x = [1, 2]; x[0] = 0; print(x)?",
+            "options": ["[0, 2]", "[1, 2]", "[0, 1]", "Error"],
+            "correctAnswer": "[0, 2]"
+        },
+        {
+            "question": "What’s a common use of dynamic programming?",
+            "options": ["Knapsack problem", "Bubble Sort", "Binary Search", "Stack operations"],
+            "correctAnswer": "Knapsack problem"
+        },
+        {
+            "question": "What’s the time complexity of BFS?",
+            "options": ["O(V + E)", "O(n²)", "O(log n)", "O(1)"],
+            "correctAnswer": "O(V + E)"
+        },
+        {
+            "question": "What’s a good way to test code in an interview?",
+            "options": ["Edge cases", "Skip testing", "Guess output", "Write more"],
+            "correctAnswer": "Edge cases"
+        },
+        {
+            "question": "What’s the output: x = {'a': 1}; del x['a']; print(x)?",
+            "options": ["{}", "{'a': 1}", "Error", "None"],
+            "correctAnswer": "{}"
+        },
+        {
+            "question": "What’s a key to pair programming success?",
+            "options": ["Communication", "Ignoring partner", "Writing alone", "Silence"],
+            "correctAnswer": "Communication"
+        },
+        {
+            "question": "What’s the time complexity of selection sort?",
+            "options": ["O(n²)", "O(n log n)", "O(n)", "O(1)"],
+            "correctAnswer": "O(n²)"
+        },
+        {
+            "question": "What’s a common system design component?",
+            "options": ["Caching", "Drawing", "Singing", "Essay"],
+            "correctAnswer": "Caching"
+        },
+        {
+            "question": "What’s the output: x = 'code'; print(x.replace('c', 'd'))?",
+            "options": ["dode", "code", "d", "Error"],
+            "correctAnswer": "dode"
+        },
+        {
+            "question": "What’s a key to handling concurrency?",
+            "options": ["Synchronization", "More threads", "No locks", "Guessing"],
+            "correctAnswer": "Synchronization"
+        },
+        {
+            "question": "What’s the time complexity of reversing a string?",
+            "options": ["O(n)", "O(1)", "O(log n)", "O(n²)"],
+            "correctAnswer": "O(n)"
+        },
+        {
+            "question": "What’s a good way to improve coding skills?",
+            "options": ["Solve real problems", "Memorize syntax", "Avoid practice", "Copy code"],
+            "correctAnswer": "Solve real problems"
+        },
+        {
+            "question": "What’s the output: x = [1, 2, 3]; x.append(x); print(len(x))?",
+            "options": ["4", "3", "Error", "Infinite"],
+            "correctAnswer": "4"
+        },
+        {
+            "question": "What’s a common use of a hash set?",
+            "options": ["Duplicate removal", "Sorting", "Tree traversal", "Stack operations"],
+            "correctAnswer": "Duplicate removal"
+        },
+        {
+            "question": "What’s the time complexity of DFS?",
+            "options": ["O(V + E)", "O(n²)", "O(log n)", "O(1)"],
+            "correctAnswer": "O(V + E)"
+        },
+        {
+            "question": "What’s a good way to end a coding interview?",
+            "options": ["Ask about next steps", "Leave silently", "Complain", "Guess"],
+            "correctAnswer": "Ask about next steps"
+        },
+        {
+            "question": "What’s the output: x = 'abc'; print(x.split('b'))?",
+            "options": ["['a', 'c']", "['abc']", "['b']", "Error"],
+            "correctAnswer": "['a', 'c']"
+        },
+        {
+            "question": "What’s a key to database design?",
+            "options": ["Normalization", "More tables", "No indexes", "Slow queries"],
+            "correctAnswer": "Normalization"
+        },
+        {
+            "question": "What’s the time complexity of finding max in a BST?",
+            "options": ["O(log n)", "O(n)", "O(1)", "O(n²)"],
+            "correctAnswer": "O(log n)"
+        },
+        {
+            "question": "What’s a common coding interview challenge?",
+            "options": ["Graph problems", "Drawing", "Singing", "Essay"],
+            "correctAnswer": "Graph problems"
+        },
+        {
+            "question": "What’s the output: x = [1, 2]; x += [3]; print(x)?",
+            "options": ["[1, 2, 3]", "[1, 2]", "[3]", "Error"],
+            "correctAnswer": "[1, 2, 3]"
+        },
+        {
+            "question": "What’s a key to API design?",
+            "options": ["Consistency", "Complex endpoints", "No docs", "Slow response"],
+            "correctAnswer": "Consistency"
+        },
+        {
+            "question": "What’s the time complexity of insertion sort?",
+            "options": ["O(n²)", "O(n log n)", "O(n)", "O(1)"],
+            "correctAnswer": "O(n²)"
+        },
+        {
+            "question": "What’s a good way to handle a bug in an interview?",
+            "options": ["Trace the logic", "Ignore it", "Guess fix", "Rewrite"],
+            "correctAnswer": "Trace the logic"
+        }
+    ]
+}

@@ -1,0 +1,313 @@
+{
+  "category": "AI & Machine Learning",
+    "title": "Reinforcement Learning",
+    "level": "Advanced",
+    "Difficulty": "Medium",
+    "timer": "30 minutes",
+    "skill": "50%",
+    "knowledge": "90%",
+    "application": "65%",
+    "why":"The Reinforcement Learning exam rigorously tests advanced concepts through scenario-based questions covering MDP formulation, Q-learning optimization, and policy gradient methods equipping candidates to design intelligent agents that solve complex decision-making problems in dynamic environments.",
+    "questions": [
+      {
+        "question": "Scenario: You’re designing an RL agent to navigate a maze. What framework should you use to model the problem?",
+        "options": [
+          "Markov Decision Process (MDP)",
+          "Q-learning alone",
+          "Policy gradient",
+          "Supervised learning"
+        ],
+        "correctAnswer": "Markov Decision Process (MDP)"
+      },
+      {
+        "question": "Evaluate: Why is the Markov property crucial in MDPs?",
+        "options": [
+          "It ensures the next state depends only on the current state and action",
+          "It guarantees immediate rewards",
+          "It eliminates the need for exploration",
+          "It simplifies policy gradients"
+        ],
+        "correctAnswer": "It ensures the next state depends only on the current state and action"
+      },
+      {
+        "question": "What are the core components of an MDP?",
+        "options": [
+          "States, actions, rewards, transition probabilities",
+          "Q-values, policies, gradients",
+          "States, actions, learning rate",
+          "Rewards, policies, exploration rate"
+        ],
+        "correctAnswer": "States, actions, rewards, transition probabilities"
+      },
+      {
+        "question": "True or False: An MDP assumes the environment is fully observable.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "true"
+      },
+      {
+        "question": "Scenario: An RL agent in a game needs to balance short-term and long-term rewards. What MDP component should you tune?",
+        "options": [
+          "Discount factor",
+          "Transition probabilities",
+          "Action space",
+          "State space"
+        ],
+        "correctAnswer": "Discount factor"
+      },
+      {
+        "question": "Create: Propose a reward function for an RL agent learning to drive a car to a destination.",
+        "options": [
+          "Positive reward for reaching the goal, negative for collisions",
+          "Positive reward for every action",
+          "Negative reward for reaching the goal",
+          "Random rewards for exploration"
+        ],
+        "correctAnswer": "Positive reward for reaching the goal, negative for collisions"
+      },
+      {
+        "question": "What is the primary goal of Q-learning?",
+        "options": [
+          "To estimate the optimal action-value function",
+          "To directly optimize a policy",
+          "To maximize immediate rewards",
+          "To define state transitions"
+        ],
+        "correctAnswer": "To estimate the optimal action-value function"
+      },
+      {
+        "question": "True or False: Q-learning is an off-policy algorithm.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "true"
+      },
+      {
+        "question": "Scenario: A Q-learning agent explores too much and learns slowly. What should you adjust?",
+        "options": [
+          "Decrease the exploration rate (epsilon)",
+          "Increase the learning rate",
+          "Increase the discount factor",
+          "Reduce the Q-table size"
+        ],
+        "correctAnswer": "Decrease the exploration rate (epsilon)"
+      },
+      {
+        "question": "Evaluate: Why does Q-learning use a Q-table or function approximator?",
+        "options": [
+          "To store and update action-value estimates",
+          "To define the policy gradient",
+          "To compute immediate rewards",
+          "To eliminate exploration"
+        ],
+        "correctAnswer": "To store and update action-value estimates"
+      },
+      {
+        "question": "What does the Bellman equation do in Q-learning?",
+        "options": [
+          "Updates Q-values based on rewards and future estimates",
+          "Calculates policy gradients",
+          "Defines the state space",
+          "Sets the exploration rate"
+        ],
+        "correctAnswer": "Updates Q-values based on rewards and future estimates"
+      },
+      {
+        "question": "True or False: Policy gradient methods directly optimize the policy rather than a value function.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "true"
+      },
+      {
+        "question": "Scenario: An RL agent needs to learn a continuous action space (e.g., robot arm movement). Which method is suitable?",
+        "options": [
+          "Policy gradients",
+          "Q-learning with Q-table",
+          "MDP alone",
+          "Value iteration"
+        ],
+        "correctAnswer": "Policy gradients"
+      },
+      {
+        "question": "Create: Design an RL approach for a trading bot maximizing profit.",
+        "options": [
+          "Policy gradient with reward as profit",
+          "Q-learning with discrete actions",
+          "MDP with random rewards",
+          "Supervised learning with profit labels"
+        ],
+        "correctAnswer": "Policy gradient with reward as profit"
+      },
+      {
+        "question": "Evaluate: Why might policy gradients outperform Q-learning in high-dimensional action spaces?",
+        "options": [
+          "They directly optimize policies and handle continuous actions",
+          "They rely on discrete Q-tables",
+          "They reduce exploration needs",
+          "They simplify reward functions"
+        ],
+        "correctAnswer": "They directly optimize policies and handle continuous actions"
+      },
+      {
+        "question": "What is the role of the learning rate in Q-learning?",
+        "options": [
+          "Controls the step size of Q-value updates",
+          "Sets the discount factor",
+          "Defines the exploration rate",
+          "Adjusts the reward function"
+        ],
+        "correctAnswer": "Controls the step size of Q-value updates"
+      },
+      {
+        "question": "Scenario: A Q-learning agent fails to converge due to sparse rewards. What can you improve?",
+        "options": [
+          "Use reward shaping",
+          "Increase exploration rate",
+          "Reduce discount factor",
+          "Simplify the state space"
+        ],
+        "correctAnswer": "Use reward shaping"
+      },
+      {
+        "question": "Create: Propose an exploration strategy for Q-learning in a dynamic environment.",
+        "options": [
+          "Epsilon-greedy with decay",
+          "Random action selection",
+          "Fixed exploration rate",
+          "No exploration"
+        ],
+        "correctAnswer": "Epsilon-greedy with decay"
+      },
+      {
+        "question": "Evaluate: Why is the discount factor important in MDPs?",
+        "options": [
+          "It balances immediate and future rewards",
+          "It sets the learning rate",
+          "It defines the action space",
+          "It eliminates exploration"
+        ],
+        "correctAnswer": "It balances immediate and future rewards"
+      },
+      {
+        "question": "What does the policy gradient theorem enable?",
+        "options": [
+          "Direct optimization of the policy using gradients",
+          "Estimation of Q-values",
+          "Definition of state transitions",
+          "Calculation of immediate rewards"
+        ],
+        "correctAnswer": "Direct optimization of the policy using gradients"
+      },
+      {
+        "question": "Scenario: An RL agent in a video game learns slowly with delayed rewards. What method could help?",
+        "options": [
+          "Policy gradients with reward shaping",
+          "Q-learning with high epsilon",
+          "MDP with low discount factor",
+          "Random policy"
+        ],
+        "correctAnswer": "Policy gradients with reward shaping"
+      },
+      {
+        "question": "Create: Design an MDP reward structure for a cleaning robot.",
+        "options": [
+          "Positive reward for cleaning, negative for hitting obstacles",
+          "Positive reward for every move",
+          "Negative reward for cleaning",
+          "Fixed reward for all actions"
+        ],
+        "correctAnswer": "Positive reward for cleaning, negative for hitting obstacles"
+      },
+      {
+        "question": "Evaluate: Why might Q-learning struggle with continuous state spaces?",
+        "options": [
+          "It requires discretization or function approximation",
+          "It relies on policy gradients",
+          "It cannot handle rewards",
+          "It overexplores the environment"
+        ],
+        "correctAnswer": "It requires discretization or function approximation"
+      },
+      {
+        "question": "What is a key advantage of policy gradients over Q-learning?",
+        "options": [
+          "Handles continuous action spaces naturally",
+          "Requires less exploration",
+          "Uses a simpler reward function",
+          "Avoids the Markov property"
+        ],
+        "correctAnswer": "Handles continuous action spaces naturally"
+      },
+      {
+        "question": "Scenario: An RL agent needs to optimize energy use in a smart grid. Which method fits best?",
+        "options": [
+          "Policy gradients",
+          "Q-learning with Q-table",
+          "Value iteration",
+          "Random policy"
+        ],
+        "correctAnswer": "Policy gradients"
+      },
+      {
+        "question": "Create: Suggest a Q-learning update rule modification for faster convergence.",
+        "options": [
+          "Use experience replay",
+          "Increase exploration rate",
+          "Reduce discount factor",
+          "Remove the Bellman equation"
+        ],
+        "correctAnswer": "Use experience replay"
+      },
+      {
+        "question": "Evaluate: Why is exploration vs. exploitation a challenge in Q-learning?",
+        "options": [
+          "Balancing learning and optimal action selection is difficult",
+          "It eliminates the need for rewards",
+          "It simplifies the policy",
+          "It reduces state space size"
+        ],
+        "correctAnswer": "Balancing learning and optimal action selection is difficult"
+      },
+      {
+        "question": "Scenario: A robot learns to pick objects but gets stuck in local optima. What can you adjust?",
+        "options": [
+          "Increase exploration in policy gradients",
+          "Reduce learning rate in Q-learning",
+          "Simplify the MDP",
+          "Remove rewards"
+        ],
+        "correctAnswer": "Increase exploration in policy gradients"
+      },
+      {
+        "question": "What does the transition probability in an MDP describe?",
+        "options": [
+          "The likelihood of moving to a new state given an action",
+          "The reward for an action",
+          "The Q-value update",
+          "The policy gradient"
+        ],
+        "correctAnswer": "The likelihood of moving to a new state given an action"
+      },
+      {
+        "question": "Scenario: An RL agent in a dynamic environment forgets past lessons. What technique should you use?",
+        "options": [
+          "Experience replay with Q-learning",
+          "Increase discount factor",
+          "Reduce policy gradient steps",
+          "Randomize rewards"
+        ],
+        "correctAnswer": "Experience replay with Q-learning"
+      }
+    ]
+  }

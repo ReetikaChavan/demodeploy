@@ -1,0 +1,165 @@
+{
+    "category": "Interview Preparation",
+    "title": "SDE Advanced Foundations",
+    "level": "Advanced",
+    "Difficulty": "Easy",
+    "timer": "15 minutes",
+    "total_marks": 30,
+    "marks_per_question": 1,
+    "skill": "40%",
+    "knowledge": "50%",
+    "application": "10%",
+    "why":"This SDE Advanced Foundations exam helps aspiring software engineers master core technical interview concepts by testing essential knowledge of data structures (heaps, BSTs, tries), algorithms (DFS, BFS, binary search), and time complexity analysis, while simulating real interview scenarios with practical coding questions and system design principles to build problem-solving confidence and identify skill gaps efficiently.",
+    "questions": [
+        {
+            "question": "What’s the time complexity of inserting into a binary heap?",
+            "options": ["O(log n)", "O(n)", "O(1)", "O(n²)"],
+            "correctAnswer": "O(log n)"
+        },
+        {
+            "question": "Which data structure is best for a priority queue?",
+            "options": ["Heap", "Array", "Stack", "Queue"],
+            "correctAnswer": "Heap"
+        },
+        {
+            "question": "What’s a key feature of a self-balancing BST?",
+            "options": ["O(log n) operations", "O(n) search", "Unordered nodes", "Fixed height"],
+            "correctAnswer": "O(log n) operations"
+        },
+        {
+            "question": "What’s the output: x = [1, 2, 3]; x.pop(1); print(x)?",
+            "options": ["[1, 3]", "[1, 2]", "[2, 3]", "Error"],
+            "correctAnswer": "[1, 3]"
+        },
+        {
+            "question": "What’s the purpose of a hash map in coding interviews?",
+            "options": ["O(1) lookups", "Sorting", "Tree traversal", "Stack operations"],
+            "correctAnswer": "O(1) lookups"
+        },
+        {
+            "question": "What’s a common SDE interview focus?",
+            "options": ["System design", "Drawing", "History", "Cooking"],
+            "correctAnswer": "System design"
+        },
+        {
+            "question": "What’s the time complexity of binary search?",
+            "options": ["O(log n)", "O(n)", "O(n²)", "O(1)"],
+            "correctAnswer": "O(log n)"
+        },
+        {
+            "question": "What’s a good way to start a coding interview problem?",
+            "options": ["Clarify requirements", "Write code", "Guess", "Debug"],
+            "correctAnswer": "Clarify requirements"
+        },
+        {
+            "question": "What’s the output: x = {'a': 1, 'b': 2}; print(x['b'])?",
+            "options": ["2", "1", "Error", "b"],
+            "correctAnswer": "2"
+        },
+        {
+            "question": "What’s a key property of a trie?",
+            "options": ["Prefix-based", "Sorted order", "Fixed size", "Binary nodes"],
+            "correctAnswer": "Prefix-based"
+        },
+        {
+            "question": "What’s the time complexity of finding min in a min-heap?",
+            "options": ["O(1)", "O(n)", "O(log n)", "O(n²)"],
+            "correctAnswer": "O(1)"
+        },
+        {
+            "question": "What’s a common use of a stack in algorithms?",
+            "options": ["DFS", "BFS", "Sorting", "Hashing"],
+            "correctAnswer": "DFS"
+        },
+        {
+            "question": "What’s the output: x = 'code'; print(x.upper())?",
+            "options": ["CODE", "code", "C", "Error"],
+            "correctAnswer": "CODE"
+        },
+        {
+            "question": "What’s a key to explaining code in an interview?",
+            "options": ["Step-by-step logic", "Say 'It works'", "Skip it", "Write more"],
+            "correctAnswer": "Step-by-step logic"
+        },
+        {
+            "question": "What’s the time complexity of reversing a linked list?",
+            "options": ["O(n)", "O(1)", "O(log n)", "O(n²)"],
+            "correctAnswer": "O(n)"
+        },
+        {
+            "question": "What’s a good question to ask about a coding role?",
+            "options": ["What’s the tech stack?", "Do you like me?", "Can I leave early?", "What’s for lunch?"],
+            "correctAnswer": "What’s the tech stack?"
+        },
+        {
+            "question": "What’s the space complexity of a recursive DFS?",
+            "options": ["O(h)", "O(1)", "O(n)", "O(n²)"],
+            "correctAnswer": "O(h)"
+        },
+        {
+            "question": "What’s the output: x = [1, 2]; x.insert(0, 0); print(x)?",
+            "options": ["[0, 1, 2]", "[1, 2, 0]", "[1, 0, 2]", "Error"],
+            "correctAnswer": "[0, 1, 2]"
+        },
+        {
+            "question": "What’s a common use of a queue?",
+            "options": ["BFS", "DFS", "Sorting", "Recursion"],
+            "correctAnswer": "BFS"
+        },
+        {
+            "question": "What’s the time complexity of bubble sort?",
+            "options": ["O(n²)", "O(n log n)", "O(n)", "O(1)"],
+            "correctAnswer": "O(n²)"
+        },
+        {
+            "question": "What’s a key to system design?",
+            "options": ["Scalability", "Speed only", "Simple code", "No planning"],
+            "correctAnswer": "Scalability"
+        },
+        {
+            "question": "What’s the output: x = [1, 2, 3]; del x[0]; print(x)?",
+            "options": ["[2, 3]", "[1, 2]", "[1, 3]", "Error"],
+            "correctAnswer": "[2, 3]"
+        },
+        {
+            "question": "What’s a common optimization technique?",
+            "options": ["Memoization", "Brute force", "Random guess", "More loops"],
+            "correctAnswer": "Memoization"
+        },
+        {
+            "question": "What’s the time complexity of accessing a BST?",
+            "options": ["O(log n)", "O(n)", "O(1)", "O(n²)"],
+            "correctAnswer": "O(log n)"
+        },
+        {
+            "question": "What’s a good way to handle edge cases?",
+            "options": ["Test them early", "Ignore them", "Guess", "Write more code"],
+            "correctAnswer": "Test them early"
+        },
+        {
+            "question": "What’s the output: x = 'abc'; print(x[1:])?",
+            "options": ["bc", "abc", "a", "Error"],
+            "correctAnswer": "bc"
+        },
+        {
+            "question": "What’s a key to pair programming?",
+            "options": ["Collaboration", "Silence", "Ignoring partner", "Writing alone"],
+            "correctAnswer": "Collaboration"
+        },
+        {
+            "question": "What’s the time complexity of heapify?",
+            "options": ["O(log n)", "O(n)", "O(1)", "O(n²)"],
+            "correctAnswer": "O(log n)"
+        },
+        {
+            "question": "What’s a common SDE interview format?",
+            "options": ["Whiteboard coding", "Singing", "Drawing", "Essay"],
+            "correctAnswer": "Whiteboard coding"
+        },
+        {
+            "question": "What’s the purpose of version control?",
+            "options": ["Track changes", "Run code", "Sort files", "Debug"],
+            "correctAnswer": "Track changes"
+        }
+    ]
+}

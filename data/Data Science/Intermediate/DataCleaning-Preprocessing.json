@@ -1,0 +1,214 @@
+{
+  "category": "Data Science",
+    "title": "Data Cleaning and Preprocessing",
+    "level": "Intermediate",
+    "Difficulty": "Easy",
+    "timer": "20 minutes",
+    "skill": "40%",
+    "knowledge": "45%",
+    "application": "15%",
+    "why": "This quiz helps learners master essential data preprocessing techniques like handling missing values, detecting outliers, encoding categorical variables, and applying normalization and scaling. It builds practical data preparation skills that are crucial for building reliable machine learning models.",
+
+    "questions": [
+      {
+        "question": "Scenario: A dataset has 10% missing values. What’s a common imputation method?",
+        "options": [
+          "Replace with the mean",
+          "Drop all rows",
+          "Replace with zero",
+          "Ignore them"
+        ],
+        "correctAnswer": "Replace with the mean"
+      },
+      {
+        "question": "What is an outlier?",
+        "options": [
+          "A value far from the rest",
+          "The mean value",
+          "A missing value",
+          "A duplicate"
+        ],
+        "correctAnswer": "A value far from the rest"
+      },
+      {
+        "question": "Solve: A dataset has values 1, 2, 3, 4, 100. What’s the mean with and without the outlier 100?",
+        "options": [
+          "22 vs. 2.5",
+          "20 vs. 3",
+          "25 vs. 2",
+          "30 vs. 4"
+        ],
+        "correctAnswer": "22 vs. 2.5"
+      },
+      {
+        "question": "Why is data normalization important?",
+        "options": [
+          "To scale features to a similar range",
+          "To remove outliers",
+          "To encode categories",
+          "To increase variance"
+        ],
+        "correctAnswer": "To scale features to a similar range"
+      },
+      {
+        "question": "Scenario: You have categories 'Red', 'Blue', 'Green'. What encoding method assigns 0, 1, 2?",
+        "options": [
+          "Ordinal encoding",
+          "One-hot encoding",
+          "Label encoding",
+          "Binary encoding"
+        ],
+        "correctAnswer": "Label encoding"
+      },
+      {
+        "question": "Analyze: How does an outlier affect the standard deviation?",
+        "options": [
+          "It increases it",
+          "It decreases it",
+          "It has no effect",
+          "It sets it to zero"
+        ],
+        "correctAnswer": "It increases it"
+      },
+      {
+        "question": "What does feature scaling do?",
+        "options": [
+          "Adjusts values to a common scale",
+          "Removes missing data",
+          "Detects outliers",
+          "Encodes variables"
+        ],
+        "correctAnswer": "Adjusts values to a common scale"
+      },
+      {
+        "question": "Solve: Normalize the values 10, 20, 30 to a 0-1 scale (min-max scaling). What’s the result for 20?",
+        "options": [
+          "0.5",
+          "1",
+          "0",
+          "0.75"
+        ],
+        "correctAnswer": "0.5"
+      },
+      {
+        "question": "Scenario: A dataset has a column with 5% missing values. What’s an alternative to imputation?",
+        "options": [
+          "Drop rows with missing values",
+          "Replace with outliers",
+          "Double the data",
+          "Keep as is"
+        ],
+        "correctAnswer": "Drop rows with missing values"
+      },
+      {
+        "question": "What is one-hot encoding used for?",
+        "options": [
+          "Converting categorical data to binary columns",
+          "Scaling numerical data",
+          "Removing outliers",
+          "Filling missing values"
+        ],
+        "correctAnswer": "Converting categorical data to binary columns"
+      },
+      {
+        "question": "Analyze: Why might dropping all missing values be problematic?",
+        "options": [
+          "It reduces dataset size",
+          "It increases variance",
+          "It adds outliers",
+          "It normalizes data"
+        ],
+        "correctAnswer": "It reduces dataset size"
+      },
+      {
+        "question": "Solve: For data 2, 4, 6, 8, what’s the z-score of 6 (mean = 5, std dev = 2)?",
+        "options": [
+          "0.5",
+          "1",
+          "-0.5",
+          "2"
+        ],
+        "correctAnswer": "0.5"
+      },
+      {
+        "question": "What method detects outliers using quartiles?",
+        "options": [
+          "IQR (Interquartile Range)",
+          "Mean deviation",
+          "Variance",
+          "Normalization"
+        ],
+        "correctAnswer": "IQR (Interquartile Range)"
+      },
+      {
+        "question": "Scenario: A dataset has values 1, 2, 3, 1000. What’s the best way to handle 1000?",
+        "options": [
+          "Cap it at a threshold",
+          "Replace with mean",
+          "Keep it",
+          "Double it"
+        ],
+        "correctAnswer": "Cap it at a threshold"
+      },
+      {
+        "question": "Why use min-max scaling?",
+        "options": [
+          "To bound values between 0 and 1",
+          "To remove missing data",
+          "To encode categories",
+          "To detect outliers"
+        ],
+        "correctAnswer": "To bound values between 0 and 1"
+      },
+      {
+        "question": "Solve: Encode 'Yes', 'No' with one-hot encoding. How many columns result?",
+        "options": [
+          "2",
+          "1",
+          "3",
+          "4"
+        ],
+        "correctAnswer": "2"
+      },
+      {
+        "question": "Analyze: How does removing outliers affect the mean?",
+        "options": [
+          "It becomes more representative",
+          "It increases",
+          "It doubles",
+          "It stays the same"
+        ],
+        "correctAnswer": "It becomes more representative"
+      },
+      {
+        "question": "What’s a drawback of replacing missing values with the mean?",
+        "options": [
+          "It can distort variance",
+          "It removes outliers",
+          "It increases data size",
+          "It normalizes data"
+        ],
+        "correctAnswer": "It can distort variance"
+      },
+      {
+        "question": "Solve: For data 5, 15, 25, normalize 15 to a 0-1 scale.",
+        "options": [
+          "0.5",
+          "0.25",
+          "0.75",
+          "1"
+        ],
+        "correctAnswer": "0.5"
+      },
+      {
+        "question": "Scenario: A dataset has a categorical column 'Low', 'Medium', 'High'. What’s the best encoding?",
+        "options": [
+          "Ordinal encoding",
+          "One-hot encoding",
+          "Mean encoding",
+          "Random encoding"
+        ],
+        "correctAnswer": "Ordinal encoding"
+      }
+    ]
+  }

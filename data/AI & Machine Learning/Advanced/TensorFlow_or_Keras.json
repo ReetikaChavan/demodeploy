@@ -1,0 +1,313 @@
+{
+  "category": "AI & Machine Learning",
+    "title": "TensorFlow/Keras",
+    "level": "Advanced",
+    "Difficulty": "Hard",
+    "timer": "30 minutes",
+    "skill": "60%",
+    "knowledge": "30%",
+    "application": "55%",
+    "why":"The TensorFlow/Keras exam tests advanced deep learning implementation skills through 30 practical questions on CNN architecture design (Conv2D, pooling layers), optimization techniques (dropout, batch normalization), and performance tuning (memory management, hyperparameter configuration), equipping candidates to build efficient image processing models that handle real-world challenges like overfitting, varying lighting conditions, and high-resolution inputs using industry-standard frameworks.",
+    "questions": [
+      {
+        "question": "Scenario: You’re designing a CNN in Keras to classify images. Which layer should you add first?",
+        "options": [
+          "Conv2D",
+          "Dense",
+          "Flatten",
+          "MaxPooling2D"
+        ],
+        "correctAnswer": "Conv2D"
+      },
+      {
+        "question": "Evaluate: Why is a convolutional layer preferred over a dense layer for image recognition?",
+        "options": [
+          "It captures spatial features and reduces parameters",
+          "It increases model complexity",
+          "It avoids spatial relationships",
+          "It requires fewer computations"
+        ],
+        "correctAnswer": "It captures spatial features and reduces parameters"
+      },
+      {
+        "question": "What is the purpose of the 'filters' parameter in a Keras Conv2D layer?",
+        "options": [
+          "To define the number of feature maps output by the layer",
+          "To set the size of the input image",
+          "To specify the pooling size",
+          "To determine the activation function"
+        ],
+        "correctAnswer": "To define the number of feature maps output by the layer"
+      },
+      {
+        "question": "True or False: Pooling layers in a CNN reduce spatial dimensions while retaining important features.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "true"
+      },
+      {
+        "question": "Scenario: Your CNN model overfits on a small image dataset. What should you add to improve generalization?",
+        "options": [
+          "Dropout layer",
+          "More Conv2D layers",
+          "Increase filter size",
+          "Remove pooling layers"
+        ],
+        "correctAnswer": "Dropout layer"
+      },
+      {
+        "question": "Create: Propose a Keras layer sequence for a basic CNN for image classification.",
+        "options": [
+          "Conv2D → MaxPooling2D → Flatten → Dense",
+          "Dense → Conv2D → Flatten → MaxPooling2D",
+          "Flatten → Dense → Conv2D → MaxPooling2D",
+          "MaxPooling2D → Conv2D → Dense → Flatten"
+        ],
+        "correctAnswer": "Conv2D → MaxPooling2D → Flatten → Dense"
+      },
+      {
+        "question": "What does the 'kernel_size' parameter in Conv2D control?",
+        "options": [
+          "The size of the convolution window",
+          "The number of filters",
+          "The stride of the convolution",
+          "The pooling region size"
+        ],
+        "correctAnswer": "The size of the convolution window"
+      },
+      {
+        "question": "True or False: The Flatten layer in Keras converts multi-dimensional feature maps into a 1D vector.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "true"
+      },
+      {
+        "question": "Scenario: You need to reduce computational cost in a CNN without losing too much information. Which layer helps?",
+        "options": [
+          "MaxPooling2D",
+          "Conv2D",
+          "Dense",
+          "Dropout"
+        ],
+        "correctAnswer": "MaxPooling2D"
+      },
+      {
+        "question": "Evaluate: Why might ReLU be preferred as an activation function in CNNs?",
+        "options": [
+          "It mitigates vanishing gradients and speeds up training",
+          "It outputs probabilities directly",
+          "It reduces the number of filters",
+          "It simplifies pooling operations"
+        ],
+        "correctAnswer": "It mitigates vanishing gradients and speeds up training"
+      },
+      {
+        "question": "Scenario: A CNN struggles with slow training on large satellite images. What modification could speed it up?",
+        "options": [
+          "Increase stride in Conv2D",
+          "Add more Dense layers",
+          "Remove MaxPooling2D",
+          "Decrease filter size"
+        ],
+        "correctAnswer": "Increase stride in Conv2D"
+      },
+      {
+        "question": "True or False: In TensorFlow/Keras, the 'strides' parameter in Conv2D affects the output size.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "true"
+      },
+      {
+        "question": "Scenario: A CNN fails to detect fine details in medical X-ray images. What adjustment should you make?",
+        "options": [
+          "Decrease kernel size",
+          "Increase stride",
+          "Remove pooling layers",
+          "Reduce filter count"
+        ],
+        "correctAnswer": "Decrease kernel size"
+      },
+      {
+        "question": "Create: Design a Keras CNN to handle 32x32 RGB images. Which input shape should you specify?",
+        "options": [
+          "(32, 32, 3)",
+          "(32, 32)",
+          "(3, 32, 32)",
+          "(32, 3)"
+        ],
+        "correctAnswer": "(32, 32, 3)"
+      },
+      {
+        "question": "Evaluate: Why might MaxPooling2D be better than AveragePooling2D for image recognition?",
+        "options": [
+          "It retains dominant features more effectively",
+          "It increases spatial dimensions",
+          "It reduces computational complexity less",
+          "It smooths features too much"
+        ],
+        "correctAnswer": "It retains dominant features more effectively"
+      },
+      {
+        "question": "Scenario: Your CNN has low accuracy on a test set of handwritten digits. What could improve performance?",
+        "options": [
+          "Add data augmentation",
+          "Reduce the number of filters",
+          "Remove Dropout",
+          "Increase stride size"
+        ],
+        "correctAnswer": "Add data augmentation"
+      },
+      {
+        "question": "Create: Propose a Keras solution to prevent vanishing gradients in a deep CNN.",
+        "options": [
+          "Use ReLU activation and batch normalization",
+          "Use sigmoid activation only",
+          "Increase kernel size",
+          "Remove pooling layers"
+        ],
+        "correctAnswer": "Use ReLU activation and batch normalization"
+      },
+      {
+        "question": "Evaluate: Why is batch normalization useful in CNNs?",
+        "options": [
+          "It stabilizes training and reduces internal covariate shift",
+          "It increases overfitting",
+          "It reduces the number of filters",
+          "It eliminates the need for pooling"
+        ],
+        "correctAnswer": "It stabilizes training and reduces internal covariate shift"
+      },
+      {
+        "question": "What does the 'Dense' layer do at the end of a CNN?",
+        "options": [
+          "Performs final classification or regression",
+          "Extracts spatial features",
+          "Reduces dimensions",
+          "Applies convolution"
+        ],
+        "correctAnswer": "Performs final classification or regression"
+      },
+      {
+        "question": "Scenario: A CNN predicts poorly on rotated images in a traffic sign dataset. What should you implement?",
+        "options": [
+          "Data augmentation with rotations",
+          "Increase filter size",
+          "Add more Conv2D layers",
+          "Use AveragePooling2D"
+        ],
+        "correctAnswer": "Data augmentation with rotations"
+      },
+      {
+        "question": "Create: Design a CNN output layer in Keras for 10-class image classification.",
+        "options": [
+          "Dense(10, activation='softmax')",
+          "Dense(10, activation='sigmoid')",
+          "Dense(1, activation='relu')",
+          "Conv2D(10, activation='softmax')"
+        ],
+        "correctAnswer": "Dense(10, activation='softmax')"
+      },
+      {
+        "question": "Evaluate: Why might increasing the number of filters improve CNN performance?",
+        "options": [
+          "It allows the model to learn more diverse features",
+          "It reduces training time",
+          "It simplifies the architecture",
+          "It eliminates overfitting"
+        ],
+        "correctAnswer": "It allows the model to learn more diverse features"
+      },
+      {
+        "question": "Scenario: A CNN for facial recognition has high validation loss. What regularization technique should you try?",
+        "options": [
+          "L2 regularization",
+          "Increase stride",
+          "Remove Dropout",
+          "Add more filters"
+        ],
+        "correctAnswer": "L2 regularization"
+      },
+      {
+        "question": "Create: Propose a Keras callback to prevent overfitting during CNN training.",
+        "options": [
+          "EarlyStopping",
+          "LearningRateScheduler",
+          "ModelCheckpoint",
+          "TensorBoard"
+        ],
+        "correctAnswer": "EarlyStopping"
+      },
+      {
+        "question": "Evaluate: Why is softmax used in the output layer for multi-class classification?",
+        "options": [
+          "It normalizes outputs into probabilities summing to 1",
+          "It avoids vanishing gradients",
+          "It reduces the number of classes",
+          "It simplifies feature extraction"
+        ],
+        "correctAnswer": "It normalizes outputs into probabilities summing to 1"
+      },
+      {
+        "question": "What does the 'padding'='same' argument do in Conv2D?",
+        "options": [
+          "It ensures the output size matches the input size",
+          "It removes padding entirely",
+          "It doubles the output size",
+          "It reduces the number of filters"
+        ],
+        "correctAnswer": "It ensures the output size matches the input size"
+      },
+      {
+        "question": "Scenario: A CNN processes high-resolution images and runs out of memory. What can you adjust?",
+        "options": [
+          "Add MaxPooling2D early",
+          "Increase filter size",
+          "Add more Conv2D layers",
+          "Use AveragePooling2D"
+        ],
+        "correctAnswer": "Add MaxPooling2D early"
+      },
+      {
+        "question": "Create: Suggest a Keras optimizer for fast CNN convergence.",
+        "options": [
+          "Adam",
+          "SGD",
+          "RMSprop",
+          "Adagrad"
+        ],
+        "correctAnswer": "Adam"
+      },
+      {
+        "question": "Scenario: A CNN needs to classify images with varying lighting conditions. What should you implement?",
+        "options": [
+          "Data augmentation with brightness adjustments",
+          "Increase kernel size",
+          "Remove pooling layers",
+          "Use fewer filters"
+        ],
+        "correctAnswer": "Data augmentation with brightness adjustments"
+      },
+      {
+        "question": "What is the effect of a larger stride in a Conv2D layer?",
+        "options": [
+          "It reduces the output size and computation",
+          "It increases the output size",
+          "It adds more filters",
+          "It preserves all spatial features"
+        ],
+        "correctAnswer": "It reduces the output size and computation"
+      }
+    ]
+  }

@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
+  --background-image-gradient-conic: conic-gradient(
+    from 180deg at 50% 50%,
+    var(--tw-gradient-stops)
+  );
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+@utility text-balance {
+  text-wrap: balance;
+}
+
+@utility flexCenter {
+  @apply flex items-center justify-center;
+}
+
+@utility flexBetween {
+  @apply flex items-center justify-between;
+}
+
+@utility flexColBetween {
+  @apply flex flex-col items-start justify-between;
+}
+
+@utility flexColCenter {
+  @apply flex flex-col items-center justify-between;
+}
+
+@utility flexCol {
+  @apply flex flex-col items-start justify-start;
+}
+
+@layer utilities {
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #FFCC66 transparent; 
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+    margin: 10px 0;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #FFCC66;
+    border: 1px solid #000;
+    border-radius: 20px;
+    background-clip: padding-box;
+    min-height: 40px;
+  }
+}

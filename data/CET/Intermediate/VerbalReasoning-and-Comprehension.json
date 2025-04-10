@@ -1,0 +1,213 @@
+{
+  "category": "CET",
+    "title": "Verbal Reasoning and Comprehension",
+    "level": "Intermediate",
+    "Difficulty": "Hard",
+    "timer": "20 minutes",
+    "skill": "60%",
+    "knowledge": "55%",
+    "application": "30%",
+    "why":"This exam focuses on verbal reasoning and comprehension skills. It tests your ability to understand and apply vocabulary, arrange words in logical sequences, deduce meaning from passages, and analyze the implications of given statements. Success in this exam reflects your capacity to think critically and analytically about language and its use.",
+    "questions": [
+      {
+        "question": "Scenario: 'She was ___ after running.' Apply: Choose the best word.",
+        "options": [
+          "exhausted",
+          "happy",
+          "calm",
+          "slow"
+        ],
+        "correctAnswer": "exhausted"
+      },
+      {
+        "question": "What’s a synonym for 'quick'?",
+        "options": [
+          "Fast",
+          "Slow",
+          "Late",
+          "Heavy"
+        ],
+        "correctAnswer": "Fast"
+      },
+      {
+        "question": "Solve: Arrange in logical sequence: Eat, Cook, Serve.",
+        "options": [
+          "Cook, Serve, Eat",
+          "Eat, Cook, Serve",
+          "Serve, Eat, Cook",
+          "Cook, Eat, Serve"
+        ],
+        "correctAnswer": "Cook, Serve, Eat"
+      },
+      {
+        "question": "What’s an antonym for 'bright'?",
+        "options": [
+          "Dim",
+          "Shiny",
+          "Clear",
+          "Light"
+        ],
+        "correctAnswer": "Dim"
+      },
+      {
+        "question": "Scenario: Passage: 'The forest was dense and quiet.' What’s the main idea?",
+        "options": [
+          "The forest’s atmosphere",
+          "The forest’s animals",
+          "The forest’s size",
+          "The forest’s location"
+        ],
+        "correctAnswer": "The forest’s atmosphere"
+      },
+      {
+        "question": "Analyze: Why might 'happy' not fit in 'He was ___ after failing'?",
+        "options": [
+          "Failure implies sadness",
+          "Happy is too strong",
+          "It’s unrelated",
+          "It’s neutral"
+        ],
+        "correctAnswer": "Failure implies sadness"
+      },
+      {
+        "question": "Solve: Complete: 'The sky was ___ with stars.'",
+        "options": [
+          "filled",
+          "empty",
+          "dark",
+          "blue"
+        ],
+        "correctAnswer": "filled"
+      },
+      {
+        "question": "What’s a synonym for 'difficult'?",
+        "options": [
+          "Hard",
+          "Easy",
+          "Simple",
+          "Quick"
+        ],
+        "correctAnswer": "Hard"
+      },
+      {
+        "question": "Scenario: 'If it’s sunny, we’ll picnic.' It’s sunny. What follows?",
+        "options": [
+          "We’ll picnic",
+          "We won’t picnic",
+          "It’s raining",
+          "Maybe picnic"
+        ],
+        "correctAnswer": "We’ll picnic"
+      },
+      {
+        "question": "Solve: Arrange: Book, Read, Buy.",
+        "options": [
+          "Buy, Book, Read",
+          "Buy, Read, Book",
+          "Read, Buy, Book",
+          "Book, Buy, Read"
+        ],
+        "correctAnswer": "Buy, Book, Read"
+      },
+      {
+        "question": "What’s an antonym for 'expand'?",
+        "options": [
+          "Shrink",
+          "Grow",
+          "Increase",
+          "Stretch"
+        ],
+        "correctAnswer": "Shrink"
+      },
+      {
+        "question": "Analyze: Passage: 'He studied all night and passed.' What’s the implied effort?",
+        "options": [
+          "High effort led to success",
+          "Low effort failed",
+          "No effort needed",
+          "Random result"
+        ],
+        "correctAnswer": "High effort led to success"
+      },
+      {
+        "question": "Solve: Complete: 'The room was ___ due to silence.'",
+        "options": [
+          "peaceful",
+          "noisy",
+          "bright",
+          "crowded"
+        ],
+        "correctAnswer": "peaceful"
+      },
+      {
+        "question": "What’s a synonym for 'begin'?",
+        "options": [
+          "Start",
+          "End",
+          "Stop",
+          "Pause"
+        ],
+        "correctAnswer": "Start"
+      },
+      {
+        "question": "Scenario: 'Some dogs bark. Rover is a dog.' What follows?",
+        "options": [
+          "Rover may bark",
+          "Rover barks",
+          "Rover doesn’t bark",
+          "All dogs are Rover"
+        ],
+        "correctAnswer": "Rover may bark"
+      },
+      {
+        "question": "Solve: Arrange: Plant, Water, Grow.",
+        "options": [
+          "Plant, Water, Grow",
+          "Grow, Plant, Water",
+          "Water, Grow, Plant",
+          "Plant, Grow, Water"
+        ],
+        "correctAnswer": "Plant, Water, Grow"
+      },
+      {
+        "question": "Analyze: Why use context clues in sentence completion?",
+        "options": [
+          "To deduce meaning",
+          "To guess randomly",
+          "To skip words",
+          "To confuse"
+        ],
+        "correctAnswer": "To deduce meaning"
+      },
+      {
+        "question": "What’s an antonym for 'calm'?",
+        "options": [
+          "Restless",
+          "Peaceful",
+          "Quiet",
+          "Still"
+        ],
+        "correctAnswer": "Restless"
+      },
+      {
+        "question": "Solve: Complete: 'His ___ effort won the prize.'",
+        "options": [
+          "great",
+          "small",
+          "weak",
+          "slow"
+        ],
+        "correctAnswer": "great"
+      },
+      {
+        "question": "Scenario: Passage: 'Rain delayed the game.' What’s the main idea?",
+        "options": [
+          "Weather’s impact",
+          "Game’s rules",
+          "Players’ skills",
+          "Time of day"
+        ],
+        "correctAnswer": "Weather’s impact"
+      }
+    ]
+  }

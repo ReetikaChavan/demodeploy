@@ -1,0 +1,213 @@
+{
+  "category": "AI & Machine Learning",
+    "title": "Classification Algorithms",
+    "level": "Intermediate",
+    "Difficulty": "Easy",
+    "timer": "20 minutes",
+    "skill": "50%",
+    "knowledge": "40%",
+    "application": "60%",
+    "why":"This exam on Classification Algorithms assesses your understanding of key concepts and their practical application in machine learning. It tests your ability to choose the right algorithm for specific scenarios, understand the nuances between logistic regression, decision trees, and k-nearest neighbors (KNN), and evaluate their strengths and weaknesses. Taking this exam helps you solidify your knowledge of classification techniques and their relevance in real-world predictive modeling.",
+    "questions": [
+      {
+        "question": "Scenario: You need to predict whether a customer will buy a product (yes/no). Which algorithm is best suited?",
+        "options": [
+          "Logistic regression",
+          "Decision trees",
+          "K-nearest neighbors",
+          "Linear regression"
+        ],
+        "correctAnswer": "Logistic regression"
+      },
+      {
+        "question": "How does logistic regression differ from linear regression?",
+        "options": [
+          "It predicts probabilities for classification instead of continuous values",
+          "It predicts continuous values instead of probabilities",
+          "It uses a different cost function for regression",
+          "It cannot handle binary outcomes"
+        ],
+        "correctAnswer": "It predicts probabilities for classification instead of continuous values"
+      },
+      {
+        "question": "What is the role of the sigmoid function in logistic regression?",
+        "options": [
+          "It maps predictions to probabilities between 0 and 1",
+          "It calculates the error in predictions",
+          "It splits data into branches",
+          "It measures distances between points"
+        ],
+        "correctAnswer": "It maps predictions to probabilities between 0 and 1"
+      },
+      {
+        "question": "True or False: Decision trees can handle both numerical and categorical data.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "true"
+      },
+      {
+        "question": "Scenario: A dataset has mixed feature types (numerical and categorical). Which algorithm can easily process it?",
+        "options": [
+          "Decision trees",
+          "Logistic regression",
+          "K-nearest neighbors",
+          "All of the above"
+        ],
+        "correctAnswer": "Decision trees"
+      },
+      {
+        "question": "What is a key advantage of k-nearest neighbors (KNN)?",
+        "options": [
+          "It is simple and does not assume a specific data distribution",
+          "It builds a hierarchical structure",
+          "It predicts continuous outcomes",
+          "It uses a sigmoid function"
+        ],
+        "correctAnswer": "It is simple and does not assume a specific data distribution"
+      },
+      {
+        "question": "How does KNN classify a new data point?",
+        "options": [
+          "By finding the majority class among its k nearest neighbors",
+          "By splitting data based on feature thresholds",
+          "By calculating a probability score",
+          "By minimizing a cost function"
+        ],
+        "correctAnswer": "By finding the majority class among its k nearest neighbors"
+      },
+      {
+        "question": "True or False: Logistic regression is suitable for multi-class classification without modification.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "false"
+      },
+      {
+        "question": "Scenario: You need an interpretable model to explain classification decisions. Which algorithm fits best?",
+        "options": [
+          "Decision trees",
+          "Logistic regression",
+          "K-nearest neighbors",
+          "None of the above"
+        ],
+        "correctAnswer": "Decision trees"
+      },
+      {
+        "question": "What is a common splitting criterion in decision trees?",
+        "options": [
+          "Gini impurity",
+          "Mean squared error",
+          "Euclidean distance",
+          "Sigmoid activation"
+        ],
+        "correctAnswer": "Gini impurity"
+      },
+      {
+        "question": "Why might KNN perform poorly with high-dimensional data?",
+        "options": [
+          "Distances become less meaningful in high dimensions",
+          "It requires a tree structure",
+          "It cannot handle numerical data",
+          "It overfits the training data"
+        ],
+        "correctAnswer": "Distances become less meaningful in high dimensions"
+      },
+      {
+        "question": "True or False: Decision trees are prone to overfitting if not pruned.",
+        "options": [
+          "true",
+          "false",
+          "error",
+          "none"
+        ],
+        "correctAnswer": "true"
+      },
+      {
+        "question": "Scenario: A dataset has noisy data with outliers. Which algorithm is most sensitive to this?",
+        "options": [
+          "K-nearest neighbors",
+          "Logistic regression",
+          "Decision trees",
+          "All are equally sensitive"
+        ],
+        "correctAnswer": "K-nearest neighbors"
+      },
+      {
+        "question": "What does the 'k' parameter in KNN control?",
+        "options": [
+          "The number of neighbors considered for classification",
+          "The depth of the decision tree",
+          "The learning rate of the model",
+          "The number of features used"
+        ],
+        "correctAnswer": "The number of neighbors considered for classification"
+      },
+      {
+        "question": "How does logistic regression handle binary classification?",
+        "options": [
+          "By assigning probabilities and using a threshold",
+          "By splitting data into branches",
+          "By measuring distances to neighbors",
+          "By minimizing Gini impurity"
+        ],
+        "correctAnswer": "By assigning probabilities and using a threshold"
+      },
+      {
+        "question": "Scenario: You need a fast, non-parametric algorithm for small datasets. Which should you choose?",
+        "options": [
+          "K-nearest neighbors",
+          "Logistic regression",
+          "Decision trees",
+          "Linear regression"
+        ],
+        "correctAnswer": "K-nearest neighbors"
+      },
+      {
+        "question": "What is a disadvantage of decision trees compared to logistic regression?",
+        "options": [
+          "They can overfit complex datasets",
+          "They cannot handle probabilities",
+          "They require distance calculations",
+          "They are computationally slow"
+        ],
+        "correctAnswer": "They can overfit complex datasets"
+      },
+      {
+        "question": "Why is feature scaling important for KNN?",
+        "options": [
+          "It ensures distances are calculated fairly across features",
+          "It improves tree branching",
+          "It reduces the cost function",
+          "It simplifies probability calculations"
+        ],
+        "correctAnswer": "It ensures distances are calculated fairly across features"
+      },
+      {
+        "question": "Scenario: A model needs to predict cancer diagnosis (positive/negative) with probabilities. Which algorithm fits?",
+        "options": [
+          "Logistic regression",
+          "Decision trees",
+          "K-nearest neighbors",
+          "All of the above"
+        ],
+        "correctAnswer": "Logistic regression"
+      },
+      {
+        "question": "How do decision trees determine the best feature to split on?",
+        "options": [
+          "By maximizing information gain or minimizing impurity",
+          "By calculating distances to neighbors",
+          "By optimizing a sigmoid function",
+          "By averaging feature values"
+        ],
+        "correctAnswer": "By maximizing information gain or minimizing impurity"
+      }
+    ]
+  }

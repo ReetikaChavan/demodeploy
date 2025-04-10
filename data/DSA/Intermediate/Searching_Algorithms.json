@@ -1,0 +1,213 @@
+{
+  "category": "DSA",
+    "title": "Searching Algorithms",
+    "level": "Intermediate",
+    "Difficulty": "Medium",
+    "timer": "20 minutes",
+    "skill": "25%",
+    "knowledge": "45%",
+    "application": "30%",
+    "why": "This Searching Algorithms module emphasizes the efficiency of different search techniques like linear and binary search, their time/space complexities, and real-world application. It prepares candidates to analyze performance and make optimal algorithm choices in technical interviews.",
+    "questions": [
+      {
+        "question": "Scenario: You perform a linear search on the array [3, 5, 1, 9] for 1. How many comparisons are needed?",
+        "options": [
+          "3",
+          "1",
+          "4",
+          "2"
+        ],
+        "correctAnswer": "3"
+      },
+      {
+        "question": "What is the time complexity of linear search in the worst case?",
+        "options": [
+          "O(n)",
+          "O(log n)",
+          "O(1)",
+          "O(n^2)"
+        ],
+        "correctAnswer": "O(n)"
+      },
+      {
+        "question": "What is a prerequisite for binary search to work correctly?",
+        "options": [
+          "The data must be sorted",
+          "The data must be unsorted",
+          "The data must be in a tree",
+          "The data must be random"
+        ],
+        "correctAnswer": "The data must be sorted"
+      },
+      {
+        "question": "Scenario: You apply binary search to [1, 3, 5, 7, 9] to find 7. How many steps are required?",
+        "options": [
+          "3",
+          "2",
+          "4",
+          "1"
+        ],
+        "correctAnswer": "2"
+      },
+      {
+        "question": "What is the time complexity of binary search in the worst case?",
+        "options": [
+          "O(log n)",
+          "O(n)",
+          "O(n log n)",
+          "O(1)"
+        ],
+        "correctAnswer": "O(log n)"
+      },
+      {
+        "question": "Why is binary search faster than linear search?",
+        "options": [
+          "It eliminates half the search space each step",
+          "It checks every element",
+          "It doesn’t require comparisons",
+          "It works on unsorted data"
+        ],
+        "correctAnswer": "It eliminates half the search space each step"
+      },
+      {
+        "question": "Scenario: You use linear search on an unsorted list of 10 elements. What’s the maximum number of comparisons?",
+        "options": [
+          "10",
+          "5",
+          "9",
+          "1"
+        ],
+        "correctAnswer": "10"
+      },
+      {
+        "question": "What happens if you apply binary search to an unsorted array?",
+        "options": [
+          "It may miss the target",
+          "It always finds the target",
+          "It sorts the array first",
+          "It runs in O(n) time"
+        ],
+        "correctAnswer": "It may miss the target"
+      },
+      {
+        "question": "In a recursive binary search, what is the base case?",
+        "options": [
+          "When the search range is empty",
+          "When the array is unsorted",
+          "When the target is at the start",
+          "When the array doubles in size"
+        ],
+        "correctAnswer": "When the search range is empty"
+      },
+      {
+        "question": "Scenario: You’re searching for 4 in [1, 2, 3, 4, 5] using binary search. What’s the first mid-point checked?",
+        "options": [
+          "3",
+          "2",
+          "4",
+          "1"
+        ],
+        "correctAnswer": "3"
+      },
+      {
+        "question": "Analyze: Why might you choose an iterative binary search over a recursive one?",
+        "options": [
+          "It avoids stack overflow for large datasets",
+          "It’s slower but more accurate",
+          "It requires less memory initially",
+          "It works on unsorted data"
+        ],
+        "correctAnswer": "It avoids stack overflow for large datasets"
+      },
+      {
+        "question": "What is the best-case time complexity of linear search?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n^2)"
+        ],
+        "correctAnswer": "O(1)"
+      },
+      {
+        "question": "Scenario: A database uses binary search on a sorted index. Why is this efficient?",
+        "options": [
+          "It reduces the search space logarithmically",
+          "It checks every record",
+          "It doesn’t require sorting",
+          "It uses O(n) time"
+        ],
+        "correctAnswer": "It reduces the search space logarithmically"
+      },
+      {
+        "question": "What is a disadvantage of linear search?",
+        "options": [
+          "It’s slow for large datasets",
+          "It requires sorted data",
+          "It uses recursive calls",
+          "It can’t find the target"
+        ],
+        "correctAnswer": "It’s slow for large datasets"
+      },
+      {
+        "question": "Analyze: Why doesn’t binary search work well with linked lists?",
+        "options": [
+          "It can’t access the middle element in O(1) time",
+          "It requires sorted data",
+          "It uses too much memory",
+          "It’s slower than linear search"
+        ],
+        "correctAnswer": "It can’t access the middle element in O(1) time"
+      },
+      {
+        "question": "In binary search, what happens if the target is less than the mid-point?",
+        "options": [
+          "Search continues in the left half",
+          "Search continues in the right half",
+          "Search stops",
+          "The array is resorted"
+        ],
+        "correctAnswer": "Search continues in the left half"
+      },
+      {
+        "question": "Scenario: You’re optimizing a search on a sorted array of 1 million elements. Which algorithm should you use?",
+        "options": [
+          "Binary search",
+          "Linear search",
+          "Recursive linear search",
+          "Random search"
+        ],
+        "correctAnswer": "Binary search"
+      },
+      {
+        "question": "What is the space complexity of an iterative binary search?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n^2)"
+        ],
+        "correctAnswer": "O(1)"
+      },
+      {
+        "question": "Analyze: Why does recursive binary search use O(log n) space?",
+        "options": [
+          "Due to the call stack depth",
+          "Due to sorting the array",
+          "Due to storing all elements",
+          "Due to iterative loops"
+        ],
+        "correctAnswer": "Due to the call stack depth"
+      },
+      {
+        "question": "Scenario: You need to find an element in an unsorted array. Which algorithm is appropriate?",
+        "options": [
+          "Linear search",
+          "Binary search",
+          "Recursive binary search",
+          "None of the above"
+        ],
+        "correctAnswer": "Linear search"
+      }
+    ]
+  }

@@ -1,0 +1,214 @@
+{
+  "category": "DSA",
+    "title": "Stacks and Queues",
+    "level": "Intermediate",
+    "Difficulty": "Hard",
+    "timer": "20 minutes",
+    "skill": "35%",
+    "knowledge": "40%",
+    "application": "25%",
+    "why": "This Stacks and Queues module focuses on mastering core linear data structures used in recursion, parsing, and scheduling. It tests the ability to apply abstract data types in coding challenges and interview scenarios involving expression evaluation, balancing problems, and BFS.",
+
+    "questions": [
+      {
+        "question": "Scenario: You need to reverse a string 'hello' using a stack. After pushing all characters and popping them, what will the result be?",
+        "options": [
+          "olleh",
+          "hello",
+          "lleho",
+          "ohell"
+        ],
+        "correctAnswer": "olleh"
+      },
+      {
+        "question": "What does the 'peek' operation do in a stack?",
+        "options": [
+          "Returns the top element without removing it",
+          "Removes the top element",
+          "Adds an element to the top",
+          "Checks if the stack is empty"
+        ],
+        "correctAnswer": "Returns the top element without removing it"
+      },
+      {
+        "question": "In a queue, what happens when you enqueue an element?",
+        "options": [
+          "It’s added to the rear",
+          "It’s added to the front",
+          "It’s removed from the rear",
+          "It’s removed from the front"
+        ],
+        "correctAnswer": "It’s added to the rear"
+      },
+      {
+        "question": "Scenario: A printer uses a queue to manage print jobs. If jobs A, B, and C are enqueued in that order, which is dequeued first?",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "None"
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "question": "How would you use a stack to evaluate the expression '3 + 5 * 2' in postfix form (3 5 2 * +)?",
+        "options": [
+          "Push operands, pop for operations, push results",
+          "Push operators, pop for operands",
+          "Enqueue operands, dequeue for operations",
+          "Reverse the expression first"
+        ],
+        "correctAnswer": "Push operands, pop for operations, push results"
+      },
+      {
+        "question": "What is the time complexity of the 'push' operation in an array-based stack with sufficient space?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n^2)"
+        ],
+        "correctAnswer": "O(1)"
+      },
+      {
+        "question": "Why might a linked-list-based queue be preferred over an array-based queue?",
+        "options": [
+          "It supports dynamic resizing",
+          "It has faster access times",
+          "It uses less memory",
+          "It allows random access"
+        ],
+        "correctAnswer": "It supports dynamic resizing"
+      },
+      {
+        "question": "Scenario: You implement a stack using an array, and it’s full. What happens when you push another element?",
+        "options": [
+          "Stack overflow occurs",
+          "The oldest element is removed",
+          "The stack doubles in size",
+          "The operation is ignored"
+        ],
+        "correctAnswer": "Stack overflow occurs"
+      },
+      {
+        "question": "How does a queue support Breadth-First Search (BFS) in a graph?",
+        "options": [
+          "By processing nodes level by level",
+          "By exploring the deepest nodes first",
+          "By reversing the graph structure",
+          "By popping nodes randomly"
+        ],
+        "correctAnswer": "By processing nodes level by level"
+      },
+      {
+        "question": "What is a key difference between stack and queue operations?",
+        "options": [
+          "Stacks are LIFO, queues are FIFO",
+          "Stacks are FIFO, queues are LIFO",
+          "Stacks use enqueue, queues use push",
+          "Stacks are dynamic, queues are fixed"
+        ],
+        "correctAnswer": "Stacks are LIFO, queues are FIFO"
+      },
+      {
+        "question": "Scenario: A call center uses a queue to handle customer calls. If 3 calls are waiting and a new call arrives, where is it placed?",
+        "options": [
+          "At the rear of the queue",
+          "At the front of the queue",
+          "At the top of the stack",
+          "It replaces the oldest call"
+        ],
+        "correctAnswer": "At the rear of the queue"
+      },
+      {
+        "question": "Why does an array-based stack have O(n) time complexity when resizing is required?",
+        "options": [
+          "All elements must be copied to a new array",
+          "It searches for the top element",
+          "It reorders the elements",
+          "It deletes the bottom element"
+        ],
+        "correctAnswer": "All elements must be copied to a new array"
+      },
+      {
+        "question": "How would you implement a queue using two stacks?",
+        "options": [
+          "Use one stack for enqueue, another for dequeue with transfer",
+          "Push all elements to one stack and pop randomly",
+          "Use one stack for both operations",
+          "Reverse the stacks periodically"
+        ],
+        "correctAnswer": "Use one stack for enqueue, another for dequeue with transfer"
+      },
+      {
+        "question": "Scenario: You’re reversing a list of numbers [1, 2, 3] using a stack. What’s the state of the stack after pushing all elements?",
+        "options": [
+          "Top: 3, then 2, then 1",
+          "Top: 1, then 2, then 3",
+          "Top: 2, then 1, then 3",
+          "Top: 3, then 1, then 2"
+        ],
+        "correctAnswer": "Top: 3, then 2, then 1"
+      },
+      {
+        "question": "What is a disadvantage of using an array-based queue?",
+        "options": [
+          "Fixed size leads to wasted space or overflow",
+          "Slower enqueue operations",
+          "No support for FIFO",
+          "Requires more memory than a stack"
+        ],
+        "correctAnswer": "Fixed size leads to wasted space or overflow"
+      },
+      {
+        "question": "Scenario: A program uses a stack to check if parentheses are balanced (e.g., '()'). What happens when it encounters a closing parenthesis?",
+        "options": [
+          "It pops the stack to match an opening parenthesis",
+          "It pushes it onto the stack",
+          "It enqueues it for later",
+          "It ignores it"
+        ],
+        "correctAnswer": "It pops the stack to match an opening parenthesis"
+      },
+      {
+        "question": "Why is a linked-list-based stack more flexible than an array-based stack?",
+        "options": [
+          "It doesn’t have a fixed capacity",
+          "It supports random access",
+          "It uses less memory per element",
+          "It has faster pop operations"
+        ],
+        "correctAnswer": "It doesn’t have a fixed capacity"
+      },
+      {
+        "question": "What is the time complexity of dequeuing from a linked-list-based queue?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n^2)"
+        ],
+        "correctAnswer": "O(1)"
+      },
+      {
+        "question": "Scenario: A scheduling system uses a queue to process tasks. If Task A takes longer than expected, what happens to subsequent tasks?",
+        "options": [
+          "They wait until Task A is dequeued",
+          "They are processed immediately",
+          "They are pushed to a stack",
+          "They are skipped"
+        ],
+        "correctAnswer": "They wait until Task A is dequeued"
+      },
+      {
+        "question": "Analyze: Why might a stack be less suitable than a queue for task scheduling?",
+        "options": [
+          "Stacks process the most recent task first, not the oldest",
+          "Stacks are slower than queues",
+          "Stacks don’t support enqueue",
+          "Stacks use more memory"
+        ],
+        "correctAnswer": "Stacks process the most recent task first, not the oldest"
+      }
+    ]
+  }
