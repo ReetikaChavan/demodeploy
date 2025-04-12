@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { useSearchParams } from "next/navigation"
 import { toast, Toaster } from "sonner"
 import TestPage from "@/components/testPage/testPage"
@@ -36,6 +36,87 @@ type AttemptData = {
     completionTime: number
   }>
 }
+
+const ScrollContainer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [scrollCirclePosition, setScrollCirclePosition] = useState(30);
+  const scrollContainerRef = useRef<HTMLDivElement | null>(null);
+  const scrollIndicatorRef = useRef<SVGSVGElement | null>(null);
+  const [showScrollIndicator, setShowScrollIndicator] = useState(false);
+
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+
+    // Check initially if scrolling is needed
+    checkIfScrollable();
+
+    function checkIfScrollable() {
+      const container = scrollContainerRef.current;
+      if (!container) return;
+      
+      // Show indicator only if content requires scrolling
+      const isScrollable = container.scrollHeight > container.clientHeight;
+      setShowScrollIndicator(isScrollable);
+    }
+
+    function updateScrollIndicator() {
+      const container = scrollContainerRef.current;
+      if (!container || !scrollIndicatorRef.current) return;
+    
+      // Update scrollable status
+      checkIfScrollable();
+      
+      const scrollable = container.scrollHeight - container.clientHeight;
+      const scrollPercentage = scrollable <= 0 ? 0 : container.scrollTop / scrollable;
+    
+      const maxPosition = 270;
+      const minPosition = 30;
+      const newPosition = minPosition + scrollPercentage * (maxPosition - minPosition);
+    
+      setScrollCirclePosition(newPosition);
+    }
+    
+    // Add scroll event listener
+    container.addEventListener("scroll", updateScrollIndicator);
+    
+    // Watch for content changes that might affect scrollability
+    const resizeObserver = new ResizeObserver(() => {
+      checkIfScrollable();
+      updateScrollIndicator();
+    });
+    
+    resizeObserver.observe(container);
+    
+    return () => {
+      container.removeEventListener("scroll", updateScrollIndicator);
+      resizeObserver.disconnect();
+    };
+  }, []);
+
+  return (
+    <div className="relative">
+      <div
+        ref={scrollContainerRef}
+        className="max-h-[220px] overflow-y-auto overflow-x-hidden pr-2 custom-scrollbar"
+        style={{ position: "relative" }}
+      >
+        {children}
+      </div>
+      {showScrollIndicator && (
+        <div className="absolute right-[-5px] top-0 h-full w-6 pointer-events-none z-20">
+          <svg
+            ref={scrollIndicatorRef}
+            viewBox="0 0 20 300"
+            className="h-full w-full"
+          >
+            <line x1="10" y1="0" x2="10" y2="300" stroke="#333" strokeWidth="2" />
+            <circle cx="10" cy={scrollCirclePosition} r="6" fill="#FFCC66" stroke="#333" strokeWidth="1" />
+          </svg>
+        </div>
+      )}
+    </div>
+  );
+};
 
 const Description = () => {
   const searchParams = useSearchParams()
@@ -247,244 +328,245 @@ const Description = () => {
     ? parsePercentage(examData.application)
     : 0
 
-  return (
-    <div
-      className="mx-auto flex min-h-screen max-w-screen flex-col items-center justify-center
-        overflow-x-hidden bg-[#E6E9F0] p-4 px-4 sm:px-6 lg:px-8"
-    >
-      <Toaster position="top-center" />
-      <motion.div
-        className="relative w-full max-w-2xl"
-        onHoverStart={() => setHovered(true)}
-        onHoverEnd={() => setHovered(false)}
-      >
-        {/* Tilted Background */}
-        <motion.div
-          className="absolute z-0 h-16 w-full rounded-full"
-          initial={{ rotate: -2 }}
-          animate={{
-            backgroundColor: hovered
-              ? "#FFCC66"
-              : theme === "dark"
-                ? "#ffffff"
-                : "#000000",
-          }}
-          transition={{
-            backgroundColor: {
-              duration: 0.3,
-              ease: "easeInOut",
-            },
-          }}
-        />
-
-        {/* Title Card*/}
-        <div
-          className={`relative z-10 flex h-16 w-full items-center justify-center rounded-full border-2
-            border-black text-3xl font-bold text-gray-800
-            ${theme === "dark" ? "bg-[#333333] text-white" : "bg-white text-black"}`}
-        >
-          {examData?.title || title}
-        </div>
-      </motion.div>
-
-      {/* left & right grid*/}
+    return (
       <div
-        className="mx-auto mt-10 flex w-full max-w-full flex-col items-start gap-4 px-4
-          sm:max-w-2xl sm:px-6 md:max-w-4xl md:flex-row md:px-8 lg:max-w-5xl xl:max-w-6xl"
+        className="mx-auto flex min-h-screen max-w-screen flex-col items-center justify-center
+          overflow-x-hidden bg-[#E6E9F0] p-4 px-4 sm:px-6 lg:px-8 overflow-y-hidden"
       >
-        {" "}
-        <div
-          className="relative flex flex-1 items-center justify-between rounded-3xl bg-white p-6
-            shadow-lg"
+        <Toaster position="top-center" />
+        <motion.div
+          className="relative w-full max-w-full sm:max-w-sm md:max-w-lg lg:max-w-2xl px-4 sm:px-6 md:px-0"
+          onHoverStart={() => setHovered(true)}
+          onHoverEnd={() => setHovered(false)}
         >
-          {/* Left */}
-          <div className="w-full flex-1 space-y-5 px-2 sm:px-3 md:px-3">
-            {/* Skill */}
-            <div className="relative">
-              <span className="text-lg font-medium">Skill</span>
-              <div className="relative mt-2 h-4 w-56 rounded-full bg-[#AAF0EE]">
-                <div
-                  className="h-full rounded-full bg-[#AAF0EE]"
-                  style={{ width: `${skillPercent}%` }}
-                ></div>
-                <div
-                  className="absolute -top-2 flex h-8 w-8 items-center justify-center rounded-full border-2
-                    border-black bg-[#AAF0EE] text-xs font-bold"
-                  style={{
-                    left: `${skillPercent}%`,
-                    transform: "translateX(-50%)",
-                  }}
-                >
-                  {skillPercent}%
-                </div>
-              </div>
-            </div>
-
-            {/* Knowledge */}
-            <div className="relative">
-              <span className="text-lg font-medium">Knowledge</span>
-              <div className="relative mt-2 h-4 w-56 rounded-full bg-[#CCEEAA]">
-                <div
-                  className="h-full rounded-full bg-[#CCEEAA]"
-                  style={{ width: `${knowledgePercent}%` }}
-                ></div>
-                <div
-                  className="absolute -top-2 flex h-8 w-8 items-center justify-center rounded-full border-2
-                    border-black bg-[#CCEEAA] text-xs font-bold"
-                  style={{
-                    left: `${knowledgePercent}%`,
-                    transform: "translateX(-50%)",
-                  }}
-                >
-                  {knowledgePercent}%
-                </div>
-              </div>
-            </div>
-
-            {/* Application */}
-            <div className="relative">
-              <span className="text-lg font-medium">Application</span>
-              <div className="relative mt-2 h-4 w-56 rounded-full bg-[#DDBBF1]">
-                <div
-                  className="h-full rounded-full bg-[#DDBBF1]"
-                  style={{ width: `${applicationPercent}%` }}
-                ></div>
-                <div
-                  className="absolute -top-2 flex h-8 w-8 items-center justify-center rounded-full border-2
-                    border-black bg-[#DDBBF1] text-xs font-bold"
-                  style={{
-                    left: `${applicationPercent}%`,
-                    transform: "translateX(-50%)",
-                  }}
-                >
-                  {applicationPercent}%
-                </div>
-              </div>
-            </div>
+          {/* Tilted Background */}
+          <motion.div
+            className="absolute z-0 h-12 w-full rounded-full sm:h-14 md:h-16"
+            style={{
+              transform: 'rotate(-2deg)',
+              width: '100%',
+              left: '0',
+              right: '0'
+            }}
+            animate={{
+              backgroundColor: hovered
+                ? "#FFCC66"
+                : theme === "dark"
+                  ? "#ffffff"
+                  : "#000000",
+            }}
+            transition={{
+              backgroundColor: {
+                duration: 0.3,
+                ease: "easeInOut",
+              },
+            }}
+          />
+    
+          {/* Title Card*/}
+          <div
+            className={`relative z-10 flex h-12 w-full items-center justify-center rounded-full border-2
+              border-black text-xl font-bold text-gray-800 sm:h-14 sm:text-2xl md:h-16 md:text-3xl
+              ${theme === "dark" ? "bg-[#333333] text-white" : "bg-white text-black"}`}
+          >
+            <span className="max-w-full truncate px-4 text-center">
+              {examData?.title || title}
+            </span>
           </div>
+        </motion.div>
 
-          {/* Dashed Line */}
-          <div className="ml-3 flex h-full justify-center">
-            <svg
-              width="2.5"
-              height="200px"
-              className="stroke-black"
-            >
-              <path
-                strokeDasharray="9 9"
-                strokeLinecap="round"
-                strokeWidth="2.5"
-                d="M1 0V200"
-              />
-            </svg>
-          </div>
-
-          {/* Right */}
-          <div className="ml-6 flex flex-col items-center space-y-2">
-            {/* Attempts */}
-            <div className="flex flex-col items-center">
-              <div className="flex items-center space-x-2">
-                <img
-                  src="/media/attemptarrow.png"
-                  alt="Arrow Icon"
-                  className="h-10 w-18"
-                />
-              </div>
-              <span className="mt-2 text-black">
-                <span className="font-bold text-black">
-                  {attemptData
-                    ? `${attemptData.totalAttempts - (attemptData.attemptsLeft || 0)}/${attemptData.totalAttempts}`
-                    : "0/3"}
-                </span>{" "}
-                Attempt
-              </span>
-
-              {attemptData?.isLocked && attemptData?.lockoutEndTime && (
-                <div className="mt-2 text-sm font-medium text-red-600">
-                  Locked until:{" "}
-                  {new Date(attemptData.lockoutEndTime).toLocaleString()}
-                </div>
-              )}
-            </div>
-
-            {/* Dashed Line */}
-            <div className="w-full">
-              <svg
-                width="100%"
-                height="2.5"
-                className="stroke-black"
-              >
-                <path
-                  strokeDasharray="9 9"
-                  strokeLinecap="round"
-                  strokeWidth="3"
-                  d="M1.5 1.5h1397"
-                />
-              </svg>
-            </div>
-
-            {/* Difficulty Section*/}
-            <div className="text-1sm font-semibold text-black dark:text-white">
-              {examData?.level || "Loading Level..."}
-            </div>
-            <div className="relative flex items-center">
-              <img
-                src="/media/staricon.png"
-                alt="Star Icon"
-                className="-top-0.4 absolute left-0 z-10 h-9 w-9"
-              />
-
-              {/* Difficulty Pill */}
-              <div
-                className={`relative z-0 flex items-center rounded-full py-1 pr-5 pl-11 text-lg ${
-                  examData?.difficulty?.toLowerCase() === "easy"
-                    ? "bg-[#F3FFE7] text-[#567F2D]"
-                    : examData?.difficulty?.toLowerCase() === "medium"
-                      ? "bg-[#FFF8D0] text-[#CCA028]"
-                      : examData?.difficulty?.toLowerCase() === "hard"
-                        ? "bg-[#FFEAE7] text-[#7F352D]"
-                        : "bg-gray-100 text-gray-800"
-                  }`}
-              >
-                <span className="font-semibold">
-                  {examData?.difficulty || "Medium"}
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* Right grid*/}
-        <div className="flex-1 rounded-3xl bg-white p-6 shadow-lg">
-          <h2 className="mb-3 text-xl font-bold">Why take this Exam?</h2>
-          <p className="font-100 text-lg text-black">
-            {examData && showFullText
-              ? examData.why
-              : examData
-                ? limitWords(examData.why, 20)
-                : ""}
-          </p>
-          {examData && (
-            <>
-              {!showFullText && examData.why.split(" ").length > 20 && (
-                <button
-                  className="mt-2 block text-gray-400"
-                  onClick={() => setShowFullText(true)}
-                >
-                  Read More...
-                </button>
-              )}
-              {showFullText && (
-                <button
-                  className="mt-2 block text-gray-400"
-                  onClick={() => setShowFullText(false)}
-                >
-                  Read Less
-                </button>
-              )}
-            </>
-          )}
+      {/* Responsive left & right grid */}
+<div className="mx-auto mt-10 flex w-full max-w-full flex-col items-start gap-4 px-4 sm:max-w-2xl sm:px-6 md:max-w-3xl md:flex-row md:px-8 lg:max-w-4xl xl:max-w-5xl">
+  {/* Left grid - Skill metrics */}
+<div className="relative flex w-full flex-1 flex-col items-start justify-between rounded-3xl bg-white p-4 shadow-lg sm:p-6 md:flex-row">
+  {/* Left content */}
+  <div className="w-full md:w-2/5 space-y-5 md:flex-1 md:pr-6">
+    {/* Skill */}
+    <div className="relative">
+      <span className="text-base font-medium sm:text-lg">Skill</span>
+      <div className="relative mt-2 h-4 w-full min-w-[100px] rounded-full bg-[#AAF0EE] sm:min-w-[140px] md:min-w-[180px] lg:min-w-[220px]">
+        <div
+          className="h-full rounded-full bg-[#AAF0EE]"
+          style={{ width: `${skillPercent}%` }}
+        ></div>
+        <div
+          className="absolute -top-2 flex h-6 w-6 items-center justify-center rounded-full border-2 border-black bg-[#AAF0EE] text-xs font-bold sm:h-8 sm:w-8"
+          style={{
+            left: `${skillPercent}%`,
+            transform: "translateX(-50%)",
+          }}
+        >
+          {skillPercent}%
         </div>
       </div>
+    </div>
+
+    {/* Knowledge */}
+    <div className="relative">
+      <span className="text-base font-medium sm:text-lg">Knowledge</span>
+      <div className="relative mt-2 h-4 w-full min-w-[100px] rounded-full bg-[#CCEEAA] sm:min-w-[140px] md:min-w-[180px] lg:min-w-[220px]">
+        <div
+          className="h-full rounded-full bg-[#CCEEAA]"
+          style={{ width: `${knowledgePercent}%` }}
+        ></div>
+        <div
+          className="absolute -top-2 flex h-6 w-6 items-center justify-center rounded-full border-2 border-black bg-[#CCEEAA] text-xs font-bold sm:h-8 sm:w-8"
+          style={{
+            left: `${knowledgePercent}%`,
+            transform: "translateX(-50%)",
+          }}
+        >
+          {knowledgePercent}%
+        </div>
+      </div>
+    </div>
+
+    {/* Application */}
+    <div className="relative">
+      <span className="text-base font-medium sm:text-lg">Application</span>
+      <div className="relative mt-2 h-4 w-full min-w-[100px] rounded-full bg-[#DDBBF1] sm:min-w-[140px] md:min-w-[180px] lg:min-w-[220px]">
+        <div
+          className="h-full rounded-full bg-[#DDBBF1]"
+          style={{ width: `${applicationPercent}%` }}
+        ></div>
+        <div
+          className="absolute -top-2 flex h-6 w-6 items-center justify-center rounded-full border-2 border-black bg-[#DDBBF1] text-xs font-bold sm:h-8 sm:w-8"
+          style={{
+            left: `${applicationPercent}%`,
+            transform: "translateX(-50%)",
+          }}
+        >
+          {applicationPercent}%
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* Horizontal Dashed Line - Visible only on small/medium screens */}
+  <div className="my-4 w-full md:hidden">
+    <svg width="100%" height="2.5" className="stroke-black">
+      <path
+        strokeDasharray="9 9"
+        strokeLinecap="round"
+        strokeWidth="2.5"
+        d="M1.5 1.5h1397"
+      />
+    </svg>
+  </div>
+
+  {/* Vertical Dashed Line - Visible only on larger screens */}
+  <div className="hidden h-full md:mx-4 md:flex md:justify-center">
+    <svg width="2.5" height="200px" className="stroke-black">
+      <path
+        strokeDasharray="9 9"
+        strokeLinecap="round"
+        strokeWidth="2.5"
+        d="M1 0V200"
+      />
+    </svg>
+  </div>
+
+  {/* Right content - Attempts and Difficulty */}
+  <div className="flex w-full flex-col items-center space-y-3 md:w-2/5 md:items-center md:space-y-2">
+    {/* Attempts */}
+    <div className="flex flex-col items-center mt-8">
+      <div className="flex items-center justify-center">
+        <img
+          src="/media/attemptarrow.png"
+          alt="Arrow Icon"
+          className="h-7 w-10 sm:h-8 sm:w-12 md:h-10 md:w-15"
+        />
+      </div>
+      <span className="mt-2 text-sm text-black sm:text-base">
+        <span className="font-bold text-black">
+          {attemptData
+            ? `${attemptData.totalAttempts - (attemptData.attemptsLeft || 0)}/${attemptData.totalAttempts}`
+            : "0/3"}
+        </span>{" "}
+        Attempt
+      </span>
+      {attemptData?.isLocked && attemptData?.lockoutEndTime && (
+        <div className="mt-2 text-xs font-medium text-red-600 sm:text-sm">
+          Locked until: {new Date(attemptData.lockoutEndTime).toLocaleString()}
+        </div>
+      )}
+    </div>
+
+    {/* Divider */}
+    <div className="w-full px-4 sm:px-2 md:px-2">
+      <svg width="100%" height="2.5" className="stroke-black">
+        <path
+          strokeDasharray="9 9"
+          strokeLinecap="round"
+          strokeWidth="2.5"
+          d="M1.5 1.5h1397"
+        />
+      </svg>
+    </div>
+
+    {/* Difficulty Section*/}
+    <div className="text-center">
+      <div className="text-xs font-semibold text-black sm:text-sm md:text-base dark:text-white">
+        {examData?.level || "Intermediate"}
+      </div>
+      <div className="relative mt-1 flex items-center justify-center">
+        <img
+          src="/media/staricon.png"
+          alt="Star Icon"
+          className="absolute left-0 z-10 h-6 w-6 sm:h-7 sm:w-7 md:h-9 md:w-9"
+        />
+        <div
+          className={`relative z-0 flex items-center rounded-full py-1 pr-3 pl-7 text-sm sm:pr-4 sm:pl-8 sm:text-base md:pr-5 md:pl-11 md:text-lg ${
+            examData?.difficulty?.toLowerCase() === "easy"
+              ? "bg-[#F3FFE7] text-[#567F2D]"
+              : examData?.difficulty?.toLowerCase() === "medium"
+                ? "bg-[#FFF8D0] text-[#CCA028]"
+                : examData?.difficulty?.toLowerCase() === "hard"
+                  ? "bg-[#FFEAE7] text-[#7F352D]"
+                  : "bg-gray-100 text-gray-800"
+          }`}
+        >
+          <span className="font-semibold">
+            {examData?.difficulty || "Hard"}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  {/* Right grid - Exam description */}
+  <div className="w-full flex-1 rounded-3xl bg-white p-4 shadow-lg sm:p-6">
+    <h2 className="text-base font-bold sm:text-lg md:text-xl">Why take this Exam?</h2>
+    <p className="mt-2 text-sm text-black sm:text-base md:text-2sm">
+      {examData && showFullText
+        ? examData.why
+        : examData
+          ? limitWords(examData.why, 35)
+          : ""}
+    </p>
+    {examData && (
+      <>
+        {!showFullText && examData.why.split(" ").length > 20 && (
+          <button
+            className="mt-0 block text-xs text-gray-400 sm:text-sm md:text-base"
+            onClick={() => setShowFullText(true)}
+          >
+            Read More...
+          </button>
+        )}
+        {showFullText && (
+          <button
+            className="mt-0 block text-xs text-gray-400 sm:text-sm md:text-base"
+            onClick={() => setShowFullText(false)}
+          >
+            Read Less
+          </button>
+        )}
+      </>
+    )}
+  </div>
+</div>
       {/* who will*/}
       <div className="mt-6 text-center">
         <h3 className="mb-4 text-3xl font-medium">Who will take this exam?</h3>
@@ -538,7 +620,7 @@ const Description = () => {
       {isMobile && (
         <button
           onClick={toggleMenu}
-          className="fixed top-4 right-4 z-50 rounded-full bg-white p-2 shadow-lg"
+          className="fixed top-16 right-4 z-50 rounded-full bg-white p-2 shadow-lg"
           aria-label="Toggle Exam Menu"
         >
           <svg
@@ -561,41 +643,41 @@ const Description = () => {
       {/* Overlay for mobile when menu is open */}
       {isMobile && isMenuOpen && (
         <div
-          className="bg-opacity-50 fixed inset-0 z-30 bg-black"
-          onClick={toggleMenu}
+        className="fixed inset-0 z-30 bg-black/50"
+        onClick={toggleMenu}
         />
       )}
 
-      {/* sidebar - Responsive */}
+      {/* sidebar*/}
       <div
         className={` ${
           isMobile
-            ? `fixed inset-y-0 right-0 z-40 w-[280px] transition-transform duration-300
-              ease-in-out`
-            : "absolute top-20 right-0 w-[280px]"
-          } ${isMobile && !isMenuOpen ? "translate-x-full" : "translate-x-0"} flex
-          max-h-[910px] min-h-[650px] flex-col overflow-auto rounded-l-3xl bg-white p-4
-          shadow-lg`}
+            ? `fixed inset-y-0 right-0 z-40 w-[255px] transition-transform duration-300
+          ease-in-out`
+      : "absolute top-8 right-0 w-[260px]"
+    } ${isMobile && !isMenuOpen ? "translate-x-full" : "translate-x-0"} flex
+    max-h-[800px] min-h-[600px] flex-col overflow-auto rounded-l-3xl bg-white p-4
+    shadow-lg`}
       >
         {/* category name */}
         <div
-          className="absolute top-0 left-7 rounded-t-none rounded-b-3xl bg-black px-6 py-0.5 pb-0
-            text-lg text-white"
-        >
+  className="absolute top-0 left-1/2 -translate-x-1/2 whitespace-nowrap 
+    rounded-t-none rounded-b-3xl bg-black px-6 py-0.5 pb-0 text-1lg text-white text-center"
+>
           {examData?.category || "Loading..."}
         </div>
 
         {/* Title */}
-        <h2 className="absolute right-4 mt-8 text-lg font-bold">
+        <h2 className="absolute right-4 mt-5 max-w-xs text-right text-2sm font-bold">
           {examData?.title || "Loading..."}
         </h2>
 
         {/* Timer and Divider Container - Reorganized */}
-        <div className="mt-20 flex items-center">
-          {/* Timer - On left side */}
+        <div className="mt-15 ml-2 flex items-center">
+        {/* Timer - On left side */}
           <div className="relative z-20">
             <svg
-              width="130"
+              width="100"
               height="70"
               viewBox="0 0 140 70"
               fill="none"
@@ -646,14 +728,14 @@ const Description = () => {
             {/* Timer Value */}
             <div
               className="absolute inset-0 flex items-center justify-center pt-2 text-xl font-semibold
-                text-black"
+          text-black"
             >
               {examData?.timer ? `${examData.timer}:00` : "Loading..."}
             </div>
           </div>
 
           {/* Divider - Now to the right of timer */}
-          <div className="ml-2 flex-1">
+          <div className="ml-1 flex-1">
             <svg
               width="100%"
               height="2"
@@ -670,8 +752,8 @@ const Description = () => {
         </div>
 
         {/* Status */}
-        <div className="mt-4 space-y-3 pl-10">
-          <div className="flex items-center justify-end gap-3">
+        <div className="mt-1 space-y-1 pl-5">
+        <div className="flex items-center justify-end gap-3">
             <span className="w-40 text-right text-lg">Not visited</span>
             <span className="h-5 w-5 rounded-full bg-[#D9D9D9]"></span>
           </div>
@@ -690,21 +772,23 @@ const Description = () => {
         </div>
 
         {/* Question no */}
-        <div className="relative left-10 mt-6 w-fit rounded-3xl bg-[#F7F7F7] p-4">
-          <h3 className="mb-2 text-right text-xl font-semibold">Questions</h3>
-          <div className="relative left-3 grid grid-cols-5 gap-2">
+        <div className="relative left-7 mt-4 w-fit rounded-3xl bg-[#F7F7F7] p-3">
+        <h3 className="mb-2 text-right mr-2 text-lg font-semibold">Questions</h3>
+        <ScrollContainer>
+        <div className="grid grid-cols-5 gap-1 w-full pr-2">
             {examData?.totalQuestions
               ? Array.from({ length: examData.totalQuestions }, (_, i) => (
                   <div
                     key={i}
-                    className="flex h-8 w-8 items-center justify-center rounded-full bg-[#D9D9D9] text-sm
-                      font-semibold"
+                    className={`flex h-8 w-8 cursor-pointer items-center justify-center rounded-full text-sm
+                        font-semibold bg-[#D9D9D9] relative z-10`}
                   >
                     {String(i + 1).padStart(2, "0")}
                   </div>
                 ))
               : "Loading..."}
-          </div>
+            </div>
+            </ScrollContainer>
         </div>
       </div>
     </div>
