@@ -80,7 +80,8 @@ const ScrollContainer: React.FC<{ children: React.ReactNode }> = ({ children }) 
     <div className="relative">
       <div
         ref={scrollContainerRef}
-        className="max-h-[220px] overflow-y-auto overflow-x-hidden pr-2 custom-scrollbar"
+        // Change this line to set a fixed height that will ensure scrolling after 4 rows (20 questions)
+        className="max-h-[125px] overflow-y-auto overflow-x-hidden pr-2 custom-scrollbar"
         style={{ position: "relative" }}
       >
         {children}
@@ -219,15 +220,15 @@ useEffect(() => {
       )}
 
       {/* sidebar*/}
-<div
+      <div
   className={` ${
     isMobile
-      ? `fixed inset-y-0 right-0 z-40 w-[255px] transition-transform duration-300
+      ? `fixed inset-y-0 right-0 z-40 w-[230px] transition-transform duration-300
           ease-in-out`
-      : "absolute top-8 right-0 w-[260px]"
+      : "absolute top-8 right-0 w-[230px]"
     } ${isMobile && !isMenuOpen ? "translate-x-full" : "translate-x-0"} flex
-    max-h-[800px] min-h-[600px] flex-col overflow-auto rounded-l-3xl bg-white p-4
-    shadow-lg`}
+    max-h-[550px] min-h-[510px] flex-col overflow-auto rounded-l-3xl bg-white p-3
+    shadow-lg overflow-y-hidden`}
 >
   {/* category name */}
   <div
@@ -245,7 +246,7 @@ useEffect(() => {
 </h2>
 
   {/* Timer and Divider Container - Reorganized */}
-  <div className="mt-15 ml-2 flex items-center">
+  <div className="mt-13 ml-2 mb-0 flex items-center">
     {/* Timer - On left side */}
     <div className="relative z-20">
       <svg
@@ -324,31 +325,30 @@ useEffect(() => {
   </div>
 
   {/* Status */}
-  <div className="mt-1 space-y-1 pl-5">
+  <div className="-mt-[1] space-y-1 pl-5">
     <div className="flex items-center justify-end gap-3">
-      <span className="w-40 text-right text-lg">Not visited</span>
+      <span className="w-40 text-right text-2sm">Not visited</span>
       <span className="h-5 w-5 rounded-full bg-[#D9D9D9]"></span>
     </div>
     <div className="flex items-center justify-end gap-3">
-      <span className="w-40 text-right text-lg">Saved answers</span>
+      <span className="w-40 text-right text-2sm">Saved answers</span>
       <span className="h-5 w-5 rounded-full bg-[#CCEEAA]"></span>
     </div>
     <div className="flex items-center justify-end gap-3">
-      <span className="w-40 text-right text-lg">Marked for Review</span>
+      <span className="w-40 text-right text-2sm">Marked for Review</span>
       <span className="h-5 w-5 rounded-full bg-[#AACCFF]"></span>
     </div>
     <div className="flex items-center justify-end gap-3">
-      <span className="w-40 text-right text-lg">Not answered</span>
+      <span className="w-40 text-right text-2sm">Not answered</span>
       <span className="h-5 w-5 rounded-full bg-[#FFB1AA]"></span>
     </div>
   </div>
 
   {/* Question no - Modified for vertical scrolling with conditional scroll indicator */}
-  <div className="relative left-7 mt-4 w-fit rounded-3xl bg-[#F7F7F7] p-3">
-  <h3 className="mb-2 text-right mr-2 text-lg font-semibold">Questions</h3>
-  {/* Using our modified ScrollContainer with reduced padding */}
+  <div className="relative left-8 mt-3 w-fit rounded-3xl bg-[#F7F7F7] p-2">
+  <h3 className="mb-2 text-right mr-2 text-base sm:text-lg font-semibold">Questions</h3>
   <ScrollContainer>
-    <div className="grid grid-cols-5 gap-1 w-full pr-2">
+    <div className="grid grid-cols-5 gap-1 w-full pr-1">
       {examData?.questions?.map((_, index) => {
         const status = getQuestionStatus(
           index,
@@ -366,7 +366,7 @@ useEffect(() => {
         return (
           <div
             key={index}
-            className={`flex h-8 w-8 cursor-pointer items-center justify-center rounded-full text-sm
+            className={`flex h-6 w-6 sm:h-7 sm:w-7 cursor-pointer items-center justify-center rounded-full text-xs
             font-semibold ${bgColor} relative z-10`}
             onClick={() => {
               setActiveQuestion(index)
@@ -391,14 +391,14 @@ useEffect(() => {
 </div>
 
 {/* Submit Button*/}
-<div className="mt-3 flex justify-center ml-5">
+<div className="mt-2 mb-0 flex justify-center ml-5">
   <motion.div
     className="relative flex justify-center"
     onHoverStart={() => setSubmitHovered(true)}
     onHoverEnd={() => setSubmitHovered(false)}
   >
     <motion.div
-      className="absolute z-0 h-11 w-40 rounded-full md:h-12 md:w-40"
+      className="absolute z-0 h-11 w-35 rounded-full md:h-10 md:w-35"
       initial={{
         rotate: -3,
         backgroundColor: theme === "dark" ? "#FFCC66" : "#000000",
@@ -420,9 +420,9 @@ useEffect(() => {
     />
 
     <button
-      className="relative z-10 flex h-10 w-40 items-center justify-center rounded-full border-2
-        border-black bg-white text-sm font-medium text-gray-800 hover:bg-white md:h-12
-        md:w-40 md:text-base lg:text-lg"
+      className="relative z-8 flex h-8 w-35 items-center justify-center rounded-full border-2
+        border-black bg-white text-sm font-medium text-gray-800 hover:bg-white md:h-10
+        md:w-35 md:text-base lg:text-lg"
       onClick={() => handleSubmit(false)}
       disabled={submitted}
     >
@@ -631,7 +631,7 @@ useEffect(() => {
   const optionLabels = ["A", "B", "C", "D"]
 
   return (
-    <div className="flex min-h-screen flex-col bg-gray-100 md:flex-row">
+    <div className="flex min-h-screen flex-col bg-gray-100 md:flex-row overflow-y-hidden">
       {/* Main content */}
       <div className="flex flex-1 flex-col items-center px-4 md:px-8">
         {/* Title Card with animation - positioned to overlap */}
@@ -670,8 +670,8 @@ useEffect(() => {
         </motion.div>
   
         {/* Main Question Container - adjusted to allow overlap */}
-        <div className="relative z-10 w-full max-w-full md:max-w-3xl" style={{ marginTop: '-1.5rem' }}>
-          {/* Timer - Only show this timer on smaller screens where sidebar might not be visible */}
+        <div className="relative z-10 w-full max-w-full md:max-w-2xl lg:max-w-3xl" style={{ marginTop: '-1.5rem' }}>
+        {/* Timer - Only show this timer on smaller screens where sidebar might not be visible */}
 {isMobile && (
   <div className="absolute top-2 right-4 z-30 flex items-center justify-center">
     <div className="relative">
@@ -728,8 +728,8 @@ useEffect(() => {
 )}
   
           {/* Questions Container with more responsive height settings */}
-          <div className="flex flex-col rounded-4xl bg-white pt-12 pb-6 px-4 shadow-lg md:px-6 md:pt-16 mb-16">
-            <div className="flex-grow">
+          <div className="flex flex-col rounded-4xl bg-white pt-12 pb-6 px-3 shadow-lg md:px-5 md:pt-16 mb-16">
+          <div className="flex-grow">
               {/* Check if examData is null or loading */}
               {loading || !examData ? (
                 <p className="text-center text-black">Loading questions...</p>
