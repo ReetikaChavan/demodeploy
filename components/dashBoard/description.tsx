@@ -402,24 +402,30 @@ const Description = () => {
       </motion.div>
 
       {/* Main Content Area */}
-      <div className="mx-auto mt-4 sm:mt-6 md:mt-10 w-full flex flex-col items-center px-2 xs:px-3 sm:px-6">
+      <div
+  className="mx-auto mt-10 flex w-full max-w-full flex-col items-start gap-4 px-4
+    sm:max-w-2xl sm:px-6 md:max-w-4xl md:flex-row md:px-8 lg:max-w-5xl xl:max-w-6xl"
+      >
         {/* Two Column Layout - Stack on mobile, side by side on larger screens */}
         <div className="w-full flex flex-col md:flex-row items-start gap-3 md:gap-4 max-w-full sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl">
           {/* Left Column - Skill metrics */}
-          <div className="w-full md:w-1/2 flex-1 flex flex-col items-start justify-between rounded-2xl sm:rounded-3xl bg-white p-3 sm:p-4 md:p-6 shadow-lg">
+          <div
+  className="relative flex w-full flex-1 flex-col justify-between rounded-3xl bg-white p-4 md:p-6
+    shadow-lg"
+>
             {/* Left content */}
             <div className="w-full space-y-3 sm:space-y-5">
               {/* Skill */}
               <div className="relative">
-                <span className="text-sm xs:text-base sm:text-lg font-medium">Skill</span>
-                <div className="relative mt-1 sm:mt-2 h-3 sm:h-4 w-full rounded-full bg-[#AAF0EE]">
+              <span className="text-sm md:text-base font-medium">Skill</span>
+              <div className="relative mt-1 sm:mt-2 h-3 sm:h-4 w-full rounded-full bg-[#AAF0EE]">
                   <div
                     className="h-full rounded-full bg-[#AAF0EE]"
                     style={{ width: `${skillPercent}%` }}
                   ></div>
                   <div
-                    className="absolute -top-1 sm:-top-2 flex h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 items-center justify-center rounded-full border-2 border-black bg-[#AAF0EE] text-xs font-bold"
-                    style={{
+className="absolute -top-2 flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full border-2
+border-black bg-[#AAF0EE] text-[10px] sm:text-xs font-bold"                    style={{
                       left: `${skillPercent}%`,
                       transform: "translateX(-50%)",
                     }}
@@ -431,15 +437,15 @@ const Description = () => {
 
               {/* Knowledge */}
               <div className="relative">
-                <span className="text-sm xs:text-base sm:text-lg font-medium">Knowledge</span>
+                <span className="text-sm md:text-base font-medium">Knowledge</span>
                 <div className="relative mt-1 sm:mt-2 h-3 sm:h-4 w-full rounded-full bg-[#CCEEAA]">
                   <div
                     className="h-full rounded-full bg-[#CCEEAA]"
                     style={{ width: `${knowledgePercent}%` }}
                   ></div>
                   <div
-                    className="absolute -top-1 sm:-top-2 flex h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 items-center justify-center rounded-full border-2 border-black bg-[#CCEEAA] text-xs font-bold"
-                    style={{
+className="absolute -top-2 flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full border-2
+border-black bg-[#AAF0EE] text-[10px] sm:text-xs font-bold"                    style={{
                       left: `${knowledgePercent}%`,
                       transform: "translateX(-50%)",
                     }}
@@ -451,14 +457,15 @@ const Description = () => {
 
               {/* Application */}
               <div className="relative">
-                <span className="text-sm xs:text-base sm:text-lg font-medium">Application</span>
+                <span className="text-sm md:text-base font-medium">Application</span>
                 <div className="relative mt-1 sm:mt-2 h-3 sm:h-4 w-full rounded-full bg-[#DDBBF1]">
                   <div
                     className="h-full rounded-full bg-[#DDBBF1]"
                     style={{ width: `${applicationPercent}%` }}
                   ></div>
                   <div
-                    className="absolute -top-1 sm:-top-2 flex h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 items-center justify-center rounded-full border-2 border-black bg-[#DDBBF1] text-xs font-bold"
+className="absolute -top-2 flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full border-2
+border-black bg-[#AAF0EE] text-[10px] sm:text-xs font-bold"
                     style={{
                       left: `${applicationPercent}%`,
                       transform: "translateX(-50%)",
@@ -472,8 +479,8 @@ const Description = () => {
 
             {/* Horizontal Dashed Line - Visible only on small/medium screens */}
             <div className="my-3 sm:my-4 w-full md:hidden">
-              <svg width="100%" height="2.5" className="stroke-black">
-                <path
+            <svg width="2" height="160" className="stroke-black hidden sm:block" >
+            <path
                   strokeDasharray="9 9"
                   strokeLinecap="round"
                   strokeWidth="2.5"
@@ -564,9 +571,10 @@ const Description = () => {
           </div>
 
           {/* Right Column - Exam description */}
-          <div className="w-full md:w-1/2 flex-1 rounded-2xl sm:rounded-3xl bg-white p-3 sm:p-4 md:p-6 shadow-lg mt-3 md:mt-0">
-            <h2 className="text-base font-bold sm:text-lg md:text-xl">Why take this Exam?</h2>
-            <p className="mt-2 text-xs xs:text-sm sm:text-base md:text-lg text-black">
+          <div className="w-full flex-1 rounded-3xl bg-white p-4 md:p-6 shadow-lg">
+          <h2 className="text-lg md:text-xl font-bold">Why take this Exam?</h2>
+<p className="text-sm md:text-base text-black">
+
               {examData && showFullText
                 ? examData.why
                 : examData
@@ -670,163 +678,157 @@ const Description = () => {
       </button>
 
       {/* Overlay for mobile when menu is open */}
-{isMobile && isMenuOpen && (
-  <div
-    className="fixed inset-0 z-30 bg-black/50"
-    onClick={toggleMenu}
-    aria-hidden="true"
-  />
-)}
-
-{/* Sidebar */}
-<div
-  id="sidebar"
-  className={`
-    fixed z-40 flex flex-col overflow-auto bg-white shadow-lg
-    ${isMobile 
-      ? `inset-y-0 right-0 w-[85vw] max-w-[280px] transition-transform duration-300 ease-in-out
-         ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} rounded-l-3xl p-3`
-      : `top-4 lg:top-8 right-4 lg:right-8 w-[90vw] max-w-[260px] md:w-[260px] rounded-3xl p-4`
-    }
-    max-h-[90vh] min-h-[min(600px,90vh)]
-  `}
-  aria-label="Exam navigation"
->
-  {/* Category name */}
-  <div
-    className="absolute top-0 left-1/2 -translate-x-1/2 whitespace-nowrap 
-      rounded-t-none rounded-b-2xl lg:rounded-b-3xl bg-black px-4 py-0.5 text-sm lg:text-base text-white text-center"
-  >
-    {examData?.category || "Loading..."}
-  </div>
-
-  {/* Title */}
-  <h2 className="absolute right-4 mt-5 max-w-[calc(100%-50px)] text-right text-sm sm:text-base font-bold line-clamp-2">
-    {examData?.title || "Loading..."}
-  </h2>
-
-  {/* Timer and Divider Container */}
-  <div className="mt-16 ml-1 flex items-center">
-    {/* Timer - On left side */}
-    <div className="relative z-20">
-      <svg
-        width="90"
-        height="60"
-        viewBox="0 0 140 70"
-        className="scale-90 sm:scale-100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        {/* Outer Rounded Rectangle */}
-        <rect
-          x="1"
-          y="11"
-          width="138"
-          height="58"
-          rx="29"
-          fill={theme === "dark" ? "#1F2937" : "white"}
-          stroke={theme === "dark" ? "#E5E7EB" : "#0C0C0C"}
-          strokeWidth="2"
+      {isMobile && isMenuOpen && (
+        <div
+          className="fixed inset-0 z-30 bg-black/50"
+          onClick={toggleMenu}
         />
+      )}
 
-        {/* Inner Yellow Border */}
-        <rect
-          x="5"
-          y="15"
-          width="130"
-          height="50"
-          rx="25"
-          stroke="#FFCC66"
-          strokeWidth="4"
-        />
-
-        {/* Middle Vertical Line */}
-        <line
-          x1="70"
-          y1="10.5"
-          x2="70"
-          y2="2.5"
-          stroke={theme === "dark" ? "#E5E7EB" : "#0C0C0C"}
-          strokeWidth="2"
-        />
-
-        {/* Top Horizontal Line */}
-        <path
-          d="M44 2H94"
-          stroke={theme === "dark" ? "#E5E7EB" : "#0C0C0C"}
-          strokeWidth="3"
-          strokeLinecap="round"
-        />
-      </svg>
-
-      {/* Timer Value */}
+      {/* Sidebar */}
       <div
-        className="absolute inset-0 flex items-center justify-center pt-2 text-lg lg:text-xl font-semibold
-          text-black"
+        id="sidebar"
+        className={`${
+          isMobile
+            ? `fixed inset-y-0 right-0 z-40 w-[200px] xs:w-[225px] sm:w-[250px] transition-transform duration-300
+            ease-in-out`
+          : "fixed md:absolute top-4 md:top-8 right-4 md:right-8 z-40 w-[200px] sm:w-[225px] md:w-[260px]"
+        } ${isMobile && !isMenuOpen ? "translate-x-full" : "translate-x-0"} flex
+    max-h-[800px] min-h-[600px] flex-col overflow-auto rounded-l-3xl bg-white p-4
+    shadow-lg`}
       >
-        {examData?.timer ? `${examData.timer}:00` : "Loading..."}
-      </div>
-    </div>
-
-    {/* Divider - Now to the right of timer */}
-    <div className="ml-1 flex-1">
-      <svg
-        width="100%"
-        height="2"
-        className="stroke-black"
-      >
-        <path
-          strokeDasharray="9 9"
-          strokeLinecap="round"
-          strokeWidth="3"
-          d="M1.5 1.5h1397"
-        />
-      </svg>
-    </div>
-  </div>
-
-  {/* Status */}
-  <div className="mt-1 space-y-1 pr-2 pl-1 sm:pl-5">
-    <div className="flex items-center justify-end gap-2 sm:gap-3">
-      <span className="text-right text-sm sm:text-base lg:text-lg flex-grow">Not visited</span>
-      <span className="h-4 w-4 sm:h-5 sm:w-5 rounded-full bg-[#D9D9D9] flex-shrink-0"></span>
-    </div>
-    <div className="flex items-center justify-end gap-2 sm:gap-3">
-      <span className="text-right text-sm sm:text-base lg:text-lg flex-grow">Saved answers</span>
-      <span className="h-4 w-4 sm:h-5 sm:w-5 rounded-full bg-[#CCEEAA] flex-shrink-0"></span>
-    </div>
-    <div className="flex items-center justify-end gap-2 sm:gap-3">
-      <span className="text-right text-sm sm:text-base lg:text-lg flex-grow">Marked for Review</span>
-      <span className="h-4 w-4 sm:h-5 sm:w-5 rounded-full bg-[#AACCFF] flex-shrink-0"></span>
-    </div>
-    <div className="flex items-center justify-end gap-2 sm:gap-3">
-      <span className="text-right text-sm sm:text-base lg:text-lg flex-grow">Not answered</span>
-      <span className="h-4 w-4 sm:h-5 sm:w-5 rounded-full bg-[#FFB1AA] flex-shrink-0"></span>
-    </div>
-  </div>
-
-  {/* Question numbers */}
-  <div className="relative mt-4 w-full rounded-2xl sm:rounded-3xl bg-[#F7F7F7] p-2 sm:p-3">
-    <h3 className="mb-2 text-center sm:text-right sm:mr-2 text-base sm:text-lg font-semibold">Questions</h3>
-    <div className="scroll-container">
-      <ScrollContainer>
-        <div className="grid grid-cols-4 sm:grid-cols-5 gap-1 w-full pr-2">
-          {examData?.totalQuestions
-            ? Array.from({ length: examData.totalQuestions }, (_, i) => (
-                <div
-                  key={i}
-                  className={`flex h-7 w-7 sm:h-8 sm:w-8 cursor-pointer items-center justify-center rounded-full text-xs sm:text-sm
-                      font-semibold bg-[#D9D9D9] relative z-10`}
-                >
-                  {String(i + 1).padStart(2, "0")}
-                </div>
-              ))
-            : "Loading..."}
+        {/* category name */}
+        <div
+  className="absolute top-0 left-1/2 -translate-x-1/2 whitespace-nowrap 
+    rounded-t-none rounded-b-3xl bg-black px-6 py-0.5 pb-0 text-1lg text-white text-center"
+>
+          {examData?.category || "Loading..."}
         </div>
-      </ScrollContainer>
-    </div>
-  </div>
-</div>
+
+        {/* Title */}
+        <h2 className="absolute right-4 mt-5 max-w-xs text-right text-2sm font-bold">
+          {examData?.title || "Loading..."}
+        </h2>
+
+        {/* Timer and Divider Container - Reorganized */}
+        <div className="mt-15 ml-2 flex items-center">
+        {/* Timer - On left side */}
+          <div className="relative z-20">
+            <svg
+              width="100"
+              height="70"
+              viewBox="0 0 140 70"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              {/* Outer Rounded Rectangle */}
+              <rect
+                x="1"
+                y="11"
+                width="138"
+                height="58"
+                rx="29"
+                fill={theme === "dark" ? "#1F2937" : "white"}
+                stroke={theme === "dark" ? "#E5E7EB" : "#0C0C0C"}
+                strokeWidth="2"
+              />
+
+              {/* Inner Yellow Border */}
+              <rect
+                x="5"
+                y="15"
+                width="130"
+                height="50"
+                rx="25"
+                stroke="#FFCC66"
+                strokeWidth="4"
+              />
+
+              {/* Middle Vertical Line */}
+              <line
+                x1="70"
+                y1="10.5"
+                x2="70"
+                y2="2.5"
+                stroke={theme === "dark" ? "#E5E7EB" : "#0C0C0C"}
+                strokeWidth="2"
+              />
+
+              {/* Top Horizontal Line */}
+              <path
+                d="M44 2H94"
+                stroke={theme === "dark" ? "#E5E7EB" : "#0C0C0C"}
+                strokeWidth="3"
+                strokeLinecap="round"
+              />
+            </svg>
+
+            {/* Timer Value */}
+            <div
+              className="absolute inset-0 flex items-center justify-center pt-2 text-xl font-semibold
+          text-black"
+            >
+              {examData?.timer ? `${examData.timer}:00` : "Loading..."}
+            </div>
+          </div>
+
+          {/* Divider - Now to the right of timer */}
+          <div className="ml-1 flex-1">
+            <svg
+              width="100%"
+              height="2"
+              className="stroke-black"
+            >
+              <path
+                strokeDasharray="9 9"
+                strokeLinecap="round"
+                strokeWidth="3"
+                d="M1.5 1.5h1397"
+              />
+            </svg>
+          </div>
+        </div>
+
+        {/* Status */}
+        <div className="mt-1 space-y-1 pl-5">
+        <div className="flex items-center justify-end gap-3">
+            <span className="w-40 text-right text-lg">Not visited</span>
+            <span className="h-5 w-5 rounded-full bg-[#D9D9D9]"></span>
+          </div>
+          <div className="flex items-center justify-end gap-3">
+            <span className="w-40 text-right text-lg">Saved answers</span>
+            <span className="h-5 w-5 rounded-full bg-[#CCEEAA]"></span>
+          </div>
+          <div className="flex items-center justify-end gap-3">
+            <span className="w-40 text-right text-lg">Marked for Review</span>
+            <span className="h-5 w-5 rounded-full bg-[#AACCFF]"></span>
+          </div>
+          <div className="flex items-center justify-end gap-3">
+            <span className="w-40 text-right text-lg">Not answered</span>
+            <span className="h-5 w-5 rounded-full bg-[#FFB1AA]"></span>
+          </div>
+        </div>
+
+        {/* Question no */}
+        <div className="relative left-7 mt-4 w-fit rounded-3xl bg-[#F7F7F7] p-3">
+        <h3 className="mb-2 text-right mr-2 text-lg font-semibold">Questions</h3>
+        <ScrollContainer>
+        <div className="grid grid-cols-5 gap-1 w-full pr-2">
+            {examData?.totalQuestions
+              ? Array.from({ length: examData.totalQuestions }, (_, i) => (
+                  <div
+                    key={i}
+                    className={`flex h-8 w-8 cursor-pointer items-center justify-center rounded-full text-sm
+                        font-semibold bg-[#D9D9D9] relative z-10`}
+                  >
+                    {String(i + 1).padStart(2, "0")}
+                  </div>
+                ))
+              : "Loading..."}
+            </div>
+            </ScrollContainer>
+        </div>
+      </div>
     </div>
   )
 }
