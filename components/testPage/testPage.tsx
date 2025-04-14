@@ -163,18 +163,20 @@ function ExamSidebar({
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   // Check if mobile on mount and when window resizes
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768)
+  // Check for mobile on mount
+useEffect(() => {
+  if (typeof window !== "undefined") {
+    setIsMobile(window.innerWidth <= 1024)    
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1024)
     }
-
-    checkMobile()
-    window.addEventListener("resize", checkMobile)
-
+    
+    window.addEventListener("resize", handleResize)
     return () => {
-      window.removeEventListener("resize", checkMobile)
+      window.removeEventListener("resize", handleResize)
     }
-  }, [])
+  }
+}, [])
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
@@ -462,29 +464,18 @@ export default function Exam2({ title, category }: Props) {
   const [theme, setTheme] = useState<string>("light")
 
   // Check for mobile on mount
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setIsMobile(window.innerWidth < 768)
-
-      const handleResize = () => {
-        setIsMobile(window.innerWidth < 768)
-      }
-
-      window.addEventListener("resize", handleResize)
-      return () => {
-        window.removeEventListener("resize", handleResize)
-      }
+useEffect(() => {
+  if (typeof window !== "undefined") {
+    setIsMobile(window.innerWidth <= 1024)    
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1024)    }
+    
+    window.addEventListener("resize", handleResize)
+    return () => {
+      window.removeEventListener("resize", handleResize)
     }
-  }, [])
-
-  // Load and listen for theme changes
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const savedTheme = localStorage.getItem("theme") || "light"
-      setTheme(savedTheme)
-      document.documentElement.classList.toggle("dark", savedTheme === "dark")
-    }
-  }, [])
+  }
+}, [])
 
   // Fetch exam data
   useEffect(() => {
@@ -513,12 +504,6 @@ export default function Exam2({ title, category }: Props) {
     }
     fetchQuestions()
   }, [category, title])
-
-  // Save theme changes
-  useEffect(() => {
-    localStorage.setItem("theme", theme)
-    document.documentElement.classList.toggle("dark", theme === "dark")
-  }, [theme])
 
   // Timer
   useEffect(() => {
@@ -687,60 +672,60 @@ export default function Exam2({ title, category }: Props) {
         {/* Main Question Container - adjusted to allow overlap */}
         <div className="relative z-10 w-full max-w-full md:max-w-3xl" style={{ marginTop: '-1.5rem' }}>
           {/* Timer - Only show this timer on smaller screens where sidebar might not be visible */}
-          {isMobile && (
-            <div className="absolute -top-8 right-4 z-20 flex items-center justify-center">
-              <div className="relative">
-                <svg
-                  className="w-28 md:w-36"
-                  width="140"
-                  height="70"
-                  viewBox="0 0 140 70"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect
-                    x="1"
-                    y="11"
-                    width="138"
-                    height="58"
-                    rx="29"
-                    fill={theme === "dark" ? "#1F2937" : "white"}
-                    stroke={theme === "dark" ? "#E5E7EB" : "#0C0C0C"}
-                    strokeWidth="2"
-                  />
-                  <rect
-                    x="5"
-                    y="15"
-                    width="130"
-                    height="50"
-                    rx="25"
-                    stroke="#FFCC66"
-                    strokeWidth="4"
-                  />
-                  <line
-                    x1="70"
-                    y1="10.5"
-                    x2="70"
-                    y2="2.5"
-                    stroke={theme === "dark" ? "#E5E7EB" : "#0C0C0C"}
-                    strokeWidth="2"
-                  />
-                  <path
-                    d="M44 2H94"
-                    stroke={theme === "dark" ? "#E5E7EB" : "#0C0C0C"}
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                  />
-                </svg>
-                <div
-                  className="absolute inset-0 flex items-center justify-center pt-2 text-base font-semibold
-                    text-gray-800 md:text-xl"
-                >
-                  {formatTime(timeLeft)}
-                </div>
-              </div>
-            </div>
-          )}
+{isMobile && (
+  <div className="absolute top-2 right-4 z-30 flex items-center justify-center">
+    <div className="relative">
+      <svg
+        className="w-20 sm:w-22 md:w-28" 
+        width="100"
+        height="50"
+        viewBox="0 0 140 70"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          x="1"
+          y="11"
+          width="138"
+          height="58"
+          rx="29"
+          fill={theme === "dark" ? "#1F2937" : "white"}
+          stroke={theme === "dark" ? "#E5E7EB" : "#0C0C0C"}
+          strokeWidth="2"
+        />
+        <rect
+          x="5"
+          y="15"
+          width="130"
+          height="50"
+          rx="25"
+          stroke="#FFCC66"
+          strokeWidth="4"
+        />
+        <line
+          x1="70"
+          y1="10.5"
+          x2="70"
+          y2="2.5"
+          stroke={theme === "dark" ? "#E5E7EB" : "#0C0C0C"}
+          strokeWidth="2"
+        />
+        <path
+          d="M44 2H94"
+          stroke={theme === "dark" ? "#E5E7EB" : "#0C0C0C"}
+          strokeWidth="3"
+          strokeLinecap="round"
+        />
+      </svg>
+      <div
+        className="absolute inset-0 flex items-center justify-center pt-2 text-xs sm:text-sm md:text-base font-semibold
+          text-gray-800"
+      >
+        {formatTime(timeLeft)}
+      </div>
+    </div>
+  </div>
+)}
   
           {/* Questions Container with more responsive height settings */}
           <div className="flex flex-col rounded-4xl bg-white pt-12 pb-6 px-4 shadow-lg md:px-6 md:pt-16 mb-16">
@@ -781,7 +766,7 @@ export default function Exam2({ title, category }: Props) {
                   ))}
   
                   {/* Buttons: Mark for Review and Next */}
-                  <div className="mt-4 flex gap-4">
+                  <div className="mt-8 mb-5 flex gap-4">
                     {/* Mark for Review / Unmark */}
                     <button
                       className={`rounded-full border px-4 py-2 text-sm ${

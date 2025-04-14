@@ -135,6 +135,10 @@ const Description = () => {
   const [showTestPage, setShowTestPage] = useState<boolean>(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
+  const titleCardRef = useRef<HTMLDivElement>(null); // Ref for the title card
+    const sidebarRef = useRef<HTMLDivElement>(null); // Ref for the sidebar
+    const [sidebarTop, setSidebarTop] = useState<number>(100 + 32); // Initial top value
+
 
   const isLocked =
     attemptData?.isLocked || (attemptData?.attemptsLeft ?? 0) <= 0
@@ -142,7 +146,7 @@ const Description = () => {
   // Check if screen is mobile size
   useEffect(() => {
     const checkScreenSize = () => {
-      setIsMobile(window.innerWidth < 768) // 768px is typical md breakpoint
+      setIsMobile(window.innerWidth <= 1024)    
     }
 
     // Initial check
@@ -376,7 +380,7 @@ const Description = () => {
         </motion.div>
 
       {/* Responsive left & right grid with reduced width to prevent sidebar overlap */}
-<div className="mx-auto mt-10 flex w-full max-w-full flex-col items-start gap-4 px-4 sm:max-w-xl sm:px-6 md:max-w-2xl md:flex-row md:px-8 lg:max-w-3xl xl:max-w-4xl">
+<div className="mx-auto mt-10 flex w-full max-w-full flex-col items-start gap-4 px-4 sm:max-w-xl sm:px-6 md:max-w-2xl md:flex-row md:px-8 lg:max-w-3xl xl:max-w-4xl h-full">
   {/* Left grid - Skill metrics */}
   <div className="relative flex w-full flex-1 flex-col items-start justify-between rounded-3xl bg-white p-4 shadow-lg sm:p-6 md:flex-row">
     {/* Left content */}
@@ -536,25 +540,27 @@ const Description = () => {
   </div>
 
   {/* Right grid - Exam description */}
-  <div className="w-full flex-1 rounded-3xl bg-white p-4 shadow-lg sm:p-6">
-    <h2 className="text-base font-bold sm:text-lg md:text-xl">Why take this Exam?</h2>
-    <p className="mt-2 text-sm text-black sm:text-base md:text-base">
-      {examData && showFullText
-        ? examData.why
-        : examData
-          ? limitWords(examData.why, 35)
-          : ""}
-    </p>
+<div className="w-full flex-1 rounded-3xl bg-white p-4 shadow-lg sm:p-6 h-full flex flex-col">
+  <h2 className="text-base font-bold sm:text-lg md:text-xl">Why take this Exam?</h2>
+  <div className="flex-grow overflow-y-auto">
+  <p className="mt-2 text-sm text-black sm:text-base md:text-base">
+  {examData && showFullText
+    ? examData.why
+    : examData
+      ? limitWords(examData.why, isMobile ? 15 : 35)
+      : ""}
+</p>
     {examData && (
       <>
-        {!showFullText && examData.why.split(" ").length > 20 && (
-          <button
-            className="mt-0 block text-xs text-gray-400 sm:text-sm md:text-base"
-            onClick={() => setShowFullText(true)}
-          >
-            Read More...
-          </button>
-        )}
+        {!showFullText && examData.why.split(" ").length > (isMobile ? 15 : 35) && (
+  <button
+    className="mt-0 block text-xs text-gray-400 sm:text-sm md:text-base"
+    onClick={() => setShowFullText(true)}
+  >
+    Read More...
+  </button>
+)}
+
         {showFullText && (
           <button
             className="mt-0 block text-xs text-gray-400 sm:text-sm md:text-base"
@@ -566,7 +572,8 @@ const Description = () => {
       </>
     )}
   </div>
-</div>
+          </div>
+          </div>
       {/* who will*/}
       <div className="mt-6 text-center">
         <h3 className="mb-4 text-3xl font-medium">Who will take this exam?</h3>
@@ -650,14 +657,19 @@ const Description = () => {
 
 {/* sidebar */}
 <div
-  className={`${
-    isMobile
-      ? `fixed z-40 w-[255px] transition-transform duration-300 ease-in-out ${
-          !isMenuOpen ? "translate-x-full" : "translate-x-0"
-        }`
-      : "absolute w-[260px]"
-  } right-0 top-[160px] md:top-8 flex max-h-[800px] min-h-[600px] flex-col overflow-auto rounded-l-3xl bg-white p-4 shadow-lg`}
->
+                ref={sidebarRef}
+                className={`
+                    ${isMobile
+                        ? `fixed inset-y-0 right-0 z-40 w-[255px] transition-transform duration-300 ease-in-out
+                            ${!isMenuOpen ? "translate-x-full" : "translate-x-0"}`
+                        : "absolute top-0 right-0 w-[260px]"
+                    }
+                    flex max-h-[90vh] min-h-[600px] flex-col overflow-auto rounded-l-3xl bg-white p-4 shadow-lg
+                `}
+                style={{
+                    top: isMobile ? '0' : `${sidebarTop}px` // Use the dynamic top value
+                }}
+            >
   {/* category name */}
   <div
     className="absolute top-0 left-1/2 -translate-x-1/2 whitespace-nowrap 
