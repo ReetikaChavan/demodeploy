@@ -673,17 +673,17 @@ export default function Exam2({ title, category }: Props) {
               },
             }}
           />
-
+  
           {/* Title with reduced horizontal padding */}
           <div
             className="relative z-10 flex h-10 w-[80%] items-center justify-center rounded-full border-2
               border-black bg-white px-3 text-base font-bold text-gray-800 shadow-md md:h-12 md:w-[500px]
-              md:px-6 md:text-2xl" // Added px-4 and md:px-6
+              md:px-6 md:text-2xl"
           >
             <span className="truncate">{loading ? "Loading..." : examData?.title || title}</span>
           </div>
         </motion.div>
-
+  
         {/* Main Question Container - adjusted to allow overlap */}
         <div className="relative z-10 w-full max-w-full md:max-w-3xl" style={{ marginTop: '-1.5rem' }}>
           {/* Timer - Only show this timer on smaller screens where sidebar might not be visible */}
@@ -741,9 +741,9 @@ export default function Exam2({ title, category }: Props) {
               </div>
             </div>
           )}
-
-          {/* Questions Container with adjusted padding to accommodate overlap */}
-          <div className="flex min-h-[calc(100vh-200px)] flex-col rounded-4xl bg-white pt-12 pb-6 px-4 shadow-lg md:px-6 md:pt-16">
+  
+          {/* Questions Container with more responsive height settings */}
+          <div className="flex flex-col rounded-4xl bg-white pt-12 pb-6 px-4 shadow-lg md:px-6 md:pt-16 mb-16">
             <div className="flex-grow">
               {/* Check if examData is null or loading */}
               {loading || !examData ? (
@@ -763,7 +763,7 @@ export default function Exam2({ title, category }: Props) {
                   <h2 className="text-black-800 mb-4 text-xl font-semibold">
                     {activeQuestion + 1}. {examData?.questions?.[activeQuestion]?.question}
                   </h2>
-
+  
                   {/* Render options */}
                   {examData?.questions?.[activeQuestion]?.options?.map((option, optionIndex) => (
                     <div
@@ -779,7 +779,7 @@ export default function Exam2({ title, category }: Props) {
                       <span className="font-medium text-black">{option}</span>
                     </div>
                   ))}
-
+  
                   {/* Buttons: Mark for Review and Next */}
                   <div className="mt-4 flex gap-4">
                     {/* Mark for Review / Unmark */}
@@ -793,7 +793,7 @@ export default function Exam2({ title, category }: Props) {
                     >
                       {markedQuestions.includes(activeQuestion) ? "Unmark" : "Mark for Review"}
                     </button>
-
+  
                     {/* Only show "Next" if it's not the last question */}
                     {activeQuestion < (examData?.questions?.length ?? 0) - 1 && (
                       <button
