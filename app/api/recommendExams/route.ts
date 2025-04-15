@@ -12,6 +12,7 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: "Missing required parameters" }, { status: 400 });
     }
 
+    console.log("Category:", category); // Log category
     // Determine level based on score
     let currentLevel = "Beginner";
     if (score) {
@@ -24,6 +25,7 @@ export async function GET(request: NextRequest) {
     }
 
     const categoryPath = path.join(process.cwd(), "data", category);
+    console.log("Category path:", categoryPath); // Log categoryPath
     const levels = ["Beginner", "Intermediate", "Advanced"];
 
     // Get the two other levels
@@ -34,12 +36,15 @@ export async function GET(request: NextRequest) {
       try {
         const levelPath = path.join(categoryPath, level);
         const files = await fs.readdir(levelPath);
+        console.log("Files found:", files); // Log files in the level folder
         
         if (files.length > 0) {
           // Pick the first available exam
           const examFile = files[0];
           const filePath = path.join(levelPath, examFile);
+          console.log("Reading file:", filePath); // Log file being read
           const fileContent = await fs.readFile(filePath, "utf-8");
+          console.log("File content:", fileContent); // Log file content
           const examData = JSON.parse(fileContent);
           
           recommendedExams.push({
@@ -52,7 +57,7 @@ export async function GET(request: NextRequest) {
           });
         }
       } catch (err) {
-        console.warn(`No exams found for ${level} level in ${category}`);
+        console.warn(`Error reading exams for ${level} level in ${category}:`, err);
       }
     }
 

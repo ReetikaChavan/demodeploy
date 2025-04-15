@@ -118,14 +118,12 @@ const ProblemList: React.FC = () => {
 
   const router = useRouter();
 
-  const handleProblemClick = (problem: ProblemItem) => {
-    console.log('Navigating to description page', {
-      id: problem.id,
-      title: problem.title,
-      category: problem.category
-    });
-    router.push(`/description?id=${problem.id}&title=${encodeURIComponent(problem.title)}&category=${encodeURIComponent(problem.category)}`);
-  };
+const handleProblemClick = (problem: ProblemItem) => {
+  if (typeof window !== 'undefined') {
+    localStorage.setItem('descriptionData', JSON.stringify(problem));
+    router.push('/description');
+  }
+};
 
   return (
     <div className="w-full max-w-6xl mx-auto px-2 sm:px-4 md:px-6">

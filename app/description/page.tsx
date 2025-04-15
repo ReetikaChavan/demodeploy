@@ -1,11 +1,33 @@
+'use client';
 
-import { Suspense } from "react"
-import DescriptionPage from "@/components/dashBoard/description";
+import { useEffect, useState, Suspense } from 'react';
+import Description from '@/components/dashBoard/description';
 
-export default function DescriptionPageWrapper() {
+// Define the ProblemItem type
+interface ProblemItem {
+  title: string;
+  category: string;
+}
+
+export default function DescriptionPage() {
+  const [data, setData] = useState<null | ProblemItem>(null);
+
+  useEffect(() => {
+    const stored = localStorage.getItem('descriptionData');
+    if (stored) {
+      setData(JSON.parse(stored));
+    }
+  }, []);
+
+  if (!data) return <div>Loading...</div>;
+
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <DescriptionPage />
+      <Description
+        title={data.title}
+        category={data.category}
+        onBack={() => window.history.back()}
+      />
     </Suspense>
-  )
+  );
 }
