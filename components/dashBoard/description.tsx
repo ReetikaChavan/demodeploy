@@ -501,11 +501,12 @@ const limitWords = (text: string, wordLimit: number) => {
         >
           {/* Left content */}
           <div className="w-full space-y-1.5 md:w-2/5 md:flex-1 md:pr-5">
-          <div className="mb-4">
-  <h2 className="text-lg font-semibold text-black sm:text-xl md:text-lg">
-  Assistant criteria 
+          <div className="mb-4 w-full">
+  <h2 className="text-lg font-semibold text-black sm:text-xl md:text-xl lg:text-lg whitespace-nowrap">
+    Assistant Criteria
   </h2>
 </div>
+
             {/* Skill */}
             <div className="relative">
               <span className="text-base font-medium sm:text-sm">Skill</span>
@@ -629,9 +630,13 @@ const limitWords = (text: string, wordLimit: number) => {
       className="h-7 w-10 sm:h-8 sm:w-12 md:h-9 md:w-14"
     />
   </div>
-  <span className="mt-2 text-1sm text-black sm:text-base">
-    <span className="font-bold text-black text-sm">Score 80% & Above</span>
+  <span className="mt-2 text-sm text-black sm:text-base w-full text-center">
+  <span className="font-bold text-black block truncate max-w-full">
+    Score 80% & Above
   </span>
+</span>
+
+
 </div>
 
             {/* Divider */}
