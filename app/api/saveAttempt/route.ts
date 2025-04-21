@@ -5,8 +5,7 @@ import Attempt from "@/database/models/attempt"
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    const { deviceId, title, category, score, attemptsLeft, completionTime } =
-      body
+    const { deviceId, title, category, score, attemptsLeft, completionTime } = body
 
     if (
       !deviceId ||
@@ -25,11 +24,12 @@ export async function POST(request: NextRequest) {
 
     const newAttemptsLeft = attemptsLeft - 1;
 
+    // Simply update the attempt data without any locking checks
     const attemptData = await Attempt.findOneAndUpdate(
       { deviceId, title, category },
       {
-        $set: { 
-          lastAttemptDate: new Date(), 
+        $set: {
+          lastAttemptDate: new Date(),
           attemptsLeft: newAttemptsLeft  // Use server-calculated value
         },
         $push: { attemptHistory: { date: new Date(), score, completionTime } },

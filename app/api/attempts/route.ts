@@ -2,17 +2,18 @@ import { NextRequest, NextResponse } from "next/server"
 import dbConnect from "@/database/connection"
 import Attempt from "@/database/models/attempt"
 
-export async function GET(request: NextRequest) {
+export async function POST(request: NextRequest) {
   try {
-    const { searchParams } = new URL(request.url)
-    const deviceId = searchParams.get("deviceId")
-    const title = searchParams.get("title")
-    const category = searchParams.get("category")
-    
-    console.log("API received params:", { deviceId, title, category });
+    const body = await request.json()
+    const { deviceId, title, category, score, completionTime } = body
 
-    if (!deviceId || !title || !category) {
-      console.log("Missing parameters in request");
+    if (
+      !deviceId ||
+      !title ||
+      !category ||
+      score === undefined ||
+      completionTime === undefined
+    ) {
       return NextResponse.json(
         { error: "Missing required parameters" },
         { status: 400 }
@@ -20,47 +21,43 @@ export async function GET(request: NextRequest) {
     }
 
     await dbConnect()
-    
-    // Find attempt data for this device and exam
-    let attemptData = await Attempt.findOne({ deviceId, title, category })
-    console.log("Database query result:", attemptData);
 
-    // If no data exists, create a new default object
-    if (!attemptData) {
-      console.log("No attempt data found, creating default");
-      const newAttemptData = new Attempt({
-        deviceId,
-        title,
-        category,
-        attemptsLeft: 3,
-        totalAttempts: 3,
-        bestScore: 0,
-        averageCompletionTime: 0,
-        attemptHistory: []
-      });
-      
-      // Save the default attempt data to the database
-      await newAttemptData.save();
-      attemptData = newAttemptData;
-    }
+    // Simply record the attempt without checking if it's locked
+    const attemptData = await Attempt.findOneAndUpdate(
+      { deviceId, title, category },
+      {
+        $set: {
+          lastAttemptDate: new Date(),
+          // Decrement attempts left by 1
+          attemptsLeft: { $subtract: ["$attemptsLeft", 1] }
+        },
+        $push: { attemptHistory: { date: new Date(), score, completionTime } },
+        $max: { bestScore: score },
+      },
+      { upsert: true, new: true }
+    )
 
-    // Convert to plain object if it's a Mongoose document
-    const attemptObject = attemptData.toObject ? attemptData.toObject() : attemptData;
+    // Calculate average completion time
+    const totalTime = attemptData.attemptHistory.reduce(
+      (sum: number, attempt: { completionTime?: number }) =>
+        sum + (attempt.completionTime || 0),
+      0
+    )
+    attemptData.averageCompletionTime =
+      totalTime / attemptData.attemptHistory.length
 
-    const response = {
-      title: attemptObject.title,
-      category: attemptObject.category,
-      attemptsLeft: attemptObject.attemptsLeft,
-      totalAttempts: attemptObject.totalAttempts,
-      bestScore: attemptObject.bestScore,
-      averageCompletionTime: attemptObject.averageCompletionTime || 0,
-      attemptHistory: attemptObject.attemptHistory || []
-    }
-    
-    console.log("Sending response:", response);
-    return NextResponse.json(response)
+    await attemptData.save()
+
+    return NextResponse.json({
+      title: attemptData.title,
+      category: attemptData.category,
+      attemptsLeft: attemptData.attemptsLeft,
+      totalAttempts: attemptData.totalAttempts || 3,
+      bestScore: attemptData.bestScore,
+      averageCompletionTime: attemptData.averageCompletionTime,
+    })
   } catch (error) {
-    console.error("Error in attempts API:", error)
+    console.error("Error saving attempt data:", error)
     return NextResponse.json({ error: "Server error" }, { status: 500 })
   }
 }

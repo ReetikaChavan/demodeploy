@@ -239,7 +239,7 @@ function ExamSidebar({
   className={` ${
     isMobile
       ? `fixed inset-y-0 right-0 z-40 w-[230px] transition-transform duration-300 ease-in-out`
-      : "absolute top-8 right-0 bottom-4 w-[230px] flex flex-col"
+      : "absolute top-8 bottom-8 right-0 w-[230px] flex flex-col"
   } ${isMobile && !isMenuOpen ? "translate-x-full" : "translate-x-0"}
   rounded-l-3xl bg-white p-3 shadow-lg overflow-hidden`}
 >
@@ -426,8 +426,7 @@ function ExamSidebar({
         </div>
 
         {/* Submit Button*/}
-        <div className="mt-auto mb-2 ml-5 flex justify-center">
-  <motion.div
+        <div className="mt-auto mb-2 ml-5 flex justify-center sticky bottom-2">  <motion.div
     className="relative flex justify-center"
     onHoverStart={() => setSubmitHovered(true)}
     onHoverEnd={() => setSubmitHovered(false)}
@@ -668,9 +667,9 @@ setTimeout(() => {
     return <ResultPage />
   }
   return (
-<div className="flex min-h-screen flex-col overflow-y-hidden bg-gray-100 md:flex-row">
+<div className="flex min-h-screen flex-col overflow-y-hidden bg-gray-100 md:flex-row md:relative">
 {/* Main content */}
-<div className="flex flex-1 flex-col items-center px-4 md:px-8 pb-4 md:pb-8">
+  <div className="flex flex-1 flex-col items-center px-4 md:px-8 pb-4 md:pb-8">
 {/* Title Card */}
         <motion.div
           className="relative z-20 -mb-4 flex justify-center py-2 md:-mb-6 md:py-4"
@@ -770,9 +769,7 @@ setTimeout(() => {
           )}
 
           {/* Questions Container */}
-          <div
-        className="mb-4 flex flex-col rounded-4xl bg-white px-3 pt-12 pb-6 shadow-lg md:px-5 md:pt-16 flex-grow"
-      >
+          <div className="mb-4 flex flex-col rounded-4xl bg-white px-3 pt-12 pb-6 shadow-lg md:px-5 md:pt-16 flex-grow md:h-full">
         <div className="flex-grow flex flex-col justify-between">
           <div className="flex-grow">
             {loading || !examData ? (
@@ -818,8 +815,8 @@ setTimeout(() => {
             )}
           </div>
                   {/* Buttons */}
-                  <div className="mt-auto pt-4 mb-2 flex gap-4">
-                  {activeQuestion < (examData?.questions?.length ?? 0) - 1 && (
+<div className="mt-auto pt-4 mb-2 flex justify-end gap-4">
+  {activeQuestion < (examData?.questions?.length ?? 0) - 1 && (
     <button
       className={`rounded-full border px-4 py-2 text-sm ${
         markedQuestions.includes(activeQuestion)
@@ -837,13 +834,13 @@ setTimeout(() => {
     </button>
   )}
 
-            {activeQuestion < (examData?.questions?.length ?? 0) - 1 && (
-              <button
-                className="ml-auto rounded-full bg-black px-5 py-2 text-sm text-white"
-                onClick={() => setActiveQuestion((prev) => prev + 1)}
-              >
-                Save & Next
-              </button>
+  {activeQuestion < (examData?.questions?.length ?? 0) - 1 && (
+    <button
+      className="rounded-full bg-black px-5 py-2 text-sm text-white"
+      onClick={() => setActiveQuestion((prev) => prev + 1)}
+    >
+      Save & Next
+    </button>
             )}
           </div>
         </div>
@@ -851,7 +848,7 @@ setTimeout(() => {
     </div>
   </div>
 
-      {/* Sidebar - Now using our redesigned component */}
+      {/* Sidebar*/}
       <ExamSidebar
     examData={examData}
     selectedOptions={selectedOptions}

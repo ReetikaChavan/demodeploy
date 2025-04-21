@@ -11,6 +11,14 @@ type QuestionType = {
   correctAnswer: string
 }
 
+type QuestionReviewType = {
+  question: string
+  options: string[]
+  correctAnswer: string
+  userAnswer: string
+  index: number
+}
+
 type ExamData = {
   title: string
   timer: number
@@ -47,10 +55,9 @@ const ResultPage = () => {
   const [completionTime, setCompletionTime] = useState<number | null>(null)
   const [timeDiffMs, setTimeDiffMs] = useState<number>(0)
   const [loading, setLoading] = useState<boolean>(true)
-  const [retakeHovered, setRetakeHovered] = useState(false);
+  const [retakeHovered, setRetakeHovered] = useState(false)
   const [theme, setTheme] = useState<string>("light")
   const [attemptData, setAttemptData] = useState<AttemptData | null>(null)
-  const [showWrongAnswers, setShowWrongAnswers] = useState<boolean>(false)
   const [wrongQuestions, setWrongQuestions] = useState<
     Array<{
       question: string
@@ -63,12 +70,11 @@ const ResultPage = () => {
   const [recommendedExams, setRecommendedExams] = useState<RecommendedExam[]>(
     []
   )
-  const [activeTab, setActiveTab] = useState<string>("results")
   const [hovered, setHovered] = useState<boolean>(false)
   const router = useRouter()
   const searchParams = useSearchParams()
-  const [showReviewAll, setShowReviewAll] = useState(false)
-const [allQuestions, setAllQuestions] = useState<any[]>([])
+  const [allQuestions, setAllQuestions] = useState<QuestionReviewType[]>([])
+  const [activeTab, setActiveTab] = useState<"results" | "review-all" | "review-wrong">("results")
 
 
   // Get title, category and deviceId
@@ -134,18 +140,30 @@ const [allQuestions, setAllQuestions] = useState<any[]>([])
 
     let correctCount = 0
     let totalQuestions = examData.questions.length
-    const wrongQuestionsData: any[] = []
+    const wrongQuestionsData: QuestionReviewType[] = []
+    const allQuestionsData: QuestionReviewType[] = []
 
     examData.questions.forEach((question, index) => {
-      if (storedAnswers[index] === question.correctAnswer) {
+      const userAnswer = storedAnswers[index] || "Not answered"
+
+      // Populate all questions data
+      allQuestionsData.push({
+        question: question.question,
+        options: question.options,
+        correctAnswer: question.correctAnswer,
+        userAnswer: userAnswer,
+        index: index,
+      })
+
+      // Populate wrong questions data
+      if (userAnswer === question.correctAnswer) {
         correctCount++
       } else {
-        // Store wrong questions for review
         wrongQuestionsData.push({
           question: question.question,
           options: question.options,
           correctAnswer: question.correctAnswer,
-          userAnswer: storedAnswers[index] || "Not answered",
+          userAnswer: userAnswer,
           index: index,
         })
       }
@@ -156,10 +174,11 @@ const [allQuestions, setAllQuestions] = useState<any[]>([])
     // Calculate percentage score
     const percentage = (correctCount / totalQuestions) * 100
 
-    setScore(percentage)
+    setScore((correctCount / totalQuestions) * 100)
     setCorrectAnswers(correctCount)
     setWrongAnswers(wrongCount)
     setWrongQuestions(wrongQuestionsData)
+    setAllQuestions(allQuestionsData)
 
     // Trigger confetti if score is good
     if (percentage >= 70) {
@@ -176,31 +195,32 @@ const [allQuestions, setAllQuestions] = useState<any[]>([])
     const saveAttemptResult = async () => {
       if (currentAttempt && percentage !== null && completionTime !== null) {
         try {
-  const response = await fetch("/api/saveAttempt", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      deviceId: currentAttempt.deviceId || storedDeviceId,
-      title: examData.title,
-      category: examData.category,
-      score: percentage,
-      completionTime: completionTime,
-    }),
-  });
+          const response = await fetch("/api/saveAttempt", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              deviceId: currentAttempt.deviceId || storedDeviceId,
+              title: examData.title,
+              category: examData.category,
+              score: percentage,
+              completionTime: completionTime,
+            }),
+          })
 
-  if (!response.ok) {
-    const errorText = await response.text();
-    throw new Error(`Failed to save attempt: ${response.status} - ${errorText}`);
-  }
+          if (!response.ok) {
+            const errorText = await response.text()
+            throw new Error(
+              `Failed to save attempt: ${response.status} - ${errorText}`
+            )
+          }
 
-  const data = await response.json();
-  setAttemptData(data);
-} catch (error) {
-  console.error("Error saving attempt:", error);
-}
-
+          const data = await response.json()
+          setAttemptData(data)
+        } catch (error) {
+          console.error("Error saving attempt:", error)
+        }
       }
     }
 
@@ -272,42 +292,44 @@ const [allQuestions, setAllQuestions] = useState<any[]>([])
     setLoading(false)
   }, [router, searchParams, deviceId, timeDiffMs])
 
-  const handleReturnToDashboard = () => {
-    // Clear result data but keep deviceId
-    localStorage.removeItem("selectedOptions")
-    localStorage.removeItem("examData")
-    localStorage.removeItem("currentAttempt")
-    localStorage.removeItem("examStartTime")
-    localStorage.removeItem("examEndTime")
-    router.push("/")
-  }
+  // const handleReturnToDashboard = () => {
+  //   // Clear result data but keep deviceId
+  //   localStorage.removeItem("selectedOptions")
+  //   localStorage.removeItem("examData")
+  //   localStorage.removeItem("currentAttempt")
+  //   localStorage.removeItem("examStartTime")
+  //   localStorage.removeItem("examEndTime")
+  //   router.push("/")
+  // }
 
   const handleRetakeExam = () => {
     // Keep exam data but clear answers
     localStorage.removeItem("selectedOptions")
     localStorage.removeItem("examStartTime")
     localStorage.removeItem("examEndTime")
-    router.push("/testPage")
+    
+    // Pass title and category as URL parameters
+    router.push(`/testPage?title=${encodeURIComponent(examTitle)}&category=${encodeURIComponent(examCategory)}`)
   }
 
-  const navigateToExam = (title: string, category: string) => {
-    router.push(
-      `/description?title=${encodeURIComponent(title)}&category=${encodeURIComponent(category)}`
-    )
-  }
+  // const navigateToExam = (title: string, category: string) => {
+  //   router.push(
+  //     `/description?title=${encodeURIComponent(title)}&category=${encodeURIComponent(category)}`
+  //   )
+  // }
 
-  const getDifficultyColor = (difficulty: string) => {
-    if (!difficulty) return { bg: "bg-gray-100", text: "text-gray-800" }
+  // const getDifficultyColor = (difficulty: string) => {
+  //   if (!difficulty) return { bg: "bg-gray-100", text: "text-gray-800" }
 
-    difficulty = difficulty.toLowerCase()
-    if (difficulty === "easy")
-      return { bg: "bg-[#F3FFE7]", text: "text-[#567F2D]" }
-    if (difficulty === "medium")
-      return { bg: "bg-[#FFF8D0]", text: "text-[#CCA028]" }
-    if (difficulty === "hard")
-      return { bg: "bg-[#FFEAE7]", text: "text-[#7F352D]" }
-    return { bg: "bg-gray-100", text: "text-gray-800" }
-  }
+  //   difficulty = difficulty.toLowerCase()
+  //   if (difficulty === "easy")
+  //     return { bg: "bg-[#F3FFE7]", text: "text-[#567F2D]" }
+  //   if (difficulty === "medium")
+  //     return { bg: "bg-[#FFF8D0]", text: "text-[#CCA028]" }
+  //   if (difficulty === "hard")
+  //     return { bg: "bg-[#FFEAE7]", text: "text-[#7F352D]" }
+  //   return { bg: "bg-gray-100", text: "text-gray-800" }
+  // }
 
   const formatTime = (seconds: number): string => {
     const minutes = Math.floor(seconds / 60)
@@ -404,7 +426,7 @@ const [allQuestions, setAllQuestions] = useState<any[]>([])
                 >
                   {/* Score */}
                   <div className="flex flex-col items-center">
-                    <div className="relative flex h-28 w-28 items-center justify-center ml-6">
+                    <div className="relative ml-6 flex h-28 w-28 items-center justify-center">
                       <svg
                         viewBox="0 0 100 100"
                         className="h-full w-full"
@@ -439,9 +461,7 @@ const [allQuestions, setAllQuestions] = useState<any[]>([])
                         {score!.toFixed(0)}%
                       </span>
                     </div>
-                    <p className="text-1sm mt-2 text-black">
-                      Score
-                    </p>
+                    <p className="text-1sm mt-2 text-black font-bold ml-2">Score</p>
                   </div>
 
                   {/* Dashed Line */}
@@ -521,8 +541,8 @@ const [allQuestions, setAllQuestions] = useState<any[]>([])
                               ? formatTime(attemptData.averageCompletionTime)
                               : "N/A"}
                         </p>
-                        </div>
-                        <p className="text-black">Time Taken</p>
+                      </div>
+                      <p className="text-black font-bold">Time Taken</p>
                     </div>
                     {/* <div className="flex flex-col items-center">
                       <div className="flex items-center space-x-2">
@@ -559,196 +579,183 @@ const [allQuestions, setAllQuestions] = useState<any[]>([])
                     </div>
 
                     <div className="flex flex-col items-center">
-                      <span className="mt-2 text-black">
-                        <span className="font-bold text-black">
-                          {attemptData
-                            ? `${Math.max(0, attemptData.totalAttempts - attemptData.attemptsLeft)}/${attemptData.totalAttempts}`
-                            : "0/3"}
-                        </span>{" "}
-                        Attempt
-                      </span>
-                    </div>
+  <span className="mt-2 text-black text-center">
+    <span className="block text-xl font-bold text-black">
+      {attemptData
+        ? `${Math.max(0, attemptData.totalAttempts - attemptData.attemptsLeft)}/${attemptData.totalAttempts}`
+        : "0/3"}
+    </span>
+    <span className="block text-sm text-black font-bold">Attempts</span>
+  </span>
+</div>
+
                   </div>
                 </div>
 
                 {/* Right: Results Summary */}
-<div className="flex-1 rounded-3xl bg-white p-6 shadow-lg">
-  <h2 className="mb-6 text-center text-xl font-bold">Result Summary</h2>
+                <div className="flex-1 rounded-3xl bg-white p-6 shadow-lg">
+                  <h2 className="mb-6 text-center text-xl font-bold">
+                    Result Summary
+                  </h2>
 
-  <div className="mt-4 grid w-full grid-cols-3 gap-4 text-center">
-    {/* Total */}
-    <motion.div
-      className="flex h-30 flex-col justify-between rounded-3xl bg-gray-100 p-6"
-      whileHover={{ scale: 1.05 }}
-    >
-      <p className="text-4xl font-bold text-gray-900">
-        {correctAnswers + wrongAnswers}
-      </p>
-      <p className="text-base font-medium text-gray-700">Total</p>
-    </motion.div>
-
-    {/* Correct */}
-    <motion.div
-      className="flex h-30 flex-col justify-between rounded-2xl bg-green-100 p-6"
-      whileHover={{ scale: 1.05 }}
-    >
-      <p className="text-4xl font-bold text-green-800">{correctAnswers}</p>
-      <p className="text-base font-medium text-green-700">Correct</p>
-    </motion.div>
-
-    {/* Wrong */}
-    <motion.div
-      className="flex h-30 cursor-pointer flex-col justify-between rounded-2xl bg-red-100 p-6 transition-colors hover:bg-red-200"
-      whileHover={{ scale: 1.05 }}
-      onClick={() => {
-        setActiveTab("details")
-        setShowWrongAnswers(true)
-      }}
-    >
-      <p className="text-4xl font-bold text-red-800">{wrongAnswers}</p>
-      <p className="text-base font-medium text-red-700">Wrong</p>
-    </motion.div>
-  </div>
-</div>
-
-              </div>
-              )}
-              <div className="mt-8 text-center">
-  <p
-    className="cursor-pointer text-lg font-semibold underline text-black hover:text-blue-900"
-    onClick={() => {
-      setActiveTab("details")
-      setShowReviewAll(true)
-    }}
-  >
-    Review All Questions
-  </p>
-</div>
-
-
-            {/* Wrong Answers Section */}
-            {activeTab === "details" && (
-              <div className="w-full rounded-3xl bg-white p-6 shadow-lg">
-                {wrongQuestions.length > 0 ? (
-                  <>
-                    <h2 className="mb-4 text-2xl font-bold text-gray-800">
-                      Questions You Missed
-                    </h2>
-                    <div className="space-y-6">
-                      {wrongQuestions.map((item, idx) => (
-                        <motion.div
-                          key={idx}
-                          className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm transition-shadow
-                            hover:shadow-md"
-                          initial={{ opacity: 0, y: 10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ delay: idx * 0.1 }}
-                        >
-                          <p className="mb-3 text-lg font-semibold">
-                            Question {item.index + 1}: {item.question}
-                          </p>
-                          <div className="mb-4 grid grid-cols-1 gap-2">
-                            {item.options.map((option, optIdx) => (
-                              <div
-                                key={optIdx}
-                                className={`rounded-lg p-3 ${
-                                  option === item.correctAnswer
-                                    ? "border-l-4 border-green-500 bg-green-100"
-                                    : option === item.userAnswer
-                                      ? "border-l-4 border-red-500 bg-red-100"
-                                      : "border border-gray-200 bg-gray-50"
-                                  }`}
-                              >
-                                <div className="flex items-center">
-                                  <span
-                                    className={`mr-2 flex h-6 w-6 items-center justify-center rounded-full ${
-                                      option === item.correctAnswer
-                                        ? "bg-green-500 text-white"
-                                        : option === item.userAnswer
-                                          ? "bg-red-500 text-white"
-                                          : "bg-gray-200 text-gray-700"
-                                      }`}
-                                  >
-                                    {String.fromCharCode(65 + optIdx)}
-                                  </span>
-                                  <span>{option}</span>
-                                  {option === item.correctAnswer && (
-                                    <span className="ml-auto flex items-center text-green-700">
-                                      <svg
-                                        className="mr-1 h-5 w-5"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                      >
-                                        <path
-                                          strokeLinecap="round"
-                                          strokeLinejoin="round"
-                                          strokeWidth="2"
-                                          d="M5 13l4 4L19 7"
-                                        ></path>
-                                      </svg>
-                                      Correct
-                                    </span>
-                                  )}
-                                  {option === item.userAnswer &&
-                                    option !== item.correctAnswer && (
-                                      <span className="ml-auto flex items-center text-red-700">
-                                        <svg
-                                          className="mr-1 h-5 w-5"
-                                          fill="none"
-                                          stroke="currentColor"
-                                          viewBox="0 0 24 24"
-                                          xmlns="http://www.w3.org/2000/svg"
-                                        >
-                                          <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            strokeWidth="2"
-                                            d="M6 18L18 6M6 6l12 12"
-                                          ></path>
-                                        </svg>
-                                        Your answer
-                                      </span>
-                                    )}
-                                </div>
-                              </div>
-                            ))}
-                          </div>
-                        </motion.div>
-                      ))}
-                    </div>
-                  </>
-                ) : (
-                  <div className="py-16 text-center">
-                    <svg
-                      className="mx-auto mb-4 h-16 w-16 text-green-500"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
+                  <div className="mt-4 grid w-full grid-cols-3 gap-4 text-center">
+                    {/* Total */}
+                    <motion.div
+                      className="flex h-30 flex-col justify-between rounded-3xl bg-gray-100 p-6"
+                      whileHover={{ scale: 1.05 }}
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                      ></path>
-                    </svg>
-                    <h3 className="mb-2 text-2xl font-bold text-gray-800">
-                      Perfect Score!
-                    </h3>
-                    <p className="text-gray-600">
-                      You answered all questions correctly. Amazing job!
-                    </p>
+                      <p className="text-4xl font-bold text-gray-900">
+                        {correctAnswers + wrongAnswers}
+                      </p>
+                      <p className="text-base font-medium text-gray-700">
+                        Total
+                      </p>
+                    </motion.div>
+
+                    {/* Correct */}
+                    <motion.div
+                      className="flex h-30 flex-col justify-between rounded-2xl bg-green-100 p-6"
+                      whileHover={{ scale: 1.05 }}
+                    >
+                      <p className="text-4xl font-bold text-green-800">
+                        {correctAnswers}
+                      </p>
+                      <p className="text-base font-medium text-green-700">
+                        Correct
+                      </p>
+                    </motion.div>
+
+                    {/* Wrong */}
+                    <motion.div
+                      className="flex h-30 cursor-pointer flex-col justify-between rounded-2xl bg-red-100 p-6
+                        transition-colors hover:bg-red-200"
+                      whileHover={{ scale: 1.05 }}
+                      onClick={() => setActiveTab("review-wrong")}
+                    >
+                      <p className="text-4xl font-bold text-red-800">
+                        {wrongAnswers}
+                      </p>
+                      <p className="text-base font-medium text-red-700">
+                        Wrong
+                      </p>
+                    </motion.div>
                   </div>
-                )}
+                </div>
               </div>
             )}
+            <div className="mt-8 text-center">
+              <p
+                className="cursor-pointer text-lg font-semibold text-black underline hover:text-blue-900"
+                onClick={() => setActiveTab("review-all")}
+              >
+                Review All Answers
+              </p>
+            </div>
+
+            {/* Review Section */}
+            {(activeTab === "review-all" || activeTab === "review-wrong") && (
+  <div className="w-full rounded-3xl bg-white p-6 shadow-lg">
+    <h2 className="mb-4 text-2xl font-bold text-gray-800">
+  {activeTab === "review-all" ? "Review All Answers" : "Wrong Answers Marked"}
+</h2>
+
+    <p
+      className="mb-4 cursor-pointer text-lg font-semibold text-black underline hover:text-blue-800"
+      onClick={() => setActiveTab("results")}
+    >
+      Back to Result
+    </p>
+
+    {(activeTab === "review-all" ? allQuestions : wrongQuestions).length > 0 ? (
+      <div className="space-y-6">
+        {(activeTab === "review-all" ? allQuestions : wrongQuestions).map(
+          (item, idx) => (
+            <motion.div
+              key={idx}
+              className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: idx * 0.05 }}
+            >
+              <p className="mb-3 text-lg font-semibold">
+                Question {item.index + 1}: {item.question}
+              </p>
+              <div className="mb-4 grid grid-cols-1 gap-2">
+                {item.options.map((option: string, optIdx: number) => (
+                  <div
+                    key={optIdx}
+                    className={`rounded-lg p-3 ${
+                      option === item.correctAnswer
+                        ? "border-l-4 border-green-500 bg-green-100"
+                        : option === item.userAnswer
+                        ? "border-l-4 border-red-500 bg-red-100"
+                        : "border border-gray-200 bg-gray-50"
+                    }`}
+                  >
+                    <div className="flex items-center">
+                      <span
+                        className={`mr-2 flex h-6 w-6 items-center justify-center rounded-full ${
+                          option === item.correctAnswer
+                            ? "bg-green-500 text-white"
+                            : option === item.userAnswer
+                            ? "bg-red-500 text-white"
+                            : "bg-gray-200 text-gray-700"
+                        }`}
+                      >
+                        {String.fromCharCode(65 + optIdx)}
+                      </span>
+                      <span>{option}</span>
+
+                      {option === item.correctAnswer && (
+                        <span className="ml-auto flex items-center text-green-700">
+                          ✅ Correct
+                        </span>
+                      )}
+                      {option === item.userAnswer &&
+                        option !== item.correctAnswer && (
+                          <span className="ml-auto flex items-center text-red-700">
+                            ❌ Your Answer
+                          </span>
+                        )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          )
+        )}
+      </div>
+    ) : (
+      <div className="py-16 text-center">
+        <svg
+          className="mx-auto mb-4 h-16 w-16 text-green-500"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+        <h3 className="mb-2 text-2xl font-bold text-gray-800">
+          Perfect Score!
+        </h3>
+        <p className="text-gray-600">
+          You answered all questions correctly. Amazing job!
+        </p>
+      </div>
+    )}
+  </div>
+)}
+
 
             {/* Recommended Exams Section */}
             {/* {activeTab === "recommended" && ( */}
-              {/* <div className="w-full rounded-3xl bg-white p-6 shadow-lg">
+            {/* <div className="w-full rounded-3xl bg-white p-6 shadow-lg">
                 <h2 className="mb-4 text-2xl font-bold text-gray-800">
                   Recommended Next Steps
                 </h2>
@@ -767,8 +774,8 @@ const [allQuestions, setAllQuestions] = useState<any[]>([])
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: idx * 0.1 }}
                       > */}
-                        {/* Exam Header */}
-                        {/* <div className="mb-3 flex items-start justify-between">
+            {/* Exam Header */}
+            {/* <div className="mb-3 flex items-start justify-between">
                           <h3 className="text-lg font-bold text-gray-800 transition-colors group-hover:text-blue-700">
                             {exam.title}
                           </h3>
@@ -786,8 +793,8 @@ const [allQuestions, setAllQuestions] = useState<any[]>([])
                           </div>
                         </div> */}
 
-                        {/* Tags Section */}
-                        {/* <div className="mb-3 flex flex-wrap gap-2">
+            {/* Tags Section */}
+            {/* <div className="mb-3 flex flex-wrap gap-2">
                           <span className="rounded-full bg-blue-100 px-2 py-1 text-xs">
                             {exam.category}
                           </span>
@@ -796,13 +803,13 @@ const [allQuestions, setAllQuestions] = useState<any[]>([])
                           </span>
                         </div> */}
 
-                        {/* Description */}
-                        {/* <p className="text-sm text-gray-600">
+            {/* Description */}
+            {/* <p className="text-sm text-gray-600">
                           Take this exam to continue improving your skills.
                         </p> */}
 
-                        {/* Start Exam Button */}
-                        {/* <div className="mt-3 flex justify-end">
+            {/* Start Exam Button */}
+            {/* <div className="mt-3 flex justify-end">
                           <span className="flex items-center text-sm text-blue-600 group-hover:underline">
                             Start Exam
                             <svg
@@ -823,7 +830,7 @@ const [allQuestions, setAllQuestions] = useState<any[]>([])
                         </div>
                       </motion.div>
                     ))} */}
-                  {/* </div>
+            {/* </div>
                 ) : (
                   // <div className="rounded-xl bg-gray-50 p-6 text-center">
                   //   <p className="text-gray-600">
@@ -833,50 +840,51 @@ const [allQuestions, setAllQuestions] = useState<any[]>([])
                   //     Check back later for new content!
                   //   </p>
                   // </div> */}
-                {/* )} */}
-              {/* </div> */}
+            {/* )} */}
+            {/* </div> */}
             {/* )} */}
           </motion.div>
 
           {/* Action Buttons */}
-<div className="mt-10 flex justify-center gap-6">
-  {/* Retake Exam Button with Submit Button Styling */}
-  <motion.div
-    className="relative flex justify-center"
-    onHoverStart={() => setRetakeHovered(true)}
-    onHoverEnd={() => setRetakeHovered(false)}
-  >
-    <motion.div
-      className="absolute z-0 h-10 w-35 rounded-full"
-      initial={{
-        rotate: -3,
-        backgroundColor: theme === "dark" ? "#FFCC66" : "#000000",
-      }}
-      animate={{
-        backgroundColor: retakeHovered
-          ? "#FFCC66"
-          : theme === "dark"
-            ? "#000000"
-            : "#000000",
-      }}
-      transition={{
-        backgroundColor: {
-          duration: 0.3,
-          ease: "easeInOut",
-        },
-      }}
-      style={{ transformOrigin: "center" }}
-    />
+          <div className="mt-10 flex justify-center gap-6">
+            {/* Retake Exam Button with Submit Button Styling */}
+            <motion.div
+              className="relative flex justify-center"
+              onHoverStart={() => setRetakeHovered(true)}
+              onHoverEnd={() => setRetakeHovered(false)}
+            >
+              <motion.div
+                className="absolute z-0 h-10 w-35 rounded-full"
+                initial={{
+                  rotate: -3,
+                  backgroundColor: theme === "dark" ? "#FFCC66" : "#000000",
+                }}
+                animate={{
+                  backgroundColor: retakeHovered
+                    ? "#FFCC66"
+                    : theme === "dark"
+                      ? "#000000"
+                      : "#000000",
+                }}
+                transition={{
+                  backgroundColor: {
+                    duration: 0.3,
+                    ease: "easeInOut",
+                  },
+                }}
+                style={{ transformOrigin: "center" }}
+              />
 
-    <button
-      className="relative z-8 flex h-10 w-35 items-center justify-center rounded-full border-2 border-black bg-[#FFCC66] text-sm font-medium text-gray-800 hover:bg-white md:text-base"
-      onClick={handleRetakeExam}
-    >
-      Retake Exam
-    </button>
-  </motion.div>
-</div>
-
+              <button
+                className="relative z-8 flex h-10 w-35 items-center justify-center rounded-full border-2
+                  border-black bg-[#FFCC66] text-sm font-medium text-gray-800 hover:bg-white
+                  md:text-base"
+                onClick={handleRetakeExam}
+              >
+                Retake Exam
+              </button>
+            </motion.div>
+          </div>
         </>
       )}
     </div>
