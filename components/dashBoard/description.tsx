@@ -491,14 +491,14 @@ const limitWords = (text: string, wordLimit: number) => {
 
       {/* left & right grid */}
       <div
-        className="mx-auto mt-10 flex h-full w-full max-w-full flex-col items-start gap-4 px-4
-          sm:max-w-xl sm:px-6 md:max-w-2xl md:flex-row md:px-8 lg:max-w-3xl xl:max-w-4xl"
-      >
+  className="mx-auto mt-10 flex h-full w-full max-w-full flex-col items-stretch gap-4 px-4
+    sm:max-w-xl sm:px-6 md:max-w-2xl md:flex-row md:px-8 lg:max-w-3xl xl:max-w-4xl"
+>
         {/* Left grid - Skill metrics */}
-        <div
-          className="relative flex w-full flex-1 flex-col items-start justify-between rounded-3xl
-            bg-white p-4 shadow-lg sm:p-6 md:flex-row"
-        >
+        {/* Left grid */}
+<div className="relative flex w-full flex-1 flex-col justify-between rounded-3xl
+  bg-white p-4 shadow-lg sm:p-6 md:flex-row md:h-full">
+
           {/* Left content */}
           <div className="w-full space-y-1.5 md:w-2/5 md:flex-1 md:pr-5">
           <div className="mb-4 w-full">
@@ -688,7 +688,9 @@ const limitWords = (text: string, wordLimit: number) => {
         </div>
 
         {/* Right grid - Exam description */}
-        <div className="flex h-full w-full flex-1 flex-col rounded-3xl bg-white p-4 shadow-lg sm:p-6">
+        {/* Right grid */}
+<div className="flex w-full flex-1 flex-col rounded-3xl bg-white p-4 shadow-lg sm:p-6 md:h-full">
+
           <h2 className="text-base font-bold sm:text-lg md:text-xl">
             Why take this Exam?
           </h2>
