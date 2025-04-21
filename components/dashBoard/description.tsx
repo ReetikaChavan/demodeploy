@@ -500,7 +500,7 @@ const limitWords = (text: string, wordLimit: number) => {
   bg-white p-4 shadow-lg sm:p-6 md:flex-row md:h-full">
 
           {/* Left content */}
-          <div className="w-full space-y-1.5 md:w-2/5 md:flex-1 md:pr-5">
+          <div className="w-full space-y-1.5 md:w-[45%] md:pr-2">
           <div className="mb-4 w-full">
   <h2 className="text-lg font-semibold text-black sm:text-xl md:text-xl lg:text-lg whitespace-nowrap">
     Assistant Criteria
@@ -601,7 +601,7 @@ const limitWords = (text: string, wordLimit: number) => {
           </div>
 
           {/* Vertical Dashed Line */}
-          <div className="hidden h-full md:mx-3 md:flex md:justify-center">
+          <div className="hidden h-full md:mx-1 md:flex md:justify-center">
           <svg
               width="2.5"
               height="200px"
