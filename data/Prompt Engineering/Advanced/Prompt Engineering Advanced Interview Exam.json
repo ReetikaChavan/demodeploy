@@ -1,0 +1,445 @@
+{
+    "category": "Prompt Engineering",
+    "title": "Prompt Engineering: Advanced Interview Exam",
+    "level": "Advanced",
+    "Difficulty": "Hard",
+    "timer": "40 minutes",
+    "total_marks": 45,
+    "marks_per_question": 1,
+    "skill": "50%",
+    "knowledge": "35%",
+    "application": "15%",
+    "why": "This rigorous exam assesses a candidate's deep understanding and mastery of advanced prompt engineering techniques relevant to real-world interview scenarios. It probes their ability to strategically design, optimize, and troubleshoot prompts for complex tasks, demonstrating critical thinking and practical application of theoretical concepts.",
+    "questions": [
+      {
+        "question": "Explain the nuances between 'instruction following' and 'context learning' in large language models and how prompt design can leverage these differences for optimal output.",
+        "options": [
+          "Instruction following relies solely on explicit commands, while context learning uses examples; prompts should primarily focus on one.",
+          "Context learning is more about memorization, instruction following about generalization; effective prompts blend both strategically.",
+          "Instruction following is limited by the prompt's length, context learning by the model's training data; prompts should prioritize the former.",
+          "There is no significant difference; the terms are interchangeable in advanced prompt engineering."
+        ],
+        "correctAnswer": "Context learning is more about memorization, instruction following about generalization; effective prompts blend both strategically."
+      },
+      {
+        "question": "Describe a scenario where a purely zero-shot prompt would be insufficient for a complex task and how you would evolve it into a few-shot or chain-of-thought prompt to achieve better results. Provide specific examples of prompt modifications.",
+        "options": [
+          "Zero-shot is always sufficient if the instructions are clear; adding examples only confuses the model.",
+          "For tasks requiring multi-step reasoning or specific format adherence, few-shot or chain-of-thought prompts providing demonstrations are crucial.",
+          "Chain-of-thought prompts are only useful for mathematical problems, not general language tasks.",
+          "Few-shot prompting is less effective than fine-tuning for complex tasks."
+        ],
+        "correctAnswer": "For tasks requiring multi-step reasoning or specific format adherence, few-shot or chain-of-thought prompts providing demonstrations are crucial."
+      },
+      {
+        "question": "Discuss the potential pitfalls of relying heavily on 'temperature' for controlling creativity and propose alternative or complementary techniques for achieving nuanced and contextually appropriate creative outputs.",
+        "options": [
+          "High temperature always leads to irrelevant outputs; it should be avoided in professional settings.",
+          "Temperature is the most reliable way to control creativity; other methods are less effective.",
+          "Over-reliance on temperature can lead to incoherence or lack of focus; techniques like top-k/p sampling, specific stylistic instructions, and persona prompting offer more control.",
+          "Lowering temperature always results in factual and accurate responses, regardless of the prompt."
+        ],
+        "correctAnswer": "Over-reliance on temperature can lead to incoherence or lack of focus; techniques like top-k/p sampling, specific stylistic instructions, and persona prompting offer more control."
+      },
+      {
+        "question": "Explain the concept of 'adversarial prompting' and its implications for the robustness and security of large language models. How can prompt engineers proactively mitigate these risks?",
+        "options": [
+          "Adversarial prompting involves making prompts very long and complex to confuse the model.",
+          "It refers to crafting prompts that intentionally elicit harmful, biased, or unintended outputs, requiring careful prompt design with safety constraints and output validation.",
+          "Mitigation primarily involves filtering user inputs, which is outside the scope of prompt engineering.",
+          "Adversarial prompts are only a theoretical concern and do not pose real-world risks."
+        ],
+        "correctAnswer": "It refers to crafting prompts that intentionally elicit harmful, biased, or unintended outputs, requiring careful prompt design with safety constraints and output validation."
+      },
+      {
+        "question": "Describe the challenges and strategies involved in prompting multi-modal models for tasks that require seamless integration of different data types (e.g., image and text). Provide examples of effective prompting techniques.",
+        "options": [
+          "Multi-modal prompting is straightforward; simply combining text and image descriptions is sufficient.",
+          "Challenges include aligning representations across modalities and providing clear instructions for interaction; effective techniques involve explicit cross-modal instructions and contextual anchoring.",
+          "Text-based prompts are always the dominant factor in multi-modal models.",
+          "Fine-tuning is the only effective way to handle multi-modal tasks."
+        ],
+        "correctAnswer": "Challenges include aligning representations across modalities and providing clear instructions for interaction; effective techniques involve explicit cross-modal instructions and contextual anchoring."
+      },
+      {
+        "question": "Discuss the trade-offs between prompt length and performance in large language models. When might a shorter, more concise prompt be more effective than a longer, more detailed one, and vice versa?",
+        "options": [
+          "Longer prompts are always better as they provide more context.",
+          "Shorter prompts are always faster and equally effective.",
+          "Trade-offs involve context window limitations, processing time, and information density; shorter prompts excel for focused tasks, longer ones for complex reasoning requiring extensive context.",
+          "Prompt length has no significant impact on model performance."
+        ],
+        "correctAnswer": "Trade-offs involve context window limitations, processing time, and information density; shorter prompts excel for focused tasks, longer ones for complex reasoning requiring extensive context."
+      },
+      {
+        "question": "Explain the role of 'knowledge retrieval' in advanced prompt engineering, particularly in the context of Retrieval-Augmented Generation (RAG). How can you design prompts to effectively leverage external knowledge sources?",
+        "options": [
+          "Knowledge retrieval is only relevant during the model's training phase, not during inference with prompts.",
+          "RAG models automatically retrieve relevant knowledge regardless of the prompt's design.",
+          "Effective prompts for RAG explicitly instruct the model to consult provided context and formulate answers based on that information, often using specific formatting or keywords.",
+          "Using external knowledge always slows down the response generation process."
+        ],
+        "correctAnswer": "Effective prompts for RAG explicitly instruct the model to consult provided context and formulate answers based on that information, often using specific formatting or keywords."
+      },
+      {
+        "question": "Describe the challenges of maintaining 'context' across multiple turns in a conversational AI and how advanced prompting techniques, such as dialogue history injection and memory management prompts, can address these issues.",
+        "options": [
+          "Maintaining context across turns is an inherent limitation of all large language models.",
+          "Simply appending previous turns to the current prompt is always the most effective strategy.",
+          "Dialogue history injection can lead to context window overflow; memory management prompts help the model selectively retain and utilize relevant information.",
+          "Context maintenance is primarily handled by the model's internal state, not the prompt."
+        ],
+        "correctAnswer": "Dialogue history injection can lead to context window overflow; memory management prompts help the model selectively retain and utilize relevant information."
+      },
+      {
+        "question": "Discuss the ethical considerations involved in using 'persona prompting' and the potential for misrepresentation or unintended biases. How can prompt engineers design personas responsibly?",
+        "options": [
+          "Persona prompting is inherently unethical as it involves deceiving the user.",
+          "As long as the persona is clearly defined, there are no ethical concerns.",
+          "Responsible persona design involves avoiding harmful stereotypes, clearly indicating the AI's nature, and focusing on helpful and unbiased interactions.",
+          "Ethical considerations are the sole responsibility of the model developers, not prompt engineers."
+        ],
+        "correctAnswer": "Responsible persona design involves avoiding harmful stereotypes, clearly indicating the AI's nature, and focusing on helpful and unbiased interactions."
+      },
+      {
+        "question": "Explain the concept of 'meta-prompting' or 'prompt engineering for prompt engineering.' When would you employ such techniques, and what are the potential benefits and drawbacks?",
+        "options": [
+          "Meta-prompting is about making prompts extremely short and abstract.",
+          "It involves using language models to generate or optimize prompts, useful for complex tasks or when human intuition is limited, but can lead to less interpretable or controllable prompts.",
+          "This technique is only applicable for very small language models.",
+          "Meta-prompting always results in significantly better prompts than manual creation."
+        ],
+        "correctAnswer": "It involves using language models to generate or optimize prompts, useful for complex tasks or when human intuition is limited, but can lead to less interpretable or controllable prompts."
+      },
+      {
+        "question": "Describe a scenario where 'structured prompting' with specific output formats (e.g., JSON, XML) is crucial. What are the key elements of designing such prompts effectively?",
+        "options": [
+          "Structured prompting is only necessary for interacting with APIs.",
+          "Clear instructions on the desired format, including delimiters, keys, and data types, are essential for reliable structured output.",
+          "Models can automatically infer the desired output format without explicit instructions.",
+          "Using structured prompts always limits the creativity of the model."
+        ],
+        "correctAnswer": "Clear instructions on the desired format, including delimiters, keys, and data types, are essential for reliable structured output."
+      },
+      {
+        "question": "Discuss the challenges of evaluating the 'quality' and 'effectiveness' of prompts, especially for subjective tasks. What metrics or approaches can be used to assess prompt performance beyond simple accuracy?",
+        "options": [
+          "Accuracy is the only relevant metric for evaluating prompts.",
+          "Subjective tasks cannot be evaluated objectively.",
+          "Evaluation can involve human feedback, task-specific metrics (e.g., coherence, fluency, relevance), and A/B testing of different prompt variations.",
+          "The best way to evaluate a prompt is to see if the model produces the desired output once."
+        ],
+        "correctAnswer": "Evaluation can involve human feedback, task-specific metrics (e.g., coherence, fluency, relevance), and A/B testing of different prompt variations."
+      },
+      {
+        "question": "Explain the concept of 'prompt injection' and how it can be exploited to manipulate large language models. What are some advanced prompt engineering techniques to defend against such attacks?",
+        "options": [
+          "Prompt injection involves physically altering the model's parameters.",
+          "It refers to malicious prompts that override the intended instructions, requiring techniques like input sanitization, clear separation of instructions and user input, and output monitoring.",
+          "Prompt injection is only a concern for models deployed in untrusted environments.",
+          "There are no effective ways to prevent prompt injection attacks."
+        ],
+        "correctAnswer": "It refers to malicious prompts that override the intended instructions, requiring techniques like input sanitization, clear separation of instructions and user input, and output monitoring."
+      },
+      {
+        "question": "Describe the role of 'system prompts' in shaping the behavior and capabilities of large language models in specific applications. How do system prompts differ from user prompts, and when is their strategic use most critical?",
+        "options": [
+          "System prompts are only used during the model's training and have no impact on user interactions.",
+          "User prompts define the specific task, while system prompts set the overall context, personality, and constraints; their use is crucial for consistent and application-specific behavior.",
+          "System prompts are simply longer user prompts.",
+          "The use of system prompts is generally discouraged as it limits user flexibility."
+        ],
+        "correctAnswer": "User prompts define the specific task, while system prompts set the overall context, personality, and constraints; their use is crucial for consistent and application-specific behavior."
+      },
+      {
+        "question": "Discuss the implications of 'context window size' limitations on advanced prompt engineering. What strategies can be employed to handle tasks that exceed the model's context window?",
+        "options": [
+          "Context window size is not a significant limitation in modern large language models.",
+          "The only solution is to use models with larger context windows.",
+          "Strategies include summarization, document chunking, retrieval-augmented generation, and state management across multiple prompts.",
+          "Exceeding the context window always leads to complete failure of the model."
+        ],
+        "correctAnswer": "Strategies include summarization, document chunking, retrieval-augmented generation, and state management across multiple prompts."
+      },
+      {
+        "question": "Explain the concept of 'cognitive biases' in large language models and how prompt design can inadvertently amplify or mitigate these biases in the generated output. Provide examples.",
+        "options": [
+          "Cognitive biases are only present in the training data and cannot be influenced by prompts.",
+          "Prompts should always aim to eliminate all biases, even if it leads to less natural language.",
+          "Prompts can either reinforce existing biases by providing skewed examples or mitigate them by including diverse perspectives and explicitly asking for unbiased responses.",
+          "The temperature setting is the primary factor influencing bias in the output."
+        ],
+        "correctAnswer": "Prompts can either reinforce existing biases by providing skewed examples or mitigate them by including diverse perspectives and explicitly asking for unbiased responses."
+      },
+      {
+        "question": "Describe the advanced techniques involved in prompting for 'code generation,' including specifying programming languages, desired functionalities, and handling potential errors or ambiguities in the request.",
+        "options": [
+          "Natural language descriptions are always sufficient for code generation prompts.",
+          "Effective code generation prompts require precise language specifications, clear functional requirements, and strategies for handling potential ambiguities or requesting error handling.",
+          "Asking for the shortest possible code is always the best approach.",
+          "Prompting for code generation is fundamentally different from prompting for natural language tasks."
+        ],
+        "correctAnswer": "Effective code generation prompts require precise language specifications, clear functional requirements, and strategies for handling potential ambiguities or requesting error handling."
+      },
+      {
+        "question": "Discuss the challenges and strategies for prompting large language models to perform complex reasoning tasks, such as logical deduction, causal inference, and planning. How can 'chain-of-thought' prompting be extended for more sophisticated reasoning?",
+        "options": [
+          "Large language models cannot perform true reasoning; they only pattern-match.",
+          "Simply asking for the final answer is the most effective way to prompt for reasoning.",
+          "Chain-of-thought can be extended by prompting for more detailed intermediate steps, exploring alternative reasoning paths, and explicitly asking for justification of conclusions.",
+          "Reasoning ability is solely determined by the model's size and training data."
+        ],
+        "correctAnswer": "Chain-of-thought can be extended by prompting for more detailed intermediate steps, exploring alternative reasoning paths, and explicitly asking for justification of conclusions."
+      },
+      {
+        "question": "Explain the role of 'negative prompting' in generative models (e.g., for images or text) and how it can be used to refine and control the output by specifying what should be avoided.",
+        "options": [
+          "Negative prompting is only applicable to image generation.",
+          "It involves explicitly stating undesirable elements in the prompt to guide the model away from them, leading to more controlled and refined outputs.",
+          "Negative prompts always confuse the model and lead to worse results.",
+          "The opposite of the desired output should be used as the negative prompt."
+        ],
+        "correctAnswer": "It involves explicitly stating undesirable elements in the prompt to guide the model away from them, leading to more controlled and refined outputs."
+      },
+      {
+        "question": "Describe the advanced techniques for prompting language models to perform 'information extraction' from unstructured text, including handling ambiguity, extracting relationships, and structuring the output effectively.",
+        "options": [
+          "Information extraction can only be done with fine-tuned models, not through prompting.",
+          "Effective prompting involves clear instructions on the entities and relationships to extract, providing examples of the desired structured output, and handling potential ambiguities through contextual clues.",
+          "Simply asking the model to extract information is usually sufficient.",
+          "The complexity of information extraction tasks cannot be addressed through prompt engineering."
+        ],
+        "correctAnswer": "Effective prompting involves clear instructions on the entities and relationships to extract, providing examples of the desired structured output, and handling potential ambiguities through contextual clues."
+      },
+      {
+        "question": "Discuss the strategies for prompting large language models to generate creative content (e.g., stories, poems, music) while maintaining coherence, originality, and adherence to specific stylistic constraints.",
+        "options": [
+          "Creativity cannot be controlled through prompting; it is an inherent property of the model.",
+          "High temperature is the only way to encourage creative generation.",
+          "Effective strategies involve providing detailed stylistic guidelines, character descriptions, plot outlines, and iterative refinement based on initial outputs.",
+          "The best creative prompts are vague and open-ended."
+        ],
+        "correctAnswer": "Effective strategies involve providing detailed stylistic guidelines, character descriptions, plot outlines, and iterative refinement based on initial outputs."
+      },
+      {
+        "question": "Explain the concept of 'self-correction' or 'iterative refinement' in prompting. How can you design prompts that encourage the model to identify and improve its own initial outputs?",
+        "options": [
+          "Language models cannot self-correct; they require external feedback.",
+          "Prompting for self-correction involves explicitly asking the model to review its initial response for errors or areas of improvement and generate a revised version.",
+          "This technique always leads to infinite loops of revisions.",
+          "The temperature setting controls the model's ability to self-correct."
+        ],
+        "correctAnswer": "Prompting for self-correction involves explicitly asking the model to review its initial response for errors or areas of improvement and generate a revised version."
+      },
+      {
+        "question": "Describe the advanced techniques for prompting for 'translation' beyond simple word-for-word conversion, including handling idiomatic expressions, cultural nuances, and maintaining the intended tone and style.",
+        "options": [
+          "Direct translation prompts are always sufficient if the source and target languages are specified.",
+          "Effective translation prompts include context about the source text, desired tone, and explicit instructions on handling idioms and cultural references.",
+          "Language models automatically handle all translation nuances without specific prompting.",
+          "Fine-tuning is the only way to achieve high-quality translation."
+        ],
+        "correctAnswer": "Effective translation prompts include context about the source text, desired tone, and explicit instructions on handling idioms and cultural references."
+    },
+    {
+        "question": "Explain the concept of 'hallucinations' in large language models and discuss advanced prompting strategies to minimize their occurrence in critical applications.",
+        "options": [
+          "Hallucinations are random errors and cannot be controlled by prompting.",
+          "Providing more data in the prompt always reduces hallucinations.",
+          "Strategies include grounding the model in provided context (RAG), using strong factual constraints, and prompting for verification or uncertainty.",
+          "Lowering the temperature to zero eliminates hallucinations."
+        ],
+        "correctAnswer": "Strategies include grounding the model in provided context (RAG), using strong factual constraints, and prompting for verification or uncertainty."
+      },
+      {
+        "question": "Describe the challenges of prompting for tasks that require external tool usage (e.g., code execution, API calls) and how you would design prompts to ensure reliable and safe interaction with these tools.",
+        "options": [
+          "Large language models can automatically use external tools without specific prompting.",
+          "Prompts should clearly define the tool, its parameters, and the expected input/output format, along with safety constraints.",
+          "Allowing the model unrestricted access to external tools is always necessary for complex tasks.",
+          "The complexity of tool usage cannot be managed through prompting."
+        ],
+        "correctAnswer": "Prompts should clearly define the tool, its parameters, and the expected input/output format, along with safety constraints."
+      },
+      {
+        "question": "Discuss the advanced techniques for prompting for 'summarization' of long-form content, including handling information loss, maintaining coherence, and tailoring summaries to specific audiences.",
+        "options": [
+          "Simply asking for a summary is sufficient for any length of text.",
+          "Effective techniques involve specifying the desired length, key information to include, and the target audience, potentially using iterative prompting.",
+          "Long documents cannot be effectively summarized through prompting.",
+          "The best summaries are always the shortest ones."
+        ],
+        "correctAnswer": "Effective techniques involve specifying the desired length, key information to include, and the target audience, potentially using iterative prompting."
+      },
+      {
+        "question": "Explain the concept of 'chain-of-verification' in prompting and how it differs from 'chain-of-thought.' When would you use one over the other?",
+        "options": [
+          "They are the same technique with different names.",
+          "Chain-of-thought focuses on reasoning steps, while chain-of-verification involves the model explicitly checking its intermediate conclusions.",
+          "Chain-of-verification is only useful for mathematical problems.",
+          "Chain-of-thought is always more reliable than chain-of-verification."
+        ],
+        "correctAnswer": "Chain-of-thought focuses on reasoning steps, while chain-of-verification involves the model explicitly checking its intermediate conclusions."
+      },
+      {
+        "question": "Describe the advanced strategies for prompting for 'question answering' over complex documents or knowledge bases, including handling ambiguous questions and synthesizing information from multiple sources.",
+        "options": [
+          "Large language models can inherently answer any question from any document.",
+          "Effective prompting involves providing relevant context, breaking down complex questions, and instructing the model to synthesize information.",
+          "The accuracy of question answering is solely determined by the quality of the knowledge base.",
+          "Prompting cannot improve question answering performance over complex data."
+        ],
+        "correctAnswer": "Effective prompting involves providing relevant context, breaking down complex questions, and instructing the model to synthesize information."
+      },
+      {
+        "question": "Discuss the role of 'prompt embeddings' in understanding prompt similarity and relevance. How can this concept be applied in advanced prompt engineering workflows?",
+        "options": [
+          "Prompt embeddings are only used for training language models.",
+          "They represent prompts in a vector space, allowing for semantic similarity comparisons, which can be used for prompt selection, clustering, and optimization.",
+          "Prompt embeddings are a measure of prompt length.",
+          "This concept has no practical application in prompt engineering."
+        ],
+        "correctAnswer": "They represent prompts in a vector space, allowing for semantic similarity comparisons, which can be used for prompt selection, clustering, and optimization."
+      },
+      {
+        "question": "Explain the advanced techniques for prompting for 'dialogue generation' that go beyond simple turn-taking, including maintaining consistent persona, handling topic shifts, and driving the conversation towards a specific goal.",
+        "options": [
+          "Natural language models can inherently generate engaging dialogues.",
+          "Effective techniques involve using system prompts to define persona and goals, and carefully managing context and topic transitions in user prompts.",
+          "The quality of dialogue generation is solely determined by the model's size.",
+          "Prompting cannot significantly influence the flow and quality of a dialogue."
+        ],
+        "correctAnswer": "Effective techniques involve using system prompts to define persona and goals, and carefully managing context and topic transitions in user prompts."
+      },
+      {
+        "question": "Describe the concept of 'active learning' in the context of prompt engineering. How can user interactions and feedback be leveraged to iteratively improve prompt effectiveness?",
+        "options": [
+          "Active learning is only relevant during the model's training phase.",
+          "By analyzing user feedback on generated outputs, prompt engineers can identify areas for improvement and refine prompts accordingly.",
+          "User feedback always introduces bias and should be ignored.",
+          "Prompt effectiveness cannot be improved after initial deployment."
+        ],
+        "correctAnswer": "By analyzing user feedback on generated outputs, prompt engineers can identify areas for improvement and refine prompts accordingly."
+      },
+      {
+        "question": "Discuss the advanced strategies for prompting for 'style transfer' in text generation, including adapting the writing style of a specific author or genre while preserving the original content.",
+        "options": [
+          "Style transfer is an impossible task for large language models.",
+          "Effective techniques involve providing examples of the target style in the prompt and explicitly instructing the model to adopt that style.",
+          "The temperature setting is the primary control for style transfer.",
+          "Style transfer always results in nonsensical output."
+        ],
+        "correctAnswer": "Effective techniques involve providing examples of the target style in the prompt and explicitly instructing the model to adopt that style."
+      },
+      {
+        "question": "Explain the concept of 'semantic search' in the context of prompt engineering. How can you design prompts to effectively leverage semantic search capabilities for retrieving relevant information?",
+        "options": [
+          "Semantic search is irrelevant to prompt engineering.",
+          "Prompts should be formulated to capture the underlying meaning of the query, allowing semantic search to retrieve contextually relevant information.",
+          "Keyword-based search is always more effective than semantic search.",
+          "The design of the prompt has no impact on the effectiveness of semantic search."
+        ],
+        "correctAnswer": "Prompts should be formulated to capture the underlying meaning of the query, allowing semantic search to retrieve contextually relevant information."
+      },
+      {
+        "question": "Describe the advanced techniques for prompting for 'data augmentation' in natural language processing tasks. How can language models be used to generate synthetic data that improves model training?",
+        "options": [
+          "Data augmentation can only be done with rule-based methods.",
+          "Effective prompting involves instructing the model to generate variations of existing data while preserving the core meaning or intent.",
+          "Synthetic data generated by language models is always low quality.",
+          "Prompting for data augmentation is inefficient compared to traditional methods."
+        ],
+        "correctAnswer": "Effective prompting involves instructing the model to generate variations of existing data while preserving the core meaning or intent."
+      },
+      {
+        "question": "Discuss the challenges and advanced prompting strategies for handling 'ambiguity' and 'underspecification' in user queries to large language models.",
+        "options": [
+          "Large language models can always resolve ambiguity on their own.",
+          "Strategies include asking clarifying questions within the prompt, providing multiple interpretations, or making reasonable assumptions based on context.",
+          "The best approach is to always reject ambiguous queries.",
+          "Prompting has no impact on how a model handles ambiguity."
+        ],
+        "correctAnswer": "Strategies include asking clarifying questions within the prompt, providing multiple interpretations, or making reasonable assumptions based on context."
+      },
+      {
+        "question": "Explain the concept of 'transfer learning' in the context of prompt engineering. How can knowledge gained from prompting one task or model be applied to improve performance on a different task or model?",
+        "options": [
+          "Transfer learning is only relevant during model pre-training.",
+          "Effective prompt design often involves adapting successful prompting strategies and patterns from related tasks or models.",
+          "Prompting strategies are highly specific to individual tasks and models.",
+          "There is no concept of transfer learning in prompt engineering."
+        ],
+        "correctAnswer": "Effective prompt design often involves adapting successful prompting strategies and patterns from related tasks or models."
+      },
+      {
+        "question": "Describe the advanced techniques for prompting for 'reasoning over knowledge graphs,' including navigating relationships and inferring new information.",
+        "options": [
+          "Knowledge graph reasoning cannot be done through prompting.",
+          "Effective prompting involves explicitly guiding the model through the graph relationships and asking for inferences based on the connections.",
+          "The structure of the knowledge graph is the only factor determining reasoning ability.",
+          "Natural language prompts are insufficient for interacting with knowledge graphs."
+        ],
+        "correctAnswer": "Effective prompting involves explicitly guiding the model through the graph relationships and asking for inferences based on the connections."
+      },
+      {
+        "question": "Discuss the ethical implications of using large language models for 'persuasion' or 'influence' through carefully crafted prompts. What safeguards should prompt engineers consider?",
+        "options": [
+          "Ethical considerations are irrelevant in prompt engineering.",
+          "Prompt engineers should be mindful of potential manipulation and design prompts with transparency and user autonomy in mind.",
+          "The responsibility for ethical use lies solely with the end-user.",
+          "Language models are incapable of true persuasion."
+        ],
+        "correctAnswer": "Prompt engineers should be mindful of potential manipulation and design prompts with transparency and user autonomy in mind."
+      },
+      {
+        "question": "Explain the concept of 'reinforcement learning from human feedback (RLHF)' and its relationship to prompt engineering. How can well-designed prompts facilitate the collection of high-quality human feedback?",
+        "options": [
+          "RLHF is entirely separate from prompt engineering.",
+          "Clear and specific prompts that elicit targeted behaviors and outputs make it easier for humans to provide useful feedback.",
+          "Ambiguous prompts are better for collecting diverse feedback.",
+          "Human feedback is always unreliable and should not be used to improve models."
+        ],
+        "correctAnswer": "Clear and specific prompts that elicit targeted behaviors and outputs make it easier for humans to provide useful feedback."
+      },
+      {
+        "question": "Describe the advanced techniques for prompting for 'code debugging' or 'explanation' of existing code. What key information should be included in such prompts?",
+        "options": [
+          "Language models cannot understand or debug code through prompting.",
+          "Effective prompts include the code snippet, the error message (if any), and a clear request for explanation or debugging suggestions.",
+          "Asking for the shortest possible explanation is always the best approach.",
+          "The complexity of code debugging cannot be addressed through prompting."
+        ],
+        "correctAnswer": "Effective prompts include the code snippet, the error message (if any), and a clear request for explanation or debugging suggestions."
+      },
+      {
+        "question": "Discuss the strategies for prompting large language models to handle 'out-of-domain' or 'novel' inputs gracefully. How can you design prompts to encourage the model to admit uncertainty or request clarification?",
+        "options": [
+          "Large language models should always provide an answer, regardless of the input.",
+          "Prompts can explicitly instruct the model to state when it is unsure or to ask for more information when the input is outside its knowledge domain.",
+          "Lowering the temperature to zero forces the model to admit uncertainty.",
+          "The ability to handle out-of-domain inputs is solely determined by the model's training data."
+        ],
+        "correctAnswer": "Prompts can explicitly instruct the model to state when it is unsure or to ask for more information when the input is outside its knowledge domain."
+      },
+      {
+        "question": "Explain the concept of 'prompt optimization' and discuss advanced techniques for improving prompt efficiency (e.g., reducing token count) without sacrificing performance.",
+        "options": [
+          "Prompt length has no impact on efficiency.",
+          "Techniques include concise wording, removing redundant information, and strategic use of formatting and keywords.",
+          "The only way to improve efficiency is to use smaller models.",
+          "Optimized prompts always lead to lower quality outputs."
+        ],
+        "correctAnswer": "Techniques include concise wording, removing redundant information, and strategic use of formatting and keywords."
+      },
+      {
+        "question": "Describe the advanced techniques for prompting for 'comparison' or 'contrast' between different entities or concepts. How can you structure prompts to elicit insightful and well-organized comparisons?",
+        "options": [
+          "Language models can automatically compare entities without specific prompting.",
+          "Effective prompts explicitly ask for comparisons based on specific criteria and suggest a structured output format (e.g., tables, lists).",
+          "Asking for a simple list of differences is always sufficient.",
+          "The ability to compare entities is solely determined by the model's knowledge base."
+        ],
+        "correctAnswer": "Effective prompts explicitly ask for comparisons based on specific criteria and suggest a structured output format (e.g., tables, lists)."
+      }
+    ]
+}

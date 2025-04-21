@@ -1,0 +1,201 @@
+{
+    "category": "Prompt Engineering",
+    "title": "Prompt Engineering Foundations",
+    "level": "Beginner",
+    "Difficulty": "Medium",
+    "timer": "15 minutes",
+    "total_marks": 20,
+    "marks_per_question": 1,
+    "skill": "35%",
+    "knowledge": "50%",
+    "application": "15%",
+    "why": "The Prompt Engineering Foundations exam is designed to test foundational knowledge and practical prompting skills for those beginning to explore AI tools like ChatGPT. It focuses on prompt refinement, context control, prompt types, temperature/tokens, and common mistakes, enabling learners to use prompting more intentionally and with higher precision.",
+    "questions": [
+      {
+        "question": "Which of the following best defines prompt engineering?",
+        "options": ["Training AI models from scratch", "Creating user interfaces", "Crafting inputs that guide AI behavior", "Debugging programming errors"],
+        "correctAnswer": "Crafting inputs that guide AI behavior"
+      },
+      {
+        "question": "Why is it useful to give instructions with context in a prompt?",
+        "options": ["It makes the AI ignore the prompt", "It helps AI generate irrelevant answers", "It guides AI to give more relevant and focused responses", "It shortens the output"],
+        "correctAnswer": "It guides AI to give more relevant and focused responses"
+      },
+      {
+        "question": "What does a 'role prompt' typically do?",
+        "options": ["Assigns a task to the AI", "Changes the temperature", "Limits the response length", "Creates a random output"],
+        "correctAnswer": "Assigns a task to the AI"
+      },
+      {
+        "question": "Which prompt is more effective for summarizing text?",
+        "options": [
+          "Summarize the following passage in 3 bullet points.",
+          "Talk about this.",
+          "Make something from this.",
+          "Give me something interesting."
+        ],
+        "correctAnswer": "Summarize the following passage in 3 bullet points."
+      },
+      {
+        "question": "Which of the following is a 'few-shot prompt' example?",
+        "options": [
+          "Translate this sentence to French.",
+          "Provide 3 examples and then ask the model to continue with another.",
+          "Ask the AI to generate a story.",
+          "Tell the model to answer a quiz."
+        ],
+        "correctAnswer": "Provide 3 examples and then ask the model to continue with another."
+      },
+      {
+        "question": "What effect does increasing the temperature have?",
+        "options": [
+          "Makes output more deterministic",
+          "Reduces word count",
+          "Increases randomness and creativity",
+          "Speeds up processing time"
+        ],
+        "correctAnswer": "Increases randomness and creativity"
+      },
+      {
+        "question": "Why is it important to set constraints (e.g., word count, tone) in prompts?",
+        "options": [
+          "So the AI gets confused",
+          "To waste time",
+          "To help AI deliver outputs in a desired format",
+          "To make the prompt longer"
+        ],
+        "correctAnswer": "To help AI deliver outputs in a desired format"
+      },
+      {
+        "question": "What is a benefit of specifying the output format in your prompt?",
+        "options": [
+          "No benefit at all",
+          "AI gives a random response",
+          "Better control over the structure of the answer",
+          "It makes AI slower"
+        ],
+        "correctAnswer": "Better control over the structure of the answer"
+      },
+      {
+        "question": "What is a common issue with vague prompts?",
+        "options": [
+          "They save time",
+          "They reduce accuracy",
+          "They improve results",
+          "They boost creativity only"
+        ],
+        "correctAnswer": "They reduce accuracy"
+      },
+      {
+        "question": "Which of these is an example of a role-based prompt?",
+        "options": [
+          "Write something creative.",
+          "You are a professional resume editor. Edit the following resume.",
+          "Tell me a story.",
+          "Give me anything."
+        ],
+        "correctAnswer": "You are a professional resume editor. Edit the following resume."
+      },
+      {
+        "question": "What is 'token limit' in language models?",
+        "options": [
+          "Maximum number of users",
+          "Maximum response length including prompt and output",
+          "Number of files uploaded",
+          "Price of the subscription"
+        ],
+        "correctAnswer": "Maximum response length including prompt and output"
+      },
+      {
+        "question": "Why might adding examples to a prompt improve performance?",
+        "options": [
+          "It confuses the model",
+          "It gives AI context for expected output style",
+          "It shortens the response",
+          "It reduces creativity"
+        ],
+        "correctAnswer": "It gives AI context for expected output style"
+      },
+      {
+        "question": "What is chain-of-thought prompting used for?",
+        "options": [
+          "Generating funny content",
+          "Breaking complex tasks into logical steps",
+          "Creating art",
+          "Shortening responses"
+        ],
+        "correctAnswer": "Breaking complex tasks into logical steps"
+      },
+      {
+        "question": "Which of these helps refine a prompt for a better response?",
+        "options": [
+          "Adding clear instructions and examples",
+          "Making it vague and short",
+          "Typing in CAPS",
+          "Using emojis only"
+        ],
+        "correctAnswer": "Adding clear instructions and examples"
+      },
+      {
+        "question": "Which prompt is most likely to get a creative story?",
+        "options": [
+          "Write a short story about a talking dog that becomes a superhero.",
+          "What is a dog?",
+          "Tell me something.",
+          "Explain history."
+        ],
+        "correctAnswer": "Write a short story about a talking dog that becomes a superhero."
+      },
+      {
+        "question": "What does temperature=0 typically produce?",
+        "options": [
+          "Unpredictable outputs",
+          "Highly varied responses",
+          "Consistent and focused answers",
+          "Blank responses"
+        ],
+        "correctAnswer": "Consistent and focused answers"
+      },
+      {
+        "question": "When using a prompt to generate Python code, what is essential to include?",
+        "options": [
+          "Language name and task description",
+          "A picture",
+          "Emojis",
+          "A joke"
+        ],
+        "correctAnswer": "Language name and task description"
+      },
+      {
+        "question": "What makes a prompt iterative?",
+        "options": [
+          "It loops forever",
+          "It uses emojis",
+          "You revise and adjust it over time for better output",
+          "It includes random data"
+        ],
+        "correctAnswer": "You revise and adjust it over time for better output"
+      },
+      {
+        "question": "Which of the following can improve prompt output clarity?",
+        "options": [
+          "Multiple commands in one line",
+          "Slang and abbreviations",
+          "Breaking instructions into steps",
+          "Asking for randomness"
+        ],
+        "correctAnswer": "Breaking instructions into steps"
+      },
+      {
+        "question": "Which prompt type is best suited for classification tasks?",
+        "options": [
+          "Storytelling prompt",
+          "Binary prompt (e.g., Is this a positive or negative review?)",
+          "Translation prompt",
+          "Poem generation prompt"
+        ],
+        "correctAnswer": "Binary prompt (e.g., Is this a positive or negative review?)"
+      }
+    ]
+  }
+  

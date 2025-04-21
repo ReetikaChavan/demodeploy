@@ -116,6 +116,7 @@ function getAllProblems(dataDir: string): Problem[] {
     "cet": "CET",
     "dsa": "DSA",
     "interview-preparation": "Interview Preparation",
+    "prompt-engineering": "Prompt Engineering",
   };
 
   try {

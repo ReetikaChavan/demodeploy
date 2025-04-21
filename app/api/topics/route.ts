@@ -23,6 +23,7 @@ export async function GET(req: Request) {
       "cet": "CET",
       "dsa": "DSA",
       "interview-preparation": "Interview Preparation",
+      "prompt-engineering": "Prompt Engineering",
     };
 
     const topics = fs.readdirSync(dataDir);

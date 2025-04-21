@@ -1,0 +1,131 @@
+{
+    "category": "Prompt Engineering",
+    "title": "Prompt Engineering Skill Builder",
+    "level": "Intermediate",
+    "Difficulty": "Easy",
+    "timer": "15 minutes",
+    "total_marks": 20,
+    "marks_per_question": 1,
+    "skill": "45%",
+    "knowledge": "40%",
+    "application": "15%",
+    "why": "The 'Prompt Engineering Skill Builder' exam helps learners in the intermediate stage apply prompt structures, understand prompt tuning basics, and manage clarity, tone, and structure. It introduces real-world examples and improves reliability and consistency in AI outputs.",
+    "questions": [
+      {
+        "question": "What does 'prompt tuning' mean in the context of prompt engineering?",
+        "options": ["Training the model", "Optimizing prompt wording for better results", "Creating new datasets", "Editing AI code"],
+        "correctAnswer": "Optimizing prompt wording for better results"
+      },
+      {
+        "question": "Which prompt will likely result in a more factual response?",
+        "options": ["Tell me anything", "Explain moon landing with sources", "What’s fun about Mars?", "Tell me a joke about planets"],
+        "correctAnswer": "Explain moon landing with sources"
+      },
+      {
+        "question": "When should you use examples in a prompt?",
+        "options": ["To confuse the model", "To guide it with format and context", "Only when asking creative questions", "Never"],
+        "correctAnswer": "To guide it with format and context"
+      },
+      {
+        "question": "Why is it important to define the role of the assistant in a prompt?",
+        "options": ["To reduce memory", "To increase randomness", "To guide tone and content", "To limit answers"],
+        "correctAnswer": "To guide tone and content"
+      },
+      {
+        "question": "Which prompt would be best to get a summary?",
+        "options": ["Explain like a professor", "Summarize this in 3 bullet points", "Tell me more", "Be creative"],
+        "correctAnswer": "Summarize this in 3 bullet points"
+      },
+      {
+        "question": "What does lowering the temperature parameter do?",
+        "options": ["Increases creativity", "Reduces randomness", "Speeds up response", "Adds emotion"],
+        "correctAnswer": "Reduces randomness"
+      },
+      {
+        "question": "How can you help an AI avoid bias in its responses?",
+        "options": ["Use emotionally charged prompts", "Use politically leading questions", "Be neutral and objective in prompts", "Ask for shocking facts"],
+        "correctAnswer": "Be neutral and objective in prompts"
+      },
+      {
+        "question": "Which structure works best for instructional content?",
+        "options": ["Open-ended", "Bullet points", "Creative poetry", "Slang and emojis"],
+        "correctAnswer": "Bullet points"
+      },
+      {
+        "question": "What is the benefit of specifying output format (like JSON or list)?",
+        "options": ["It makes answers longer", "Ensures structure and parsing", "It’s easier to ignore", "No benefit"],
+        "correctAnswer": "Ensures structure and parsing"
+      },
+      {
+        "question": "Why is clarity in prompts important?",
+        "options": ["To confuse the model", "To ensure more predictable and relevant output", "To generate surprises", "To test AI randomness"],
+        "correctAnswer": "To ensure more predictable and relevant output"
+      },
+      {
+        "question": "What is the purpose of 'few-shot' prompting?",
+        "options": ["To test user memory", "To generate jokes", "To show examples and teach the model", "To adjust model weights"],
+        "correctAnswer": "To show examples and teach the model"
+      },
+      {
+        "question": "Which is the best use of an instructional prompt?",
+        "options": ["Tell me something", "Teach me how to write a resume", "Be funny", "Draw a cat"],
+        "correctAnswer": "Teach me how to write a resume"
+      },
+      {
+        "question": "When should chain-of-thought prompting be used?",
+        "options": ["In poetry", "For step-by-step logic and reasoning tasks", "In jokes", "To change formatting"],
+        "correctAnswer": "For step-by-step logic and reasoning tasks"
+      },
+      {
+        "question": "Which of the following is best for classification tasks?",
+        "options": ["Ask the AI to rate sentiment as Positive, Neutral, or Negative", "Tell a story", "Ask it to write a poem", "Ask for random output"],
+        "correctAnswer": "Ask the AI to rate sentiment as Positive, Neutral, or Negative"
+      },
+      {
+        "question": "Which prompt format is best when asking AI to rewrite text in a specific tone?",
+        "options": ["Tell a joke", "Summarize", "Rewrite the following in a formal tone", "Translate to French"],
+        "correctAnswer": "Rewrite the following in a formal tone"
+      },
+      {
+        "question": "Which prompt will generate a structured answer?",
+        "options": [
+          "Explain everything",
+          "What happened in 2020?",
+          "List 3 events from 2020 in bullet points",
+          "Tell me a long story"
+        ],
+        "correctAnswer": "List 3 events from 2020 in bullet points"
+      },
+      {
+        "question": "What’s the purpose of adding constraints like word limits?",
+        "options": ["To annoy the model", "To avoid output", "To get concise answers", "To confuse the AI"],
+        "correctAnswer": "To get concise answers"
+      },
+      {
+        "question": "How should you instruct the AI to speak as a doctor?",
+        "options": [
+          "Talk smart",
+          "You are a professional doctor, respond accordingly",
+          "Act funny",
+          "Be confusing"
+        ],
+        "correctAnswer": "You are a professional doctor, respond accordingly"
+      },
+      {
+        "question": "What does an ambiguous prompt lead to?",
+        "options": ["Clear answers", "Unexpected or off-topic outputs", "Shorter responses", "High accuracy"],
+        "correctAnswer": "Unexpected or off-topic outputs"
+      },
+      {
+        "question": "Which option best improves relevance?",
+        "options": [
+          "Use vague wording",
+          "Provide clear instruction and specific context",
+          "Add random questions",
+          "Lower output length"
+        ],
+        "correctAnswer": "Provide clear instruction and specific context"
+      }
+    ]
+  }
+  

@@ -164,95 +164,119 @@ const Description = ({ title, category, onBack }: DescriptionProps) => {
   const isLocked =
     attemptData?.isLocked || (attemptData?.attemptsLeft ?? 0) <= 0
 
-  // Function to update sidebar position
-  const updateSidebarPosition = () => {
-    if (titleCardRef.current && mainContainerRef.current && !isMobile) {
-      const titleCardRect = titleCardRef.current.getBoundingClientRect()
-      const containerRect = mainContainerRef.current.getBoundingClientRect()
+ // Function to update sidebar position
+const updateSidebarPosition = () => {
+  if (titleCardRef.current && mainContainerRef.current && sidebarRef.current && !isMobile) {
+    const titleCardRect = titleCardRef.current.getBoundingClientRect();
+    const containerRect = mainContainerRef.current.getBoundingClientRect();
 
-      const rightOffset = window.innerWidth - containerRect.right
+    // Find the bottom of the content section with the start button
+    const startButtonSection = document.querySelector('.mt-6'); // Select the section with the start button
+    const contentBottom = startButtonSection 
+      ? startButtonSection.getBoundingClientRect().bottom 
+      : containerRect.bottom;
 
-      setSidebarOffset({
-        top: titleCardRect.bottom + 20,
-        right: Math.max(rightOffset, 20),
-      })
+    const rightOffset = window.innerWidth - containerRect.right;
+
+    setSidebarOffset({
+      top: titleCardRect.bottom + 20,
+      right: Math.max(rightOffset, 20),
+    });
+    
+    // Calculate the height from the sidebar's top to the bottom of the content
+    const viewportHeight = window.innerHeight;
+    const availableHeight = Math.min(
+      contentBottom - titleCardRect.bottom - 20, // Height to match content
+      viewportHeight - titleCardRect.bottom - 40  // Max height to prevent overflow
+    );
+    
+    // Set a minimum height of 480px (original value) or extend to match content
+    sidebarRef.current.style.height = `${Math.max(availableHeight, 480)}px`;
+  }
+};
+
+useEffect(() => {
+  const checkScreenSize = () => {
+    const newIsMobile = window.innerWidth <= 1024;
+    setIsMobile(newIsMobile);
+    if (!newIsMobile) {
+      updateSidebarPosition();
     }
+  };
+
+  checkScreenSize();
+
+  const handleResize = () => {
+    checkScreenSize();
+  };
+
+  const handleScroll = () => {
+    if (!isMobile) {
+      updateSidebarPosition();
+    }
+  };
+
+  window.addEventListener("resize", handleResize);
+  window.addEventListener("scroll", handleScroll);
+
+  const observer = new MutationObserver(() => {
+    updateSidebarPosition();
+  });
+
+  if (document.body) {
+    observer.observe(document.body, {
+      attributes: true,
+      childList: true,
+      subtree: true,
+    });
   }
 
-  useEffect(() => {
-    const checkScreenSize = () => {
-      const newIsMobile = window.innerWidth <= 1024
-      setIsMobile(newIsMobile)
-      if (!newIsMobile) {
-        updateSidebarPosition()
-      }
-    }
+  // Call sidebar
+  const timeoutId = setTimeout(updateSidebarPosition, 500);
 
-    checkScreenSize()
+  // Cleanup
+  return () => {
+    window.removeEventListener("resize", handleResize);
+    window.removeEventListener("scroll", handleScroll);
+    observer.disconnect();
+    clearTimeout(timeoutId);
+  };
+}, [isMobile]);
 
-    const handleResize = () => {
-      checkScreenSize()
-    }
-
-    const handleScroll = () => {
-      if (!isMobile) {
-        updateSidebarPosition()
-      }
-    }
-
-    window.addEventListener("resize", handleResize)
-    window.addEventListener("scroll", handleScroll)
-
-    const observer = new MutationObserver(() => {
-      updateSidebarPosition()
-    })
-
-    if (document.body) {
-      observer.observe(document.body, {
-        attributes: true,
-        childList: true,
-        subtree: true,
-      })
-    }
-
-    // Call sidebar
-    const timeoutId = setTimeout(updateSidebarPosition, 500)
-
-    // Cleanup
-    return () => {
-      window.removeEventListener("resize", handleResize)
-      window.removeEventListener("scroll", handleScroll)
-      observer.disconnect()
-      clearTimeout(timeoutId)
-    }
-  }, [isMobile])
-
-  // Called after exam data loads to update positions
-  useEffect(() => {
-    if (!loading && examData) {
-      updateSidebarPosition()
-    }
-  }, [loading, examData])
-
-  // Toggle menu function
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
+// Called after exam data loads to update positions
+useEffect(() => {
+  if (!loading && examData) {
+    updateSidebarPosition();
   }
+}, [loading, examData]);
 
-  // percentage string to no
-  const parsePercentage = (value: string): number => {
-    if (!value) return 0
-    const match = value.match(/(\d+)/)
-    return match && match[1] ? parseInt(match[1]) : 0
+// Update sidebar when content expands (Read More/Less)
+useEffect(() => {
+  if (!isMobile && examData) {
+    // Small delay to ensure DOM updates
+    const timeoutId = setTimeout(updateSidebarPosition, 100);
+    return () => clearTimeout(timeoutId);
   }
+}, [showFullText, isMobile, examData]);
 
-  const limitWords = (text: string, wordLimit: number) => {
-    const words = text.split(" ")
-    return words.length > wordLimit
-      ? words.slice(0, wordLimit).join(" ") + "..."
-      : text
-  }
+// Toggle menu function
+const toggleMenu = () => {
+  setIsMenuOpen(!isMenuOpen);
+};
 
+// percentage string to no
+const parsePercentage = (value: string): number => {
+  if (!value) return 0;
+  const match = value.match(/(\d+)/);
+  return match && match[1] ? parseInt(match[1]) : 0;
+};
+
+const limitWords = (text: string, wordLimit: number) => {
+  const words = text.split(" ");
+  return words.length > wordLimit
+    ? words.slice(0, wordLimit).join(" ") + "..."
+    : text;
+};
   // Generate or retrieve id
   useEffect(() => {
     let storedDeviceId = localStorage.getItem("deviceId")
@@ -664,7 +688,7 @@ const Description = ({ title, category, onBack }: DescriptionProps) => {
               {examData && showFullText
                 ? examData.why
                 : examData
-                  ? limitWords(examData.why, isMobile ? 15 : 35)
+                  ? limitWords(examData.why, isMobile ? 15 : 30)
                   : ""}
             </p>
             {examData && (
@@ -788,16 +812,24 @@ const Description = ({ title, category, onBack }: DescriptionProps) => {
       )}
 
       {/* Sidebar */}
-      <div
-        className={` ${
-          isMobile
-            ? `fixed inset-y-0 right-0 z-40 w-[200px] transition-transform duration-300
-              ease-in-out`
-            : "absolute top-8 right-0 w-[200px]"
-          } ${isMobile && !isMenuOpen ? "translate-x-full" : "translate-x-0"} flex
-          max-h-[480px] min-h-[480px] flex-col overflow-auto overflow-y-hidden
-          rounded-l-3xl bg-white p-3 shadow-lg`}
-      >
+<div
+  className={` ${
+    isMobile
+      ? `fixed inset-y-0 right-0 z-40 w-[200px] transition-transform duration-300
+          ease-in-out`
+      : "absolute right-0 w-[200px]"
+    } ${isMobile && !isMenuOpen ? "translate-x-full" : "translate-x-0"} flex
+    flex-col overflow-auto overflow-y-hidden
+    rounded-l-3xl bg-white p-3 shadow-lg`}
+  style={{
+    top: isMobile ? '0' : `${sidebarOffset.top}px`,
+    // For mobile: full height, for desktop: auto height with minimum of original size
+    height: isMobile ? '100%' : 'auto',
+    minHeight: isMobile ? 'auto' : '480px', 
+    maxHeight: isMobile ? '100%' : 'calc(100vh - 120px)'
+  }}
+  ref={sidebarRef}
+>
         {/* category name */}
         <div
           className="absolute top-0 left-1/2 -translate-x-1/2 rounded-t-none rounded-b-3xl bg-black
@@ -844,24 +876,6 @@ const Description = ({ title, category, onBack }: DescriptionProps) => {
                 stroke="#FFCC66"
                 strokeWidth="4"
               />
-
-              {/* Middle Vertical Line */}
-              <line
-                x1="70"
-                y1="10.5"
-                x2="70"
-                y2="2.5"
-                stroke={theme === "dark" ? "#E5E7EB" : "#0C0C0C"}
-                strokeWidth="2"
-              />
-
-              {/* Top Horizontal Line */}
-              <path
-                d="M44 2H94"
-                stroke={theme === "dark" ? "#E5E7EB" : "#0C0C0C"}
-                strokeWidth="3"
-                strokeLinecap="round"
-              />
             </svg>
 
             {/* Timer Value */}
@@ -891,30 +905,52 @@ const Description = ({ title, category, onBack }: DescriptionProps) => {
         </div>
 
         {/* Status */}
-        <div className="mt-1 space-y-1 pl-3">
-          <div className="flex items-center justify-end gap-2">
-            <span className="text-2sm w-40 text-right">Not visited</span>
-            <span className="h-4 w-4 rounded-full bg-[#D9D9D9]"></span>
-          </div>
-          <div className="flex items-center justify-end gap-2">
-            <span className="text-2sm w-40 text-right">Saved answers</span>
-            <span className="h-4 w-4 rounded-full bg-[#CCEEAA]"></span>
-          </div>
-          <div className="flex items-center justify-end gap-2">
-            <span className="text-2sm w-40 text-right">Marked for Review</span>
-            <span className="h-4 w-4 rounded-full bg-[#AACCFF]"></span>
-          </div>
-          <div className="flex items-center justify-end gap-2">
-            <span className="text-2sm w-40 text-right">Not answered</span>
-            <span className="h-4 w-4 rounded-full bg-[#FFB1AA]"></span>
-          </div>
-        </div>
+<div className="mt-1 space-y-1 pl-3">
+  {/* Not visited */}
+  <div className="flex items-center justify-end gap-2">
+    <span className="text-2sm w-40 text-right">Not visited</span>
+    <span className="h-6 w-6 flex items-center justify-center rounded-full bg-[#D9D9D9]">
+      <svg className="h-4 w-4 text-white" fill="none" stroke="white" strokeWidth="2" viewBox="0 0 24 24">
+        <line x1="18" y1="6" x2="6" y2="18" />
+      </svg>
+    </span>
+  </div>
+  {/* Saved answers */}
+  <div className="flex items-center justify-end gap-2">
+    <span className="text-2sm w-40 text-right">Saved answers</span>
+    <span className="h-6 w-6 flex items-center justify-center rounded-full bg-[#CCEEAA]">
+      <svg className="h-4.5 w-4.5 text-white" fill="none" stroke="white" strokeWidth="3" viewBox="0 0 24 24">
+        <path d="M5 13l4 4L19 7" />
+      </svg>
+    </span>
+  </div>
+  {/* Not sure */}
+  <div className="flex items-center justify-end gap-2">
+    <span className="text-2sm w-40 text-right">Not sure</span>
+    <span className="h-6 w-6 flex items-center justify-center rounded-full bg-[#AACCFF]">
+      <svg className="h-4 w-1 text-white" fill="white" viewBox="0 0 4 16">
+        <rect x="1" y="0" width="2" height="10" rx="1" />
+        <rect x="1" y="12" width="2" height="2" rx="1" />
+      </svg>
+    </span>
+  </div>
+  {/* Not answered */}
+  <div className="flex items-center justify-end gap-2">
+    <span className="text-2sm w-40 text-right">Not answered</span>
+    <span className="h-6 w-6 flex items-center justify-center rounded-full bg-[#FFB1AA]">
+      <svg className="h-4 w-4 text-white" fill="none" stroke="white" strokeWidth="2" viewBox="0 0 24 24">
+        <line x1="6" y1="6" x2="18" y2="18" />
+        <line x1="6" y1="18" x2="18" y2="6" />
+      </svg>
+    </span>
+  </div>
+</div>
 
         {/* Question no */}
         <div className="relative left-2 mt-3 w-fit rounded-3xl bg-[#F7F7F7] p-2">
-          <h3 className="sm:text-2sm mr-2 mb-2 text-right text-base font-semibold">
-            Questions
-          </h3>
+  <h3 className="sm:text-2sm mr-2 mb-2 text-right text-base font-semibold">
+    Questions
+  </h3>
           <ScrollContainer>
             <div className="grid w-full grid-cols-5 gap-1 pr-1">
               {examData?.totalQuestions

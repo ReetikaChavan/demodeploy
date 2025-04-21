@@ -1,0 +1,186 @@
+{
+    "category": "Prompt Engineering",
+    "title": "Structured Prompting for Beginners",
+    "level": "Beginner",
+    "Difficulty": "Hard",
+    "timer": "20 minutes",
+    "total_marks": 25,
+    "marks_per_question": 1,
+    "skill": "30%",
+    "knowledge": "40%",
+    "application": "30%",
+    "why": "The 'Structured Prompting for Beginners' exam challenges beginners with a deeper exploration into effective prompt construction, handling edge cases, response evaluation, prompt patterns, and mitigation of AI hallucinations. It helps users transition from basic prompt users to intentional, efficient prompt engineers.",
+    "questions": [
+      {
+        "question": "Which of the following is a major cause of AI hallucination?",
+        "options": ["Lack of examples", "Too much punctuation", "Ambiguous or open-ended prompts", "High word count"],
+        "correctAnswer": "Ambiguous or open-ended prompts"
+      },
+      {
+        "question": "How can you reduce hallucinated facts in AI responses?",
+        "options": ["Use jokes in prompts", "Add fake examples", "Specify data sources or ask for citations", "Lower the temperature to zero"],
+        "correctAnswer": "Specify data sources or ask for citations"
+      },
+      {
+        "question": "What does the 'zero-shot' technique imply in prompting?",
+        "options": ["The model trains in real-time", "No examples are given in the prompt", "The model asks questions", "The user gives multiple demos"],
+        "correctAnswer": "No examples are given in the prompt"
+      },
+      {
+        "question": "Why is step-by-step reasoning important in complex prompts?",
+        "options": ["To make the output creative", "To limit the length", "To reduce randomness", "To guide the model logically toward a better answer"],
+        "correctAnswer": "To guide the model logically toward a better answer"
+      },
+      {
+        "question": "Which method is ideal for improving accuracy in numerical tasks?",
+        "options": ["Adding emojis", "Increasing temperature", "Chain-of-thought prompting", "Asking creative questions"],
+        "correctAnswer": "Chain-of-thought prompting"
+      },
+      {
+        "question": "Which is most likely to prevent biased outputs?",
+        "options": ["Neutral language in the prompt", "High temperature", "Adding randomness", "Using vague wording"],
+        "correctAnswer": "Neutral language in the prompt"
+      },
+      {
+        "question": "What does the token limit include?",
+        "options": ["Only the output text", "Only the input prompt", "Both prompt and output combined", "The response title only"],
+        "correctAnswer": "Both prompt and output combined"
+      },
+      {
+        "question": "Which of the following best defines 'prompt leakage'?",
+        "options": [
+          "When your prompt is too short",
+          "When the AI generates its own prompt",
+          "When the prompt reveals internal instructions unintentionally",
+          "When tokens are saved in memory"
+        ],
+        "correctAnswer": "When the prompt reveals internal instructions unintentionally"
+      },
+      {
+        "question": "Which strategy is best when the model gives inconsistent answers?",
+        "options": ["Raise the temperature", "Make prompts more detailed and structured", "Add randomness", "Switch to vague prompts"],
+        "correctAnswer": "Make prompts more detailed and structured"
+      },
+      {
+        "question": "What type of prompt would suit classification problems?",
+        "options": ["Creative prompt", "Descriptive prompt", "Binary or label-based prompt", "Multi-language prompt"],
+        "correctAnswer": "Binary or label-based prompt"
+      },
+      {
+        "question": "Which technique adds logic-based reasoning into the prompt?",
+        "options": ["Temperature control", "Chain-of-thought", "Length restriction", "Role-based prompting"],
+        "correctAnswer": "Chain-of-thought"
+      },
+      {
+        "question": "What makes role-based prompting effective?",
+        "options": ["It’s fast", "Assigns expertise and context to the AI", "Shortens answers", "Increases randomness"],
+        "correctAnswer": "Assigns expertise and context to the AI"
+      },
+      {
+        "question": "Which prompt leads to more reliable outputs?",
+        "options": [
+          "Can you tell me something about anything?",
+          "What happened yesterday in the world?",
+          "List 3 verified facts about Mars from NASA reports.",
+          "Why is the sky interesting?"
+        ],
+        "correctAnswer": "List 3 verified facts about Mars from NASA reports."
+      },
+      {
+        "question": "Why should you avoid overloading a prompt with multiple unrelated tasks?",
+        "options": ["It makes the AI more creative", "It improves clarity", "It confuses the model", "It trains the model better"],
+        "correctAnswer": "It confuses the model"
+      },
+      {
+        "question": "Which setting would you adjust to increase determinism?",
+        "options": ["Length", "Temperature", "Model version", "Prompt length"],
+        "correctAnswer": "Temperature"
+      },
+      {
+        "question": "What is a drawback of excessively long prompts?",
+        "options": ["AI gives more accurate answers", "Token limit may be exceeded", "It becomes more creative", "Nothing happens"],
+        "correctAnswer": "Token limit may be exceeded"
+      },
+      {
+        "question": "What is a 'meta prompt'?",
+        "options": [
+          "A prompt that analyzes another prompt",
+          "A simple instruction",
+          "An image inside a prompt",
+          "Prompt to describe a color"
+        ],
+        "correctAnswer": "A prompt that analyzes another prompt"
+      },
+      {
+        "question": "Which would likely yield better structure in answers?",
+        "options": [
+          "Use step-by-step formatting",
+          "Use informal language",
+          "Avoid punctuation",
+          "Ask a yes/no question"
+        ],
+        "correctAnswer": "Use step-by-step formatting"
+      },
+      {
+        "question": "What kind of bias may occur when AI sees certain trigger words in prompts?",
+        "options": ["Output bias", "Grammar bias", "Random bias", "Prompt inflation"],
+        "correctAnswer": "Output bias"
+      },
+      {
+        "question": "Why is evaluation important in prompt engineering?",
+        "options": [
+          "To make it fun",
+          "To know how fast the AI is",
+          "To check relevance, accuracy, and tone",
+          "To shorten the prompt"
+        ],
+        "correctAnswer": "To check relevance, accuracy, and tone"
+      },
+      {
+        "question": "How do you best structure a comparative prompt?",
+        "options": [
+          "Ask AI to compare X and Y with clear context and criteria",
+          "Ask only about X",
+          "Be vague and short",
+          "Just list both names"
+        ],
+        "correctAnswer": "Ask AI to compare X and Y with clear context and criteria"
+      },
+      {
+        "question": "Which is NOT a typical step in iterative prompting?",
+        "options": ["Refine based on output", "Evaluate and re-prompt", "Use the same prompt repeatedly", "Adjust instructions"],
+        "correctAnswer": "Use the same prompt repeatedly"
+      },
+      {
+        "question": "What helps ensure factual correctness in AI outputs?",
+        "options": [
+          "Creative wording",
+          "Asking for sources or citations",
+          "Using emojis",
+          "Shortening the prompt"
+        ],
+        "correctAnswer": "Asking for sources or citations"
+      },
+      {
+        "question": "How can you handle hallucinations in creative tasks?",
+        "options": [
+          "Avoid asking for creativity",
+          "Tell the AI to only use real facts",
+          "Provide creative context and set boundaries",
+          "Disable tokens"
+        ],
+        "correctAnswer": "Provide creative context and set boundaries"
+      },
+      {
+        "question": "Why does prompt specificity matter?",
+        "options": [
+          "It helps reduce processing cost",
+          "It improves reproducibility and relevance of answers",
+          "It’s easier to write",
+          "It adds randomness"
+        ],
+        "correctAnswer": "It improves reproducibility and relevance of answers"
+      }
+    ]
+  }
+  

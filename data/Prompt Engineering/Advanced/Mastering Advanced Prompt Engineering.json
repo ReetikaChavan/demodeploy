@@ -1,0 +1,415 @@
+{
+    "category": "Prompt Engineering",
+    "title": "Mastering Advanced Prompt Engineering",
+    "level": "Advanced",
+    "Difficulty": "Medium",
+    "timer": "35 minutes",
+    "total_marks": 40,
+    "marks_per_question": 1,
+    "skill": "60%",
+    "knowledge": "30%",
+    "application": "10%",
+    "why": "This exam is designed to test a candidate's advanced understanding and practical skills in Prompt Engineering. It challenges candidates to apply their knowledge in dynamic contexts, optimize model outputs, and troubleshoot common challenges, simulating real-world scenarios.",
+    "questions": [
+      {
+        "question": "What does 'max tokens' in a prompt configuration control?",
+        "options": [
+          "The number of words in the output",
+          "The maximum length of input text",
+          "The maximum length of the model's response",
+          "The number of models used in generating responses"
+        ],
+        "correctAnswer": "The maximum length of the model's response"
+      },
+      {
+        "question": "Which of the following techniques can help mitigate bias in AI responses?",
+        "options": [
+          "Using more data to train the model",
+          "Including diverse examples and perspectives in the prompt",
+          "Increasing the model's creativity by lowering the temperature",
+          "Reducing the complexity of the prompt"
+        ],
+        "correctAnswer": "Including diverse examples and perspectives in the prompt"
+      },
+      {
+        "question": "What is the difference between 'zero-shot' and 'few-shot' prompting?",
+        "options": [
+          "Zero-shot requires no examples, while few-shot uses a few examples for context",
+          "Zero-shot uses a single example, while few-shot uses multiple examples",
+          "Few-shot prompts are faster, while zero-shot prompts take longer",
+          "Zero-shot requires more context than few-shot"
+        ],
+        "correctAnswer": "Zero-shot requires no examples, while few-shot uses a few examples for context"
+      },
+      {
+        "question": "Why is 'prompt tuning' important?",
+        "options": [
+          "It allows the model to focus only on specific tasks and reduce randomness",
+          "It increases the model's response time",
+          "It helps in fine-tuning model parameters for specialized tasks",
+          "It reduces the need for multiple training data sets"
+        ],
+        "correctAnswer": "It helps in fine-tuning model parameters for specialized tasks"
+      },
+      {
+        "question": "How do you prevent an AI from generating overly long or verbose responses?",
+        "options": [
+          "Set a high temperature",
+          "Limit the number of tokens or words in the prompt",
+          "Ask the AI to provide explanations for all answers",
+          "Reduce the number of examples in the prompt"
+        ],
+        "correctAnswer": "Limit the number of tokens or words in the prompt"
+      },
+      {
+        "question": "What is the purpose of 'persona-based prompting'?",
+        "options": [
+          "To ask the AI to perform tasks based on a predefined set of rules",
+          "To make the AI generate responses as though it is a specific character or entity",
+          "To randomize responses and make them unpredictable",
+          "To make the model work faster by simplifying the task"
+        ],
+        "correctAnswer": "To make the AI generate responses as though it is a specific character or entity"
+      },
+      {
+        "question": "What role do 'stop words' play in prompt engineering?",
+        "options": [
+          "They are used to signal the end of a response",
+          "They prevent the AI from generating complex or verbose outputs",
+          "They increase the randomness of the AI's response",
+          "They help focus the AI's attention on the most relevant parts of the prompt"
+        ],
+        "correctAnswer": "They are used to signal the end of a response"
+      },
+      {
+        "question": "What is the advantage of using a 'pre-trained model' in prompt engineering?",
+        "options": [
+          "It allows for faster response generation with less training data",
+          "It improves the quality of responses by using more diverse training examples",
+          "It reduces the need for additional fine-tuning",
+          "It forces the model to always produce the most accurate output"
+        ],
+        "correctAnswer": "It improves the quality of responses by using more diverse training examples"
+      },
+      {
+        "question": "What does the 'context window' in a model refer to?",
+        "options": [
+          "The number of words or tokens the model can analyze at once",
+          "The length of the AI's output",
+          "The types of tasks the model can perform",
+          "The time the model takes to process each prompt"
+        ],
+        "correctAnswer": "The number of words or tokens the model can analyze at once"
+      },
+      {
+        "question": "Why is it important to optimize the input text when working with large language models?",
+        "options": [
+          "It speeds up response time",
+          "It reduces the complexity of the model's output",
+          "It helps the model generate more accurate and relevant responses",
+          "It minimizes the need for external data sources"
+        ],
+        "correctAnswer": "It helps the model generate more accurate and relevant responses"
+      },
+      {
+        "question": "Which technique can be used to prevent the model from hallucinating irrelevant information?",
+        "options": [
+          "Providing clear, specific instructions within the prompt",
+          "Increasing randomness by setting a high temperature",
+          "Using generic prompts without details",
+          "Asking the model to generate creative outputs"
+        ],
+        "correctAnswer": "Providing clear, specific instructions within the prompt"
+      },
+      {
+        "question": "What does 'model fine-tuning' involve?",
+        "options": [
+          "Modifying the model's architecture to speed up its response",
+          "Adjusting the model's behavior based on the specific task or dataset",
+          "Reducing the model's training time",
+          "Removing unimportant features from the model"
+        ],
+        "correctAnswer": "Adjusting the model's behavior based on the specific task or dataset"
+      },
+      {
+        "question": "What type of prompt is useful for reducing ambiguity in the AI's responses?",
+        "options": [
+          "Vague and open-ended prompts",
+          "Clear and specific prompts with contextual information",
+          "Randomized prompts to encourage variety",
+          "Short prompts with no additional instructions"
+        ],
+        "correctAnswer": "Clear and specific prompts with contextual information"
+      },
+      {
+        "question": "What is 'zero-shot learning' in the context of prompt engineering?",
+        "options": [
+          "When the model is given no examples to generate an output",
+          "When the model is trained with a very small amount of data",
+          "When the model can learn from its own output without supervision",
+          "When the model is trained using multiple different techniques"
+        ],
+        "correctAnswer": "When the model is given no examples to generate an output"
+      },
+      {
+        "question": "How does 'temperature' affect the AI's responses?",
+        "options": [
+          "Higher temperature increases randomness and creativity in responses",
+          "Higher temperature decreases the variability of responses",
+          "Lower temperature generates more creative answers",
+          "Temperature does not affect the output"
+        ],
+        "correctAnswer": "Higher temperature increases randomness and creativity in responses"
+      },
+      {
+        "question": "Which strategy helps improve the quality of AI-generated content?",
+        "options": [
+          "Minimizing the length of the prompt",
+          "Increasing the complexity of the prompt",
+          "Using concise and clear instructions with adequate context",
+          "Asking the model to be as creative as possible"
+        ],
+        "correctAnswer": "Using concise and clear instructions with adequate context"
+      },
+      {
+        "question": "What does the 'nucleus sampling' technique control in prompt engineering?",
+        "options": [
+          "The model's ability to generate a range of creative outputs",
+          "The maximum number of words in a prompt",
+          "The style and tone of the model's responses",
+          "The speed of generating responses"
+        ],
+        "correctAnswer": "The model's ability to generate a range of creative outputs"
+      },
+      {
+        "question": "What is the purpose of 'backpropagation' in machine learning?",
+        "options": [
+          "To adjust the model's parameters to improve accuracy",
+          "To generate more random outputs",
+          "To fine-tune the input data",
+          "To decrease the complexity of the model's responses"
+        ],
+        "correctAnswer": "To adjust the model's parameters to improve accuracy"
+      },
+      {
+        "question": "What is the best way to address a model's tendency to generate irrelevant or incoherent answers?",
+        "options": [
+          "Refining the prompt and adding more context",
+          "Reducing the prompt's length",
+          "Increasing the temperature for creative freedom",
+          "Using simpler words"
+        ],
+        "correctAnswer": "Refining the prompt and adding more context"
+      },
+      {
+        "question": "What does 'multi-modal' in AI refer to?",
+        "options": [
+          "A model's ability to process multiple types of input (e.g., text, images, etc.)",
+          "The model's ability to generate long and complex outputs",
+          "A model that only processes text-based inputs",
+          "A model trained for specific tasks"
+        ],
+        "correctAnswer": "A model's ability to process multiple types of input (e.g., text, images, etc.)"
+      },
+      {
+        "question": "Which factor primarily influences the creativity of an AI's response?",
+        "options": [
+          "Length of the prompt",
+          "Temperature settings",
+          "Number of tokens in the prompt",
+          "Pre-trained model size"
+        ],
+        "correctAnswer": "Temperature settings"
+      },
+      {
+        "question": "Which of the following can improve response accuracy in prompt engineering?",
+        "options": [
+          "Increase the temperature to allow more creative responses",
+          "Use larger input data sets for training the model",
+          "Use explicit and context-rich prompts with examples",
+          "Decrease the number of tokens in the input text"
+        ],
+        "correctAnswer": "Use explicit and context-rich prompts with examples"
+      },
+      {
+        "question": "What is the primary challenge of using AI models with unstructured data?",
+        "options": [
+          "Data formatting issues that lead to inaccurate responses",
+          "The model's tendency to focus on irrelevant information",
+          "Too much training data can make the model slower",
+          "Model performance is directly related to dataset size"
+        ],
+        "correctAnswer": "The model's tendency to focus on irrelevant information"
+      },
+      {
+        "question": "What is the benefit of using 'dynamic prompting' in complex systems?",
+        "options": [
+          "It adapts the prompt based on the system's response to previous queries",
+          "It improves the model's ability to generate creative ideas",
+          "It decreases the response time for model queries",
+          "It makes the model more resource-efficient"
+        ],
+        "correctAnswer": "It adapts the prompt based on the system's response to previous queries"
+      },
+      {
+        "question": "How can AI outputs be enhanced by the integration of user feedback?",
+        "options": [
+          "User feedback helps optimize the model's training and improves its context understanding",
+          "User feedback increases the temperature for more creative responses",
+          "User feedback speeds up the model's computation",
+          "User feedback forces the model to randomly adjust its responses"
+        ],
+        "correctAnswer": "User feedback helps optimize the model's training and improves its context understanding"
+      },
+      {
+        "question": "What is an effective way to prevent the model from generating repetitive answers?",
+        "options": [
+          "Set higher temperature",
+          "Use more varied and diverse examples in the prompt",
+          "Ask the model to repeat its response",
+          "Limit the model to a fixed number of tokens"
+        ],
+        "correctAnswer": "Use more varied and diverse examples in the prompt"
+      },
+      {
+        "question": "What is the purpose of 'chain-of-thought' prompting?",
+        "options": [
+          "To make the model explain its reasoning step-by-step",
+          "To increase the speed of response generation",
+          "To reduce the number of tokens used in the output",
+          "To make the model more creative in its responses"
+        ],
+        "correctAnswer": "To make the model explain its reasoning step-by-step"
+      },
+      {
+        "question": "Which technique is most effective for generating multiple diverse responses?",
+        "options": [
+          "Using the same prompt multiple times",
+          "Implementing top-k sampling with a high k value",
+          "Reducing the temperature parameter",
+          "Using very specific and narrow prompts"
+        ],
+        "correctAnswer": "Implementing top-k sampling with a high k value"
+      },
+      {
+        "question": "What does 'few-shot learning' enable in prompt engineering?",
+        "options": [
+          "The model to perform tasks with minimal examples",
+          "The model to train itself without any data",
+          "Faster response times by reducing computational load",
+          "Complete elimination of the need for fine-tuning"
+        ],
+        "correctAnswer": "The model to perform tasks with minimal examples"
+      },
+      {
+        "question": "How does increasing the 'top_p' parameter affect response generation?",
+        "options": [
+          "It makes responses more focused by considering only the most probable tokens",
+          "It increases the randomness by considering less probable tokens",
+          "It speeds up response generation",
+          "It makes the model ignore the prompt context"
+        ],
+        "correctAnswer": "It makes responses more focused by considering only the most probable tokens"
+      },
+      {
+        "question": "What is the primary purpose of 'instruction tuning'?",
+        "options": [
+          "To make the model better at following specific instructions",
+          "To reduce the model's memory usage",
+          "To increase the model's response speed",
+          "To make the model generate longer outputs"
+        ],
+        "correctAnswer": "To make the model better at following specific instructions"
+      },
+      {
+        "question": "Which approach helps in maintaining context across multiple interactions?",
+        "options": [
+          "Using conversation history in the prompt",
+          "Increasing the temperature setting",
+          "Reducing the max tokens parameter",
+          "Using completely new prompts for each interaction"
+        ],
+        "correctAnswer": "Using conversation history in the prompt"
+      },
+      {
+        "question": "What is the effect of setting a very low temperature (e.g., 0.1)?",
+        "options": [
+          "Responses become more deterministic and focused",
+          "Responses become more creative and varied",
+          "The model ignores the prompt completely",
+          "Response generation becomes significantly faster"
+        ],
+        "correctAnswer": "Responses become more deterministic and focused"
+      },
+      {
+        "question": "Which technique helps in evaluating prompt effectiveness?",
+        "options": [
+          "A/B testing with different prompt variations",
+          "Always using the same prompt structure",
+          "Increasing the model size",
+          "Reducing the number of examples in the prompt"
+        ],
+        "correctAnswer": "A/B testing with different prompt variations"
+      },
+      {
+        "question": "What is the main advantage of 'meta-prompting'?",
+        "options": [
+          "It allows the model to generate its own prompts",
+          "It reduces the need for any prompt engineering",
+          "It makes the model faster at generating responses",
+          "It eliminates the need for fine-tuning"
+        ],
+        "correctAnswer": "It allows the model to generate its own prompts"
+      },
+      {
+        "question": "Which factor is most important when designing prompts for sensitive topics?",
+        "options": [
+          "Including safeguards and ethical constraints in the prompt",
+          "Making the prompts as short as possible",
+          "Using high temperature settings",
+          "Avoiding any examples in the prompt"
+        ],
+        "correctAnswer": "Including safeguards and ethical constraints in the prompt"
+      },
+      {
+        "question": "What is the primary benefit of using 'structured prompts'?",
+        "options": [
+          "Improved consistency and predictability of outputs",
+          "Faster response generation",
+          "More creative and unexpected responses",
+          "Reduced need for model fine-tuning"
+        ],
+        "correctAnswer": "Improved consistency and predictability of outputs"
+      },
+      {
+        "question": "What is 'RAG' in the context of large language models?",
+        "options": [
+          "Retrieval-Augmented Generation",
+          "Reinforcement-driven Answer Generation",
+          "Recursive Attention Generation",
+          "Response-Adaptive Grammar"
+        ],
+        "correctAnswer": "Retrieval-Augmented Generation"
+      },
+      {
+        "question": "What is the significance of prompt chaining in complex AI workflows?",
+        "options": [
+          "To break down complex tasks into smaller, manageable steps",
+          "To increase the randomness of the AI's output",
+          "To reduce the computational cost of generating responses",
+          "To limit the model to single-turn interactions"
+        ],
+        "correctAnswer": "To break down complex tasks into smaller, manageable steps"
+      },
+      {
+        "question": "Which of the following is a key consideration when prompting for code generation?",
+        "options": [
+          "Using natural language descriptions without specifying programming languages",
+          "Providing clear specifications of the desired functionality and language",
+          "Asking for the shortest possible code snippets",
+          "Encouraging the AI to use the most advanced and experimental features"
+        ],
+        "correctAnswer": "Providing clear specifications of the desired functionality and language"
+      }
+    ]
+}

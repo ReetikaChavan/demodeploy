@@ -23,15 +23,20 @@ export async function POST(request: NextRequest) {
 
     await dbConnect()
 
+    const newAttemptsLeft = attemptsLeft - 1;
+
     const attemptData = await Attempt.findOneAndUpdate(
       { deviceId, title, category },
       {
-        $set: { lastAttemptDate: new Date(), attemptsLeft },
+        $set: { 
+          lastAttemptDate: new Date(), 
+          attemptsLeft: newAttemptsLeft  // Use server-calculated value
+        },
         $push: { attemptHistory: { date: new Date(), score, completionTime } },
         $max: { bestScore: score },
       },
       { upsert: true, new: true }
-    )
+    );
 
     // Calculate average completion time
     const totalTime = attemptData.attemptHistory.reduce(

@@ -1,0 +1,226 @@
+{
+    "category": "Prompt Engineering",
+    "title": "Mastering Prompt Engineering",
+    "level": "Intermediate",
+    "Difficulty": "Hard",
+    "timer": "25 minutes",
+    "total_marks": 30,
+    "marks_per_question": 1,
+    "skill": "60%",
+    "knowledge": "30%",
+    "application": "10%",
+    "why": "This exam tests advanced knowledge and application of prompt engineering principles, from optimizing prompts for complex use cases to handling real-world AI challenges. Candidates will need to demonstrate their understanding of nuanced model behavior, parameters, and sophisticated prompting strategies.",
+    "questions": [
+      {
+        "question": "What does the 'temperature' parameter do in prompt engineering?",
+        "options": [
+          "Controls the AI's creativity by increasing randomness",
+          "Controls the speed of responses",
+          "Decides how verbose the response will be",
+          "Limits the content to certain domains"
+        ],
+        "correctAnswer": "Controls the AI's creativity by increasing randomness"
+      },
+      {
+        "question": "How would you improve the accuracy of an AI response when asking for technical details?",
+        "options": [
+          "Keep the prompt as broad as possible",
+          "Provide specific details, ask for sources or evidence",
+          "Ask for the model’s opinion",
+          "Make the prompt more abstract"
+        ],
+        "correctAnswer": "Provide specific details, ask for sources or evidence"
+      },
+      {
+        "question": "What is the primary advantage of using few-shot prompting?",
+        "options": [
+          "It allows the model to randomly guess answers",
+          "It provides examples to help the model understand the context",
+          "It speeds up the process by using fewer tokens",
+          "It reduces the need for any input clarification"
+        ],
+        "correctAnswer": "It provides examples to help the model understand the context"
+      },
+      {
+        "question": "In a scenario where you want AI to provide a detailed explanation of a concept, which approach would you take?",
+        "options": [
+          "Ask for a quick summary",
+          "Give a precise question and request a step-by-step breakdown",
+          "Request a random output",
+          "Ask the AI to answer creatively"
+        ],
+        "correctAnswer": "Give a precise question and request a step-by-step breakdown"
+      },
+      {
+        "question": "When training a model for a technical task, which is the most important prompt consideration?",
+        "options": [
+          "Use abstract phrasing to avoid overfitting",
+          "Provide clear, specific, and actionable instructions",
+          "Keep the prompt as general as possible",
+          "Use random examples"
+        ],
+        "correctAnswer": "Provide clear, specific, and actionable instructions"
+      },
+      {
+        "question": "What is the significance of setting an explicit tone or voice in a prompt?",
+        "options": [
+          "It confuses the model",
+          "It provides structure and consistency to the output",
+          "It increases randomness",
+          "It is irrelevant to the outcome"
+        ],
+        "correctAnswer": "It provides structure and consistency to the output"
+      },
+      {
+        "question": "What is the primary issue when an AI model generates inconsistent answers to similar prompts?",
+        "options": [
+          "Lack of training data",
+          "Inconsistent or ambiguous phrasing of the prompt",
+          "Increased randomness due to low temperature",
+          "Excessive examples in the prompt"
+        ],
+        "correctAnswer": "Inconsistent or ambiguous phrasing of the prompt"
+      },
+      {
+        "question": "What does the concept of 'zero-shot' prompting refer to?",
+        "options": [
+          "Providing no examples and expecting the model to generate a response based on context alone",
+          "Providing multiple examples to guide the model's response",
+          "Using random words and phrases",
+          "Rewriting prompts multiple times"
+        ],
+        "correctAnswer": "Providing no examples and expecting the model to generate a response based on context alone"
+      },
+      {
+        "question": "Why would you use a 'few-shot' approach instead of 'zero-shot' prompting?",
+        "options": [
+          "To provide context or examples that help the model learn the task quickly",
+          "To increase randomness and creativity",
+          "To prevent the model from generating any output",
+          "To limit the complexity of the question"
+        ],
+        "correctAnswer": "To provide context or examples that help the model learn the task quickly"
+      },
+      {
+        "question": "What does a high temperature setting typically result in when generating text?",
+        "options": [
+          "More predictable and structured responses",
+          "More creative and varied responses",
+          "Shorter answers",
+          "Faster response times"
+        ],
+        "correctAnswer": "More creative and varied responses"
+      },
+      {
+        "question": "What is the benefit of using 'structured prompts' when working with AI?",
+        "options": [
+          "To make the output more random",
+          "To guide the model towards a specific format or structure in the output",
+          "To generate the longest possible response",
+          "To confuse the model into offering unique answers"
+        ],
+        "correctAnswer": "To guide the model towards a specific format or structure in the output"
+      },
+      {
+        "question": "What is the most common issue when generating code using AI models?",
+        "options": [
+          "Code is overly creative and lacks structure",
+          "Code lacks clear syntax and proper formatting",
+          "The model creates long comments but no code",
+          "The model generates code that is too simple"
+        ],
+        "correctAnswer": "Code lacks clear syntax and proper formatting"
+      },
+      {
+        "question": "How can you reduce bias in the responses generated by AI models?",
+        "options": [
+          "By using politically charged language",
+          "By being neutral and objective in the wording of the prompt",
+          "By increasing the temperature for more creativity",
+          "By using humor in the prompt"
+        ],
+        "correctAnswer": "By being neutral and objective in the wording of the prompt"
+      },
+      {
+        "question": "In an interview, how would you explain why a low temperature setting is important in technical prompt engineering?",
+        "options": [
+          "It makes the AI more creative",
+          "It increases the randomness of the model’s output",
+          "It improves the consistency and relevance of the model’s responses",
+          "It decreases the speed of the model’s responses"
+        ],
+        "correctAnswer": "It improves the consistency and relevance of the model’s responses"
+      },
+      {
+        "question": "What is the benefit of using role-based prompting in AI?",
+        "options": [
+          "It makes the model more creative",
+          "It guides the model to respond according to the specified role or context",
+          "It confuses the model into generating unique answers",
+          "It limits the diversity of answers"
+        ],
+        "correctAnswer": "It guides the model to respond according to the specified role or context"
+      },
+      {
+        "question": "Which of these best describes the use of 'system-level instructions' in prompting?",
+        "options": [
+          "They tell the AI how to interpret and respond to the prompt based on the task or situation",
+          "They add creativity and randomness to the output",
+          "They restrict the AI from using external knowledge",
+          "They help reduce the length of the response"
+        ],
+        "correctAnswer": "They tell the AI how to interpret and respond to the prompt based on the task or situation"
+      },
+      {
+        "question": "In what situation would you use 'iterative prompting'?",
+        "options": [
+          "When you want to generate random outputs",
+          "When you need to refine the model’s response through multiple stages",
+          "When you want the output to be as creative as possible",
+          "When the prompt is too simple to need refinement"
+        ],
+        "correctAnswer": "When you need to refine the model’s response through multiple stages"
+      },
+      {
+        "question": "Which of these is the most effective way to handle complex or ambiguous prompts?",
+        "options": [
+          "Simplify the question and ask for a general response",
+          "Break down the prompt into smaller, more specific components",
+          "Increase the temperature setting to encourage creativity",
+          "Ask for a random response"
+        ],
+        "correctAnswer": "Break down the prompt into smaller, more specific components"
+      },
+      {
+        "question": "Why is context important in prompt engineering?",
+        "options": [
+          "It helps the model generate creative content",
+          "It guides the model to produce relevant, accurate, and on-topic responses",
+          "It reduces the length of responses",
+          "It increases randomness"
+        ],
+        "correctAnswer": "It guides the model to produce relevant, accurate, and on-topic responses"
+      },
+      {
+        "question": "What’s the key challenge when working with multi-step reasoning tasks in prompt engineering?",
+        "options": [
+          "Ensuring the output is as short as possible",
+          "Managing the complexity of the reasoning and maintaining logical flow",
+          "Reducing the number of tokens used",
+          "Simplifying the prompt to encourage creativity"
+        ],
+        "correctAnswer": "Managing the complexity of the reasoning and maintaining logical flow"
+      },
+      {
+        "question": "When would you use 'in-context learning'?",
+        "options": [
+          "When you want the model to generate output based on a few relevant examples in the prompt",
+          "When you need the model to create entirely new information without any context",
+          "When the model needs random outputs",
+          "When working with images instead of text"
+        ],
+        "correctAnswer": "When you want the model to generate output based on a few relevant examples in the prompt"
+      }
+    ]
+  }
+  

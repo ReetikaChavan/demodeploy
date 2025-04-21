@@ -48,6 +48,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
     "CET",
     "DSA",
     "Interview Preparation",
+    "Prompt Engineering",
   ]
 
   const toggleDifficultyDropdown = () => {

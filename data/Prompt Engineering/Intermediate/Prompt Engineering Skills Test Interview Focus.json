@@ -1,0 +1,216 @@
+{
+    "category": "Prompt Engineering",
+    "title": "Prompt Engineering Skills Test: Interview Focus",
+    "level": "Intermediate",
+    "Difficulty": "Medium",
+    "timer": "20 minutes",
+    "total_marks": 25,
+    "marks_per_question": 1,
+    "skill": "50%",
+    "knowledge": "40%",
+    "application": "10%",
+    "why": "This exam is designed to simulate real-world interview questions for an intermediate-level prompt engineer. It tests both technical knowledge and the ability to apply prompt engineering concepts to various AI tasks, from question formatting to output improvement strategies.",
+    "questions": [
+      {
+        "question": "In an interview scenario, how would you explain the concept of prompt engineering to someone new to the field?",
+        "options": [
+          "It’s a method of adjusting AI code to improve responses",
+          "It’s about making the AI smart without any input",
+          "It involves crafting inputs that guide the AI to produce optimal responses",
+          "It’s about feeding AI massive datasets"
+        ],
+        "correctAnswer": "It involves crafting inputs that guide the AI to produce optimal responses"
+      },
+      {
+        "question": "What would you suggest if an AI model provides answers that are inconsistent and off-topic?",
+        "options": [
+          "Increase randomness in the prompt",
+          "Refine the prompt for clarity and context",
+          "Use more abstract wording",
+          "Ask the model to guess the correct answer"
+        ],
+        "correctAnswer": "Refine the prompt for clarity and context"
+      },
+      {
+        "question": "How does chain-of-thought prompting improve the quality of AI responses?",
+        "options": [
+          "By encouraging creative outputs",
+          "By making the model think aloud step-by-step, improving logical flow",
+          "By limiting the word count",
+          "By introducing randomness into the response"
+        ],
+        "correctAnswer": "By making the model think aloud step-by-step, improving logical flow"
+      },
+      {
+        "question": "What factors would you consider when setting the 'temperature' parameter to adjust the model’s creativity?",
+        "options": [
+          "The length of the response",
+          "The expected randomness or creativity in the output",
+          "The clarity of the prompt",
+          "The computational cost"
+        ],
+        "correctAnswer": "The expected randomness or creativity in the output"
+      },
+      {
+        "question": "If you need a concise and factual response from an AI model, what approach should you use in your prompt?",
+        "options": [
+          "Ask open-ended questions",
+          "Use specific instructions with a clear format request",
+          "Allow the model to interpret the question freely",
+          "Use vague and broad wording"
+        ],
+        "correctAnswer": "Use specific instructions with a clear format request"
+      },
+      {
+        "question": "How would you mitigate the risk of AI hallucination when asking factual questions?",
+        "options": [
+          "Use emojis in the prompt",
+          "Request sources or citations to support answers",
+          "Ask for general opinions",
+          "Keep the question ambiguous"
+        ],
+        "correctAnswer": "Request sources or citations to support answers"
+      },
+      {
+        "question": "When creating prompts for code generation, which practice is most important?",
+        "options": [
+          "Vague wording to encourage flexibility",
+          "Clear and specific instructions, including context and language constraints",
+          "Randomizing examples",
+          "Only using natural language without specific examples"
+        ],
+        "correctAnswer": "Clear and specific instructions, including context and language constraints"
+      },
+      {
+        "question": "Which type of prompt would you use to generate a bulleted list of facts on a given topic?",
+        "options": [
+          "Tell me everything you know about this topic",
+          "Generate a creative poem about this topic",
+          "List 5 key facts about this topic in bullet points",
+          "Ask a yes/no question"
+        ],
+        "correctAnswer": "List 5 key facts about this topic in bullet points"
+      },
+      {
+        "question": "What role does 'role-based prompting' play in improving AI responses?",
+        "options": [
+          "It assigns a specific expertise or context to the AI, guiding its response",
+          "It allows the model to answer questions without structure",
+          "It increases randomness",
+          "It creates confusion in answers"
+        ],
+        "correctAnswer": "It assigns a specific expertise or context to the AI, guiding its response"
+      },
+      {
+        "question": "In an interview, how would you explain the difference between 'zero-shot' and 'few-shot' prompting?",
+        "options": [
+          "Zero-shot involves no prior examples, few-shot provides some examples to guide the model",
+          "Zero-shot uses long inputs, few-shot uses short inputs",
+          "Zero-shot refers to providing multiple examples, few-shot refers to giving none",
+          "There is no difference"
+        ],
+        "correctAnswer": "Zero-shot involves no prior examples, few-shot provides some examples to guide the model"
+      },
+      {
+        "question": "Which approach should you take if the model produces repetitive and irrelevant answers?",
+        "options": [
+          "Increase randomness in the prompt",
+          "Refine the prompt to be more specific and structured",
+          "Ask for longer responses",
+          "Provide less detail"
+        ],
+        "correctAnswer": "Refine the prompt to be more specific and structured"
+      },
+      {
+        "question": "How do you use the 'temperature' setting to control the randomness of the AI’s response?",
+        "options": [
+          "Increasing temperature increases creativity and randomness",
+          "Decreasing temperature increases creativity and randomness",
+          "Temperature has no effect on randomness",
+          "The temperature setting controls the speed of the response"
+        ],
+        "correctAnswer": "Increasing temperature increases creativity and randomness"
+      },
+      {
+        "question": "What should you do when the AI generates an output that is too long or overly verbose?",
+        "options": [
+          "Increase the temperature",
+          "Ask for a shorter, more concise version",
+          "Lower the token limit",
+          "Make the prompt more vague"
+        ],
+        "correctAnswer": "Ask for a shorter, more concise version"
+      },
+      {
+        "question": "Which of these is most important when prompting for a factual answer in a technical domain?",
+        "options": [
+          "Use humor to engage the model",
+          "Ask the model to be creative",
+          "Provide a well-defined, focused question with clear parameters",
+          "Make the prompt open-ended"
+        ],
+        "correctAnswer": "Provide a well-defined, focused question with clear parameters"
+      },
+      {
+        "question": "Why is 'prompt specificity' important in preventing biased or irrelevant outputs?",
+        "options": [
+          "It helps ensure the AI stays on topic and produces relevant content",
+          "It makes the AI more creative",
+          "It speeds up the model’s processing",
+          "It increases the randomness of outputs"
+        ],
+        "correctAnswer": "It helps ensure the AI stays on topic and produces relevant content"
+      },
+      {
+        "question": "If you wanted the AI to write in a professional tone, how would you prompt it?",
+        "options": [
+          "Write in a formal style, without slang or casual language",
+          "Write in an informal, conversational style",
+          "Write creatively, using artistic language",
+          "Ask the AI to write creatively"
+        ],
+        "correctAnswer": "Write in a formal style, without slang or casual language"
+      },
+      {
+        "question": "Which technique would be best for generating a list of pros and cons?",
+        "options": [
+          "Ask for a summary",
+          "Ask for a creative description",
+          "Ask for a comparison with a clear structure",
+          "Ask for a narrative"
+        ],
+        "correctAnswer": "Ask for a comparison with a clear structure"
+      },
+      {
+        "question": "Why should you use 'examples' in your prompts when training a model to perform a task?",
+        "options": [
+          "It helps the AI understand the format and context of the desired output",
+          "It increases the randomness of the answer",
+          "It reduces model performance",
+          "It is not necessary"
+        ],
+        "correctAnswer": "It helps the AI understand the format and context of the desired output"
+      },
+      {
+        "question": "In your opinion, what is the most effective way to handle edge cases in AI responses?",
+        "options": [
+          "Ignore them and move on",
+          "Ask for clarification or more details in the prompt",
+          "Make the prompt more general",
+          "Increase temperature settings"
+        ],
+        "correctAnswer": "Ask for clarification or more details in the prompt"
+      },
+      {
+        "question": "What is the advantage of role-based prompting in AI?",
+        "options": [
+          "It helps the model understand context and adopt the appropriate tone or behavior",
+          "It makes the model less creative",
+          "It decreases the speed of response",
+          "It limits the diversity of answers"
+        ],
+        "correctAnswer": "It helps the model understand context and adopt the appropriate tone or behavior"
+      }
+    ]
+  }
+  

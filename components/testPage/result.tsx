@@ -47,6 +47,7 @@ const ResultPage = () => {
   const [completionTime, setCompletionTime] = useState<number | null>(null)
   const [timeDiffMs, setTimeDiffMs] = useState<number>(0)
   const [loading, setLoading] = useState<boolean>(true)
+  const [retakeHovered, setRetakeHovered] = useState(false);
   const [theme, setTheme] = useState<string>("light")
   const [attemptData, setAttemptData] = useState<AttemptData | null>(null)
   const [showWrongAnswers, setShowWrongAnswers] = useState<boolean>(false)
@@ -66,6 +67,9 @@ const ResultPage = () => {
   const [hovered, setHovered] = useState<boolean>(false)
   const router = useRouter()
   const searchParams = useSearchParams()
+  const [showReviewAll, setShowReviewAll] = useState(false)
+const [allQuestions, setAllQuestions] = useState<any[]>([])
+
 
   // Get title, category and deviceId
   const [deviceId, setDeviceId] = useState<string>("")
@@ -172,27 +176,31 @@ const ResultPage = () => {
     const saveAttemptResult = async () => {
       if (currentAttempt && percentage !== null && completionTime !== null) {
         try {
-          const response = await fetch("/api/saveAttempt", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              deviceId: currentAttempt.deviceId || storedDeviceId,
-              title: examData.title,
-              category: examData.category,
-              score: percentage,
-              completionTime: completionTime,
-            }),
-          })
+  const response = await fetch("/api/saveAttempt", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      deviceId: currentAttempt.deviceId || storedDeviceId,
+      title: examData.title,
+      category: examData.category,
+      score: percentage,
+      completionTime: completionTime,
+    }),
+  });
 
-          if (response.ok) {
-            const data = await response.json()
-            setAttemptData(data)
-          }
-        } catch (error) {
-          console.error("Error saving attempt:", error)
-        }
+  if (!response.ok) {
+    const errorText = await response.text();
+    throw new Error(`Failed to save attempt: ${response.status} - ${errorText}`);
+  }
+
+  const data = await response.json();
+  setAttemptData(data);
+} catch (error) {
+  console.error("Error saving attempt:", error);
+}
+
       }
     }
 
@@ -356,7 +364,7 @@ const ResultPage = () => {
       ) : (
         <>
           {/* Tabs */}
-          <div className="mt-8 flex w-full max-w-lg overflow-hidden rounded-3xl border border-gray-200">
+          {/* <div className="mt-8 flex w-full max-w-lg overflow-hidden rounded-3xl border border-gray-200">
             <button
               className={`flex-1 py-3 font-medium transition-colors
                 ${activeTab === "results" ? "bg-[#FFCC66] text-black" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}
@@ -378,11 +386,11 @@ const ResultPage = () => {
             >
               Next Exam
             </button>
-          </div>
+          </div> */}
 
           {/* Main Content Area */}
           <motion.div
-            className="mt-6 w-full max-w-5xl"
+            className="mt-10 w-full max-w-4xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -396,7 +404,7 @@ const ResultPage = () => {
                 >
                   {/* Score */}
                   <div className="flex flex-col items-center">
-                    <div className="relative flex h-28 w-28 items-center justify-center">
+                    <div className="relative flex h-28 w-28 items-center justify-center ml-6">
                       <svg
                         viewBox="0 0 100 100"
                         className="h-full w-full"
@@ -432,12 +440,12 @@ const ResultPage = () => {
                       </span>
                     </div>
                     <p className="text-1sm mt-2 text-black">
-                      Total Percentage Scored
+                      Score
                     </p>
                   </div>
 
                   {/* Dashed Line */}
-                  <div className="ml-5 flex h-full justify-center">
+                  <div className="ml-10 flex h-full justify-center">
                     <svg
                       width="2.5"
                       height="200px"
@@ -454,46 +462,11 @@ const ResultPage = () => {
 
                   {/* Right Side */}
                   <div className="ml-6 flex flex-col items-center space-y-2">
-                    <div className="flex flex-col items-center">
-                      <div className="flex items-center space-x-2">
-                        <img
-                          src="/media/attemptarrow.png"
-                          alt="Arrow Icon"
-                          className="h-12 w-20"
-                        />
-                      </div>
-                      <span className="mt-2 text-black">
-                        <span className="font-bold text-black">
-                          {attemptData
-                            ? `${Math.max(0, attemptData.totalAttempts - attemptData.attemptsLeft)}/${attemptData.totalAttempts}`
-                            : "0/3"}
-                        </span>{" "}
-                        Attempt
-                      </span>
-                    </div>
-
-                    {/* Dashed Line */}
-                    <div className="w-full">
-                      <svg
-                        width="195%"
-                        height="2.5"
-                        className="stroke-black"
-                      >
-                        <path
-                          strokeDasharray="9 9"
-                          strokeLinecap="round"
-                          strokeWidth="3"
-                          d="M1.5 1.5h195"
-                        />
-                      </svg>
-                    </div>
-
                     {/* Time Taken */}
                     <div className="relative flex flex-col items-center text-center">
-                      <p className="text-black">Time Taken</p>
                       <div className="relative flex items-center justify-center">
                         <svg
-                          width="130"
+                          width="100"
                           height="70"
                           viewBox="0 0 140 70"
                           fill="none"
@@ -548,77 +521,110 @@ const ResultPage = () => {
                               ? formatTime(attemptData.averageCompletionTime)
                               : "N/A"}
                         </p>
+                        </div>
+                        <p className="text-black">Time Taken</p>
+                    </div>
+                    {/* <div className="flex flex-col items-center">
+                      <div className="flex items-center space-x-2">
+                        <img
+                          src="/media/attemptarrow.png"
+                          alt="Arrow Icon"
+                          className="h-12 w-20"
+                        />
                       </div>
+                      <span className="mt-2 text-black">
+                        <span className="font-bold text-black">
+                          {attemptData
+                            ? `${Math.max(0, attemptData.totalAttempts - attemptData.attemptsLeft)}/${attemptData.totalAttempts}`
+                            : "0/3"}
+                        </span>{" "}
+                        Attempt
+                      </span>
+                    </div> */}
+
+                    {/* Dashed Line */}
+                    <div className="w-full">
+                      <svg
+                        width="195%"
+                        height="2.5"
+                        className="stroke-black"
+                      >
+                        <path
+                          strokeDasharray="9 9"
+                          strokeLinecap="round"
+                          strokeWidth="3"
+                          d="M1.5 1.5h195"
+                        />
+                      </svg>
+                    </div>
+
+                    <div className="flex flex-col items-center">
+                      <span className="mt-2 text-black">
+                        <span className="font-bold text-black">
+                          {attemptData
+                            ? `${Math.max(0, attemptData.totalAttempts - attemptData.attemptsLeft)}/${attemptData.totalAttempts}`
+                            : "0/3"}
+                        </span>{" "}
+                        Attempt
+                      </span>
                     </div>
                   </div>
                 </div>
 
                 {/* Right: Results Summary */}
-                <div className="flex-1 rounded-3xl bg-white p-6 shadow-lg">
-                  <h2 className="mb-3 text-xl font-bold">Results Summary</h2>
+<div className="flex-1 rounded-3xl bg-white p-6 shadow-lg">
+  <h2 className="mb-6 text-center text-xl font-bold">Result Summary</h2>
 
-                  <div className="mt-4 grid w-full grid-cols-3 gap-4">
-                    <motion.div
-                      className="rounded-xl bg-gray-100 p-4"
-                      whileHover={{ scale: 1.05 }}
-                    >
-                      <p className="text-lg text-gray-800">Total</p>
-                      <p className="text-2xl font-bold text-gray-900">
-                        {correctAnswers + wrongAnswers}
-                      </p>
-                    </motion.div>
+  <div className="mt-4 grid w-full grid-cols-3 gap-4 text-center">
+    {/* Total */}
+    <motion.div
+      className="flex h-30 flex-col justify-between rounded-3xl bg-gray-100 p-6"
+      whileHover={{ scale: 1.05 }}
+    >
+      <p className="text-4xl font-bold text-gray-900">
+        {correctAnswers + wrongAnswers}
+      </p>
+      <p className="text-base font-medium text-gray-700">Total</p>
+    </motion.div>
 
-                    <motion.div
-                      className="rounded-xl bg-green-100 p-4"
-                      whileHover={{ scale: 1.05 }}
-                    >
-                      <p className="text-lg text-green-800">Correct</p>
-                      <p className="text-2xl font-bold text-green-900">
-                        {correctAnswers}
-                      </p>
-                    </motion.div>
+    {/* Correct */}
+    <motion.div
+      className="flex h-30 flex-col justify-between rounded-2xl bg-green-100 p-6"
+      whileHover={{ scale: 1.05 }}
+    >
+      <p className="text-4xl font-bold text-green-800">{correctAnswers}</p>
+      <p className="text-base font-medium text-green-700">Correct</p>
+    </motion.div>
 
-                    <motion.div
-                      className="cursor-pointer rounded-xl bg-red-100 p-4 transition-colors hover:bg-red-200"
-                      whileHover={{ scale: 1.05 }}
-                      onClick={() => {
-                        setActiveTab("details")
-                        setShowWrongAnswers(true)
-                      }}
-                    >
-                      <p className="text-lg text-red-800">Wrong</p>
-                      <p className="text-2xl font-bold text-red-900">
-                        {wrongAnswers}
-                      </p>
-                    </motion.div>
-                  </div>
+    {/* Wrong */}
+    <motion.div
+      className="flex h-30 cursor-pointer flex-col justify-between rounded-2xl bg-red-100 p-6 transition-colors hover:bg-red-200"
+      whileHover={{ scale: 1.05 }}
+      onClick={() => {
+        setActiveTab("details")
+        setShowWrongAnswers(true)
+      }}
+    >
+      <p className="text-4xl font-bold text-red-800">{wrongAnswers}</p>
+      <p className="text-base font-medium text-red-700">Wrong</p>
+    </motion.div>
+  </div>
+</div>
 
-                  {attemptData && (
-                    <motion.div
-                      className="mt-4 w-full rounded-3xl border border-[#DFE1E8] bg-gray-100 p-5"
-                      whileHover={{ scale: 1.02 }}
-                    >
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <p className="text-lg text-black">Attempts Left</p>
-                          <p className="text-2xl font-bold text-black">
-                            {`${Math.max(0, attemptData.totalAttempts - attemptData.attemptsLeft)}/${attemptData.totalAttempts}`}
-                          </p>
-                        </div>
-                        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gray-300">
-                          <p className="text-xl font-bold text-black">
-                            {attemptData.bestScore.toFixed(0)}%
-                          </p>
-                          <p className="absolute mt-8 text-xs text-black">
-                            Best
-                          </p>
-                        </div>
-                      </div>
-                    </motion.div>
-                  )}
-                </div>
               </div>
-            )}
+              )}
+              <div className="mt-8 text-center">
+  <p
+    className="cursor-pointer text-lg font-semibold underline text-black hover:text-blue-900"
+    onClick={() => {
+      setActiveTab("details")
+      setShowReviewAll(true)
+    }}
+  >
+    Review All Questions
+  </p>
+</div>
+
 
             {/* Wrong Answers Section */}
             {activeTab === "details" && (
@@ -741,8 +747,8 @@ const ResultPage = () => {
             )}
 
             {/* Recommended Exams Section */}
-            {activeTab === "recommended" && (
-              <div className="w-full rounded-3xl bg-white p-6 shadow-lg">
+            {/* {activeTab === "recommended" && ( */}
+              {/* <div className="w-full rounded-3xl bg-white p-6 shadow-lg">
                 <h2 className="mb-4 text-2xl font-bold text-gray-800">
                   Recommended Next Steps
                 </h2>
@@ -760,9 +766,9 @@ const ResultPage = () => {
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: idx * 0.1 }}
-                      >
+                      > */}
                         {/* Exam Header */}
-                        <div className="mb-3 flex items-start justify-between">
+                        {/* <div className="mb-3 flex items-start justify-between">
                           <h3 className="text-lg font-bold text-gray-800 transition-colors group-hover:text-blue-700">
                             {exam.title}
                           </h3>
@@ -778,25 +784,25 @@ const ResultPage = () => {
                             />
                             {exam.difficulty}
                           </div>
-                        </div>
+                        </div> */}
 
                         {/* Tags Section */}
-                        <div className="mb-3 flex flex-wrap gap-2">
+                        {/* <div className="mb-3 flex flex-wrap gap-2">
                           <span className="rounded-full bg-blue-100 px-2 py-1 text-xs">
                             {exam.category}
                           </span>
                           <span className="rounded-full bg-purple-100 px-2 py-1 text-xs">
                             {exam.level}
                           </span>
-                        </div>
+                        </div> */}
 
                         {/* Description */}
-                        <p className="text-sm text-gray-600">
+                        {/* <p className="text-sm text-gray-600">
                           Take this exam to continue improving your skills.
-                        </p>
+                        </p> */}
 
                         {/* Start Exam Button */}
-                        <div className="mt-3 flex justify-end">
+                        {/* <div className="mt-3 flex justify-end">
                           <span className="flex items-center text-sm text-blue-600 group-hover:underline">
                             Start Exam
                             <svg
@@ -816,46 +822,61 @@ const ResultPage = () => {
                           </span>
                         </div>
                       </motion.div>
-                    ))}
-                  </div>
+                    ))} */}
+                  {/* </div>
                 ) : (
-                  <div className="rounded-xl bg-gray-50 p-6 text-center">
-                    <p className="text-gray-600">
-                      No recommended exams available at this time.
-                    </p>
-                    <p className="mt-2 text-sm text-gray-500">
-                      Check back later for new content!
-                    </p>
-                  </div>
-                )}
-              </div>
-            )}
+                  // <div className="rounded-xl bg-gray-50 p-6 text-center">
+                  //   <p className="text-gray-600">
+                  //     No recommended exams available at this time.
+                  //   </p>
+                  //   <p className="mt-2 text-sm text-gray-500">
+                  //     Check back later for new content!
+                  //   </p>
+                  // </div> */}
+                {/* )} */}
+              {/* </div> */}
+            {/* )} */}
           </motion.div>
 
           {/* Action Buttons */}
-          <div className="mt-10 flex justify-center gap-6">
-            {/* Return to Dashboard Button */}
-            <motion.button
-              className="rounded-full border-2 border-black bg-[#FFCC66] px-8 py-3 font-semibold
-                text-black shadow-md transition-colors hover:bg-[#FFD580] hover:shadow-lg"
-              onClick={handleReturnToDashboard}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Return to Dashboard
-            </motion.button>
+<div className="mt-10 flex justify-center gap-6">
+  {/* Retake Exam Button with Submit Button Styling */}
+  <motion.div
+    className="relative flex justify-center"
+    onHoverStart={() => setRetakeHovered(true)}
+    onHoverEnd={() => setRetakeHovered(false)}
+  >
+    <motion.div
+      className="absolute z-0 h-10 w-35 rounded-full"
+      initial={{
+        rotate: -3,
+        backgroundColor: theme === "dark" ? "#FFCC66" : "#000000",
+      }}
+      animate={{
+        backgroundColor: retakeHovered
+          ? "#FFCC66"
+          : theme === "dark"
+            ? "#000000"
+            : "#000000",
+      }}
+      transition={{
+        backgroundColor: {
+          duration: 0.3,
+          ease: "easeInOut",
+        },
+      }}
+      style={{ transformOrigin: "center" }}
+    />
 
-            {/* Retake Exam Button */}
-            <motion.button
-              className="rounded-full border-2 border-black bg-white px-8 py-3 font-semibold text-black
-                shadow-md transition-colors hover:bg-gray-100 hover:shadow-lg"
-              onClick={handleRetakeExam}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Retake Exam
-            </motion.button>
-          </div>
+    <button
+      className="relative z-8 flex h-10 w-35 items-center justify-center rounded-full border-2 border-black bg-[#FFCC66] text-sm font-medium text-gray-800 hover:bg-white md:text-base"
+      onClick={handleRetakeExam}
+    >
+      Retake Exam
+    </button>
+  </motion.div>
+</div>
+
         </>
       )}
     </div>

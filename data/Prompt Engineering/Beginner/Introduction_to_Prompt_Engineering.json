@@ -1,0 +1,91 @@
+{
+    "category": "Prompt Engineering",
+    "title": "Introduction to prompt engineering",
+    "level": "Beginner",
+    "Difficulty": "Easy",
+    "timer": "10 minutes",
+    "total_marks": 15,
+    "marks_per_question": 1,
+    "skill": "30%",
+    "knowledge": "60%",
+    "application": "10%",
+    "why": "The Prompt Engineering Basics exam helps learners develop a strong foundation in crafting clear and effective inputs for AI models like ChatGPT. It introduces core concepts such as prompt clarity, structure, zero-shot vs few-shot prompting, and response control, allowing beginners to communicate better with AI systems and generate high-quality outputs confidently.",
+    "questions": [
+      {
+        "question": "What is 'prompt engineering' in the context of AI?",
+        "options": ["Building physical robots", "Designing inputs for AI models to get desired outputs", "Writing software code for websites", "Training humans to speak to robots"],
+        "correctAnswer": "Designing inputs for AI models to get desired outputs"
+      },
+      {
+        "question": "Which of the following is a good prompt style for ChatGPT?",
+        "options": ["Just answer me!", "Do whatever you want.", "Explain photosynthesis in simple words suitable for a 10-year-old.", "Tell me everything."],
+        "correctAnswer": "Explain photosynthesis in simple words suitable for a 10-year-old."
+      },
+      {
+        "question": "Which tool is often used with prompt engineering?",
+        "options": ["Photoshop", "React.js", "ChatGPT", "Excel"],
+        "correctAnswer": "ChatGPT"
+      },
+      {
+        "question": "What does the word 'prompt' mean in prompt engineering?",
+        "options": ["A fast solution", "A mistake", "The input or instruction given to an AI model", "An error code"],
+        "correctAnswer": "The input or instruction given to an AI model"
+      },
+      {
+        "question": "What kind of language should prompts use?",
+        "options": ["Complex and vague", "Friendly and sarcastic", "Clear and specific", "Short and confusing"],
+        "correctAnswer": "Clear and specific"
+      },
+      {
+        "question": "Which of these is a well-structured prompt?",
+        "options": ["Tell me stuff.", "Generate a 100-word poem about sunrise in the style of Shakespeare.", "You know what I mean.", "Hey."],
+        "correctAnswer": "Generate a 100-word poem about sunrise in the style of Shakespeare."
+      },
+      {
+        "question": "Why is prompt clarity important?",
+        "options": ["So the AI can ignore it", "So the user gets random answers", "So the AI gives a more accurate response", "It's not important"],
+        "correctAnswer": "So the AI gives a more accurate response"
+      },
+      {
+        "question": "Which is NOT a feature of a good AI prompt?",
+        "options": ["Vague wording", "Specific instruction", "Defined format", "Clear context"],
+        "correctAnswer": "Vague wording"
+      },
+      {
+        "question": "What does 'zero-shot prompting' mean?",
+        "options": ["Giving a gun to a robot", "Giving the AI multiple examples", "Providing no examples and asking the model to complete the task", "Giving incorrect data"],
+        "correctAnswer": "Providing no examples and asking the model to complete the task"
+      },
+      {
+        "question": "What is 'few-shot prompting'?",
+        "options": ["Asking multiple questions quickly", "Giving a few examples to guide the model", "Firing AI staff", "Randomly generating responses"],
+        "correctAnswer": "Giving a few examples to guide the model"
+      },
+      {
+        "question": "In prompt engineering, what does 'temperature' control?",
+        "options": ["AI's mood", "Randomness of AI responses", "Response speed", "Model size"],
+        "correctAnswer": "Randomness of AI responses"
+      },
+      {
+        "question": "What is one benefit of using structured prompts (like bullet points)?",
+        "options": ["They confuse the AI", "AI skips bullet points", "They help the AI understand the format better", "They are never useful"],
+        "correctAnswer": "They help the AI understand the format better"
+      },
+      {
+        "question": "Which of these prompts is best for summarizing a document?",
+        "options": ["Tell me random stuff about this.", "Explain this like I’m 5.", "Summarize the key points of this document in 3 bullet points.", "Just give me something."],
+        "correctAnswer": "Summarize the key points of this document in 3 bullet points."
+      },
+      {
+        "question": "How can you make AI give more creative responses?",
+        "options": ["Set temperature to 0", "Use very strict instructions", "Increase temperature", "Ask it to be boring"],
+        "correctAnswer": "Increase temperature"
+      },
+      {
+        "question": "What is the primary goal of prompt engineering?",
+        "options": ["Making AI angry", "Confusing the model", "Crafting inputs to guide AI for better outputs", "Teaching AI to write code"],
+        "correctAnswer": "Crafting inputs to guide AI for better outputs"
+      }
+    ]
+  }
+  
